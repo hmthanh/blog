@@ -206,6 +206,7 @@
 
 .post-header {
     margin-bottom: $spacing-unit;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .post-title {
@@ -256,4 +257,14 @@
 
 .page-navigation .next {
     text-align: right;
+}
+
+.back {
+    float: right;
+    font-size: 22px;
+    margin: 1em 0;
+}
+
+.nav-top {
+    padding: 15px 20px 15px 200px;
 }

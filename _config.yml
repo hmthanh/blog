@@ -23,16 +23,20 @@ email: hmthanhgm@gmail.com
 website: "http://hmthanh.github.io/"
 description: >- # this means to ignore newlines until "baseurl:"
   ✨ _Your ambition outweighed your talent !_ ✨
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://hmthanh.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "http://hmthanh.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 email_username: hmthanhgm
 twitter_username: hmthanhgm
 website_username: hmthanh.github.io
 github_username:  hmthanh
 facebook_username: hmthanhgm
+excerpt_separator: <!--more-->
 
 # Build settings
+gem 'solargraph', group: :development
 theme: minima
+markdown: kramdown
+highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-spaceship
@@ -64,3 +68,7 @@ plugins:
 #   - vendor/ruby/
 
 github: [metadata]
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
