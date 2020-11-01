@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang=" en ">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Python is Cool | Minh-Thanh</title>
+<meta name="generator" content="Jekyll v4.1.1">
+<meta property="og:title" content="Python is Cool">
+<meta name="author" content="Huyen Chip">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="1. Lambda, map, filter, reduce The lambda keyword is used to create inline functions. The functionssquare_fn and square_ld below are identical. def square_fn(x): return x * x square_ld = lambda x: x * x for i in range(10): assert square_fn(i) == square_ld(i) Its quick declaration makes lambda functions ideal for use in callbacks, and when functions are to be passed as arguments to other functions. They are especially useful when used in conjunction with functions like map, filter, and reduce. map(fn, iterable) applies the fn to all elements of the iterable (e.g. list, set, dictionary, tuple, string) and returns a map object. nums = [1/3, 333/7, 2323/2230, 40/34, 2/3] nums_squared = [num * num for num in nums] print(nums_squared) ==&gt; [0.1111111, 2263.04081632, 1.085147, 1.384083, 0.44444444] This is the same as calling using map with a callback function. nums_squared_1 = map(square_fn, nums) nums_squared_2 = map(lambda x: x * x, nums) print(list(nums_squared_1)) ==&gt; [0.1111111, 2263.04081632, 1.085147, 1.384083, 0.44444444] You can also use map with more than one iterable. For example, if you want to calculate the mean squared error of a simple linear function f(x) = ax + b with the true label labels, these two methods are equivalent: a, b = 3, -0.5 xs = [2, 3, 4, 5] labels = [6.4, 8.9, 10.9, 15.3] # Method 1: using a loop errors = [] for i, x in enumerate(xs): errors.append((a * x + b - labels[i]) ** 2) result1 = sum(errors) ** 0.5 / len(xs) # Method 2: using map diffs = map(lambda x, y: (a * x + b - y) ** 2, xs, labels) result2 = sum(diffs) ** 0.5 / len(xs) print(result1, result2) ==&gt; 0.35089172119045514 0.35089172119045514 Note that objects returned by map and filter are iterators, which means that their values aren’t stored but generated as needed. After you’ve called sum(diffs), diffs becomes empty. If you want to keep all elements in diffs, convert it to a list using list(diffs). filter(fn, iterable) works the same way as map, except that fn returns a boolean value and filter returns all the elements of the iterable for which the fn returns True. bad_preds = filter(lambda x: x &gt; 0.5, errors) print(list(bad_preds)) ==&gt; [0.8100000000000006, 0.6400000000000011] reduce(fn, iterable, initializer) is used when we want to iteratively apply an operator to all elements in a list. For example, if we want to calculate the product of all elements in a list: product = 1 for num in nums: product *= num print(product) ==&gt; 12.95564683272412 This is equivalent to: from functools import reduce product = reduce(lambda x, y: x * y, nums) print(product) ==&gt; 12.95564683272412 Note on the performance of lambda functions Lambda functions are meant for one time use. Each time lambda x: dosomething(x) is called, the function has to be created, which hurts the performance if you call lambda x: dosomething(x) multiple times (e.g. when you pass it inside reduce). When you assign a name to the lambda function as in fn = lambda x: dosomething(x), its performance is slightly slower than the same function defined using def, but the difference is negligible. See here. Even though I find lambdas cool, I personally recommend using named functions when you can for the sake of clarity. 2. List manipulation Python lists are super cool. 2.1 Unpacking We can unpack a list by each element like this: elems = [1, 2, 3, 4] a, b, c, d = elems print(a, b, c, d) ==&gt; 1 2 3 4 We can also unpack a list like this: a, *new_elems, d = elems print(a) print(new_elems) print(d) ==&gt; 1 [2, 3] 4 2.2 Slicing We know that we can reverse a list using [::-1]. elems = list(range(10)) print(elems) ==&gt; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] print(elems[::-1]) ==&gt; [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] The syntax [x:y:z] means &quot;take every zth element of a list from index x to index y&quot;. When z is negative, it indicates going backwards. When x isn’t specified, it defaults to the first element of the list in the direction you are traversing the list. When y isn’t specified, it defaults to the last element of the list. So if we want to take every 2th element of a list, we use [::2]. evens = elems[::2] print(evens) reversed_evens = elems[-2::-2] print(reversed_evens) ==&gt; [0, 2, 4, 6, 8] [8, 6, 4, 2, 0] We can also use slicing to delete all the even numbers in the list. del elems[::2] print(elems) ==&gt; [1, 3, 5, 7, 9] 2.3 Insertion We can change the value of an element in a list to another value. elems = list(range(10)) elems[1] = 10 print(elems) ==&gt; [0, 10, 2, 3, 4, 5, 6, 7, 8, 9] If we want to replace the element at an index with multiple elements, e.g. replace the value 1 with 3 values 20, 30, 40: elems = list(range(10)) elems[1:2] = [20, 30, 40] print(elems) ==&gt; [0, 20, 30, 40, 2, 3, 4, 5, 6, 7, 8, 9] If we want to insert 3 values 0.2, 0.3, 0.5 between element at index 0 and element at index 1: elems = list(range(10)) elems[1:1] = [0.2, 0.3, 0.5] print(elems) ==&gt; [0, 0.2, 0.3, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9] 2.4 Flattening We can flatten a list of lists using sum. list_of_lists = [[1], [2, 3], [4, 5, 6]] sum(list_of_lists, []) ==&gt; [1, 2, 3, 4, 5, 6] If we have nested lists, we can recursively flatten it. That’s another beauty of lambda functions – we can use it in the same line as its creation. nested_lists = [[1, 2], [[3, 4], [5, 6], [[7, 8], [9, 10], [[11, [12, 13]]]]]] flatten = lambda x: [y for l in x for y in flatten(l)] if type(x) is list else [x] flatten(nested_lists) # This line of code is from # https://github.com/sahands/python-by-example/blob/master/python-by-example.rst#flattening-lists 2.5 List vs generator To illustrate the difference between a list and a generator, let’s look at an example of creating n-grams out of a list of tokens. One way to create n-grams is to use a sliding window. tokens = ['i', 'want', 'to', 'go', 'to', 'school'] def ngrams(tokens, n): length = len(tokens) grams = [] for i in range(length - n + 1): grams.append(tokens[i:i+n]) return grams print(ngrams(tokens, 3)) ==&gt; [['i', 'want', 'to'], ['want', 'to', 'go'], ['to', 'go', 'to'], ['go', 'to', 'school']] In the above example, we have to store all the n-grams at the same time. If the text has m tokens, then the memory requirement is O(nm), which can be problematic when m is large. Instead of using a list to store all n-grams, we can use a generator that generates the next n-gram when it’s asked for. This is known as lazy evaluation. We can make the function ngrams returns a generator using the keyword yield. Then the memory requirement is O(m+n). def ngrams(tokens, n): length = len(tokens) for i in range(length - n + 1): yield tokens[i:i+n] ngrams_generator = ngrams(tokens, 3) print(ngrams_generator) ==&gt; &lt;generator object ngrams at 0x1069b26d0&gt; for ngram in ngrams_generator: print(ngram) ==&gt; ['i', 'want', 'to'] ['want', 'to', 'go'] ['to', 'go', 'to'] ['go', 'to', 'school'] Another way to generate n-grams is to use slices to create lists: [0, 1, ..., -n], [1, 2, ..., -n+1], …, [n-1, n, ..., -1], and then zip them together. def ngrams(tokens, n): length = len(tokens) slices = (tokens[i:length-n+i+1] for i in range(n)) return zip(*slices) ngrams_generator = ngrams(tokens, 3) print(ngrams_generator) ==&gt; &lt;zip object at 0x1069a7dc8&gt; # zip objects are generators for ngram in ngrams_generator: print(ngram) ==&gt; ('i', 'want', 'to') ('want', 'to', 'go') ('to', 'go', 'to') ('go', 'to', 'school') Note that to create slices, we use (tokens[...] for i in range(n)) instead of [tokens[...] for i in range(n)]. [] is the normal list comprehension that returns a list. () returns a generator. 3. Classes and magic methods In Python, magic methods are prefixed and suffixed with the double underscore __, also known as dunder. The most wellknown magic method is probably __init__. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right When we try to print out a Node object, however, it’s not very interpretable. root = Node(5) print(root) # &lt;__main__.Node object at 0x1069c4518&gt; Ideally, when user prints out a node, we want to print out the node’s value and the values of its children if it has children. To do so, we use the magic method __repr__, which must return a printable object, like string. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right def __repr__(self): strings = [f'value: {self.value}'] strings.append(f'left: {self.left.value}' if self.left else 'left: None') strings.append(f'right: {self.right.value}' if self.right else 'right: None') return ', '.join(strings) left = Node(4) root = Node(5, left) print(root) # value: 5, left: 4, right: None We’d also like to compare two nodes by comparing their values. To do so, we overload the operator == with __eq__, &lt; with __lt__, and &gt;= with __ge__. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right def __eq__(self, other): return self.value == other.value def __lt__(self, other): return self.value &lt; other.value def __ge__(self, other): return self.value &gt;= other.value left = Node(4) root = Node(5, left) print(left == root) # False print(left &lt; root) # True print(left &gt;= root) # False For a comprehensive list of supported magic methods here or see the official Python documentation here (slightly harder to read). Some of the methods that I highly recommend: __len__: to overload the len() function. __str__: to overload the str() function. __iter__: if you want to your objects to be iterators. This also allows you to call next() on your object. For classes like Node where we know for sure all the attributes they can support (in the case of Node, they are value, left, and right), we might want to use __slots__ to denote those values for both performance boost and memory saving. For a comprehensive understanding of pros and cons of __slots__, see this absolutely amazing answer by Aaron Hall on StackOverflow. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; __slots__ = ('value', 'left', 'right') def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right 4. local namespace, object’s attributes The locals() function returns a dictionary containing the variables defined in the local namespace. class Model1: def __init__(self, hidden_size=100, num_layers=3, learning_rate=3e-4): print(locals()) self.hidden_size = hidden_size self.num_layers = num_layers self.learning_rate = learning_rate model1 = Model1() ==&gt; {'learning_rate': 0.0003, 'num_layers': 3, 'hidden_size': 100, 'self': &lt;__main__.Model1 object at 0x1069b1470&gt;} All attributes of an object are stored in its __dict__. print(model1.__dict__) ==&gt; {'hidden_size': 100, 'num_layers': 3, 'learning_rate': 0.0003} Note that manually assigning each of the arguments to an attribute can be quite tiring when the list of the arguments is large. To avoid this, we can directly assign the list of arguments to the object’s __dict__. class Model2: def __init__(self, hidden_size=100, num_layers=3, learning_rate=3e-4): params = locals() del params['self'] self.__dict__ = params model2 = Model2() print(model2.__dict__) ==&gt; {'learning_rate': 0.0003, 'num_layers': 3, 'hidden_size': 100} This can be especially convenient when the object is initiated using the catch-all **kwargs, though the use of **kwargs should be reduced to the minimum. class Model3: def __init__(self, **kwargs): self.__dict__ = kwargs model3 = Model3(hidden_size=100, num_layers=3, learning_rate=3e-4) print(model3.__dict__) ==&gt; {'hidden_size': 100, 'num_layers': 3, 'learning_rate': 0.0003} 5. Wild import Often, you run into this wild import * that looks something like this: file.py from parts import * This is irresponsible because it will import everything in module, even the imports of that module. For example, if parts.py looks like this: parts.py import numpy import tensorflow class Encoder: ... class Decoder: ... class Loss: ... def helper(*args, **kwargs): ... def utils(*args, **kwargs): ... Since parts.py doesn’t have __all__ specified, file.py will import Encoder, Decoder, Loss, utils, helper together with numpy and tensorflow. If we intend that only Encoder, Decoder, and Loss are ever to be imported and used in another module, we should specify that in parts.py using the __all__ keyword. parts.py __all__ = ['Encoder', 'Decoder', 'Loss'] import numpy import tensorflow class Encoder: ... Now, if some user irresponsibly does a wild import with parts, they can only import Encoder, Decoder, Loss. Personally, I also find __all__ helpful as it gives me an overview of the module. 6. Decorator to time your functions It’s often useful to know how long it takes a function to run, e.g. when you need to compare the performance of two algorithms that do the same thing. One naive way is to call time.time() at the begin and end of each function and print out the difference. For example: compare two algorithms to calculate the n-th Fibonacci number, one uses memoization and one doesn’t. def fib_helper(n): if n &lt; 2: return n return fib_helper(n - 1) + fib_helper(n - 2) def fib(n): &quot;&quot;&quot; fib is a wrapper function so that later we can change its behavior at the top level without affecting the behavior at every recursion step. &quot;&quot;&quot; return fib_helper(n) def fib_m_helper(n, computed): if n in computed: return computed[n] computed[n] = fib_m_helper(n - 1, computed) + fib_m_helper(n - 2, computed) return computed[n] def fib_m(n): return fib_m_helper(n, {0: 0, 1: 1}) Let’s make sure that fib and fib_m are functionally equivalent. for n in range(20): assert fib(n) == fib_m(n) import time start = time.time() fib(30) print(f'Without memoization, it takes {time.time() - start:7f} seconds.') ==&gt; Without memoization, it takes 0.267569 seconds. start = time.time() fib_m(30) print(f'With memoization, it takes {time.time() - start:.7f} seconds.') ==&gt; With memoization, it takes 0.0000713 seconds. If you want to time multiple functions, it can be a drag having to write the same code over and over again. It’d be nice to have a way to specify how to change any function in the same way. In this case would be to call time.time() at the beginning and the end of each function, and print out the time difference. This is exactly what decorators do. They allow programmers to change the behavior of a function or class. Here’s an example to create a decorator timeit. def timeit(fn): # *args and **kwargs are to support positional and named arguments of fn def get_time(*args, **kwargs): start = time.time() output = fn(*args, **kwargs) print(f&quot;Time taken in {fn.__name__}: {time.time() - start:.7f}&quot;) return output # make sure that the decorator returns the output of fn return get_time Add the decorator @timeit to your functions. @timeit def fib(n): return fib_helper(n) @timeit def fib_m(n): return fib_m_helper(n, {0: 0, 1: 1}) fib(30) fib_m(30) ==&gt; Time taken in fib: 0.2787242 ==&gt; Time taken in fib_m: 0.0000138 7. Caching with @functools.lru_cache Memoization is a form of cache: we cache the previously calculated Fibonacci numbers so that we don’t have to calculate them again. Caching is such an important technique that Python provides a built-in decorator to give your function the caching capacity. If you want fib_helper to reuse the previously calculated Fibonacci numbers, you can just add the decorator lru_cache from functools. lru stands for “least recently used”. For more information on cache, see here. import functools @functools.lru_cache() def fib_helper(n): if n &lt; 2: return n return fib_helper(n - 1) + fib_helper(n - 2) @timeit def fib(n): &quot;&quot;&quot; fib is a wrapper function so that later we can change its behavior at the top level without affecting the behavior at every recursion step. &quot;&quot;&quot; return fib_helper(n) fib(50) fib_m(50) ==&gt; Time taken in fib: 0.0000412 ==&gt; Time taken in fib_m: 0.0000281 Source : Huyen Chip">
+<meta property="og:description" content="1. Lambda, map, filter, reduce The lambda keyword is used to create inline functions. The functionssquare_fn and square_ld below are identical. def square_fn(x): return x * x square_ld = lambda x: x * x for i in range(10): assert square_fn(i) == square_ld(i) Its quick declaration makes lambda functions ideal for use in callbacks, and when functions are to be passed as arguments to other functions. They are especially useful when used in conjunction with functions like map, filter, and reduce. map(fn, iterable) applies the fn to all elements of the iterable (e.g. list, set, dictionary, tuple, string) and returns a map object. nums = [1/3, 333/7, 2323/2230, 40/34, 2/3] nums_squared = [num * num for num in nums] print(nums_squared) ==&gt; [0.1111111, 2263.04081632, 1.085147, 1.384083, 0.44444444] This is the same as calling using map with a callback function. nums_squared_1 = map(square_fn, nums) nums_squared_2 = map(lambda x: x * x, nums) print(list(nums_squared_1)) ==&gt; [0.1111111, 2263.04081632, 1.085147, 1.384083, 0.44444444] You can also use map with more than one iterable. For example, if you want to calculate the mean squared error of a simple linear function f(x) = ax + b with the true label labels, these two methods are equivalent: a, b = 3, -0.5 xs = [2, 3, 4, 5] labels = [6.4, 8.9, 10.9, 15.3] # Method 1: using a loop errors = [] for i, x in enumerate(xs): errors.append((a * x + b - labels[i]) ** 2) result1 = sum(errors) ** 0.5 / len(xs) # Method 2: using map diffs = map(lambda x, y: (a * x + b - y) ** 2, xs, labels) result2 = sum(diffs) ** 0.5 / len(xs) print(result1, result2) ==&gt; 0.35089172119045514 0.35089172119045514 Note that objects returned by map and filter are iterators, which means that their values aren’t stored but generated as needed. After you’ve called sum(diffs), diffs becomes empty. If you want to keep all elements in diffs, convert it to a list using list(diffs). filter(fn, iterable) works the same way as map, except that fn returns a boolean value and filter returns all the elements of the iterable for which the fn returns True. bad_preds = filter(lambda x: x &gt; 0.5, errors) print(list(bad_preds)) ==&gt; [0.8100000000000006, 0.6400000000000011] reduce(fn, iterable, initializer) is used when we want to iteratively apply an operator to all elements in a list. For example, if we want to calculate the product of all elements in a list: product = 1 for num in nums: product *= num print(product) ==&gt; 12.95564683272412 This is equivalent to: from functools import reduce product = reduce(lambda x, y: x * y, nums) print(product) ==&gt; 12.95564683272412 Note on the performance of lambda functions Lambda functions are meant for one time use. Each time lambda x: dosomething(x) is called, the function has to be created, which hurts the performance if you call lambda x: dosomething(x) multiple times (e.g. when you pass it inside reduce). When you assign a name to the lambda function as in fn = lambda x: dosomething(x), its performance is slightly slower than the same function defined using def, but the difference is negligible. See here. Even though I find lambdas cool, I personally recommend using named functions when you can for the sake of clarity. 2. List manipulation Python lists are super cool. 2.1 Unpacking We can unpack a list by each element like this: elems = [1, 2, 3, 4] a, b, c, d = elems print(a, b, c, d) ==&gt; 1 2 3 4 We can also unpack a list like this: a, *new_elems, d = elems print(a) print(new_elems) print(d) ==&gt; 1 [2, 3] 4 2.2 Slicing We know that we can reverse a list using [::-1]. elems = list(range(10)) print(elems) ==&gt; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] print(elems[::-1]) ==&gt; [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] The syntax [x:y:z] means &quot;take every zth element of a list from index x to index y&quot;. When z is negative, it indicates going backwards. When x isn’t specified, it defaults to the first element of the list in the direction you are traversing the list. When y isn’t specified, it defaults to the last element of the list. So if we want to take every 2th element of a list, we use [::2]. evens = elems[::2] print(evens) reversed_evens = elems[-2::-2] print(reversed_evens) ==&gt; [0, 2, 4, 6, 8] [8, 6, 4, 2, 0] We can also use slicing to delete all the even numbers in the list. del elems[::2] print(elems) ==&gt; [1, 3, 5, 7, 9] 2.3 Insertion We can change the value of an element in a list to another value. elems = list(range(10)) elems[1] = 10 print(elems) ==&gt; [0, 10, 2, 3, 4, 5, 6, 7, 8, 9] If we want to replace the element at an index with multiple elements, e.g. replace the value 1 with 3 values 20, 30, 40: elems = list(range(10)) elems[1:2] = [20, 30, 40] print(elems) ==&gt; [0, 20, 30, 40, 2, 3, 4, 5, 6, 7, 8, 9] If we want to insert 3 values 0.2, 0.3, 0.5 between element at index 0 and element at index 1: elems = list(range(10)) elems[1:1] = [0.2, 0.3, 0.5] print(elems) ==&gt; [0, 0.2, 0.3, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9] 2.4 Flattening We can flatten a list of lists using sum. list_of_lists = [[1], [2, 3], [4, 5, 6]] sum(list_of_lists, []) ==&gt; [1, 2, 3, 4, 5, 6] If we have nested lists, we can recursively flatten it. That’s another beauty of lambda functions – we can use it in the same line as its creation. nested_lists = [[1, 2], [[3, 4], [5, 6], [[7, 8], [9, 10], [[11, [12, 13]]]]]] flatten = lambda x: [y for l in x for y in flatten(l)] if type(x) is list else [x] flatten(nested_lists) # This line of code is from # https://github.com/sahands/python-by-example/blob/master/python-by-example.rst#flattening-lists 2.5 List vs generator To illustrate the difference between a list and a generator, let’s look at an example of creating n-grams out of a list of tokens. One way to create n-grams is to use a sliding window. tokens = ['i', 'want', 'to', 'go', 'to', 'school'] def ngrams(tokens, n): length = len(tokens) grams = [] for i in range(length - n + 1): grams.append(tokens[i:i+n]) return grams print(ngrams(tokens, 3)) ==&gt; [['i', 'want', 'to'], ['want', 'to', 'go'], ['to', 'go', 'to'], ['go', 'to', 'school']] In the above example, we have to store all the n-grams at the same time. If the text has m tokens, then the memory requirement is O(nm), which can be problematic when m is large. Instead of using a list to store all n-grams, we can use a generator that generates the next n-gram when it’s asked for. This is known as lazy evaluation. We can make the function ngrams returns a generator using the keyword yield. Then the memory requirement is O(m+n). def ngrams(tokens, n): length = len(tokens) for i in range(length - n + 1): yield tokens[i:i+n] ngrams_generator = ngrams(tokens, 3) print(ngrams_generator) ==&gt; &lt;generator object ngrams at 0x1069b26d0&gt; for ngram in ngrams_generator: print(ngram) ==&gt; ['i', 'want', 'to'] ['want', 'to', 'go'] ['to', 'go', 'to'] ['go', 'to', 'school'] Another way to generate n-grams is to use slices to create lists: [0, 1, ..., -n], [1, 2, ..., -n+1], …, [n-1, n, ..., -1], and then zip them together. def ngrams(tokens, n): length = len(tokens) slices = (tokens[i:length-n+i+1] for i in range(n)) return zip(*slices) ngrams_generator = ngrams(tokens, 3) print(ngrams_generator) ==&gt; &lt;zip object at 0x1069a7dc8&gt; # zip objects are generators for ngram in ngrams_generator: print(ngram) ==&gt; ('i', 'want', 'to') ('want', 'to', 'go') ('to', 'go', 'to') ('go', 'to', 'school') Note that to create slices, we use (tokens[...] for i in range(n)) instead of [tokens[...] for i in range(n)]. [] is the normal list comprehension that returns a list. () returns a generator. 3. Classes and magic methods In Python, magic methods are prefixed and suffixed with the double underscore __, also known as dunder. The most wellknown magic method is probably __init__. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right When we try to print out a Node object, however, it’s not very interpretable. root = Node(5) print(root) # &lt;__main__.Node object at 0x1069c4518&gt; Ideally, when user prints out a node, we want to print out the node’s value and the values of its children if it has children. To do so, we use the magic method __repr__, which must return a printable object, like string. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right def __repr__(self): strings = [f'value: {self.value}'] strings.append(f'left: {self.left.value}' if self.left else 'left: None') strings.append(f'right: {self.right.value}' if self.right else 'right: None') return ', '.join(strings) left = Node(4) root = Node(5, left) print(root) # value: 5, left: 4, right: None We’d also like to compare two nodes by comparing their values. To do so, we overload the operator == with __eq__, &lt; with __lt__, and &gt;= with __ge__. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right def __eq__(self, other): return self.value == other.value def __lt__(self, other): return self.value &lt; other.value def __ge__(self, other): return self.value &gt;= other.value left = Node(4) root = Node(5, left) print(left == root) # False print(left &lt; root) # True print(left &gt;= root) # False For a comprehensive list of supported magic methods here or see the official Python documentation here (slightly harder to read). Some of the methods that I highly recommend: __len__: to overload the len() function. __str__: to overload the str() function. __iter__: if you want to your objects to be iterators. This also allows you to call next() on your object. For classes like Node where we know for sure all the attributes they can support (in the case of Node, they are value, left, and right), we might want to use __slots__ to denote those values for both performance boost and memory saving. For a comprehensive understanding of pros and cons of __slots__, see this absolutely amazing answer by Aaron Hall on StackOverflow. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; __slots__ = ('value', 'left', 'right') def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right 4. local namespace, object’s attributes The locals() function returns a dictionary containing the variables defined in the local namespace. class Model1: def __init__(self, hidden_size=100, num_layers=3, learning_rate=3e-4): print(locals()) self.hidden_size = hidden_size self.num_layers = num_layers self.learning_rate = learning_rate model1 = Model1() ==&gt; {'learning_rate': 0.0003, 'num_layers': 3, 'hidden_size': 100, 'self': &lt;__main__.Model1 object at 0x1069b1470&gt;} All attributes of an object are stored in its __dict__. print(model1.__dict__) ==&gt; {'hidden_size': 100, 'num_layers': 3, 'learning_rate': 0.0003} Note that manually assigning each of the arguments to an attribute can be quite tiring when the list of the arguments is large. To avoid this, we can directly assign the list of arguments to the object’s __dict__. class Model2: def __init__(self, hidden_size=100, num_layers=3, learning_rate=3e-4): params = locals() del params['self'] self.__dict__ = params model2 = Model2() print(model2.__dict__) ==&gt; {'learning_rate': 0.0003, 'num_layers': 3, 'hidden_size': 100} This can be especially convenient when the object is initiated using the catch-all **kwargs, though the use of **kwargs should be reduced to the minimum. class Model3: def __init__(self, **kwargs): self.__dict__ = kwargs model3 = Model3(hidden_size=100, num_layers=3, learning_rate=3e-4) print(model3.__dict__) ==&gt; {'hidden_size': 100, 'num_layers': 3, 'learning_rate': 0.0003} 5. Wild import Often, you run into this wild import * that looks something like this: file.py from parts import * This is irresponsible because it will import everything in module, even the imports of that module. For example, if parts.py looks like this: parts.py import numpy import tensorflow class Encoder: ... class Decoder: ... class Loss: ... def helper(*args, **kwargs): ... def utils(*args, **kwargs): ... Since parts.py doesn’t have __all__ specified, file.py will import Encoder, Decoder, Loss, utils, helper together with numpy and tensorflow. If we intend that only Encoder, Decoder, and Loss are ever to be imported and used in another module, we should specify that in parts.py using the __all__ keyword. parts.py __all__ = ['Encoder', 'Decoder', 'Loss'] import numpy import tensorflow class Encoder: ... Now, if some user irresponsibly does a wild import with parts, they can only import Encoder, Decoder, Loss. Personally, I also find __all__ helpful as it gives me an overview of the module. 6. Decorator to time your functions It’s often useful to know how long it takes a function to run, e.g. when you need to compare the performance of two algorithms that do the same thing. One naive way is to call time.time() at the begin and end of each function and print out the difference. For example: compare two algorithms to calculate the n-th Fibonacci number, one uses memoization and one doesn’t. def fib_helper(n): if n &lt; 2: return n return fib_helper(n - 1) + fib_helper(n - 2) def fib(n): &quot;&quot;&quot; fib is a wrapper function so that later we can change its behavior at the top level without affecting the behavior at every recursion step. &quot;&quot;&quot; return fib_helper(n) def fib_m_helper(n, computed): if n in computed: return computed[n] computed[n] = fib_m_helper(n - 1, computed) + fib_m_helper(n - 2, computed) return computed[n] def fib_m(n): return fib_m_helper(n, {0: 0, 1: 1}) Let’s make sure that fib and fib_m are functionally equivalent. for n in range(20): assert fib(n) == fib_m(n) import time start = time.time() fib(30) print(f'Without memoization, it takes {time.time() - start:7f} seconds.') ==&gt; Without memoization, it takes 0.267569 seconds. start = time.time() fib_m(30) print(f'With memoization, it takes {time.time() - start:.7f} seconds.') ==&gt; With memoization, it takes 0.0000713 seconds. If you want to time multiple functions, it can be a drag having to write the same code over and over again. It’d be nice to have a way to specify how to change any function in the same way. In this case would be to call time.time() at the beginning and the end of each function, and print out the time difference. This is exactly what decorators do. They allow programmers to change the behavior of a function or class. Here’s an example to create a decorator timeit. def timeit(fn): # *args and **kwargs are to support positional and named arguments of fn def get_time(*args, **kwargs): start = time.time() output = fn(*args, **kwargs) print(f&quot;Time taken in {fn.__name__}: {time.time() - start:.7f}&quot;) return output # make sure that the decorator returns the output of fn return get_time Add the decorator @timeit to your functions. @timeit def fib(n): return fib_helper(n) @timeit def fib_m(n): return fib_m_helper(n, {0: 0, 1: 1}) fib(30) fib_m(30) ==&gt; Time taken in fib: 0.2787242 ==&gt; Time taken in fib_m: 0.0000138 7. Caching with @functools.lru_cache Memoization is a form of cache: we cache the previously calculated Fibonacci numbers so that we don’t have to calculate them again. Caching is such an important technique that Python provides a built-in decorator to give your function the caching capacity. If you want fib_helper to reuse the previously calculated Fibonacci numbers, you can just add the decorator lru_cache from functools. lru stands for “least recently used”. For more information on cache, see here. import functools @functools.lru_cache() def fib_helper(n): if n &lt; 2: return n return fib_helper(n - 1) + fib_helper(n - 2) @timeit def fib(n): &quot;&quot;&quot; fib is a wrapper function so that later we can change its behavior at the top level without affecting the behavior at every recursion step. &quot;&quot;&quot; return fib_helper(n) fib(50) fib_m(50) ==&gt; Time taken in fib: 0.0000412 ==&gt; Time taken in fib_m: 0.0000281 Source : Huyen Chip">
+<link rel="canonical" href="http://hmthanh.github.io/blog/python/2020/11/01/python-is-cool.html">
+<meta property="og:url" content="http://hmthanh.github.io/blog/python/2020/11/01/python-is-cool.html">
+<meta property="og:site_name" content="Minh-Thanh">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-11-01T11:04:17+07:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Python is Cool">
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2020-11-01T11:04:17+07:00","url":"http://hmthanh.github.io/blog/python/2020/11/01/python-is-cool.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://hmthanh.github.io/blog/python/2020/11/01/python-is-cool.html"},"author":{"@type":"Person","name":"Huyen Chip"},"headline":"Python is Cool","description":"1. Lambda, map, filter, reduce The lambda keyword is used to create inline functions. The functionssquare_fn and square_ld below are identical. def square_fn(x): return x * x square_ld = lambda x: x * x for i in range(10): assert square_fn(i) == square_ld(i) Its quick declaration makes lambda functions ideal for use in callbacks, and when functions are to be passed as arguments to other functions. They are especially useful when used in conjunction with functions like map, filter, and reduce. map(fn, iterable) applies the fn to all elements of the iterable (e.g. list, set, dictionary, tuple, string) and returns a map object. nums = [1/3, 333/7, 2323/2230, 40/34, 2/3] nums_squared = [num * num for num in nums] print(nums_squared) ==&gt; [0.1111111, 2263.04081632, 1.085147, 1.384083, 0.44444444] This is the same as calling using map with a callback function. nums_squared_1 = map(square_fn, nums) nums_squared_2 = map(lambda x: x * x, nums) print(list(nums_squared_1)) ==&gt; [0.1111111, 2263.04081632, 1.085147, 1.384083, 0.44444444] You can also use map with more than one iterable. For example, if you want to calculate the mean squared error of a simple linear function f(x) = ax + b with the true label labels, these two methods are equivalent: a, b = 3, -0.5 xs = [2, 3, 4, 5] labels = [6.4, 8.9, 10.9, 15.3] # Method 1: using a loop errors = [] for i, x in enumerate(xs): errors.append((a * x + b - labels[i]) ** 2) result1 = sum(errors) ** 0.5 / len(xs) # Method 2: using map diffs = map(lambda x, y: (a * x + b - y) ** 2, xs, labels) result2 = sum(diffs) ** 0.5 / len(xs) print(result1, result2) ==&gt; 0.35089172119045514 0.35089172119045514 Note that objects returned by map and filter are iterators, which means that their values aren’t stored but generated as needed. After you’ve called sum(diffs), diffs becomes empty. If you want to keep all elements in diffs, convert it to a list using list(diffs). filter(fn, iterable) works the same way as map, except that fn returns a boolean value and filter returns all the elements of the iterable for which the fn returns True. bad_preds = filter(lambda x: x &gt; 0.5, errors) print(list(bad_preds)) ==&gt; [0.8100000000000006, 0.6400000000000011] reduce(fn, iterable, initializer) is used when we want to iteratively apply an operator to all elements in a list. For example, if we want to calculate the product of all elements in a list: product = 1 for num in nums: product *= num print(product) ==&gt; 12.95564683272412 This is equivalent to: from functools import reduce product = reduce(lambda x, y: x * y, nums) print(product) ==&gt; 12.95564683272412 Note on the performance of lambda functions Lambda functions are meant for one time use. Each time lambda x: dosomething(x) is called, the function has to be created, which hurts the performance if you call lambda x: dosomething(x) multiple times (e.g. when you pass it inside reduce). When you assign a name to the lambda function as in fn = lambda x: dosomething(x), its performance is slightly slower than the same function defined using def, but the difference is negligible. See here. Even though I find lambdas cool, I personally recommend using named functions when you can for the sake of clarity. 2. List manipulation Python lists are super cool. 2.1 Unpacking We can unpack a list by each element like this: elems = [1, 2, 3, 4] a, b, c, d = elems print(a, b, c, d) ==&gt; 1 2 3 4 We can also unpack a list like this: a, *new_elems, d = elems print(a) print(new_elems) print(d) ==&gt; 1 [2, 3] 4 2.2 Slicing We know that we can reverse a list using [::-1]. elems = list(range(10)) print(elems) ==&gt; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] print(elems[::-1]) ==&gt; [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] The syntax [x:y:z] means &quot;take every zth element of a list from index x to index y&quot;. When z is negative, it indicates going backwards. When x isn’t specified, it defaults to the first element of the list in the direction you are traversing the list. When y isn’t specified, it defaults to the last element of the list. So if we want to take every 2th element of a list, we use [::2]. evens = elems[::2] print(evens) reversed_evens = elems[-2::-2] print(reversed_evens) ==&gt; [0, 2, 4, 6, 8] [8, 6, 4, 2, 0] We can also use slicing to delete all the even numbers in the list. del elems[::2] print(elems) ==&gt; [1, 3, 5, 7, 9] 2.3 Insertion We can change the value of an element in a list to another value. elems = list(range(10)) elems[1] = 10 print(elems) ==&gt; [0, 10, 2, 3, 4, 5, 6, 7, 8, 9] If we want to replace the element at an index with multiple elements, e.g. replace the value 1 with 3 values 20, 30, 40: elems = list(range(10)) elems[1:2] = [20, 30, 40] print(elems) ==&gt; [0, 20, 30, 40, 2, 3, 4, 5, 6, 7, 8, 9] If we want to insert 3 values 0.2, 0.3, 0.5 between element at index 0 and element at index 1: elems = list(range(10)) elems[1:1] = [0.2, 0.3, 0.5] print(elems) ==&gt; [0, 0.2, 0.3, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9] 2.4 Flattening We can flatten a list of lists using sum. list_of_lists = [[1], [2, 3], [4, 5, 6]] sum(list_of_lists, []) ==&gt; [1, 2, 3, 4, 5, 6] If we have nested lists, we can recursively flatten it. That’s another beauty of lambda functions – we can use it in the same line as its creation. nested_lists = [[1, 2], [[3, 4], [5, 6], [[7, 8], [9, 10], [[11, [12, 13]]]]]] flatten = lambda x: [y for l in x for y in flatten(l)] if type(x) is list else [x] flatten(nested_lists) # This line of code is from # https://github.com/sahands/python-by-example/blob/master/python-by-example.rst#flattening-lists 2.5 List vs generator To illustrate the difference between a list and a generator, let’s look at an example of creating n-grams out of a list of tokens. One way to create n-grams is to use a sliding window. tokens = [&#39;i&#39;, &#39;want&#39;, &#39;to&#39;, &#39;go&#39;, &#39;to&#39;, &#39;school&#39;] def ngrams(tokens, n): length = len(tokens) grams = [] for i in range(length - n + 1): grams.append(tokens[i:i+n]) return grams print(ngrams(tokens, 3)) ==&gt; [[&#39;i&#39;, &#39;want&#39;, &#39;to&#39;], [&#39;want&#39;, &#39;to&#39;, &#39;go&#39;], [&#39;to&#39;, &#39;go&#39;, &#39;to&#39;], [&#39;go&#39;, &#39;to&#39;, &#39;school&#39;]] In the above example, we have to store all the n-grams at the same time. If the text has m tokens, then the memory requirement is O(nm), which can be problematic when m is large. Instead of using a list to store all n-grams, we can use a generator that generates the next n-gram when it’s asked for. This is known as lazy evaluation. We can make the function ngrams returns a generator using the keyword yield. Then the memory requirement is O(m+n). def ngrams(tokens, n): length = len(tokens) for i in range(length - n + 1): yield tokens[i:i+n] ngrams_generator = ngrams(tokens, 3) print(ngrams_generator) ==&gt; &lt;generator object ngrams at 0x1069b26d0&gt; for ngram in ngrams_generator: print(ngram) ==&gt; [&#39;i&#39;, &#39;want&#39;, &#39;to&#39;] [&#39;want&#39;, &#39;to&#39;, &#39;go&#39;] [&#39;to&#39;, &#39;go&#39;, &#39;to&#39;] [&#39;go&#39;, &#39;to&#39;, &#39;school&#39;] Another way to generate n-grams is to use slices to create lists: [0, 1, ..., -n], [1, 2, ..., -n+1], …, [n-1, n, ..., -1], and then zip them together. def ngrams(tokens, n): length = len(tokens) slices = (tokens[i:length-n+i+1] for i in range(n)) return zip(*slices) ngrams_generator = ngrams(tokens, 3) print(ngrams_generator) ==&gt; &lt;zip object at 0x1069a7dc8&gt; # zip objects are generators for ngram in ngrams_generator: print(ngram) ==&gt; (&#39;i&#39;, &#39;want&#39;, &#39;to&#39;) (&#39;want&#39;, &#39;to&#39;, &#39;go&#39;) (&#39;to&#39;, &#39;go&#39;, &#39;to&#39;) (&#39;go&#39;, &#39;to&#39;, &#39;school&#39;) Note that to create slices, we use (tokens[...] for i in range(n)) instead of [tokens[...] for i in range(n)]. [] is the normal list comprehension that returns a list. () returns a generator. 3. Classes and magic methods In Python, magic methods are prefixed and suffixed with the double underscore __, also known as dunder. The most wellknown magic method is probably __init__. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right When we try to print out a Node object, however, it’s not very interpretable. root = Node(5) print(root) # &lt;__main__.Node object at 0x1069c4518&gt; Ideally, when user prints out a node, we want to print out the node’s value and the values of its children if it has children. To do so, we use the magic method __repr__, which must return a printable object, like string. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right def __repr__(self): strings = [f&#39;value: {self.value}&#39;] strings.append(f&#39;left: {self.left.value}&#39; if self.left else &#39;left: None&#39;) strings.append(f&#39;right: {self.right.value}&#39; if self.right else &#39;right: None&#39;) return &#39;, &#39;.join(strings) left = Node(4) root = Node(5, left) print(root) # value: 5, left: 4, right: None We’d also like to compare two nodes by comparing their values. To do so, we overload the operator == with __eq__, &lt; with __lt__, and &gt;= with __ge__. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right def __eq__(self, other): return self.value == other.value def __lt__(self, other): return self.value &lt; other.value def __ge__(self, other): return self.value &gt;= other.value left = Node(4) root = Node(5, left) print(left == root) # False print(left &lt; root) # True print(left &gt;= root) # False For a comprehensive list of supported magic methods here or see the official Python documentation here (slightly harder to read). Some of the methods that I highly recommend: __len__: to overload the len() function. __str__: to overload the str() function. __iter__: if you want to your objects to be iterators. This also allows you to call next() on your object. For classes like Node where we know for sure all the attributes they can support (in the case of Node, they are value, left, and right), we might want to use __slots__ to denote those values for both performance boost and memory saving. For a comprehensive understanding of pros and cons of __slots__, see this absolutely amazing answer by Aaron Hall on StackOverflow. class Node: &quot;&quot;&quot; A struct to denote the node of a binary tree. It contains a value and pointers to left and right children. &quot;&quot;&quot; __slots__ = (&#39;value&#39;, &#39;left&#39;, &#39;right&#39;) def __init__(self, value, left=None, right=None): self.value = value self.left = left self.right = right 4. local namespace, object’s attributes The locals() function returns a dictionary containing the variables defined in the local namespace. class Model1: def __init__(self, hidden_size=100, num_layers=3, learning_rate=3e-4): print(locals()) self.hidden_size = hidden_size self.num_layers = num_layers self.learning_rate = learning_rate model1 = Model1() ==&gt; {&#39;learning_rate&#39;: 0.0003, &#39;num_layers&#39;: 3, &#39;hidden_size&#39;: 100, &#39;self&#39;: &lt;__main__.Model1 object at 0x1069b1470&gt;} All attributes of an object are stored in its __dict__. print(model1.__dict__) ==&gt; {&#39;hidden_size&#39;: 100, &#39;num_layers&#39;: 3, &#39;learning_rate&#39;: 0.0003} Note that manually assigning each of the arguments to an attribute can be quite tiring when the list of the arguments is large. To avoid this, we can directly assign the list of arguments to the object’s __dict__. class Model2: def __init__(self, hidden_size=100, num_layers=3, learning_rate=3e-4): params = locals() del params[&#39;self&#39;] self.__dict__ = params model2 = Model2() print(model2.__dict__) ==&gt; {&#39;learning_rate&#39;: 0.0003, &#39;num_layers&#39;: 3, &#39;hidden_size&#39;: 100} This can be especially convenient when the object is initiated using the catch-all **kwargs, though the use of **kwargs should be reduced to the minimum. class Model3: def __init__(self, **kwargs): self.__dict__ = kwargs model3 = Model3(hidden_size=100, num_layers=3, learning_rate=3e-4) print(model3.__dict__) ==&gt; {&#39;hidden_size&#39;: 100, &#39;num_layers&#39;: 3, &#39;learning_rate&#39;: 0.0003} 5. Wild import Often, you run into this wild import * that looks something like this: file.py from parts import * This is irresponsible because it will import everything in module, even the imports of that module. For example, if parts.py looks like this: parts.py import numpy import tensorflow class Encoder: ... class Decoder: ... class Loss: ... def helper(*args, **kwargs): ... def utils(*args, **kwargs): ... Since parts.py doesn’t have __all__ specified, file.py will import Encoder, Decoder, Loss, utils, helper together with numpy and tensorflow. If we intend that only Encoder, Decoder, and Loss are ever to be imported and used in another module, we should specify that in parts.py using the __all__ keyword. parts.py __all__ = [&#39;Encoder&#39;, &#39;Decoder&#39;, &#39;Loss&#39;] import numpy import tensorflow class Encoder: ... Now, if some user irresponsibly does a wild import with parts, they can only import Encoder, Decoder, Loss. Personally, I also find __all__ helpful as it gives me an overview of the module. 6. Decorator to time your functions It’s often useful to know how long it takes a function to run, e.g. when you need to compare the performance of two algorithms that do the same thing. One naive way is to call time.time() at the begin and end of each function and print out the difference. For example: compare two algorithms to calculate the n-th Fibonacci number, one uses memoization and one doesn’t. def fib_helper(n): if n &lt; 2: return n return fib_helper(n - 1) + fib_helper(n - 2) def fib(n): &quot;&quot;&quot; fib is a wrapper function so that later we can change its behavior at the top level without affecting the behavior at every recursion step. &quot;&quot;&quot; return fib_helper(n) def fib_m_helper(n, computed): if n in computed: return computed[n] computed[n] = fib_m_helper(n - 1, computed) + fib_m_helper(n - 2, computed) return computed[n] def fib_m(n): return fib_m_helper(n, {0: 0, 1: 1}) Let’s make sure that fib and fib_m are functionally equivalent. for n in range(20): assert fib(n) == fib_m(n) import time start = time.time() fib(30) print(f&#39;Without memoization, it takes {time.time() - start:7f} seconds.&#39;) ==&gt; Without memoization, it takes 0.267569 seconds. start = time.time() fib_m(30) print(f&#39;With memoization, it takes {time.time() - start:.7f} seconds.&#39;) ==&gt; With memoization, it takes 0.0000713 seconds. If you want to time multiple functions, it can be a drag having to write the same code over and over again. It’d be nice to have a way to specify how to change any function in the same way. In this case would be to call time.time() at the beginning and the end of each function, and print out the time difference. This is exactly what decorators do. They allow programmers to change the behavior of a function or class. Here’s an example to create a decorator timeit. def timeit(fn): # *args and **kwargs are to support positional and named arguments of fn def get_time(*args, **kwargs): start = time.time() output = fn(*args, **kwargs) print(f&quot;Time taken in {fn.__name__}: {time.time() - start:.7f}&quot;) return output # make sure that the decorator returns the output of fn return get_time Add the decorator @timeit to your functions. @timeit def fib(n): return fib_helper(n) @timeit def fib_m(n): return fib_m_helper(n, {0: 0, 1: 1}) fib(30) fib_m(30) ==&gt; Time taken in fib: 0.2787242 ==&gt; Time taken in fib_m: 0.0000138 7. Caching with @functools.lru_cache Memoization is a form of cache: we cache the previously calculated Fibonacci numbers so that we don’t have to calculate them again. Caching is such an important technique that Python provides a built-in decorator to give your function the caching capacity. If you want fib_helper to reuse the previously calculated Fibonacci numbers, you can just add the decorator lru_cache from functools. lru stands for “least recently used”. For more information on cache, see here. import functools @functools.lru_cache() def fib_helper(n): if n &lt; 2: return n return fib_helper(n - 1) + fib_helper(n - 2) @timeit def fib(n): &quot;&quot;&quot; fib is a wrapper function so that later we can change its behavior at the top level without affecting the behavior at every recursion step. &quot;&quot;&quot; return fib_helper(n) fib(50) fib_m(50) ==&gt; Time taken in fib: 0.0000412 ==&gt; Time taken in fib_m: 0.0000281 Source : Huyen Chip","dateModified":"2020-11-01T11:04:17+07:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="http://hmthanh.github.io/blog/feed.xml" title="Minh-Thanh">
+</head>
+<body>
+    <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+            <header class="post-header">
+                <a class="back" href="/blog/"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"></path></svg>Back Home</a>
+                <h1 class="post-title p-name" itemprop="name headline" id="title">Python is Cool</h1>
+                <p class="post-meta">
+                    <time class="dt-published" datetime="2020-11-01T11:04:17+07:00" itemprop="datePublished">Nov 1, 2020
+            </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Huyen Chip</span></span></p>
+                    
+            </header>
+            
+
+            <div class="post-content e-content" itemprop="articleBody">
+                <h2 id="1-lambda-map-filter-reduce">1. Lambda, map, filter, reduce</h2>
+<p>The lambda keyword is used to create inline functions. The functions<code>square_fn</code> and <code>square_ld</code> below are identical.</p>
+
+<pre><code class="language-python">def square_fn(x):
+    return x * x
+
+square_ld = lambda x: x * x
+
+for i in range(10):
+    assert square_fn(i) == square_ld(i)
+</code></pre>
+
+<p>Its quick declaration makes <code>lambda</code> functions ideal for use in callbacks, and when functions are to be passed as arguments to other functions. They are especially useful when used in conjunction with functions like <code>map</code>, <code>filter</code>, and <code>reduce</code>.</p>
+
+<p><code>map(fn, iterable)</code> applies the <code>fn</code> to all elements of the <code>iterable</code> (e.g. list, set, dictionary, tuple, string) and returns a map object.</p>
+
+<pre><code class="language-python">nums = [1/3, 333/7, 2323/2230, 40/34, 2/3]
+nums_squared = [num * num for num in nums]
+print(nums_squared)
+
+==&gt; [0.1111111, 2263.04081632, 1.085147, 1.384083, 0.44444444]
+</code></pre>
+
+<p>This is the same as calling using <code>map</code> with a callback function.</p>
+
+<pre><code class="language-python">nums_squared_1 = map(square_fn, nums)
+nums_squared_2 = map(lambda x: x * x, nums)
+print(list(nums_squared_1))
+
+==&gt; [0.1111111, 2263.04081632, 1.085147, 1.384083, 0.44444444]
+</code></pre>
+
+<p>You can also use <code>map</code> with more than one iterable. For example, if you want to calculate the mean squared error of a simple linear function <code>f(x) = ax + b</code> with the true label <code>labels</code>, these two methods are equivalent:</p>
+
+<pre><code class="language-python">a, b = 3, -0.5
+xs = [2, 3, 4, 5]
+labels = [6.4, 8.9, 10.9, 15.3]
+
+# Method 1: using a loop
+errors = []
+for i, x in enumerate(xs):
+    errors.append((a * x + b - labels[i]) ** 2)
+result1 = sum(errors) ** 0.5 / len(xs)
+
+# Method 2: using map
+diffs = map(lambda x, y: (a * x + b - y) ** 2, xs, labels)
+result2 = sum(diffs) ** 0.5 / len(xs)
+
+print(result1, result2)
+
+==&gt; 0.35089172119045514 0.35089172119045514
+</code></pre>
+
+<p>Note that objects returned by <code>map</code> and <code>filter</code> are iterators, which means that their values aren’t stored but generated as needed. After you’ve called <code>sum(diffs)</code>, <code>diffs</code> becomes empty. If you want to keep all elements in <code>diffs</code>, convert it to a list using <code>list(diffs)</code>.</p>
+
+<p><code>filter(fn, iterable)</code> works the same way as <code>map</code>, except that <code>fn</code> returns a boolean value and <code>filter</code> returns all the elements of the <code>iterable</code> for which the <code>fn</code> returns True.</p>
+
+<pre><code class="language-python">bad_preds = filter(lambda x: x &gt; 0.5, errors)
+print(list(bad_preds))
+
+==&gt; [0.8100000000000006, 0.6400000000000011]
+</code></pre>
+
+<p><code>reduce(fn, iterable, initializer)</code> is used when we want to iteratively apply an operator to all elements in a list. For example, if we want to calculate the product of all elements in a list:</p>
+
+<pre><code class="language-python">product = 1
+for num in nums:
+    product *= num
+print(product)
+
+==&gt; 12.95564683272412
+</code></pre>
+
+<p>This is equivalent to:</p>
+<pre><code class="language-python">from functools import reduce
+product = reduce(lambda x, y: x * y, nums)
+print(product)
+
+==&gt; 12.95564683272412
+</code></pre>
+
+<h3 id="note-on-the-performance-of-lambda-functions">Note on the performance of lambda functions</h3>
+
+<p>Lambda functions are meant for one time use. Each time <code>lambda x: dosomething(x)</code> is called, the function has to be created, which hurts the performance if you call <code>lambda x: dosomething(x)</code> multiple times (e.g. when you pass it inside <code>reduce</code>).</p>
+
+<p>When you assign a name to the lambda function as in <code>fn = lambda x: dosomething(x)</code>, its performance is slightly slower than the same function defined using <code>def</code>, but the difference is negligible. See <a href="https://stackoverflow.com/questions/26540885/lambda-is-slower-than-function-call-in-python-why">here</a>.</p>
+
+<p>Even though I find lambdas cool, I personally recommend using named functions when you can for the sake of clarity.</p>
+
+<h2 id="2-list-manipulation">2. List manipulation</h2>
+<p>Python lists are super cool.</p>
+
+<h3 id="21-unpacking">2.1 Unpacking</h3>
+<p>We can unpack a list by each element like this:</p>
+<pre><code class="language-python">elems = [1, 2, 3, 4]
+a, b, c, d = elems
+print(a, b, c, d)
+
+==&gt; 1 2 3 4
+</code></pre>
+
+<p>We can also unpack a list like this:</p>
+
+<pre><code class="language-python">a, *new_elems, d = elems
+print(a)
+print(new_elems)
+print(d)
+
+==&gt; 1
+    [2, 3]
+    4
+</code></pre>
+
+<h3 id="22-slicing">2.2 Slicing</h3>
+<p>We know that we can reverse a list using <code>[::-1]</code>.</p>
+
+<pre><code class="language-python">elems = list(range(10))
+print(elems)
+
+==&gt; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(elems[::-1])
+
+==&gt; [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+</code></pre>
+<p>The syntax <code>[x:y:z]</code> means "take every <code>z</code>th element of a list from index <code>x</code> to index <code>y</code>". When <code>z</code> is negative, it indicates going backwards. When <code>x</code> isn’t specified, it defaults to the first element of the list in the direction you are traversing the list. When <code>y</code> isn’t specified, it defaults to the last element of the list. So if we want to take every 2th element of a list, we use <code>[::2]</code>.</p>
+
+<pre><code class="language-python">evens = elems[::2]
+print(evens)
+
+reversed_evens = elems[-2::-2]
+print(reversed_evens)
+
+==&gt; [0, 2, 4, 6, 8]
+    [8, 6, 4, 2, 0]
+</code></pre>
+
+<p>We can also use slicing to delete all the even numbers in the list.</p>
+
+<pre><code class="language-python">del elems[::2]
+print(elems)
+
+==&gt; [1, 3, 5, 7, 9]
+</code></pre>
+
+<h3 id="23-insertion">2.3 Insertion</h3>
+<p>We can change the value of an element in a list to another value.</p>
+
+<pre><code class="language-python">elems = list(range(10))
+elems[1] = 10
+print(elems)
+
+==&gt; [0, 10, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre>
+
+<p>If we want to replace the element at an index with multiple elements, e.g. replace the value <code>1</code> with 3 values <code>20, 30, 40</code>:</p>
+
+<pre><code class="language-python">elems = list(range(10))
+elems[1:2] = [20, 30, 40]
+print(elems)
+
+==&gt; [0, 20, 30, 40, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre>
+
+<p>If we want to insert 3 values <code>0.2, 0.3, 0.5</code> between element at index 0 and element at index 1:</p>
+
+<pre><code class="language-python">elems = list(range(10))
+elems[1:1] = [0.2, 0.3, 0.5]
+print(elems)
+
+==&gt; [0, 0.2, 0.3, 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre>
+
+<h3 id="24-flattening">2.4 Flattening</h3>
+<p>We can flatten a list of lists using <code>sum</code>.</p>
+
+<pre><code class="language-python">list_of_lists = [[1], [2, 3], [4, 5, 6]]
+sum(list_of_lists, [])
+
+==&gt; [1, 2, 3, 4, 5, 6]
+</code></pre>
+
+<p>If we have nested lists, we can recursively flatten it. That’s another beauty of lambda functions – we can use it in the same line as its creation.</p>
+
+<pre><code class="language-python">nested_lists = [[1, 2], [[3, 4], [5, 6], [[7, 8], [9, 10], [[11, [12, 13]]]]]]
+flatten = lambda x: [y for l in x for y in flatten(l)] if type(x) is list else [x]
+flatten(nested_lists)
+
+# This line of code is from
+# https://github.com/sahands/python-by-example/blob/master/python-by-example.rst#flattening-lists
+</code></pre>
+
+<h3 id="25-list-vs-generator">2.5 List vs generator</h3>
+<p>To illustrate the difference between a list and a generator, let’s look at an example of creating n-grams out of a list of tokens.</p>
+
+<p>One way to create n-grams is to use a sliding window.</p>
+
+<pre><code class="language-python">tokens = ['i', 'want', 'to', 'go', 'to', 'school']
+
+def ngrams(tokens, n):
+    length = len(tokens)
+    grams = []
+    for i in range(length - n + 1):
+        grams.append(tokens[i:i+n])
+    return grams
+
+print(ngrams(tokens, 3))
+
+==&gt; [['i', 'want', 'to'],
+     ['want', 'to', 'go'],
+     ['to', 'go', 'to'],
+     ['go', 'to', 'school']]
+</code></pre>
+
+<p>In the above example, we have to store all the n-grams at the same time. If the text has m tokens, then the memory requirement is <code>O(nm)</code>, which can be problematic when m is large.</p>
+
+<p>Instead of using a list to store all n-grams, we can use a generator that generates the next n-gram when it’s asked for. This is known as lazy evaluation. We can make the function <code>ngrams</code> returns a generator using the keyword <code>yield</code>. Then the memory requirement is <code>O(m+n)</code>.</p>
+
+<pre><code class="language-python">def ngrams(tokens, n):
+    length = len(tokens)
+    for i in range(length - n + 1):
+        yield tokens[i:i+n]
+
+ngrams_generator = ngrams(tokens, 3)
+print(ngrams_generator)
+
+==&gt; &lt;generator object ngrams at 0x1069b26d0&gt;
+
+for ngram in ngrams_generator:
+    print(ngram)
+
+==&gt; ['i', 'want', 'to']
+    ['want', 'to', 'go']
+    ['to', 'go', 'to']
+    ['go', 'to', 'school']
+</code></pre>
+
+<p>Another way to generate n-grams is to use slices to create lists: <code>[0, 1, ..., -n]</code>, <code>[1, 2, ..., -n+1]</code>, …, <code>[n-1, n, ..., -1]</code>, and then <code>zip</code> them together.</p>
+
+<pre><code class="language-python">def ngrams(tokens, n):
+    length = len(tokens)
+    slices = (tokens[i:length-n+i+1] for i in range(n))
+    return zip(*slices)
+
+ngrams_generator = ngrams(tokens, 3)
+print(ngrams_generator)
+
+==&gt; &lt;zip object at 0x1069a7dc8&gt; # zip objects are generators
+
+for ngram in ngrams_generator:
+    print(ngram)
+
+==&gt; ('i', 'want', 'to')
+    ('want', 'to', 'go')
+    ('to', 'go', 'to')
+    ('go', 'to', 'school')
+</code></pre>
+
+<p>Note that to create slices, we use <code>(tokens[...] for i in range(n))</code> instead of <code>[tokens[...] for i in range(n)]</code>. <code>[]</code> is the normal list comprehension that returns a list. <code>()</code> returns a generator.</p>
+
+<h2 id="3-classes-and-magic-methods">3. Classes and magic methods</h2>
+<p>In Python, magic methods are prefixed and suffixed with the double underscore <code>__</code>, also known as dunder. The most wellknown magic method is probably <code>__init__</code>.</p>
+
+<pre><code class="language-python">class Node:
+    """ A struct to denote the node of a binary tree.
+    It contains a value and pointers to left and right children.
+    """
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+</code></pre>
+
+<p>When we try to print out a Node object, however, it’s not very interpretable.</p>
+
+<pre><code class="language-python">root = Node(5)
+print(root) # &lt;__main__.Node object at 0x1069c4518&gt;
+</code></pre>
+
+<p>Ideally, when user prints out a node, we want to print out the node’s value and the values of its children if it has children. To do so, we use the magic method <code>__repr__</code>, which must return a printable object, like string.</p>
+
+<pre><code class="language-python">class Node:
+    """ A struct to denote the node of a binary tree.
+    It contains a value and pointers to left and right children.
+    """
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+    def __repr__(self):
+        strings = [f'value: {self.value}']
+        strings.append(f'left: {self.left.value}' if self.left else 'left: None')
+        strings.append(f'right: {self.right.value}' if self.right else 'right: None')
+        return ', '.join(strings)
+
+left = Node(4)
+root = Node(5, left)
+print(root) # value: 5, left: 4, right: None
+</code></pre>
+
+<p>We’d also like to compare two nodes by comparing their values. To do so, we overload the operator <code>==</code> with <code>__eq__</code>, <code>&lt;</code> with <code>__lt__</code>, and <code>&gt;=</code> with <code>__ge__</code>.</p>
+
+<pre><code class="language-python">class Node:
+    """ A struct to denote the node of a binary tree.
+    It contains a value and pointers to left and right children.
+    """
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+    def __eq__(self, other):
+        return self.value == other.value
+
+    def __lt__(self, other):
+        return self.value &lt; other.value
+
+    def __ge__(self, other):
+        return self.value &gt;= other.value
+
+
+left = Node(4)
+root = Node(5, left)
+print(left == root) # False
+print(left &lt; root) # True
+print(left &gt;= root) # False
+</code></pre>
+
+<p>For a comprehensive list of supported magic methods <a href="https://www.tutorialsteacher.com/python/magic-methods-in-python">here</a> or see the official Python documentation <a href="https://docs.python.org/3/reference/datamodel.html#special-method-names">here</a> (slightly harder to read).</p>
+
+<p>Some of the methods that I highly recommend:</p>
+
+<ul>
+  <li>
+<code>__len__</code>: to overload the <code>len()</code> function.</li>
+  <li>
+<code>__str__</code>: to overload the <code>str()</code> function.</li>
+  <li>
+<code>__iter__</code>: if you want to your objects to be iterators. This also allows you to call <code>next()</code> on your object.</li>
+</ul>
+
+<p>For classes like Node where we know for sure all the attributes they can support (in the case of Node, they are <code>value</code>, <code>left</code>, and <code>right</code>), we might want to use <code>__slots__</code> to denote those values for both performance boost and memory saving. For a comprehensive understanding of pros and cons of <code>__slots__</code>, see this <a href="https://stackoverflow.com/a/28059785/5029595">absolutely amazing answer by Aaron Hall on StackOverflow</a>.</p>
+
+<pre><code class="language-python">class Node:
+    """ A struct to denote the node of a binary tree.
+    It contains a value and pointers to left and right children.
+    """
+    __slots__ = ('value', 'left', 'right')
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+</code></pre>
+<h2 id="4-local-namespace-objects-attributes">4. local namespace, object’s attributes</h2>
+<p>The <code>locals()</code> function returns a dictionary containing the variables defined in the local namespace.</p>
+
+<pre><code class="language-python">class Model1:
+    def __init__(self, hidden_size=100, num_layers=3, learning_rate=3e-4):
+        print(locals())
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+        self.learning_rate = learning_rate
+
+model1 = Model1()
+
+==&gt; {'learning_rate': 0.0003, 'num_layers': 3, 'hidden_size': 100, 'self': &lt;__main__.Model1 object at 0x1069b1470&gt;}
+</code></pre>
+
+<p>All attributes of an object are stored in its <code>__dict__</code>.</p>
+<pre><code class="language-python">print(model1.__dict__)
+
+==&gt; {'hidden_size': 100, 'num_layers': 3, 'learning_rate': 0.0003}
+</code></pre>
+
+<p>Note that manually assigning each of the arguments to an attribute can be quite tiring when the list of the arguments is large. To avoid this, we can directly assign the list of arguments to the object’s <code>__dict__</code>.</p>
+
+<pre><code class="language-python">class Model2:
+    def __init__(self, hidden_size=100, num_layers=3, learning_rate=3e-4):
+        params = locals()
+        del params['self']
+        self.__dict__ = params
+
+model2 = Model2()
+print(model2.__dict__)
+
+==&gt; {'learning_rate': 0.0003, 'num_layers': 3, 'hidden_size': 100}
+</code></pre>
+
+<p>This can be especially convenient when the object is initiated using the catch-all <code>**kwargs</code>, though the use of <code>**kwargs</code> should be reduced to the minimum.</p>
+
+<pre><code class="language-python">class Model3:
+    def __init__(self, **kwargs):
+        self.__dict__ = kwargs
+
+model3 = Model3(hidden_size=100, num_layers=3, learning_rate=3e-4)
+print(model3.__dict__)
+
+==&gt; {'hidden_size': 100, 'num_layers': 3, 'learning_rate': 0.0003}
+</code></pre>
+
+<h2 id="5-wild-import">5. Wild import</h2>
+<p>Often, you run into this wild import <code>*</code> that looks something like this:</p>
+
+<p><code>file.py</code></p>
+<pre><code class="language-python">    from parts import *
+</code></pre>
+
+<p>This is irresponsible because it will import everything in module, even the imports of that module. For example, if <code>parts.py</code> looks like this:</p>
+
+<p><code>parts.py</code></p>
+<pre><code class="language-python">import numpy
+import tensorflow
+
+class Encoder:
+    ...
+
+class Decoder:
+    ...
+
+class Loss:
+    ...
+
+def helper(*args, **kwargs):
+    ...
+
+def utils(*args, **kwargs):
+    ...
+</code></pre>
+
+<p>Since <code>parts.py</code> doesn’t have <code>__all__</code> specified, <code>file.py</code> will import Encoder, Decoder, Loss, utils, helper together with numpy and tensorflow.</p>
+
+<p>If we intend that only Encoder, Decoder, and Loss are ever to be imported and used in another module, we should specify that in <code>parts.py</code> using the <code>__all__</code> keyword.</p>
+
+<p><code>parts.py</code></p>
+<pre><code class="language-python"> __all__ = ['Encoder', 'Decoder', 'Loss']
+import numpy
+import tensorflow
+
+class Encoder:
+    ...
+</code></pre>
+<p>Now, if some user irresponsibly does a wild import with <code>parts</code>, they can only import Encoder, Decoder, Loss. Personally, I also find <code>__all__</code> helpful as it gives me an overview of the module.</p>
+
+<h2 id="6-decorator-to-time-your-functions">6. Decorator to time your functions</h2>
+<p>It’s often useful to know how long it takes a function to run, e.g. when you need to compare the performance of two algorithms that do the same thing. One naive way is to call <code>time.time()</code> at the begin and end of each function and print out the difference.</p>
+
+<p>For example: compare two algorithms to calculate the n-th Fibonacci number, one uses memoization and one doesn’t.</p>
+
+<pre><code class="language-python">def fib_helper(n):
+    if n &lt; 2:
+        return n
+    return fib_helper(n - 1) + fib_helper(n - 2)
+
+def fib(n):
+    """ fib is a wrapper function so that later we can change its behavior
+    at the top level without affecting the behavior at every recursion step.
+    """
+    return fib_helper(n)
+
+def fib_m_helper(n, computed):
+    if n in computed:
+        return computed[n]
+    computed[n] = fib_m_helper(n - 1, computed) + fib_m_helper(n - 2, computed)
+    return computed[n]
+
+def fib_m(n):
+    return fib_m_helper(n, {0: 0, 1: 1})
+</code></pre>
+
+<p>Let’s make sure that <code>fib</code> and <code>fib_m</code> are functionally equivalent.</p>
+
+<pre><code class="language-python">for n in range(20):
+    assert fib(n) == fib_m(n)
+</code></pre>
+
+<pre><code class="language-python">import time
+
+start = time.time()
+fib(30)
+print(f'Without memoization, it takes {time.time() - start:7f} seconds.')
+
+==&gt; Without memoization, it takes 0.267569 seconds.
+
+start = time.time()
+fib_m(30)
+print(f'With memoization, it takes {time.time() - start:.7f} seconds.')
+
+==&gt; With memoization, it takes 0.0000713 seconds.
+</code></pre>
+
+<p>If you want to time multiple functions, it can be a drag having to write the same code over and over again. It’d be nice to have a way to specify how to change any function in the same way. In this case would be to call time.time() at the beginning and the end of each function, and print out the time difference.</p>
+
+<p>This is exactly what decorators do. They allow programmers to change the behavior of a function or class. Here’s an example to create a decorator <code>timeit</code>.</p>
+
+<pre><code class="language-python">def timeit(fn): 
+    # *args and **kwargs are to support positional and named arguments of fn
+    def get_time(*args, **kwargs): 
+        start = time.time() 
+        output = fn(*args, **kwargs)
+        print(f"Time taken in {fn.__name__}: {time.time() - start:.7f}")
+        return output  # make sure that the decorator returns the output of fn
+    return get_time 
+</code></pre>
+
+<p>Add the decorator <code>@timeit</code> to your functions.</p>
+
+<pre><code class="language-python">@timeit
+def fib(n):
+    return fib_helper(n)
+
+@timeit
+def fib_m(n):
+    return fib_m_helper(n, {0: 0, 1: 1})
+
+fib(30)
+fib_m(30)
+
+==&gt; Time taken in fib: 0.2787242
+==&gt; Time taken in fib_m: 0.0000138
+</code></pre>
+
+<h2 id="7-caching-with-functoolslru_cache">7. Caching with @functools.lru_cache</h2>
+<p>Memoization is a form of cache: we cache the previously calculated Fibonacci numbers so that we don’t have to calculate them again.</p>
+
+<p>Caching is such an important technique that Python provides a built-in decorator to give your function the caching capacity. If you want <code>fib_helper</code> to reuse the previously calculated Fibonacci numbers, you can just add the decorator <code>lru_cache</code> from <code>functools</code>. <code>lru</code> stands for “least recently used”. For more information on cache, see <a href="https://docs.python.org/3/library/functools.html">here</a>.</p>
+
+<pre><code class="language-python">import functools
+
+@functools.lru_cache()
+def fib_helper(n):
+    if n &lt; 2:
+        return n
+    return fib_helper(n - 1) + fib_helper(n - 2)
+
+@timeit
+def fib(n):
+    """ fib is a wrapper function so that later we can change its behavior
+    at the top level without affecting the behavior at every recursion step.
+    """
+    return fib_helper(n)
+
+fib(50)
+fib_m(50)
+
+==&gt; Time taken in fib: 0.0000412
+==&gt; Time taken in fib_m: 0.0000281
+</code></pre>
+
+<p>Source : <a href="https://github.com/chiphuyen/python-is-cool">Huyen Chip</a></p>
+
+            </div>
+<a class="u-url" href="/blog/python/2020/11/01/python-is-cool.html" hidden></a>
+        </article>
+        
+
+        <div class="page-navigation">
+          
+          <a class="prev" href="/blog/deep-learning/2020/11/01/recipe-for-training-neural-network.html"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"></path></svg> A Recipe for Training Neural Networks</a>  
+          <a class="next" href="/blog/tutorial/2020/11/01/simple-vim-tutorial.html">Simple tutorial using VIM <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg></a> 
+      </div>
+    
+    </div>
+</main>
+<div class="scroll-top"><a href="#title" class="nav-top">Top <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512"><path d="M177 255.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 351.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 425.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1zm-34-192L7 199.7c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l96.4-96.4 96.4 96.4c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9l-136-136c-9.2-9.4-24.4-9.4-33.8 0z"></path></svg></a></div>
+<footer class="site-footer h-card">
+    <data class="u-url" href="/blog/"></data>
+
+    <div class="wrapper">
+        <div class="footer-col-wrapper">
+            <div><ul class="social-media-list">
+<li><a href="http://hmthanh.github.io/" target="_blank"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path></svg><span class="username">Website</span></a></li>
+<li><a href="mailto:hmthanhgm@gmail.com"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg> <span class="username">Email</span></a></li>
+<li><a href="https://www.facebook.com/hmthanhgm" target="_blank"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username">Facebook</span></a></li>
+<li><a href="https://github.com/hmthanh" target="_blank"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg>
+    <span class="username">Github</span></a></li>
+<li><a href="https://www.twitter.com/hmthanhgm" target="_blank"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">Twitter</span></a></li>
+<li>
+        <a href="/blog/%20/feed.xml">RSS</a>
+    </li>
+
+</ul></div>
+            <p>© 2020 Minh-Thanh</p>
+        </div>
+    </div>
+</footer>
+            <script>
+                window.onload = function () {
+                    var script = document.createElement('script');
+                    var firstScript = document.getElementsByTagName('script')[0];
+                    script.type = 'text/javascript';
+                    script.async = true;
+                    script.src = '/blog/sw-register.js?v=' + Date.now();
+                    firstScript.parentNode.insertBefore(script, firstScript);
+                };
+            </script>
+            </body>
+
+
+</html>
