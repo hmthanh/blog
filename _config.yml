@@ -18,13 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Minh-Thanh Hoang
+title: Minh-Thanh
 email: hmthanhgm@gmail.com
+website: "http://hmthanh.github.io/"
 description: >- # this means to ignore newlines until "baseurl:"
   ✨ _Your ambition outweighed your talent !_ ✨
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "http://hmthanh.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://hmthanh.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+email_username: hmthanhgm
 twitter_username: hmthanhgm
+website_username: hmthanh.github.io
 github_username:  hmthanh
 facebook_username: hmthanhgm
 
@@ -32,6 +35,13 @@ facebook_username: hmthanhgm
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-spaceship
+  - jekyll-analytics
+  - jekyll-paginate
+  - "jekyll-github-metadata"
+  - jekyll-mentions
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -52,3 +62,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+github: [metadata]

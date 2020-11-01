@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: home
 title: About
 permalink: /about/
 ---
-# Hi ! I'm Minh-Thanh Hoang 👋
+## Hi ! I'm Minh-Thanh Hoang 👋
 
 ## 🤗🤗🤗🤗
 
