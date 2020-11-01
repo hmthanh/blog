@@ -160,12 +160,11 @@ a {
  */
 
 blockquote {
-    color: $grey-color;
+    color: $grey-color-dark;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
     @include relative-font-size(1.125);
     letter-spacing: -1px;
-    font-style: italic;
     > :last-child {
         margin-bottom: 0;
     }
@@ -300,4 +299,26 @@ table {
     td {
         border: 1px solid $grey-color-light;
     }
+}
+
+table.info {
+    max-width: 100%;
+    border-top: 2px solid #828282;
+    border-bottom: 2px solid #828282;
+    margin: 20px auto;
+}
+
+table.info th,
+table.info td {
+    padding: 2px 6px;
+    text-align: left;
+}
+
+table.info th {
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8
+}
+
+table.info tr td>* {
+    margin: 0 !important;
 }

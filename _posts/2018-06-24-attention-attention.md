@@ -12,13 +12,6 @@ author: Lilian
 
 <!--more-->
 
-<span style="color: #286ee0;">[Updated on 2018-10-28: Add [Pointer Network](#pointer-network) and the [link](https://github.com/lilianweng/transformer-tensorflow) to my implementation of Transformer.]</span><br/>
-<span style="color: #286ee0;">[Updated on 2018-11-06: Add a [link](https://github.com/lilianweng/transformer-tensorflow) to the implementation of Transformer model.]</span><br/>
-<span style="color: #286ee0;">[Updated on 2018-11-18: Add [Neural Turing Machines](#neural-turing-machines).]</span><br/>
-<span style="color: #286ee0;">[Updated on 2019-07-18: Correct the mistake on using the term "self-attention" when introducing the [show-attention-tell](https://arxiv.org/abs/1502.03044) paper; moved it to [Self-Attention](#self-attention) section.]</span><br/>
-<span style="color: #286ee0;">[Updated on 2020-04-07: A follow-up post on improved Transformer models is [here]({{ site.baseurl }}{% post_url 2020-04-07-the-transformer-family %}).]</span>
-
-
 {: class="table-of-content"}
 * TOC
 {:toc}

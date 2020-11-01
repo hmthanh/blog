@@ -40,7 +40,7 @@ It has been almost two years since my last post on [attention]({{ site.baseurl }
 | $$S_i$$ | A collection of key positions for the $$i$$-th query $$\mathbf{q}_i$$ to attend to. |
 | $$\mathbf{A} \in \mathbb{R}^{L \times L}$$ | The self-attention matrix between a input sequence of lenght $$L$$ and itself. $$\mathbf{A} = \text{softmax}(\mathbf{Q}\mathbf{K}^\top / \sqrt{d_k})$$. |
 | $$a_{ij} \in \mathbf{A}$$ | The scalar attention score between query $$\mathbf{q}_i$$ and key $$\mathbf{k}_j$$.  
-| $$\mathbf{P} \in \mathbb{R}^{L \times d}$$ | position encoding matrix, where the $$i$$-th row $$\mathbf{p}_i$$ is the positional encoding for input $$\mathbf{x}_i$$. |
+| $$\mathbf{P} \in \ma  thbb{R}^{L \times d}$$ | position encoding matrix, where the $$i$$-th row $$\mathbf{p}_i$$ is the positional encoding for input $$\mathbf{x}_i$$. |
 
 
 
