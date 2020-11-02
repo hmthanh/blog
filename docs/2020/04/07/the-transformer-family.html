@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="The Transformer Family">
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"The Transformer Family","dateModified":"2020-04-07T19:00:00+07:00","datePublished":"2020-04-07T19:00:00+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://hmthanh.github.io/blog/2020/04/07/the-transformer-family.html"},"author":{"@type":"Person","name":"Lilian"},"url":"http://hmthanh.github.io/blog/2020/04/07/the-transformer-family.html","description":"Inspired by recent progress on various enhanced versions of Transformer models, this post presents how the vanilla Transformer can be improved for longer-term attention span, less memory and computation consumption, RL task solving, etc.","@context":"https://schema.org"}</script>
+{"dateModified":"2020-04-07T19:00:00+07:00","datePublished":"2020-04-07T19:00:00+07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://hmthanh.github.io/blog/2020/04/07/the-transformer-family.html"},"author":{"@type":"Person","name":"Lilian"},"url":"http://hmthanh.github.io/blog/2020/04/07/the-transformer-family.html","description":"Inspired by recent progress on various enhanced versions of Transformer models, this post presents how the vanilla Transformer can be improved for longer-term attention span, less memory and computation consumption, RL task solving, etc.","headline":"The Transformer Family","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="http://hmthanh.github.io/blog/feed.xml" title="Minh-Thanh's Blog">
@@ -198,7 +198,7 @@
 
 <p>where \([.;.]\) is a concatenation operation. \(\mathbf{W}^q_i, \mathbf{W}^k_i \in \mathbb{R}^{d \times d_k/h}, \mathbf{W}^v_i \in \mathbb{R}^{d \times d_v/h}\) are weight matrices to map input embeddings of size \(L \times d\) into query, key and value matrices. And \(\mathbf{W}^o \in \mathbb{R}^{d_v \times d}\) is the output linear transformation. All the weights should be learned during training.</p>
 
-<p style="width: 30%;" class="center"><img src="/blog/assets/images/multi-head-attention.png" alt="Multi-head scaled dot-product attention"></p>
+<p style="width: 30%;" class="center"><img src="/blog/assets/images/transformer/multi-head-attention.png" alt="Multi-head scaled dot-product attention"></p>
 <p><em>Fig. 1. Illustration of the multi-head scaled dot-product attention mechanism. (Image source: Figure 2 in <a href="https://arxiv.org/abs/1706.03762">Vaswani, et al., 2017</a>)</em></p>
 
 <h2 id="transformer">Transformer</h2>
@@ -211,7 +211,7 @@
 
 <p>The function of Transformer <strong>decoder</strong> is to retrieve information from the encoded representation. The architecture is quite similar to the encoder, except that the decoder contains two multi-head attention submodules instead of one in each identical repeating module. The first multi-head attention submodule is <em>masked</em> to prevent positions from attending to the future.</p>
 
-<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer.png" alt="Transformer"></p>
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer/transformer.png" alt="Transformer"></p>
 <p><em>Fig. 2. The architecture of the vanilla Transformer model. (Image source: <a href="/blog/blog/2018/06/24/attention-attention.html#full-architecture">Figure 17</a>)</em></p>
 
 <p><strong>Positional Encoding</strong></p>
@@ -228,7 +228,7 @@
 
 <p>In this way each dimension of the positional encoding corresponds to a sinusoid of different wavelengths in different dimensions, from \(2\pi\) to \(10000 \cdot 2\pi\).</p>
 
-<p style="width: 100%;" class="center"><img src="/blog/assets/images/sinoidual-positional-encoding.png" alt="Transformer"></p>
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer/sinoidual-positional-encoding.png" alt="Transformer"></p>
 <p><em>Fig. 3. Sinusoidal positional encoding with \(L=32\) and \(d=128\). The value is between -1 (black) and 1 (white) and the value 0 is in gray.</em></p>
 
 <p>(2) <em>Learned positional encoding</em>, as its name suggested, assigns each element with a learned column vector which encodes its <em>absolute</em> position (<a href="https://arxiv.org/abs/1705.03122">Gehring, et al. 2017</a>).</p>
@@ -242,7 +242,7 @@
   <li>Each position in the sequence can predict multiple targets, i.e. two or more predictions of the future tokens.</li>
 </ul>
 
-<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer-aux-losses.png" alt="Transformer"></p>
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer/transformer-aux-losses.png" alt="Transformer"></p>
 <p><em>Fig. 4. Auxiliary prediction tasks used in deep Transformer for character-level language modeling. (Image source: <a href="https://arxiv.org/abs/1808.04444">Al-Rfou et al. (2018)</a>)</em></p>
 
 <h2 id="adaptive-computation-time-act">Adaptive Computation Time (ACT)</h2>
@@ -283,7 +283,7 @@ R(t) = 1 - \sum_{n=1}^{N(t)-1} h_t^n &amp; \text{if }n= N(t)\\
 
 \[s_t = \sum_{n=1}^{N(t)} p_t^n s_t^n,\quad y_t = \sum_{n=1}^{N(t)} p_t^n y_t^n\]
 
-<p style="width: 85%;" class="center"><img src="/blog/assets/images/ACT-computation-graph.png" alt="ACT computation graph"></p>
+<p style="width: 85%;" class="center"><img src="/blog/assets/images/transformer/ACT-computation-graph.png" alt="ACT computation graph"></p>
 <p><em>Fig. 5. The computation graph of a RNN with ACT mechanism. (Image source: <a href="https://arxiv.org/abs/1603.08983">Graves, 2016</a>)</em></p>
 
 <p>To avoid unnecessary pondering over each input, ACT adds a <em>ponder cost</em> \(\mathcal{P}(x) = \sum_{t=1}^L N(t) + R(t)\)  in the loss function to encourage a smaller number of intermediate computational steps.</p>
@@ -313,7 +313,7 @@ R(t) = 1 - \sum_{n=1}^{N(t)-1} h_t^n &amp; \text{if }n= N(t)\\
 
 <p>The recurrent connection between segments is introduced into the model by continuously using the hidden states from the previous segments.</p>
 
-<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer-XL-training.png" alt="Training phrase of Transformer-XL"></p>
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer/transformer-XL-training.png" alt="Training phrase of Transformer-XL"></p>
 <p><em>Fig. 6. A comparison between the training phrase of vanilla Transformer &amp; Transformer-XL with a segment length 4. (Image source: left part of Figure 2 in <a href="https://arxiv.org/abs/1901.02860">Dai et al., 2019</a>).</em></p>
 
 <p>Let’s label the hidden state of the \(n\)-th layer for the \((\tau + 1)\)-th segment in the model as \(\mathbf{h}_{\tau+1}^{(n)} \in \mathbb{R}^{L \times d}\). In addition to the hidden state of the last layer for the same segment \(\mathbf{h}_{\tau+1}^{(n-1)}\), it also depends on the hidden state of the same layer for the previous segment \(\mathbf{h}_{\tau}^{(n)}\).  By incorporating information from the previous hidden states, the model extends the attention span much longer in the past, over multiple segments.</p>
@@ -362,7 +362,7 @@ a_{ij}
 
 <p>This is the motivation for <strong>Adaptive Attention Span</strong>. <a href="https://arxiv.org/abs/1905.07799">Sukhbaatar, et al., (2019)</a> proposed a self-attention mechanism that seeks an optimal attention span. They hypothesized that different attention heads might assign scores differently within the same context window (See Fig. 7) and thus the optimal span would be trained separately per head.</p>
 
-<p style="width: 70%;" class="center"><img src="/blog/assets/images/attention-per-head.png" alt="Attention per head"></p>
+<p style="width: 70%;" class="center"><img src="/blog/assets/images/transformer/attention-per-head.png" alt="Attention per head"></p>
 <p><em>Fig. 7. Two attention heads in the same model, A &amp; B, assign attention differently within the same context window. Head A attends more to the recent tokens, while head B look further back into the past uniformly. (Image source: <a href="https://arxiv.org/abs/1905.07799">Sukhbaatar, et al. 2019</a>)</em></p>
 
 <p>Given the \(i\)-th token, we need to compute the attention weights between this token and other keys at positions \(j \in S_i\), where \(S_i\) defineds the \(i\)-th token’s context window.</p>
@@ -379,7 +379,7 @@ a_{ij} &amp;= \text{softmax}(e_{ij}) = \frac{\exp(e_{ij})}{\sum_{r=i-s}^{i-1} \e
 
 <p>where \(R\) is a hyper-parameter which defines the softness of \(m_z\).</p>
 
-<p style="width: 55%;" class="center"><img src="/blog/assets/images/soft-masking-function.png" alt="Soft masking function"></p>
+<p style="width: 55%;" class="center"><img src="/blog/assets/images/transformer/soft-masking-function.png" alt="Soft masking function"></p>
 <p><em>Fig. 8. The soft masking function used in the adaptive attention span. (Image source: <a href="https://arxiv.org/abs/1905.07799">Sukhbaatar, et al. 2019</a>.)</em></p>
 
 <p>The soft mask function is applied to the softmax elements in the attention weights:</p>
@@ -408,7 +408,7 @@ a_{ij} &amp;= \text{softmax}(e_{ij}) = \frac{\exp(e_{ij})}{\sum_{r=i-s}^{i-1} \e
 
 <p>Image Transformer introduced two types of localized \(\mathbf{M}\), as illustrated below.</p>
 
-<p style="width: 100%;" class="center"><img src="/blog/assets/images/image-transformer-attention.png" alt="Attention patterns in Image Transformer"></p>
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer/image-transformer-attention.png" alt="Attention patterns in Image Transformer"></p>
 <p><em>Fig. 9. Illustration of 1D and 2D attention span for visual inputs in Image Transformer. The black line marks a query block and the cyan outlines the actual attention span for pixel q. (Image source: Figure 2 in <a href="https://arxiv.org/abs/1802.05751">Parmer et al, 2018</a>)</em></p>
 
 <p>(1) <em>1D Local Attention</em>: The input image is flattened in the <a href="https://en.wikipedia.org/wiki/Raster_scan#Scanning_pattern">raster scanning</a> order, that is, from left to right and top to bottom. The linearized image is then partitioned into non-overlapping query blocks. The context window consists of pixels in the same query block as \(\mathbf{q}\) and a fixed number of additional pixels generated before this query block.</p>
@@ -444,7 +444,7 @@ a_{ij} &amp;= \text{softmax}(e_{ij}) = \frac{\exp(e_{ij})}{\sum_{r=i-s}^{i-1} \e
 
 <p>Sparse Transformer proposed two types of fractorized attention. It is easier to understand the concepts as illustrated in Fig. 10 with 2D image inputs as examples.</p>
 
-<p style="width: 100%;" class="center"><img src="/blog/assets/images/sparse-attention.png" alt="Sparse attention"></p>
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer/sparse-attention.png" alt="Sparse attention"></p>
 <p><em>Fig. 10. The top row illustrates the attention connectivity patterns in (a) Transformer, (b) Sparse Transformer with strided attention, and (c) Sparse Transformer with fixed attention. The bottom row contains corresponding self-attention connectivity matrices. Note that the top and bottom rows are not in the same scale. (Image source: <a href="https://arxiv.org/abs/1904.10509">Child et al., 2019</a> + a few of extra annotations.)</em></p>
 
 <p>(1) <em>Strided</em> attention with stride \(\ell \sim \sqrt{n}\). This works well with image data as the structure is aligned with strides. In the image case, each pixel would attend to all the previous \(\ell\) pixels in the raster scanning order (naturally cover the entire width of the image) and then those pixels attend to others in the same column (defined by another attention connectivity subset).</p>
@@ -504,7 +504,7 @@ $$
 $$ 
 -->
 
-<p style="width: 100%;" class="center"><img src="/blog/assets/images/LSH-attention-matrix.png" alt="LSH attention matrix"></p>
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer/LSH-attention-matrix.png" alt="LSH attention matrix"></p>
 <p><em>Fig. 11. Illustration of Locality-Sensitive Hashing (LSH) attention. (Image source: right part of Figure 1 in <a href="https://arxiv.org/abs/2001.04451">Kitaev, et al. 2020</a>).</em></p>
 
 <p>In LSH attention, a query can only attend to positions in the same hashing bucket, \(S_i = \{j: h(\mathbf{q}_i) = h(\mathbf{k}_j)\}\). It is carried out in the following process, as illustrated in Fig. 11:</p>
@@ -515,7 +515,7 @@ $$
   <li>(d) Apply batching where chunks of \(m\) consecutive queries are grouped together.</li>
 </ul>
 
-<p style="width: 75%;" class="center"><img src="/blog/assets/images/LSH-attention.png" alt="LSH attention"></p>
+<p style="width: 75%;" class="center"><img src="/blog/assets/images/transformer/LSH-attention.png" alt="LSH attention"></p>
 <p><em>Fig. 12. The LSH attention consists of 4 steps: bucketing, sorting, chunking, and attention computation. (Image source: left part of Figure 1 in <a href="https://arxiv.org/abs/2001.04451">Kitaev, et al. 2020</a>).</em></p>
 
 <p><strong>Reversible Residual Network</strong></p>
@@ -547,7 +547,7 @@ $$
 
 <p>On a high level, the universal transformer can be viewed as a recurrent function for learning the hidden state representation per token. The recurrent function evolves in parallel across token positions and the information between positions is shared through self-attention.</p>
 
-<p style="width: 100%;" class="center"><img src="/blog/assets/images/universal-transformer-loop.png" alt="Universal Transformer Recurrent Step"></p>
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer/universal-transformer-loop.png" alt="Universal Transformer Recurrent Step"></p>
 <p><em>Fig. 13. How the Universal Transformer refines a set of hidden state representations repeatedly for every position in parallel. (Image source: Figure 1 in <a href="https://arxiv.org/abs/1807.03819">Dehghani, et al. 2019</a>).</em></p>
 
 <p>Given an input sequence of length \(L\), Universal Transformer iteratively updates the representation \(\mathbf{H}^t \in \mathbb{R}^{L \times d}\) at step \(t\) for an adjustable number of steps. At step 0, \(\mathbf{H}^0\) is initialized to be same as the input embedding matrix. All the positions are processed in parallel in the multi-head self-attention mechanism and then go through a recurrent transition function.</p>
@@ -567,7 +567,7 @@ $$
 \cos(\frac{i}{10000^{2\delta'/d}}) \oplus \cos(\frac{t}{10000^{2\delta'/d}}) &amp; \text{if } \delta = 2\delta' + 1\\
 \end{cases}\]
 
-<p style="width: 100%;" class="center"><img src="/blog/assets/images/universal-transformer.png" alt="Universal Transformer"></p>
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer/universal-transformer.png" alt="Universal Transformer"></p>
 <p><em>Fig. 14. A simplified illustration of Universal Transformer. The encoder and decoder share the same basic recurrent structure. But the decoder also attends to final encoder representation \(\mathbf{H}^T\). (Image source: Figure 2 in <a href="https://arxiv.org/abs/1807.03819">Dehghani, et al. 2019</a>)</em></p>
 
 <p>In the adaptive version of Universal Transformer, the number of recurrent steps \(T\) is dynamically determined by <a href="#adaptive-computation-time-act">ACT</a>. Each position is equipped with a dynamic ACT halting mechanism. Once a per-token recurrent block halts, it stops taking more recurrent updates but simply copies the current value to the next step until all the blocks halt or until the model reaches a maximum step limit.</p>
@@ -591,7 +591,7 @@ g^{(l)}(x, y) &amp;= (1-z)\odot x + z\odot \hat{h}
 
 <p>The gating function parameters are explicitly initialized to be close to an identity map - this is why there is a \(b_g\) term. A \(b_g &gt; 0\) greatly helps with the learning speedup.</p>
 
-<p style="width: 100%;" class="center"><img src="/blog/assets/images/gated-transformer-XL.png" alt="GTrXL"></p>
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/transformer/gated-transformer-XL.png" alt="GTrXL"></p>
 <p><em>Fig. 15. Comparison of the model architecture of Transformer-XL, Transformer-XL with the layer norm reordered, and Gated Transformer-XL. (Image source: Figure 1 in <a href="https://arxiv.org/abs/1910.06764">Parisotto, et al. 2019</a>)</em></p>
 
 <hr>
@@ -640,8 +640,8 @@ g^{(l)}(x, y) &amp;= (1-z)\odot x + z\odot \hat{h}
 
         <div class="page-navigation">
           
-          <a class="prev" href="/blog/2018/06/24/attention-attention.html"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"></path></svg> Attention? Attention!</a>  
-          <a class="next" href="/blog/deep-learning/2020/11/01/recipe-for-training-neural-network.html">A Recipe for Training Neural Networks <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg></a> 
+          <a class="prev" href="/blog/python/2019/12/27/python-is-cool.html"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"></path></svg> Python is Cool</a>  
+          <a class="next" href="/blog/tutorial/2020/11/01/simple-vim-tutorial.html">Simple tutorial using VIM <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg></a> 
       </div>
     
     </div>

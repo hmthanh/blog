@@ -84,7 +84,7 @@ $$
 where $$[.;.]$$ is a concatenation operation. $$\mathbf{W}^q_i, \mathbf{W}^k_i \in \mathbb{R}^{d \times d_k/h}, \mathbf{W}^v_i \in \mathbb{R}^{d \times d_v/h}$$ are weight matrices to map input embeddings of size $$L \times d$$ into query, key and value matrices. And $$\mathbf{W}^o \in \mathbb{R}^{d_v \times d}$$ is the output linear transformation. All the weights should be learned during training.
 
 
-![Multi-head scaled dot-product attention]({{ '/assets/images/multi-head-attention.png' | relative_url }})
+![Multi-head scaled dot-product attention]({{ '/assets/images/transformer/multi-head-attention.png' | relative_url }})
 {: style="width: 30%;" class="center"}
 *Fig. 1. Illustration of the multi-head scaled dot-product attention mechanism. (Image source: Figure 2 in [Vaswani, et al., 2017](https://arxiv.org/abs/1706.03762))*
 
@@ -101,7 +101,7 @@ The **encoder** generates an attention-based representation with capability to l
 The function of Transformer **decoder** is to retrieve information from the encoded representation. The architecture is quite similar to the encoder, except that the decoder contains two multi-head attention submodules instead of one in each identical repeating module. The first multi-head attention submodule is *masked* to prevent positions from attending to the future.
 
 
-![Transformer]({{ '/assets/images/transformer.png' | relative_url }})
+![Transformer]({{ '/assets/images/transformer/transformer.png' | relative_url }})
 {: style="width: 100%;" class="center"}
 *Fig. 2. The architecture of the vanilla Transformer model. (Image source: [Figure 17]({{ site.baseurl }}{% post_url 2018-06-24-attention-attention %}#full-architecture))*
 
@@ -123,7 +123,7 @@ $$
 In this way each dimension of the positional encoding corresponds to a sinusoid of different wavelengths in different dimensions, from $$2\pi$$ to $$10000 \cdot 2\pi$$.
 
 
-![Transformer]({{ '/assets/images/sinoidual-positional-encoding.png' | relative_url }})
+![Transformer]({{ '/assets/images/transformer/sinoidual-positional-encoding.png' | relative_url }})
 {: style="width: 100%;" class="center"}
 *Fig. 3. Sinusoidal positional encoding with $$L=32$$ and $$d=128$$. The value is between -1 (black) and 1 (white) and the value 0 is in gray.*
 
@@ -138,7 +138,7 @@ Following the vanilla Transformer, [Al-Rfou et al. (2018)](https://arxiv.org/abs
 - Each intermediate Transformer layer is used for making predictions as well. Lower layers are weighted to contribute less and less to the total loss as training progresses. 
 - Each position in the sequence can predict multiple targets, i.e. two or more predictions of the future tokens.
 
-![Transformer]({{ '/assets/images/transformer-aux-losses.png' | relative_url }})
+![Transformer]({{ '/assets/images/transformer/transformer-aux-losses.png' | relative_url }})
 {: style="width: 100%;" class="center"}
 *Fig. 4. Auxiliary prediction tasks used in deep Transformer for character-level language modeling. (Image source: [Al-Rfou et al. (2018)](https://arxiv.org/abs/1808.04444))*
 
@@ -193,7 +193,7 @@ $$
 s_t = \sum_{n=1}^{N(t)} p_t^n s_t^n,\quad y_t = \sum_{n=1}^{N(t)} p_t^n y_t^n
 $$
 
-![ACT computation graph]({{ '/assets/images/ACT-computation-graph.png' | relative_url }})
+![ACT computation graph]({{ '/assets/images/transformer/ACT-computation-graph.png' | relative_url }})
 {: style="width: 85%;" class="center"}
 *Fig. 5. The computation graph of a RNN with ACT mechanism. (Image source: [Graves, 2016](https://arxiv.org/abs/1603.08983))*
 
@@ -225,7 +225,7 @@ This *context segmentation* causes several issues:
 The recurrent connection between segments is introduced into the model by continuously using the hidden states from the previous segments. 
 
 
-![Training phrase of Transformer-XL]({{ '/assets/images/transformer-XL-training.png' | relative_url }})
+![Training phrase of Transformer-XL]({{ '/assets/images/transformer/transformer-XL-training.png' | relative_url }})
 {: style="width: 100%;" class="center"}
 *Fig. 6. A comparison between the training phrase of vanilla Transformer & Transformer-XL with a segment length 4. (Image source: left part of Figure 2 in [Dai et al., 2019](https://arxiv.org/abs/1901.02860)).*
 
@@ -286,7 +286,7 @@ One key advantage of Transformer is the capability of capturing long-term depend
 This is the motivation for **Adaptive Attention Span**. [Sukhbaatar, et al., (2019)](https://arxiv.org/abs/1905.07799) proposed a self-attention mechanism that seeks an optimal attention span. They hypothesized that different attention heads might assign scores differently within the same context window (See Fig. 7) and thus the optimal span would be trained separately per head.
 
 
-![Attention per head]({{ '/assets/images/attention-per-head.png' | relative_url }})
+![Attention per head]({{ '/assets/images/transformer/attention-per-head.png' | relative_url }})
 {: style="width: 70%;" class="center"}
 *Fig. 7. Two attention heads in the same model, A & B, assign attention differently within the same context window. Head A attends more to the recent tokens, while head B look further back into the past uniformly. (Image source: [Sukhbaatar, et al. 2019](https://arxiv.org/abs/1905.07799))*
 
@@ -310,7 +310,7 @@ $$
 where $$R$$ is a hyper-parameter which defines the softness of $$m_z$$.
 
 
-![Soft masking function]({{ '/assets/images/soft-masking-function.png' | relative_url }})
+![Soft masking function]({{ '/assets/images/transformer/soft-masking-function.png' | relative_url }})
 {: style="width: 55%;" class="center"}
 *Fig. 8. The soft masking function used in the adaptive attention span. (Image source: [Sukhbaatar, et al. 2019](https://arxiv.org/abs/1905.07799).)*
 
@@ -346,7 +346,7 @@ Let's label the representation of the current pixel to be generated as the query
 Image Transformer introduced two types of localized $$\mathbf{M}$$, as illustrated below. 
 
 
-![Attention patterns in Image Transformer]({{ '/assets/images/image-transformer-attention.png' | relative_url }})
+![Attention patterns in Image Transformer]({{ '/assets/images/transformer/image-transformer-attention.png' | relative_url }})
 {: style="width: 100%;" class="center"}
 *Fig. 9. Illustration of 1D and 2D attention span for visual inputs in Image Transformer. The black line marks a query block and the cyan outlines the actual attention span for pixel q. (Image source: Figure 2 in [Parmer et al, 2018](https://arxiv.org/abs/1802.05751))*
 
@@ -392,7 +392,7 @@ Precisely, the set $$S_i$$ is divided into $$p$$ *non-overlapping* subsets, wher
 Sparse Transformer proposed two types of fractorized attention. It is easier to understand the concepts as illustrated in Fig. 10 with 2D image inputs as examples.
 
 
-![Sparse attention]({{ '/assets/images/sparse-attention.png' | relative_url }})
+![Sparse attention]({{ '/assets/images/transformer/sparse-attention.png' | relative_url }})
 {: style="width: 100%;" class="center"}
 *Fig. 10. The top row illustrates the attention connectivity patterns in (a) Transformer, (b) Sparse Transformer with strided attention, and (c) Sparse Transformer with fixed attention. The bottom row contains corresponding self-attention connectivity matrices. Note that the top and bottom rows are not in the same scale. (Image source: [Child et al., 2019](https://arxiv.org/abs/1904.10509) + a few of extra annotations.)*
 
@@ -457,7 +457,7 @@ $$
 -->
 
 
-![LSH attention matrix]({{ '/assets/images/LSH-attention-matrix.png' | relative_url }})
+![LSH attention matrix]({{ '/assets/images/transformer/LSH-attention-matrix.png' | relative_url }})
 {: style="width: 100%;" class="center"}
 *Fig. 11. Illustration of Locality-Sensitive Hashing (LSH) attention. (Image source: right part of Figure 1 in [Kitaev, et al. 2020](https://arxiv.org/abs/2001.04451)).*
 
@@ -470,7 +470,7 @@ In LSH attention, a query can only attend to positions in the same hashing bucke
 
 
 
-![LSH attention]({{ '/assets/images/LSH-attention.png' | relative_url }})
+![LSH attention]({{ '/assets/images/transformer/LSH-attention.png' | relative_url }})
 {: style="width: 75%;" class="center"}
 *Fig. 12. The LSH attention consists of 4 steps: bucketing, sorting, chunking, and attention computation. (Image source: left part of Figure 1 in [Kitaev, et al. 2020](https://arxiv.org/abs/2001.04451)).*
 
@@ -516,7 +516,7 @@ Rather than going through a fixed number of layers, Universal Transformer dynami
 On a high level, the universal transformer can be viewed as a recurrent function for learning the hidden state representation per token. The recurrent function evolves in parallel across token positions and the information between positions is shared through self-attention.
 
 
-![Universal Transformer Recurrent Step]({{ '/assets/images/universal-transformer-loop.png' | relative_url }})
+![Universal Transformer Recurrent Step]({{ '/assets/images/transformer/universal-transformer-loop.png' | relative_url }})
 {: style="width: 100%;" class="center"}
 *Fig. 13. How the Universal Transformer refines a set of hidden state representations repeatedly for every position in parallel. (Image source: Figure 1 in [Dehghani, et al. 2019](https://arxiv.org/abs/1807.03819)).*
 
@@ -544,7 +544,7 @@ $$
 
 
 
-![Universal Transformer]({{ '/assets/images/universal-transformer.png' | relative_url }})
+![Universal Transformer]({{ '/assets/images/transformer/universal-transformer.png' | relative_url }})
 {: style="width: 100%;" class="center"}
 *Fig. 14. A simplified illustration of Universal Transformer. The encoder and decoder share the same basic recurrent structure. But the decoder also attends to final encoder representation $$\mathbf{H}^T$$. (Image source: Figure 2 in [Dehghani, et al. 2019](https://arxiv.org/abs/1807.03819))*
 
@@ -573,7 +573,7 @@ $$
 The gating function parameters are explicitly initialized to be close to an identity map - this is why there is a $$b_g$$ term. A $$b_g > 0$$ greatly helps with the learning speedup.
 
 
-![GTrXL]({{ '/assets/images/gated-transformer-XL.png' | relative_url }})
+![GTrXL]({{ '/assets/images/transformer/gated-transformer-XL.png' | relative_url }})
 {: style="width: 100%;" class="center"}
 *Fig. 15. Comparison of the model architecture of Transformer-XL, Transformer-XL with the layer norm reordered, and Gated Transformer-XL. (Image source: Figure 1 in [Parisotto, et al. 2019](https://arxiv.org/abs/1910.06764))*
 

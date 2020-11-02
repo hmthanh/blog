@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Python is Cool"
-date:   2020-11-01 11:04:17 +0700
+date:   2019-12-27 11:04:17 +0700
 author: Huyen Chip
 categories: python
 ---

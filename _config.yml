@@ -46,6 +46,7 @@ plugins:
   - jekyll-mentions
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll/footnotes
 
 # Exclude from processing.
 # The following items will not be processed, by default.
