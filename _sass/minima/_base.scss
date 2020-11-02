@@ -322,3 +322,19 @@ table.info th {
 table.info tr td>* {
     margin: 0 !important;
 }
+
+.center {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.post-content hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #e8e8e8;
+    margin: 2em 0;
+    padding: 0;
+}

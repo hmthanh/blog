@@ -32,8 +32,9 @@ facebook_username: hmthanhgm
 excerpt_separator: <!--more-->
 
 # Build settings
-gem 'solargraph', group: :development
 theme: minima
+gem 'solargraph', group: :development
+gem "github-pages", group: :jekyll_plugins
 markdown: kramdown
 highlighter: rouge
 plugins:
