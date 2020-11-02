@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://hmthanh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://hmthanh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-11-02T01:21:25+07:00</updated><id>http://hmthanh.github.io/blog/feed.xml</id><title type="html">Minh-Thanh’s Blog</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">Simple tutorial using VIM</title><link href="http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html" rel="alternate" type="text/html" title="Simple tutorial using VIM" /><published>2020-11-01T11:04:17+07:00</published><updated>2020-11-01T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial</id><content type="html" xml:base="http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html">&lt;p&gt;Download VIM tại : &lt;a href=&quot;https://www.vim.org/download.php&quot;&gt;VIM&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://hmthanh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://hmthanh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-11-02T13:00:01+07:00</updated><id>http://hmthanh.github.io/blog/feed.xml</id><title type="html">Minh-Thanh’s Blog</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">Simple tutorial using VIM</title><link href="http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html" rel="alternate" type="text/html" title="Simple tutorial using VIM" /><published>2020-11-01T11:04:17+07:00</published><updated>2020-11-01T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial</id><content type="html" xml:base="http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html">&lt;p&gt;Download VIM tại : &lt;a href=&quot;https://www.vim.org/download.php&quot;&gt;VIM&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -817,7 +817,7 @@ fib_m(50)
       &lt;td&gt;The scalar attention score between query $$\mathbf{q}_i$$ and key $$\mathbf{k}_j$$.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;$$\mathbf{P} \in \ma  thbb{R}^{L \times d}$$&lt;/td&gt;
+      &lt;td&gt;$$\mathbf{P} \in \mathbb{R}^{L \times d}$$&lt;/td&gt;
       &lt;td&gt;position encoding matrix, where the $$i$$-th row $$\mathbf{p}_i$$ is the positional encoding for input $$\mathbf{x}_i$$.&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -1327,14 +1327,14 @@ g^{(l)}(x, y) &amp;amp;= (1-z)\odot x + z\odot \hat{h}
 &lt;p&gt;Attention is, to some extent, motivated by how we pay visual attention to different regions of an image or correlate words in one sentence. Take the picture of a Shiba Inu in Fig. 1 as an example.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/shiba-example-attention.png&quot; alt=&quot;shiba&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 1. A Shiba Inu in a men’s outfit. The credit of the original photo goes to Instagram &lt;a href=&quot;https://www.instagram.com/mensweardog/?hl=en&quot;&gt;@mensweardog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 1. A Shiba Inu in a men’s outfit. The credit of the original photo goes to Instagram &lt;a href=&quot;https://www.instagram.com/mensweardog/?hl=en&quot;&gt;@mensweardog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Human visual attention allows us to focus on a certain region with “high resolution” (i.e. look at the pointy ear in the yellow box) while perceiving the surrounding image in “low resolution” (i.e. now how about the snowy background and the outfit?), and then adjust the focal point or do the inference accordingly. Given a small patch of an image, pixels in the rest provide clues what should be displayed there. We expect to see a pointy ear in the yellow box because we have seen a dog’s nose, another pointy ear on the right, and Shiba’s mystery eyes (stuff in the red boxes). However, the sweater and blanket at the bottom would not be as helpful as those doggy features.&lt;/p&gt;
 
 &lt;p&gt;Similarly, we can explain the relationship between words in one sentence or close context. When we see “eating”, we expect to encounter a food word very soon. The color term describes the food, but probably not so much with “eating” directly.&lt;/p&gt;
 
 &lt;p style=&quot;width: 65%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/sentence-example-attention.png&quot; alt=&quot;sentence&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 2. One word “attends” to other words in the same sentence differently.&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 2. One word “attends” to other words in the same sentence differently.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;In a nutshell, attention in deep learning can be broadly interpreted as a vector of importance weights: in order to predict or infer one element, such as a pixel in an image or a word in a sentence, we estimate using the attention vector how strongly it is correlated with (or “&lt;em&gt;attends to&lt;/em&gt;” as you may have read in many papers) other elements and take the sum of their values weighted by the attention vector as the approximation of the target.&lt;/p&gt;
 
@@ -1351,7 +1351,7 @@ g^{(l)}(x, y) &amp;amp;= (1-z)\odot x + z\odot \hat{h}
 &lt;p&gt;Both the encoder and decoder are recurrent neural networks, i.e. using &lt;a href=&quot;http://colah.github.io/posts/2015-08-Understanding-LSTMs/&quot;&gt;LSTM or GRU&lt;/a&gt; units.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/encoder-decoder-example.png&quot; alt=&quot;encoder-decoder model with additive attention layer&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 3. The encoder-decoder model, translating the sentence “she is eating a green apple” to Chinese. The visualization of both encoder and decoder is unrolled in time.&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 3. The encoder-decoder model, translating the sentence “she is eating a green apple” to Chinese. The visualization of both encoder and decoder is unrolled in time.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;A critical and apparent disadvantage of this fixed-length context vector design is incapability of remembering long sentences. Often it has forgotten the first part once it completes processing the whole input. The attention mechanism was born (&lt;a href=&quot;https://arxiv.org/pdf/1409.0473.pdf&quot;&gt;Bahdanau et al., 2015&lt;/a&gt;) to resolve this problem.&lt;/p&gt;
 
@@ -1367,7 +1367,7 @@ g^{(l)}(x, y) &amp;amp;= (1-z)\odot x + z\odot \hat{h}
 &lt;/ul&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/encoder-decoder-attention.png&quot; alt=&quot;encoder-decoder model with additive attention layer&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 4. The encoder-decoder model with additive attention mechanism in &lt;a href=&quot;https://arxiv.org/pdf/1409.0473.pdf&quot;&gt;Bahdanau et al., 2015&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 4. The encoder-decoder model with additive attention mechanism in &lt;a href=&quot;https://arxiv.org/pdf/1409.0473.pdf&quot;&gt;Bahdanau et al., 2015&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;definition&quot;&gt;Definition&lt;/h3&gt;
 
@@ -1401,7 +1401,7 @@ g^{(l)}(x, y) &amp;amp;= (1-z)\odot x + z\odot \hat{h}
 &lt;p&gt;The matrix of alignment scores is a nice byproduct to explicitly show the correlation between source and target words.&lt;/p&gt;
 
 &lt;p style=&quot;width: 65%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/bahdanau-fig3.png&quot; alt=&quot;alignment matrix&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 5. Alignment matrix of “L’accord sur l’Espace économique européen a été signé en août 1992” (French) and its English translation “The agreement on the European Economic Area was signed in August 1992”. (Image source: Fig 3 in &lt;a href=&quot;https://arxiv.org/pdf/1409.0473.pdf&quot;&gt;Bahdanau et al., 2015&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 5. Alignment matrix of “L’accord sur l’Espace économique européen a été signé en août 1992” (French) and its English translation “The agreement on the European Economic Area was signed in August 1992”. (Image source: Fig 3 in &lt;a href=&quot;https://arxiv.org/pdf/1409.0473.pdf&quot;&gt;Bahdanau et al., 2015&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Check out this nice &lt;a href=&quot;https://www.tensorflow.org/versions/master/tutorials/seq2seq&quot;&gt;tutorial&lt;/a&gt; by Tensorflow team for more implementation instructions.&lt;/p&gt;
 
@@ -1455,7 +1455,7 @@ g^{(l)}(x, y) &amp;amp;= (1-z)\odot x + z\odot \hat{h}
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;(*) Referred to as “concat” in Luong, et al., 2015 and as “additive attention” in Vaswani, et al., 2017.&lt;br /&gt;
+&lt;p&gt;(*) Referred to as “concat” in Luong, et al., 2015 and as “additive attention” in Vaswani, et al., 2017.
 (^) It adds a scaling factor \(1/\sqrt{n}\), motivated by the concern when the input is large, the softmax function may have an extremely small gradient, hard for efficient learning.&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here are a summary of broader categories of attention mechanisms:&lt;/p&gt;
@@ -1496,14 +1496,14 @@ g^{(l)}(x, y) &amp;amp;= (1-z)\odot x + z\odot \hat{h}
 &lt;p&gt;The &lt;a href=&quot;https://arxiv.org/pdf/1601.06733.pdf&quot;&gt;long short-term memory network&lt;/a&gt; paper used self-attention to do machine reading. In the example below, the self-attention mechanism enables us to learn the correlation between the current words and the previous part of the sentence.&lt;/p&gt;
 
 &lt;p style=&quot;width: 70%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/cheng2016-fig1.png&quot; alt=&quot;intra-attention&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 6. The current word is in red and the size of the blue shade indicates the activation level. (Image source: &lt;a href=&quot;https://arxiv.org/pdf/1601.06733.pdf&quot;&gt;Cheng et al., 2016&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 6. The current word is in red and the size of the blue shade indicates the activation level. (Image source: &lt;a href=&quot;https://arxiv.org/pdf/1601.06733.pdf&quot;&gt;Cheng et al., 2016&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;soft-vs-hard-attention&quot;&gt;Soft vs Hard Attention&lt;/h3&gt;
 
 &lt;p&gt;In the &lt;a href=&quot;http://proceedings.mlr.press/v37/xuc15.pdf&quot;&gt;show, attend and tell&lt;/a&gt; paper, attention mechanism is applied to images to generate captions. The image is first encoded by a CNN to extract features. Then a LSTM decoder consumes the convolution features to produce descriptive words one by one, where the weights are learned through attention. The visualization of the attention weights clearly demonstrates which regions of the image the model is paying attention to so as to output a certain word.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/xu2015-fig6b.png&quot; alt=&quot;show-attend-and-tell&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 7. “A woman is throwing a frisbee in a park.” (Image source: Fig. 6(b) in &lt;a href=&quot;http://proceedings.mlr.press/v37/xuc15.pdf&quot;&gt;Xu et al. 2015&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 7. “A woman is throwing a frisbee in a park.” (Image source: Fig. 6(b) in &lt;a href=&quot;http://proceedings.mlr.press/v37/xuc15.pdf&quot;&gt;Xu et al. 2015&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;This paper first proposed the distinction between “soft” vs “hard” attention, based on whether the attention has access to the entire image or only a patch:&lt;/p&gt;
 
@@ -1527,14 +1527,14 @@ g^{(l)}(x, y) &amp;amp;= (1-z)\odot x + z\odot \hat{h}
 &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1508.04025.pdf&quot;&gt;Luong, et al., 2015&lt;/a&gt; proposed the “global” and “local” attention. The global attention is similar to the soft attention, while the local one is an interesting blend between &lt;a href=&quot;#soft-vs-hard-attention&quot;&gt;hard and soft&lt;/a&gt;, an improvement over the hard attention to make it differentiable: the model first predicts a single aligned position for the current target word and a window centered around the source position is then used to compute a context vector.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/luong2015-fig2-3.png&quot; alt=&quot;global-local-attention&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 8. Global vs local attention (Image source: Fig 2 &amp;amp; 3 in &lt;a href=&quot;https://arxiv.org/pdf/1508.04025.pdf&quot;&gt;Luong, et al., 2015&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 8. Global vs local attention (Image source: Fig 2 &amp;amp; 3 in &lt;a href=&quot;https://arxiv.org/pdf/1508.04025.pdf&quot;&gt;Luong, et al., 2015&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;neural-turing-machines&quot;&gt;Neural Turing Machines&lt;/h2&gt;
 
 &lt;p&gt;Alan Turing in &lt;a href=&quot;https://en.wikipedia.org/wiki/Turing_machine&quot;&gt;1936&lt;/a&gt; proposed a minimalistic model of computation. It is composed of a infinitely long tape and a head to interact with the tape. The tape has countless cells on it, each filled with a symbol: 0, 1 or blank (“ “). The operation head can read symbols, edit symbols and move left/right on the tape. Theoretically a Turing machine can simulate any computer algorithm, irrespective of how complex or expensive the procedure might be. The infinite memory gives a Turing machine an edge to be mathematically limitless. However, infinite memory is not feasible in real modern computers and then we only consider Turing machine as a mathematical model of computation.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/turing-machine.jpg&quot; alt=&quot;turing-machine&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 9. How a Turing machine looks like: a tape + a head that handles the tape. (Image source: http://aturingmachine.com/)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 9. How a Turing machine looks like: a tape + a head that handles the tape. (Image source: http://aturingmachine.com/)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Neural Turing Machine&lt;/strong&gt; (&lt;strong&gt;NTM&lt;/strong&gt;, &lt;a href=&quot;https://arxiv.org/abs/1410.5401&quot;&gt;Graves, Wayne &amp;amp; Danihelka, 2014&lt;/a&gt;) is a model architecture for coupling a neural network with external memory storage. The memory mimics the Turing machine tape and the neural network controls the operation heads to read from or write to the tape. However, the memory in NTM is finite, and thus it probably looks more like a “Neural &lt;a href=&quot;https://en.wikipedia.org/wiki/Von_Neumann_architecture&quot;&gt;von Neumann&lt;/a&gt; Machine”.&lt;/p&gt;
 
@@ -1545,7 +1545,8 @@ Memory: stores processed information. It is a matrix of size \(N \times M\), con
 &lt;p&gt;In one update iteration, the controller processes the input and interacts with the memory bank accordingly to generate output. The interaction is handled by a set of parallel &lt;em&gt;read&lt;/em&gt; and &lt;em&gt;write&lt;/em&gt; heads. Both read and write operations are “blurry” by softly attending to all the memory addresses.&lt;/p&gt;
 
 &lt;p style=&quot;width: 60%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/NTM.png&quot; alt=&quot;turing-machine&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig 10. Neural Turing Machine Architecture.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig 10. Neural Turing Machine Architecture.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;reading-and-writing&quot;&gt;Reading and Writing&lt;/h3&gt;
 
@@ -1585,7 +1586,7 @@ Memory: stores processed information. It is a matrix of size \(N \times M\), con
 &lt;p&gt;The location-based addressing sums up the values at different positions in the attention vector, weighted by a weighting distribution over allowable integer shifts. It is equivalent to a 1-d convolution with a kernel \(\mathbf{s}_t(.)\), a function of the position offset. There are multiple ways to define this distribution. See Fig. 11. for inspiration.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/shift-weighting.png&quot; alt=&quot;shift-weighting&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 11. Two ways to represent the shift weighting distribution \(\mathbf{s}_t\).&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 11. Two ways to represent the shift weighting distribution \(\mathbf{s}_t\).&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Finally the attention distribution is enhanced by a sharpening scalar \(\gamma_t \geq 1\).&lt;/p&gt;
 
@@ -1597,14 +1598,14 @@ w_t(i) &amp;amp;= \frac{\tilde{w}_t(i)^{\gamma_t}}{\sum_{j=1}^N \tilde{w}_t(j)^{
 &lt;p&gt;The complete process of generating the attention vector \(\mathbf{w}_t\) at time step t is illustrated in Fig. 12. All the parameters produced by the controller are unique for each head. If there are multiple read and write heads in parallel, the controller would output multiple sets.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/NTM-flow-addressing.png&quot; alt=&quot;NTM-flow-addressing&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 12. Flow diagram of the addressing mechanisms in Neural Turing Machine. (Image source: &lt;a href=&quot;https://arxiv.org/abs/1410.5401&quot;&gt;Graves, Wayne &amp;amp; Danihelka, 2014&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 12. Flow diagram of the addressing mechanisms in Neural Turing Machine. (Image source: &lt;a href=&quot;https://arxiv.org/abs/1410.5401&quot;&gt;Graves, Wayne &amp;amp; Danihelka, 2014&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;pointer-network&quot;&gt;Pointer Network&lt;/h2&gt;
 
 &lt;p&gt;In problems like sorting or travelling salesman, both input and output are sequential data. Unfortunately, they cannot be easily solved by classic seq-2-seq or NMT models, given that the discrete categories of output elements are not determined in advance, but depends on the variable input size. The &lt;strong&gt;Pointer Net&lt;/strong&gt; (&lt;strong&gt;Ptr-Net&lt;/strong&gt;; &lt;a href=&quot;https://arxiv.org/abs/1506.03134&quot;&gt;Vinyals, et al. 2015&lt;/a&gt;) is proposed to resolve this type of problems: When the output elements correspond to &lt;em&gt;positions&lt;/em&gt; in an input sequence. Rather than using attention to blend hidden units of an encoder into a context vector (See Fig. 8), the Pointer Net applies attention over the input elements to pick one as the output at each decoder step.&lt;/p&gt;
 
 &lt;p style=&quot;width: 75%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/ptr-net.png&quot; alt=&quot;pointer network&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 13. The architecture of a Pointer Network model. (Image source: &lt;a href=&quot;https://arxiv.org/abs/1506.03134&quot;&gt;Vinyals, et al. 2015&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 13. The architecture of a Pointer Network model. (Image source: &lt;a href=&quot;https://arxiv.org/abs/1506.03134&quot;&gt;Vinyals, et al. 2015&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;The Ptr-Net outputs a sequence of integer indices, \(\boldsymbol{c} = (c_1, \dots, c_m)\) given a sequence of input vectors \(\boldsymbol{x} = (x_1, \dots, x_n)\) and \(1 \leq c_i \leq n\). The model still embraces an encoder-decoder framework. The encoder and decoder hidden states are denoted as \((\boldsymbol{h}_1, \dots, \boldsymbol{h}_n)\) and \((\boldsymbol{s}_1, \dots, \boldsymbol{s}_m)\), respectively. Note that \(\mathbf{s}_i\) is the output gate after cell activation in the decoder. The Ptr-Net applies additive attention between states and then normalizes it by softmax to model the output conditional probability:&lt;/p&gt;
 
@@ -1633,9 +1634,9 @@ y_i &amp;amp;= p(c_i \vert c_1, \dots, c_{i-1}, \boldsymbol{x}) \\
 &lt;h3 id=&quot;multi-head-self-attention&quot;&gt;Multi-Head Self-Attention&lt;/h3&gt;
 
 &lt;p style=&quot;width: 40%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/multi-head-attention.png&quot; alt=&quot;multi-head scaled dot-product attention&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 14. Multi-head scaled dot-product attention mechanism. (Image source: Fig 2 in &lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf&quot;&gt;Vaswani, et al., 2017&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em style=&quot;text-align: center;&quot;&gt;Fig. 14. Multi-head scaled dot-product attention mechanism. (Image source: Fig 2 in &lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf&quot;&gt;Vaswani, et al., 2017&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Rather than only computing the attention once, the multi-head mechanism runs through the scaled dot-product attention multiple times in parallel. The independent attention outputs are simply concatenated and linearly transformed into the expected dimensions. I assume the motivation is because ensembling always helps? ;) According to the paper, &lt;em&gt;“multi-head attention allows the model to jointly attend to information from different representation &lt;strong&gt;subspaces&lt;/strong&gt; at different positions. With a single attention head, averaging inhibits this.”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Rather than only computing the attention once, the multi-head mechanism runs through the scaled dot-product attention multiple times in parallel. The independent attention outputs are simply concatenated and linearly transformed into the expected dimensions. I assume the motivation is because ensembling always helps? ;) According to the paper, &lt;em style=&quot;text-align: center;&quot;&gt;“multi-head attention allows the model to jointly attend to information from different representation &lt;strong&gt;subspaces&lt;/strong&gt; at different positions. With a single attention head, averaging inhibits this.”&lt;/em&gt;&lt;/p&gt;
 
 \[\begin{aligned}
 \text{MultiHead}(\mathbf{Q}, \mathbf{K}, \mathbf{V}) &amp;amp;= [\text{head}_1; \dots; \text{head}_h]\mathbf{W}^O \\
@@ -1647,7 +1648,8 @@ y_i &amp;amp;= p(c_i \vert c_1, \dots, c_{i-1}, \boldsymbol{x}) \\
 &lt;h3 id=&quot;encoder&quot;&gt;Encoder&lt;/h3&gt;
 
 &lt;p style=&quot;width: 60%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/transformer-encoder.png&quot; alt=&quot;Transformer encoder&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 15. The transformer’s encoder. (Image source: &lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf&quot;&gt;Vaswani, et al., 2017&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 15. The transformer’s encoder. (Image source: &lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf&quot;&gt;Vaswani, et al., 2017&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;The encoder generates an attention-based representation with capability to locate a specific piece of information from a potentially infinitely-large context.&lt;/p&gt;
 &lt;ul&gt;
@@ -1660,7 +1662,7 @@ All the sub-layers output data of the same dimension \(d_\text{model} = 512\).&l
 &lt;h3 id=&quot;decoder&quot;&gt;Decoder&lt;/h3&gt;
 
 &lt;p style=&quot;width: 58%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/transformer-decoder.png&quot; alt=&quot;Transformer decoder&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 16. The transformer’s decoder. (Image source: &lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf&quot;&gt;Vaswani, et al., 2017&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 16. The transformer’s decoder. (Image source: &lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf&quot;&gt;Vaswani, et al., 2017&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;The decoder is able to retrieval from the encoded representation.&lt;/p&gt;
 &lt;ul&gt;
@@ -1680,7 +1682,7 @@ All the sub-layers output data of the same dimension \(d_\text{model} = 512\).&l
 &lt;/ul&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/transformer.png&quot; alt=&quot;Transformer model&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 17. The full model architecture of the transformer. (Image source: Fig 1 &amp;amp; 2 in &lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf&quot;&gt;Vaswani, et al., 2017&lt;/a&gt;.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em style=&quot;text-align: center;&quot;&gt;Fig. 17. The full model architecture of the transformer. (Image source: Fig 1 &amp;amp; 2 in &lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf&quot;&gt;Vaswani, et al., 2017&lt;/a&gt;.)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Try to implement the transformer model is an interesting experience, here is mine: &lt;a href=&quot;https://github.com/lilianweng/transformer-tensorflow&quot;&gt;lilianweng/transformer-tensorflow&lt;/a&gt;. Read the comments in the code if you are interested.&lt;/p&gt;
 
@@ -1691,7 +1693,7 @@ All the sub-layers output data of the same dimension \(d_\text{model} = 512\).&l
 &lt;p&gt;The &lt;strong&gt;Simple Neural Attention &lt;a href=&quot;http://bair.berkeley.edu/blog/2017/07/18/learning-to-learn/&quot;&gt;Meta-Learner&lt;/a&gt;&lt;/strong&gt; (&lt;strong&gt;SNAIL&lt;/strong&gt;) (&lt;a href=&quot;http://metalearning.ml/papers/metalearn17_mishra.pdf&quot;&gt;Mishra et al., 2017&lt;/a&gt;) was developed partially to resolve the problem with &lt;a href=&quot;#full-architecture&quot;&gt;positioning&lt;/a&gt; in the transformer model by combining the self-attention mechanism in transformer with &lt;a href=&quot;https://deepmind.com/blog/wavenet-generative-model-raw-audio/&quot;&gt;temporal convolutions&lt;/a&gt;. It has been demonstrated to be good at both supervised learning and reinforcement learning tasks.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/snail.png&quot; alt=&quot;SNAIL&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 18. SNAIL model architecture (Image source: &lt;a href=&quot;http://metalearning.ml/papers/metalearn17_mishra.pdf&quot;&gt;Mishra et al., 2017&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 18. SNAIL model architecture (Image source: &lt;a href=&quot;http://metalearning.ml/papers/metalearn17_mishra.pdf&quot;&gt;Mishra et al., 2017&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;SNAIL was born in the field of meta-learning, which is another big topic worthy of a post by itself. But in simple words, the meta-learning model is expected to be generalizable to novel, unseen tasks in the similar distribution. Read &lt;a href=&quot;http://bair.berkeley.edu/blog/2017/07/18/learning-to-learn/&quot;&gt;this&lt;/a&gt; nice introduction if interested.&lt;/p&gt;
 
@@ -1704,7 +1706,7 @@ All the sub-layers output data of the same dimension \(d_\text{model} = 512\).&l
 &lt;p&gt;As the (soft) self-attention in the vision context is designed to explicitly learn the relationship between one pixel and all other positions, even regions far apart, it can easily capture global dependencies. Hence GAN equipped with self-attention is expected to &lt;em&gt;handle details better&lt;/em&gt;, hooray!&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/conv-vs-self-attention.png&quot; alt=&quot;Conv vs self-attention on images&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 19. Convolution operation and self-attention have access to regions of very different sizes.&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 19. Convolution operation and self-attention have access to regions of very different sizes.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;The SAGAN adopts the &lt;a href=&quot;https://arxiv.org/pdf/1711.07971.pdf&quot;&gt;non-local neural network&lt;/a&gt; to apply the attention computation. The convolutional image feature maps \(\mathbf{x}\) is branched out into three copies, corresponding to the concepts of &lt;a href=&quot;#key-value-and-query&quot;&gt;key, value, and query&lt;/a&gt; in the transformer:&lt;/p&gt;
 &lt;ul&gt;
@@ -1721,7 +1723,7 @@ All the sub-layers output data of the same dimension \(d_\text{model} = 512\).&l
 \end{aligned}\]
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/SAGAN.png&quot; alt=&quot;SAGAN&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 20. The self-attention mechanism in SAGAN. (Image source: Fig. 2 in &lt;a href=&quot;https://arxiv.org/abs/1805.08318&quot;&gt;Zhang et al., 2018&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 20. The self-attention mechanism in SAGAN. (Image source: Fig. 2 in &lt;a href=&quot;https://arxiv.org/abs/1805.08318&quot;&gt;Zhang et al., 2018&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Note that \(\alpha_{i,j}\) is one entry in the attention map, indicating how much attention the model should pay to the \(i\)-th position when synthesizing the \(j\)-th location. \(\mathbf{W}_f\), \(\mathbf{W}_g\), and \(\mathbf{W}_h\) are all 1x1 convolution filters. If you feel that 1x1 conv sounds like a weird concept (i.e., isn’t it just to multiply the whole feature map with one number?), watch this short &lt;a href=&quot;https://www.coursera.org/lecture/convolutional-neural-networks/networks-in-networks-and-1x1-convolutions-ZTb8x&quot;&gt;tutorial&lt;/a&gt; by Andrew Ng. The output \(\mathbf{o}_j\) is a column vector of the final output \(\mathbf{o}= (\mathbf{o}_1, \mathbf{o}_2, \dots, \mathbf{o}_j, \dots, \mathbf{o}_N)\).&lt;/p&gt;
 
@@ -1732,7 +1734,7 @@ All the sub-layers output data of the same dimension \(d_\text{model} = 512\).&l
 &lt;p&gt;While the scaling parameter \(\gamma\) is increased gradually from 0 during the training, the network is configured to first rely on the cues in the local regions and then gradually learn to assign more weight to the regions that are further away.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/SAGAN-examples.png&quot; alt=&quot;SAGAN examples&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Fig. 21. 128×128 example images generated by SAGAN for different classes. (Image source: Partial Fig. 6 in &lt;a href=&quot;https://arxiv.org/pdf/1805.08318.pdf&quot;&gt;Zhang et al., 2018&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;em&gt;Fig. 21. 128×128 example images generated by SAGAN for different classes. (Image source: Partial Fig. 6 in &lt;a href=&quot;https://arxiv.org/pdf/1805.08318.pdf&quot;&gt;Zhang et al., 2018&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1745,9 +1747,6 @@ All the sub-layers output data of the same dimension \(d_\text{model} = 512\).&l
   url     = &quot;http://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html&quot;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;If you notice mistakes and errors in this post, don’t hesitate to contact me at [lilian dot wengweng at gmail dot com] and I would be very happy to correct them right away!&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;See you in the next post :D&lt;/p&gt;
 
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 
