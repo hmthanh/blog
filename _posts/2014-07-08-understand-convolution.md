@@ -2,7 +2,7 @@
 layout: post
 title:  "Understand Convolution"
 date:   2014-07-08 11:04:17
-author: Minh-Thanh Hoang
+author: Christopher Olah
 tags: deep learning
 ---
 

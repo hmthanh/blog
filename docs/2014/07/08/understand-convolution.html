@@ -9,7 +9,7 @@
 <title>Understand Convolution | Minh-Thanh’s Blog</title>
 <meta name="generator" content="Jekyll v4.1.1">
 <meta property="og:title" content="Understand Convolution">
-<meta name="author" content="Minh-Thanh Hoang">
+<meta name="author" content="Christopher Olah">
 <meta property="og:locale" content="en_US">
 <meta name="description" content="Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/">
 <meta property="og:description" content="Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/">
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="Understand Convolution">
 <script type="application/ld+json">
-{"dateModified":"2014-07-08T18:04:17+07:00","datePublished":"2014-07-08T18:04:17+07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html"},"author":{"@type":"Person","name":"Minh-Thanh Hoang"},"url":"http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html","description":"Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/","headline":"Understand Convolution","@context":"https://schema.org"}</script>
+{"dateModified":"2014-07-08T18:04:17+07:00","datePublished":"2014-07-08T18:04:17+07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html"},"author":{"@type":"Person","name":"Christopher Olah"},"url":"http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html","description":"Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/","headline":"Understand Convolution","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="http://hmthanh.github.io/blog/feed.xml" title="Minh-Thanh's Blog">
@@ -37,7 +37,7 @@
                 <a class="back" href="/blog/"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"></path></svg>Back Home</a>
                 <p class="post-meta">
                     <time class="dt-published" datetime="2014-07-08T18:04:17+07:00" itemprop="datePublished">Jul 8, 2014
-            </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Minh-Thanh Hoang</span></span></p>
+            </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Christopher Olah</span></span></p>
                     <div style="clear:both"></div>
             </header>
             
@@ -71,7 +71,7 @@ The probability of the ball rolling $b$ units away from the new starting point i
 
 <p>If we fix the result of the first drop so we know the ball went distance $a$, for the ball to go a total distance $c$,
 the distance traveled in the second drop is also fixed at $b$, where $a + b = c$.
-So the probability of this happening is simply $f(a) ⋅ g(b)$.<sup><a href="#3ad3:fn:1" class="footnote" id="3ad3:fn-back:1">1</a></sup></p>
+So the probability of this happening is simply $f(a) ⋅ g(b)$.<sup><a href="#5639:fn:1" class="footnote" id="5639:fn-back:1">1</a></sup></p>
 
 <p>Let’s think about this with a specific discrete example.
 We want the total distance $c$ to be $3$. If the first time it rolls, $a=2$, the second time it must roll $b=1$ in order to reach our total distance $a+b=3$.
@@ -106,7 +106,7 @@ So, summing over every solution to $a+b=c$, we can denote the total likelihood a
 
 \[(f∗g)(c)=\sum_{a} f(a)⋅g(c−a)\]
 
-<p>This is the standard definition<sup><a href="#3ad3:fn:2" class="footnote" id="3ad3:fn-back:2">2</a></sup> of convolution.</p>
+<p>This is the standard definition<sup><a href="#5639:fn:2" class="footnote" id="5639:fn-back:2">2</a></sup> of convolution.</p>
 
 <p>To make this a bit more concrete, we can think about this in terms of positions the ball might land.
 After the first drop, it will land at an intermediate position $a$ with probability $f(a)$.
@@ -227,7 +227,7 @@ This allows us to understand the convolution as a whole.</p>
 
 <p>Where $x_0, x_1…$ are the inputs. The weights, $w0$, $w1$, … describe how the neuron connects to its inputs.
 A negative weight means that an input inhibits the neuron from firing, while a positive weight encourages it to.
-The weights are the heart of the neuron, controlling its behavior<sup><a href="#3ad3:fn:3" class="footnote" id="3ad3:fn-back:3">3</a></sup>.
+The weights are the heart of the neuron, controlling its behavior<sup><a href="#5639:fn:3" class="footnote" id="5639:fn-back:3">3</a></sup>.
 Saying that multiple neurons are identical is the same thing as saying that the weights are the same.</p>
 
 <p>It’s this wiring of neurons, describing all the weights and which ones are identical, that convolution will handle for us.</p>
@@ -300,11 +300,11 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
 <h1 id="acknowledgments">Acknowledgments</h1>
 
 <ol class="footnotelist">
-<li id="3ad3:fn:1" class="footnotebody" value="1">
+<li id="5639:fn:1" class="footnotebody" value="1">
         We want the probability of the ball rolling a units the first time and also rolling b units the second time. The distributions $P(A)=f(a)$ and $P(b)=g(b)$ are independent, with both distributions centered at 0. So  $P(a,b)=P(a)∗P(b)=f(a)⋅g(b)$
-   <a href="#3ad3:fn-back:1" class="backlink">⏎</a>
+   <a href="#5639:fn-back:1" class="backlink">⏎</a>
 </li>
-<li id="3ad3:fn:2" class="footnotebody" value="2">
+<li id="5639:fn:2" class="footnotebody" value="2">
       The non-standard definition, which I haven’t previously seen, seems to have a lot of benefits. In future posts, we will find this definition very helpful because it lends itself to generalization to new algebraic structures. But it also has the advantage that it makes a lot of algebraic properties of convolutions really obvious.
       <br>
       For example, convolution is a commutative operation. That is, $f∗g=g∗f$. Why?
@@ -316,11 +316,11 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
       \sum_{(a+b)+c=d} (f(a)⋅g(b))⋅h(c)  = \sum_{a+(b+c)=d} f(a)⋅(g(b)⋅h(c))
       $$
       
-   <a href="#3ad3:fn-back:2" class="backlink">⏎</a>
+   <a href="#5639:fn-back:2" class="backlink">⏎</a>
 </li>
-<li id="3ad3:fn:3" class="footnotebody" value="3">
+<li id="5639:fn:3" class="footnotebody" value="3">
      There’s also the bias, which is the “threshold” for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
-  <a href="#3ad3:fn-back:3" class="backlink">⏎</a>
+  <a href="#5639:fn-back:3" class="backlink">⏎</a>
 </li>
 </ol>
 

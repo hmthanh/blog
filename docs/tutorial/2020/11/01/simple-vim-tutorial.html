@@ -6,22 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Simple tutorial using VIM | Minh-Thanh’s Blog</title>
+<title>VIM cơ bản | Minh-Thanh’s Blog</title>
 <meta name="generator" content="Jekyll v4.1.1">
-<meta property="og:title" content="Simple tutorial using VIM">
+<meta property="og:title" content="VIM cơ bản">
 <meta name="author" content="Minh-Thanh Hoang">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="Download VIM tại : VIM Vim có hai chế độ insert mode (để chèn) : ấn i để chuyển qua chế độ insert normal mode (để di chuyển và điều khiển trong văn bản) : ấn Esc để chuyển qua chế độ normal Vim chuyển cơ bản Di chuyển sang trái &lt;- hoặc sang phải -&gt; trong văn bản : ấn h sang trái, ấn l sang phải Di chuyển lên xuống từng dòng : ấn j đi xuống, ấn k đi lên Di chuyển theo từ Để di chuyển đến từ tiếp theo : w đến đầu từ, e đến cuối từ Để di chuyển đến từ phía trước : b di chuyển đến đầu từ Di chuyển sử dụng số Sử dụng số trước các phím di chuyển (w, e, b) để đi đến số từ mong muốn Ví dụ : 3w để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo Sử dụng số trước l để di chuyển đến ký tự (letter) lần Ví dụ : 3l di chuyển đến 3 ký tự tiếp theo Chèn nhiều lần trong chế độ norrmal mode Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng [number]i[] rồi Esc Ví dụ 30iabc Esc sẽ sinh ra abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab Tìm kiếm một ký tự huoưg">
-<meta property="og:description" content="Download VIM tại : VIM Vim có hai chế độ insert mode (để chèn) : ấn i để chuyển qua chế độ insert normal mode (để di chuyển và điều khiển trong văn bản) : ấn Esc để chuyển qua chế độ normal Vim chuyển cơ bản Di chuyển sang trái &lt;- hoặc sang phải -&gt; trong văn bản : ấn h sang trái, ấn l sang phải Di chuyển lên xuống từng dòng : ấn j đi xuống, ấn k đi lên Di chuyển theo từ Để di chuyển đến từ tiếp theo : w đến đầu từ, e đến cuối từ Để di chuyển đến từ phía trước : b di chuyển đến đầu từ Di chuyển sử dụng số Sử dụng số trước các phím di chuyển (w, e, b) để đi đến số từ mong muốn Ví dụ : 3w để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo Sử dụng số trước l để di chuyển đến ký tự (letter) lần Ví dụ : 3l di chuyển đến 3 ký tự tiếp theo Chèn nhiều lần trong chế độ norrmal mode Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng [number]i[] rồi Esc Ví dụ 30iabc Esc sẽ sinh ra abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab Tìm kiếm một ký tự huoưg">
+<meta name="description" content="Download VIM tại : VIM Vim có hai chế độ insert mode (để chèn) : ấn i để chuyển qua chế độ insert normal mode (để di chuyển và điều khiển trong văn bản) : ấn Esc để chuyển qua chế độ normal Vim chuyển cơ bản Di chuyển sang trái &lt;- hoặc sang phải -&gt; trong văn bản : ấn h sang trái, ấn l sang phải Di chuyển lên xuống từng dòng : ấn j đi xuống, ấn k đi lên Di chuyển theo từ Để di chuyển đến từ tiếp theo : w đến đầu từ, e đến cuối từ Để di chuyển đến từ phía trước : b di chuyển đến đầu từ Di chuyển sử dụng số Sử dụng số trước các phím di chuyển (w, e, b) để đi đến số từ mong muốn Ví dụ : 3w để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo Sử dụng số trước l để di chuyển đến ký tự (letter) lần Ví dụ : 3l di chuyển đến 3 ký tự tiếp theo Chèn nhiều lần trong chế độ norrmal mode Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng [number]i[character] rồi Esc Ví dụ 30iabc Esc sẽ sinh ra abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab Tìm kiếm một ký tự Để tìm kiếm một ký tự : f[character] Để tìm kiếm nhiều ký tự : [number]f[character] Đi đến vị trí cặp dấu ngoặc ([, {, () trùng : Shift + 5 = % Di chuyển đến Đầu dòng 0 Cuối dòng Shift + 4 = $ Di chuyển đến từ giống với từ ở ngay vị trí con trỏ Tiếp theo * Quay lại # Di chuyển đến Đầu văn bản gg Cuối văn bản G Đến dòng thứ number : [number]G Tìm kiếm một từ Nhấn /[word] để tìm kiếm Nhấn Enter n để di chuyển đến từ tiếp theo Để chèn một dòng mới Trước dòng hoặc sau dòng hiện tại o hoặc O Để xóa một ký tự x xóa các ký tự trước X xóa ký tự phía sau Thay thế ký tự ở vị trí con trỏ : r[character] Để xóa một chữ d[number]w xóa number chữ và khoảng trắng d[number]e xóa number chữ Để lặp lại quá trình đã xóa ở trên nhấn . Chế độ visual mode : v visual mode : Chọn theo cột V visual mode line : Chọn theo hàng Ví du để chọn một từ sau con trỏ đang xét nhấn vw Các câu lệnh thường gặp :w Lưu văn bản :wq Lưu và thoát văn bản :q">
+<meta property="og:description" content="Download VIM tại : VIM Vim có hai chế độ insert mode (để chèn) : ấn i để chuyển qua chế độ insert normal mode (để di chuyển và điều khiển trong văn bản) : ấn Esc để chuyển qua chế độ normal Vim chuyển cơ bản Di chuyển sang trái &lt;- hoặc sang phải -&gt; trong văn bản : ấn h sang trái, ấn l sang phải Di chuyển lên xuống từng dòng : ấn j đi xuống, ấn k đi lên Di chuyển theo từ Để di chuyển đến từ tiếp theo : w đến đầu từ, e đến cuối từ Để di chuyển đến từ phía trước : b di chuyển đến đầu từ Di chuyển sử dụng số Sử dụng số trước các phím di chuyển (w, e, b) để đi đến số từ mong muốn Ví dụ : 3w để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo Sử dụng số trước l để di chuyển đến ký tự (letter) lần Ví dụ : 3l di chuyển đến 3 ký tự tiếp theo Chèn nhiều lần trong chế độ norrmal mode Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng [number]i[character] rồi Esc Ví dụ 30iabc Esc sẽ sinh ra abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab Tìm kiếm một ký tự Để tìm kiếm một ký tự : f[character] Để tìm kiếm nhiều ký tự : [number]f[character] Đi đến vị trí cặp dấu ngoặc ([, {, () trùng : Shift + 5 = % Di chuyển đến Đầu dòng 0 Cuối dòng Shift + 4 = $ Di chuyển đến từ giống với từ ở ngay vị trí con trỏ Tiếp theo * Quay lại # Di chuyển đến Đầu văn bản gg Cuối văn bản G Đến dòng thứ number : [number]G Tìm kiếm một từ Nhấn /[word] để tìm kiếm Nhấn Enter n để di chuyển đến từ tiếp theo Để chèn một dòng mới Trước dòng hoặc sau dòng hiện tại o hoặc O Để xóa một ký tự x xóa các ký tự trước X xóa ký tự phía sau Thay thế ký tự ở vị trí con trỏ : r[character] Để xóa một chữ d[number]w xóa number chữ và khoảng trắng d[number]e xóa number chữ Để lặp lại quá trình đã xóa ở trên nhấn . Chế độ visual mode : v visual mode : Chọn theo cột V visual mode line : Chọn theo hàng Ví du để chọn một từ sau con trỏ đang xét nhấn vw Các câu lệnh thường gặp :w Lưu văn bản :wq Lưu và thoát văn bản :q">
 <link rel="canonical" href="http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html">
 <meta property="og:url" content="http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html">
 <meta property="og:site_name" content="Minh-Thanh’s Blog">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-11-01T11:04:17+07:00">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Simple tutorial using VIM">
+<meta property="twitter:title" content="VIM cơ bản">
 <script type="application/ld+json">
-{"dateModified":"2020-11-01T11:04:17+07:00","datePublished":"2020-11-01T11:04:17+07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html"},"author":{"@type":"Person","name":"Minh-Thanh Hoang"},"url":"http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html","description":"Download VIM tại : VIM Vim có hai chế độ insert mode (để chèn) : ấn i để chuyển qua chế độ insert normal mode (để di chuyển và điều khiển trong văn bản) : ấn Esc để chuyển qua chế độ normal Vim chuyển cơ bản Di chuyển sang trái &lt;- hoặc sang phải -&gt; trong văn bản : ấn h sang trái, ấn l sang phải Di chuyển lên xuống từng dòng : ấn j đi xuống, ấn k đi lên Di chuyển theo từ Để di chuyển đến từ tiếp theo : w đến đầu từ, e đến cuối từ Để di chuyển đến từ phía trước : b di chuyển đến đầu từ Di chuyển sử dụng số Sử dụng số trước các phím di chuyển (w, e, b) để đi đến số từ mong muốn Ví dụ : 3w để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo Sử dụng số trước l để di chuyển đến ký tự (letter) lần Ví dụ : 3l di chuyển đến 3 ký tự tiếp theo Chèn nhiều lần trong chế độ norrmal mode Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng [number]i[] rồi Esc Ví dụ 30iabc Esc sẽ sinh ra abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab Tìm kiếm một ký tự huoưg","headline":"Simple tutorial using VIM","@context":"https://schema.org"}</script>
+{"dateModified":"2020-11-01T11:04:17+07:00","datePublished":"2020-11-01T11:04:17+07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html"},"author":{"@type":"Person","name":"Minh-Thanh Hoang"},"url":"http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html","description":"Download VIM tại : VIM Vim có hai chế độ insert mode (để chèn) : ấn i để chuyển qua chế độ insert normal mode (để di chuyển và điều khiển trong văn bản) : ấn Esc để chuyển qua chế độ normal Vim chuyển cơ bản Di chuyển sang trái &lt;- hoặc sang phải -&gt; trong văn bản : ấn h sang trái, ấn l sang phải Di chuyển lên xuống từng dòng : ấn j đi xuống, ấn k đi lên Di chuyển theo từ Để di chuyển đến từ tiếp theo : w đến đầu từ, e đến cuối từ Để di chuyển đến từ phía trước : b di chuyển đến đầu từ Di chuyển sử dụng số Sử dụng số trước các phím di chuyển (w, e, b) để đi đến số từ mong muốn Ví dụ : 3w để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo Sử dụng số trước l để di chuyển đến ký tự (letter) lần Ví dụ : 3l di chuyển đến 3 ký tự tiếp theo Chèn nhiều lần trong chế độ norrmal mode Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng [number]i[character] rồi Esc Ví dụ 30iabc Esc sẽ sinh ra abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab Tìm kiếm một ký tự Để tìm kiếm một ký tự : f[character] Để tìm kiếm nhiều ký tự : [number]f[character] Đi đến vị trí cặp dấu ngoặc ([, {, () trùng : Shift + 5 = % Di chuyển đến Đầu dòng 0 Cuối dòng Shift + 4 = $ Di chuyển đến từ giống với từ ở ngay vị trí con trỏ Tiếp theo * Quay lại # Di chuyển đến Đầu văn bản gg Cuối văn bản G Đến dòng thứ number : [number]G Tìm kiếm một từ Nhấn /[word] để tìm kiếm Nhấn Enter n để di chuyển đến từ tiếp theo Để chèn một dòng mới Trước dòng hoặc sau dòng hiện tại o hoặc O Để xóa một ký tự x xóa các ký tự trước X xóa ký tự phía sau Thay thế ký tự ở vị trí con trỏ : r[character] Để xóa một chữ d[number]w xóa number chữ và khoảng trắng d[number]e xóa number chữ Để lặp lại quá trình đã xóa ở trên nhấn . Chế độ visual mode : v visual mode : Chọn theo cột V visual mode line : Chọn theo hàng Ví du để chọn một từ sau con trỏ đang xét nhấn vw Các câu lệnh thường gặp :w Lưu văn bản :wq Lưu và thoát văn bản :q","headline":"VIM cơ bản","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="http://hmthanh.github.io/blog/feed.xml" title="Minh-Thanh's Blog">
@@ -32,7 +32,7 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
             <header class="post-header">
-                <h1 class="post-title p-name" itemprop="name headline" id="title">Simple tutorial using VIM</h1>
+                <h1 class="post-title p-name" itemprop="name headline" id="title">VIM cơ bản</h1>
                 <a class="back" href="/blog/"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"></path></svg>Back Home</a>
                 <p class="post-meta">
                     <time class="dt-published" datetime="2020-11-01T11:04:17+07:00" itemprop="datePublished">Nov 1, 2020
@@ -75,29 +75,134 @@
     <p>Di chuyển sử dụng số</p>
 
     <ul>
-      <li>
-        <p>Sử dụng số trước các phím di chuyển (<code>w</code>, <code>e</code>, <code>b</code>) để đi đến số từ mong muốn
-Ví dụ : <code>3w</code> để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo</p>
-      </li>
-      <li>
-        <p>Sử dụng số trước <code>l</code> để di chuyển đến ký tự (letter) lần
-Ví dụ : <code>3l</code> di chuyển đến 3 ký tự tiếp theo</p>
-      </li>
+      <li>Sử dụng số trước các phím di chuyển (<code>w</code>, <code>e</code>, <code>b</code>) để đi đến số từ mong muốn</li>
     </ul>
+
+    <p>Ví dụ : <code>3w</code> để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo</p>
+
+    <ul>
+      <li>Sử dụng số trước <code>l</code> để di chuyển đến ký tự (letter) lần</li>
+    </ul>
+
+    <p>Ví dụ : <code>3l</code> di chuyển đến 3 ký tự tiếp theo</p>
   </li>
   <li>
     <p>Chèn nhiều lần trong chế độ <code>norrmal</code> mode</p>
 
     <ul>
-      <li>Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng <code>[number]i[]</code> rồi <code>Esc</code>
-Ví dụ <code>30iabc</code> <code>Esc</code> sẽ sinh ra <code>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab</code>
+      <li>Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng <code>[number]i[character]</code> rồi <code>Esc</code>
 </li>
     </ul>
+
+    <p>Ví dụ <code>30iabc</code> <code>Esc</code> sẽ sinh ra <code>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab</code></p>
   </li>
   <li>
     <p>Tìm kiếm một ký tự</p>
 
-    <p>huoưg</p>
+    <ul>
+      <li>Để tìm kiếm một ký tự : <code>f[character]</code>
+</li>
+      <li>Để tìm kiếm nhiều ký tự : <code>[number]f[character]</code>
+</li>
+    </ul>
+  </li>
+  <li>
+    <p>Đi đến vị trí cặp dấu ngoặc (<code>[</code>, <code>{</code>, <code>(</code>) trùng : <code>Shift + 5 = %</code></p>
+  </li>
+  <li>
+    <p>Di chuyển đến</p>
+
+    <ul>
+      <li>Đầu dòng <code>0</code>
+</li>
+      <li>Cuối dòng <code>Shift + 4 = $</code>
+</li>
+    </ul>
+  </li>
+  <li>
+    <p>Di chuyển đến từ giống với từ ở ngay vị trí con trỏ</p>
+
+    <ul>
+      <li>Tiếp theo <code>*</code>
+</li>
+      <li>Quay lại <code>#</code>
+</li>
+    </ul>
+  </li>
+  <li>
+    <p>Di chuyển đến</p>
+
+    <ul>
+      <li>Đầu văn bản <code>gg</code>
+</li>
+      <li>Cuối văn bản <code>G</code>
+</li>
+      <li>Đến dòng thứ number : <code>[number]G</code>
+</li>
+    </ul>
+  </li>
+  <li>
+    <p>Tìm kiếm một từ</p>
+
+    <ul>
+      <li>Nhấn <code>/[word]</code> để tìm kiếm</li>
+      <li>Nhấn <code>Enter</code> <code>n</code> để di chuyển đến từ tiếp theo</li>
+    </ul>
+  </li>
+  <li>
+    <p>Để chèn một dòng mới</p>
+
+    <ul>
+      <li>Trước dòng hoặc sau dòng hiện tại <code>o</code> hoặc <code>O</code>
+</li>
+    </ul>
+  </li>
+  <li>
+    <p>Để xóa một ký tự</p>
+
+    <ul>
+      <li>
+<code>x</code> xóa các ký tự trước</li>
+      <li>
+<code>X</code> xóa ký tự phía sau</li>
+    </ul>
+  </li>
+  <li>
+    <p>Thay thế ký tự ở vị trí con trỏ : <code>r[character]</code></p>
+  </li>
+  <li>
+    <p>Để xóa một chữ</p>
+
+    <ul>
+      <li>
+<code>d[number]w</code> xóa number chữ và khoảng trắng</li>
+      <li>
+<code>d[number]e</code> xóa number chữ</li>
+    </ul>
+  </li>
+  <li>
+    <p>Để lặp lại quá trình đã xóa ở trên nhấn <code>.</code></p>
+  </li>
+  <li>
+    <p>Chế độ visual mode :</p>
+
+    <ul>
+      <li>
+<code>v</code> visual mode : Chọn theo cột</li>
+      <li>
+<code>V</code> visual mode line : Chọn theo hàng</li>
+    </ul>
+
+    <p>Ví du để chọn một từ sau con trỏ đang xét nhấn <code>vw</code></p>
+  </li>
+  <li>
+    <p>Các câu lệnh thường gặp</p>
+
+    <ul>
+      <li>:w Lưu văn bản</li>
+      <li>:wq Lưu và thoát văn bản</li>
+      <li>:q</li>
+    </ul>
   </li>
 </ol>
 
@@ -109,6 +214,7 @@ Ví dụ <code>30iabc</code> <code>Esc</code> sẽ sinh ra <code>abcabcabcabcabc
         <div class="page-navigation">
           
           <a class="prev" href="/blog/2020/04/07/the-transformer-family.html"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"></path></svg> The Transformer Family</a>  
+          <a class="next" href="/blog/softskill/2020/11/03/How-to-thinking.html">How-to-think <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg></a> 
       </div>
     
     </div>
