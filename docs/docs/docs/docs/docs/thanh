@@ -1,0 +1,259 @@
+sdfsdfStack Overflow
+Products
+Search…
+
+Thanh
+hoangf minh
+
+Minh-Thanh Hoang
+91
+, 91 reputation
+?11 silver badge?1212 bronze badges
+Home
+PUBLIC
+Stack Overflow
+Tags
+Users
+FIND A JOB
+Jobs
+Companies
+TEAMS
+What’s this?
+Free 30 Day Trial
+Change the encoding of a file in Visual Studio Code
+Asked 5 years, 6 months ago
+Active 4 days ago
+Viewed 181k times
+
+134
+
+
+18
+Is there any way to change the encoding of a file? For example UTF-8 to ISO 8859-1?
+
+Setting Example Sublime Text:
+
+"default_encoding": "UTF-8"
+visual-studio-code
+character-encoding
+vscode-settings
+share  edit  follow  flag 
+edited Mar 30 '19 at 14:13
+
+Gama11
+21.9k77 gold badges5151 silver badges7474 bronze badges
+asked May 6 '15 at 16:43
+
+Fernando Tholl
+1,75822 gold badges1111 silver badges1111 bronze badges
+add a comment
+start a bounty
+3 Answers
+
+260
+
+So here's how to do that:
+
+In the bottom bar of VSCode, you'll see the label UTF-8. Click it. A popup opens. Click Save with encoding. You can now pick a new encoding for that file.
+
+Alternatively, you can change the setting globally in Workspace/User settings using the setting "files.encoding": "utf8". If using the graphical settings page in VSCode, simply search for encoding. Do note however that this only applies to newly created files.
+change
+flag 
+30 '19 at 10:04
+
+1 '16 at 17:1
+DarkNeuron
+o
+,25422 gold badges3434 silver b
+
+
+@Gerfried "If you doesn't work. See github.com/Microsoft/vscode/issues/47089 – john c. j. Apr 4 '18 at 21:11 
+8
+
+please avoid using utf8bom, you not need it – sherpya Jun 5 '18 at 14:57
+add a comment
+
+24
+
+Apart from the settings explained in the answer by @DarkNeuron:
+
+"files.encoding": "any encoding"
+you can also specify settings for a specific language like so:
+
+"[language id]": {
+  "files.encoding": "any encoding"
+}
+For example, I use this when I need to edit PowerShell files previously created with ISE (which are created in ANSI format):
+
+"[powershell]": {
+    "files.encoding": "windows1252"
+}
+You can get a list of identifiers of well-known languages here.
+
+share  edit  follow  flag 
+edited Mar 7 '19 at 8:21
+
+Lankymart
+14k55 gold badges6161 silver badges147147 bronze badges
+answered Mar 8 '18 at 14:23
+
+JotaBe
+33.6k77 gold badges7777 silver badges104104 bronze badges
+add a comment
+
+0
+
+The existing answers show a possible solution for single files or file types. However, you can define the charset standard in VS Code by following this path:
+
+File > Preferences > Settings > Encoding > Choose your option
+
+This will define a character set as default. Besides that, you can always change the encoding in the lower right corner of the editor (blue symbol line) for the current project.
+
+share  edit  follow  flag 
+answered Oct 29 at 13:51
+
+Sven Eschlbeck
+6688 bronze badges
+add a comment
+Your Answer
+Links Images Styling/Headers Lists Blockquotes Code HTMLAdvanced help
+
+
+Community wiki
+Not the answer you're looking for? Browse other questions tagged visual-studio-code character-encoding vscode-settings or ask your own question.
+The Overflow Blog
+What’s so great about Go?
+The Overflow #45: What we call CI/CD is actually only CI.
+Featured on Meta
+Announcing tweaks to the Triage queue
+How does the Triage review queue work?
+Hot Meta Posts
+6
+Why does Stack Overflow look like this?
+24
+Should we rename [question2answer] to [php-question2answer]?
+Looking for a job?
+
+Software Quality Assurance Engineer
+Confluence Technologies, Inc.Ho Chi Minh City, Vietnam
+c#testing
+
+Senior Front-End Developer
+(Poly)Swarm Technologies, IncSan Diego, CA
+$100K - $150KREMOTE
+javascriptcss
+
+Senior Backend Engineer - Python
+APNATIME TECH PRIVATE LIMITEDNo office location
+?2500K - ?3500KREMOTE
+pythondjango
+
+Full-Stack Engineer
+Octane AINo office location
+REMOTE
+pythonjavascript
+
+Software Engineer in Test
+CanonicalNo office location
+REMOTE
+linuxubuntu
+
+Go engineer
+Sticker MuleNo office location
+$99K - $135KREMOTE
+c++go
+
+Software Engineer - Data Backend
+YelpLondon, UK
+REMOTE
+pythonjava
+
+Front - End Developer (All Level)
+TOP Jobs Front - End Developers in VietnamHo Chi Minh City, Vietnam
+javascriptangularjs
+View more jobs on Stack Overflow
+Linked
+0
+vscode: set encoding for files with a specific extension
+466
+UnicodeDecodeError when reading CSV file in Pandas with Python
+0
+hebrew characters in aspnet with angular 2
+0
+VS Code can't read unicode language written in other editors
+0
+Thai script seems to lose UTF-8 encoding in java for-each loop
+0
+Encoding problem if I put my code in module or other ps1 file
+0
+Vscode chinese words encode issue
+0
+error while compiling my sass code, how should i proceed from here on?
+-1
+Words with special characters are not getting rendered properly. Is there a way in Javascript?
+1
+Visual Studio Code can't encode cyrillic characters in output
+See more linked questions
+Related
+2229
+How do I get a consistent byte representation of strings in C# without manually specifying an encoding?
+422
+What is the difference between UTF-8 and ISO-8859-1?
+874
+Vertical rulers in Visual Studio Code
+990
+How do you format code in Visual Studio Code (VSCode)
+643
+Multiline editing in Visual Studio Code
+844
+How do I collapse sections of code in Visual Studio Code for Windows?
+680
+How do I hide certain files from the sidebar in Visual Studio Code?
+444
+Find and replace with a newline in Visual Studio Code
+520
+How can I switch word wrap on and off in Visual Studio Code?
+1459
+Open files always in a new tab
+Hot Network Questions
+Why does separation of variable gives the general solution to a PDE
+Why is Electron painted in black?
+how does merkle root building work for empty array?
+Multicolor inside borders for polygons in QGIS 3
+Tuning the lowest bass string a hair flat
+more hot questions
+ Question feed
+
+STACK OVERFLOW
+Questions
+Jobs
+Developer Jobs Directory
+Salary Calculator
+Help
+Mobile
+Disable Responsiveness
+PRODUCTS
+Teams
+Talent
+Advertising
+Enterprise
+COMPANY
+About
+Press
+Work Here
+Legal
+Privacy Policy
+Contact Us
+STACK EXCHANGE
+NETWORK
+Technology
+Life / Arts
+Culture / Recreation
+Science
+Other
+Blog
+Facebook
+Twitter
+LinkedIn
+Instagram
+site design / logo © 2020 Stack Exchange Inc; user contributions licensed under cc by-sa. rev 2020.11.2.37934
