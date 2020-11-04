@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-11-03T01:50:46+07:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Minh-Thanh’s Blog</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">Simple tutorial using VIM</title><link href="http://localhost:4000/blog/tutorial/2020/11/01/simple-vim-tutorial.html" rel="alternate" type="text/html" title="Simple tutorial using VIM" /><published>2020-11-01T11:04:17+07:00</published><updated>2020-11-01T11:04:17+07:00</updated><id>http://localhost:4000/blog/tutorial/2020/11/01/simple-vim-tutorial</id><content type="html" xml:base="http://localhost:4000/blog/tutorial/2020/11/01/simple-vim-tutorial.html">&lt;p&gt;Download VIM tại : &lt;a href=&quot;https://www.vim.org/download.php&quot;&gt;VIM&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-11-03T22:49:54+07:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Minh-Thanh’s Blog</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">How-to-think</title><link href="http://localhost:4000/blog/softskill/2020/11/03/How-to-thinking.html" rel="alternate" type="text/html" title="How-to-think" /><published>2020-11-03T11:04:17+07:00</published><updated>2020-11-03T11:04:17+07:00</updated><id>http://localhost:4000/blog/softskill/2020/11/03/How-to-thinking</id><content type="html" xml:base="http://localhost:4000/blog/softskill/2020/11/03/How-to-thinking.html">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Không thể tạo ra kết quả mới nếu đầu vào và tư duy như cũ&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nếu bạn vẫn làm những việc thường làm thì bạn vẫn nhận được kết quả bạn nhận được&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nếu tôi có 6 tiếng để chặt một cái cây, tôi sẽ giành 4 tiếng để mài một lưỡi rìu&lt;/p&gt;
+
+    &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2020-11-03-how-to-think/abraham_lincoln.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Cách bạn làm một việc là cách bạn làm mọi việc&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Thay đổi tất cả trừ vợ và con&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Minh-Thanh Hoang</name></author><category term="softskill" /><summary type="html">Không thể tạo ra kết quả mới nếu đầu vào và tư duy như cũ Nếu bạn vẫn làm những việc thường làm thì bạn vẫn nhận được kết quả bạn nhận được Nếu tôi có 6 tiếng để chặt một cái cây, tôi sẽ giành 4 tiếng để mài một lưỡi rìu Cách bạn làm một việc là cách bạn làm mọi việc Thay đổi tất cả trừ vợ và con</summary></entry><entry><title type="html">VIM cơ bản</title><link href="http://localhost:4000/blog/tutorial/2020/11/01/simple-vim-tutorial.html" rel="alternate" type="text/html" title="VIM cơ bản" /><published>2020-11-01T11:04:17+07:00</published><updated>2020-11-01T11:04:17+07:00</updated><id>http://localhost:4000/blog/tutorial/2020/11/01/simple-vim-tutorial</id><content type="html" xml:base="http://localhost:4000/blog/tutorial/2020/11/01/simple-vim-tutorial.html">&lt;p&gt;Download VIM tại : &lt;a href=&quot;https://www.vim.org/download.php&quot;&gt;VIM&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -29,30 +47,119 @@
     &lt;p&gt;Di chuyển sử dụng số&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Sử dụng số trước các phím di chuyển (&lt;code&gt;w&lt;/code&gt;, &lt;code&gt;e&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt;) để đi đến số từ mong muốn
-Ví dụ : &lt;code&gt;3w&lt;/code&gt; để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Sử dụng số trước &lt;code&gt;l&lt;/code&gt; để di chuyển đến ký tự (letter) lần
-Ví dụ : &lt;code&gt;3l&lt;/code&gt; di chuyển đến 3 ký tự tiếp theo&lt;/p&gt;
-      &lt;/li&gt;
+      &lt;li&gt;Sử dụng số trước các phím di chuyển (&lt;code&gt;w&lt;/code&gt;, &lt;code&gt;e&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt;) để đi đến số từ mong muốn&lt;/li&gt;
     &lt;/ul&gt;
+
+    &lt;p&gt;Ví dụ : &lt;code&gt;3w&lt;/code&gt; để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Sử dụng số trước &lt;code&gt;l&lt;/code&gt; để di chuyển đến ký tự (letter) lần&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Ví dụ : &lt;code&gt;3l&lt;/code&gt; di chuyển đến 3 ký tự tiếp theo&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Chèn nhiều lần trong chế độ &lt;code&gt;norrmal&lt;/code&gt; mode&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng &lt;code&gt;[number]i[]&lt;/code&gt; rồi &lt;code&gt;Esc&lt;/code&gt;
-Ví dụ &lt;code&gt;30iabc&lt;/code&gt; &lt;code&gt;Esc&lt;/code&gt; sẽ sinh ra &lt;code&gt;abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng &lt;code&gt;[number]i[character]&lt;/code&gt; rồi &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
+
+    &lt;p&gt;Ví dụ &lt;code&gt;30iabc&lt;/code&gt; &lt;code&gt;Esc&lt;/code&gt; sẽ sinh ra &lt;code&gt;abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Tìm kiếm một ký tự&lt;/p&gt;
 
-    &lt;p&gt;huoưg&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Để tìm kiếm một ký tự : &lt;code&gt;f[character]&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Để tìm kiếm nhiều ký tự : &lt;code&gt;[number]f[character]&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Minh-Thanh Hoang</name></author><category term="tutorial" /><summary type="html">Download VIM tại : VIM Vim có hai chế độ insert mode (để chèn) : ấn i để chuyển qua chế độ insert normal mode (để di chuyển và điều khiển trong văn bản) : ấn Esc để chuyển qua chế độ normal Vim chuyển cơ bản Di chuyển sang trái &amp;lt;- hoặc sang phải -&amp;gt; trong văn bản : ấn h sang trái, ấn l sang phải Di chuyển lên xuống từng dòng : ấn j đi xuống, ấn k đi lên Di chuyển theo từ Để di chuyển đến từ tiếp theo : w đến đầu từ, e đến cuối từ Để di chuyển đến từ phía trước : b di chuyển đến đầu từ Di chuyển sử dụng số Sử dụng số trước các phím di chuyển (w, e, b) để đi đến số từ mong muốn Ví dụ : 3w để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo Sử dụng số trước l để di chuyển đến ký tự (letter) lần Ví dụ : 3l di chuyển đến 3 ký tự tiếp theo Chèn nhiều lần trong chế độ norrmal mode Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng [number]i[] rồi Esc Ví dụ 30iabc Esc sẽ sinh ra abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab Tìm kiếm một ký tự huoưg</summary></entry><entry><title type="html">The Transformer Family</title><link href="http://localhost:4000/blog/2020/04/07/the-transformer-family.html" rel="alternate" type="text/html" title="The Transformer Family" /><published>2020-04-07T19:00:00+07:00</published><updated>2020-04-07T19:00:00+07:00</updated><id>http://localhost:4000/blog/2020/04/07/the-transformer-family</id><content type="html" xml:base="http://localhost:4000/blog/2020/04/07/the-transformer-family.html">&lt;blockquote&gt;
+  &lt;li&gt;
+    &lt;p&gt;Đi đến vị trí cặp dấu ngoặc (&lt;code&gt;[&lt;/code&gt;, &lt;code&gt;{&lt;/code&gt;, &lt;code&gt;(&lt;/code&gt;) trùng : &lt;code&gt;Shift + 5 = %&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Di chuyển đến&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Đầu dòng &lt;code&gt;0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Cuối dòng &lt;code&gt;Shift + 4 = $&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Di chuyển đến từ giống với từ ở ngay vị trí con trỏ&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Tiếp theo &lt;code&gt;*&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Quay lại &lt;code&gt;#&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Di chuyển đến&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Đầu văn bản &lt;code&gt;gg&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Cuối văn bản &lt;code&gt;G&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Đến dòng thứ number : &lt;code&gt;[number]G&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Tìm kiếm một từ&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Nhấn &lt;code&gt;/[word]&lt;/code&gt; để tìm kiếm&lt;/li&gt;
+      &lt;li&gt;Nhấn &lt;code&gt;Enter&lt;/code&gt; &lt;code&gt;n&lt;/code&gt; để di chuyển đến từ tiếp theo&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Để chèn một dòng mới&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Trước dòng hoặc sau dòng hiện tại &lt;code&gt;o&lt;/code&gt; hoặc &lt;code&gt;O&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Để xóa một ký tự&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;x&lt;/code&gt; xóa các ký tự trước&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;X&lt;/code&gt; xóa ký tự phía sau&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Thay thế ký tự ở vị trí con trỏ : &lt;code&gt;r[character]&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Để xóa một chữ&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;d[number]w&lt;/code&gt; xóa number chữ và khoảng trắng&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;d[number]e&lt;/code&gt; xóa number chữ&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Để lặp lại quá trình đã xóa ở trên nhấn &lt;code&gt;.&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Chế độ visual mode :&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code&gt;v&lt;/code&gt; visual mode : Chọn theo cột&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;V&lt;/code&gt; visual mode line : Chọn theo hàng&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;Ví du để chọn một từ sau con trỏ đang xét nhấn &lt;code&gt;vw&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Các câu lệnh thường gặp&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;:w Lưu văn bản&lt;/li&gt;
+      &lt;li&gt;:wq Lưu và thoát văn bản&lt;/li&gt;
+      &lt;li&gt;:q&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Minh-Thanh Hoang</name></author><category term="tutorial" /><summary type="html">Download VIM tại : VIM Vim có hai chế độ insert mode (để chèn) : ấn i để chuyển qua chế độ insert normal mode (để di chuyển và điều khiển trong văn bản) : ấn Esc để chuyển qua chế độ normal Vim chuyển cơ bản Di chuyển sang trái &amp;lt;- hoặc sang phải -&amp;gt; trong văn bản : ấn h sang trái, ấn l sang phải Di chuyển lên xuống từng dòng : ấn j đi xuống, ấn k đi lên Di chuyển theo từ Để di chuyển đến từ tiếp theo : w đến đầu từ, e đến cuối từ Để di chuyển đến từ phía trước : b di chuyển đến đầu từ Di chuyển sử dụng số Sử dụng số trước các phím di chuyển (w, e, b) để đi đến số từ mong muốn Ví dụ : 3w để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo Sử dụng số trước l để di chuyển đến ký tự (letter) lần Ví dụ : 3l di chuyển đến 3 ký tự tiếp theo Chèn nhiều lần trong chế độ norrmal mode Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng [number]i[character] rồi Esc Ví dụ 30iabc Esc sẽ sinh ra abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab Tìm kiếm một ký tự Để tìm kiếm một ký tự : f[character] Để tìm kiếm nhiều ký tự : [number]f[character] Đi đến vị trí cặp dấu ngoặc ([, {, () trùng : Shift + 5 = % Di chuyển đến Đầu dòng 0 Cuối dòng Shift + 4 = $ Di chuyển đến từ giống với từ ở ngay vị trí con trỏ Tiếp theo * Quay lại # Di chuyển đến Đầu văn bản gg Cuối văn bản G Đến dòng thứ number : [number]G Tìm kiếm một từ Nhấn /[word] để tìm kiếm Nhấn Enter n để di chuyển đến từ tiếp theo Để chèn một dòng mới Trước dòng hoặc sau dòng hiện tại o hoặc O Để xóa một ký tự x xóa các ký tự trước X xóa ký tự phía sau Thay thế ký tự ở vị trí con trỏ : r[character] Để xóa một chữ d[number]w xóa number chữ và khoảng trắng d[number]e xóa number chữ Để lặp lại quá trình đã xóa ở trên nhấn . Chế độ visual mode : v visual mode : Chọn theo cột V visual mode line : Chọn theo hàng Ví du để chọn một từ sau con trỏ đang xét nhấn vw Các câu lệnh thường gặp :w Lưu văn bản :wq Lưu và thoát văn bản :q</summary></entry><entry><title type="html">The Transformer Family</title><link href="http://localhost:4000/blog/2020/04/07/the-transformer-family.html" rel="alternate" type="text/html" title="The Transformer Family" /><published>2020-04-07T19:00:00+07:00</published><updated>2020-04-07T19:00:00+07:00</updated><id>http://localhost:4000/blog/2020/04/07/the-transformer-family</id><content type="html" xml:base="http://localhost:4000/blog/2020/04/07/the-transformer-family.html">&lt;blockquote&gt;
   &lt;p&gt;Inspired by recent progress on various enhanced versions of Transformer models, this post presents how the vanilla Transformer can be improved for longer-term attention span, less memory and computation consumption, RL task solving, etc.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -1191,7 +1298,7 @@ Cơ bản mà nói, convolution neural network có thể được xem như một
 
 &lt;p&gt;In the last few years, deep neural networks have lead to breakthrough results on a variety of pattern recognition problems, such as computer vision and voice recognition. One of the essential components leading to these results has been a special kind of neural network called a convolutional neural network.&lt;/p&gt;
 
-&lt;p&gt;At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron&lt;sup&gt;&lt;a href=&quot;#eef9:fn:1&quot; class=&quot;footnote&quot; id=&quot;eef9:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.&lt;/p&gt;
+&lt;p&gt;At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron&lt;sup&gt;&lt;a href=&quot;#0d69:fn:1&quot; class=&quot;footnote&quot; id=&quot;0d69:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/Conv2-9x5-Conv2Conv2.png&quot; alt=&quot;Conv2Conv2&quot; /&gt;&lt;/p&gt;
 
@@ -1226,7 +1333,7 @@ There are a bunch of different neurons, and every input connects to every neuron
 
 &lt;p&gt;We care about the same properties at all points in time. It’s useful to know the frequencies at the beginning, it’s useful to know the frequencies in the middle, and it’s also useful to know the frequencies at the end. Again, note that these are local properties, in that we only need to look at a small window of the audio sample in order to determine them.&lt;/p&gt;
 
-&lt;p&gt;So, we can create a group of neurons, $A$, that look at small time segments of our data&lt;sup&gt;&lt;a href=&quot;#eef9:fn:2&quot; class=&quot;footnote&quot; id=&quot;eef9:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; $A$ looks at all such segments, computing certain features.
+&lt;p&gt;So, we can create a group of neurons, $A$, that look at small time segments of our data&lt;sup&gt;&lt;a href=&quot;#0d69:fn:2&quot; class=&quot;footnote&quot; id=&quot;0d69:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; $A$ looks at all such segments, computing certain features.
 Then, the output of this convolutional layer is fed into a fully-connected layer, $F$.&lt;/p&gt;
 
 &lt;p style=&quot;width: 90%; padding: 20 10px;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/Conv-9-Conv2.png&quot; alt=&quot;Conv-9-Conv2&quot; /&gt;&lt;/p&gt;
@@ -1307,7 +1414,7 @@ They used a new kind of neuron (ReLUs) and a new technique to reduce a problem c
 They used a very large dataset with lots of image categories (&lt;a href=&quot;http://www.image-net.org/&quot;&gt;ImageNet&lt;/a&gt;). And, of course, it was a convolutional neural network.&lt;/p&gt;
 
 &lt;p&gt;Their architecture, illustrated below, was very deep.
-It has 5 convolutional layers&lt;sup&gt;&lt;a href=&quot;#eef9:fn:3&quot; class=&quot;footnote&quot; id=&quot;eef9:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, with pooling interspersed, and three fully-connected layers.
+It has 5 convolutional layers&lt;sup&gt;&lt;a href=&quot;#0d69:fn:3&quot; class=&quot;footnote&quot; id=&quot;0d69:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, with pooling interspersed, and three fully-connected layers.
 The early layers are split over the two GPUs.&lt;/p&gt;
 
 &lt;p style=&quot;width: 80%; padding: 20 10px;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/KSH-arch.png&quot; alt=&quot;KSH-arch&quot; /&gt;&lt;/p&gt;
@@ -1340,7 +1447,7 @@ From &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf&quot;&
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Neurons in one side focus on black and white, learning to detect edges of different orientations and sizes.
-Neurons on the other side specialize on color and texture, detecting color contrasts and patterns&lt;sup&gt;&lt;a href=&quot;#eef9:fn:4&quot; class=&quot;footnote&quot; id=&quot;eef9:fn-back:4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
+Neurons on the other side specialize on color and texture, detecting color contrasts and patterns&lt;sup&gt;&lt;a href=&quot;#0d69:fn:4&quot; class=&quot;footnote&quot; id=&quot;0d69:fn-back:4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
 Remember that the neurons are &lt;em&gt;randomly&lt;/em&gt; initialized. No human went and set them to be edge detectors, or to split in this way. It arose simply from training the network to classify images.&lt;/p&gt;
 
 &lt;p&gt;These remarkable results (and other exciting results around that time) were only the beginning. They were quickly followed by a lot of other work testing modified approaches and gradually improving the results, or applying them to other areas. And, in addition to the neural networks community, many in the computer vision community have adopted deep convolutional neural networks.&lt;/p&gt;
@@ -1408,18 +1515,18 @@ There is an alternative formulation, in terms of a mathematical operation called
 &lt;h1 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h1&gt;
 
 &lt;ol class=&quot;footnotelist&quot;&gt;
-&lt;li id=&quot;eef9:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
+&lt;li id=&quot;0d69:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
         It should be noted that not all neural networks that use multiple copies of the same neuron are convolutional neural networks. Convolutional neural networks are just one type of neural network that uses the more general trick, weight-tying. Other kinds of neural network that do this are recurrent neural networks and recursive neural networks.
-   &lt;a href=&quot;#eef9:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;eef9:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
+   &lt;a href=&quot;#0d69:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;0d69:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
       Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-   &lt;a href=&quot;#eef9:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;eef9:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
+   &lt;a href=&quot;#0d69:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;0d69:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
      Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-  &lt;a href=&quot;#eef9:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;eef9:fn:4&quot; class=&quot;footnotebody&quot; value=&quot;4&quot;&gt;
+  &lt;a href=&quot;#0d69:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;0d69:fn:4&quot; class=&quot;footnotebody&quot; value=&quot;4&quot;&gt;
        They also test using 7 in the paper.
-    &lt;a href=&quot;#eef9:fn-back:4&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+    &lt;a href=&quot;#0d69:fn-back:4&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Christopher Olah</name></author><category term="deep-learning" /><summary type="html">Source : https://colah.github.io/posts/2014-07-Conv-Nets-Modular/</summary></entry><entry><title type="html">A Recipe for Training Neural Networks</title><link href="http://localhost:4000/blog/deep-learning/2019/04/25/recipe-for-training-neural-network.html" rel="alternate" type="text/html" title="A Recipe for Training Neural Networks" /><published>2019-04-25T07:04:17+07:00</published><updated>2019-04-25T07:04:17+07:00</updated><id>http://localhost:4000/blog/deep-learning/2019/04/25/recipe-for-training-neural-network</id><content type="html" xml:base="http://localhost:4000/blog/deep-learning/2019/04/25/recipe-for-training-neural-network.html">&lt;!--more--&gt;
 
 &lt;ul class=&quot;table-of-content&quot; id=&quot;markdown-toc&quot;&gt;
@@ -2077,7 +2184,7 @@ The probability of the ball rolling $b$ units away from the new starting point i
 
 &lt;p&gt;If we fix the result of the first drop so we know the ball went distance $a$, for the ball to go a total distance $c$,
 the distance traveled in the second drop is also fixed at $b$, where $a + b = c$.
-So the probability of this happening is simply $f(a) ⋅ g(b)$.&lt;sup&gt;&lt;a href=&quot;#031a:fn:1&quot; class=&quot;footnote&quot; id=&quot;031a:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+So the probability of this happening is simply $f(a) ⋅ g(b)$.&lt;sup&gt;&lt;a href=&quot;#d6c8:fn:1&quot; class=&quot;footnote&quot; id=&quot;d6c8:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;Let’s think about this with a specific discrete example.
 We want the total distance $c$ to be $3$. If the first time it rolls, $a=2$, the second time it must roll $b=1$ in order to reach our total distance $a+b=3$.
@@ -2112,7 +2219,7 @@ So, summing over every solution to $a+b=c$, we can denote the total likelihood a
 
 \[(f∗g)(c)=\sum_{a} f(a)⋅g(c−a)\]
 
-&lt;p&gt;This is the standard definition&lt;sup&gt;&lt;a href=&quot;#031a:fn:2&quot; class=&quot;footnote&quot; id=&quot;031a:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; of convolution.&lt;/p&gt;
+&lt;p&gt;This is the standard definition&lt;sup&gt;&lt;a href=&quot;#d6c8:fn:2&quot; class=&quot;footnote&quot; id=&quot;d6c8:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; of convolution.&lt;/p&gt;
 
 &lt;p&gt;To make this a bit more concrete, we can think about this in terms of positions the ball might land.
 After the first drop, it will land at an intermediate position $a$ with probability $f(a)$.
@@ -2233,7 +2340,7 @@ This allows us to understand the convolution as a whole.&lt;/p&gt;
 
 &lt;p&gt;Where $x_0, x_1…$ are the inputs. The weights, $w0$, $w1$, … describe how the neuron connects to its inputs.
 A negative weight means that an input inhibits the neuron from firing, while a positive weight encourages it to.
-The weights are the heart of the neuron, controlling its behavior&lt;sup&gt;&lt;a href=&quot;#031a:fn:3&quot; class=&quot;footnote&quot; id=&quot;031a:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
+The weights are the heart of the neuron, controlling its behavior&lt;sup&gt;&lt;a href=&quot;#d6c8:fn:3&quot; class=&quot;footnote&quot; id=&quot;d6c8:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
 Saying that multiple neurons are identical is the same thing as saying that the weights are the same.&lt;/p&gt;
 
 &lt;p&gt;It’s this wiring of neurons, describing all the weights and which ones are identical, that convolution will handle for us.&lt;/p&gt;
@@ -2306,10 +2413,10 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
 &lt;h1 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h1&gt;
 
 &lt;ol class=&quot;footnotelist&quot;&gt;
-&lt;li id=&quot;031a:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
+&lt;li id=&quot;d6c8:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
         We want the probability of the ball rolling a units the first time and also rolling b units the second time. The distributions $P(A)=f(a)$ and $P(b)=g(b)$ are independent, with both distributions centered at 0. So  $P(a,b)=P(a)∗P(b)=f(a)⋅g(b)$
-   &lt;a href=&quot;#031a:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;031a:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
+   &lt;a href=&quot;#d6c8:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;d6c8:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
       The non-standard definition, which I haven’t previously seen, seems to have a lot of benefits. In future posts, we will find this definition very helpful because it lends itself to generalization to new algebraic structures. But it also has the advantage that it makes a lot of algebraic properties of convolutions really obvious.
       &lt;br /&gt;
       For example, convolution is a commutative operation. That is, $f∗g=g∗f$. Why?
@@ -2321,8 +2428,8 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
       \sum_{(a+b)+c=d} (f(a)⋅g(b))⋅h(c)  = \sum_{a+(b+c)=d} f(a)⋅(g(b)⋅h(c))
       $$
       
-   &lt;a href=&quot;#031a:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;031a:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
+   &lt;a href=&quot;#d6c8:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;d6c8:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
      There’s also the bias, which is the “threshold” for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
-  &lt;a href=&quot;#031a:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+  &lt;a href=&quot;#d6c8:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Minh-Thanh Hoang</name></author><category term="deep" /><category term="learning" /><summary type="html">Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/</summary></entry></feed>
