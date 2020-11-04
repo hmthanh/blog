@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How-to-think"
+title:  "Quotes"
 date:   2020-11-03 11:04:17 +0700
 author: Minh-Thanh Hoang
 categories: softskill
