@@ -6,6 +6,8 @@ author: Huyen Chip
 categories: python
 ---
 
+Source : [Python is Cool - Huyen Chip](https://github.com/chiphuyen/python-is-cool)
+
 ## 1. Lambda, map, filter, reduce
 The lambda keyword is used to create inline functions. The functions`square_fn` and `square_ld` below are identical.
 
@@ -588,4 +590,3 @@ fib_m(50)
 ==> Time taken in fib_m: 0.0000281
 ```
 
-Source : [Huyen Chip](https://github.com/chiphuyen/python-is-cool)
