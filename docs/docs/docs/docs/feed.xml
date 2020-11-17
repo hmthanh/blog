@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://hmthanh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://hmthanh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-11-04T23:37:39+07:00</updated><id>http://hmthanh.github.io/blog/feed.xml</id><title type="html">Minh-Thanh’s Blog</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">How-to-think</title><link href="http://hmthanh.github.io/blog/softskill/2020/11/03/How-to-thinking.html" rel="alternate" type="text/html" title="How-to-think" /><published>2020-11-03T11:04:17+07:00</published><updated>2020-11-03T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/softskill/2020/11/03/How-to-thinking</id><content type="html" xml:base="http://hmthanh.github.io/blog/softskill/2020/11/03/How-to-thinking.html">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://hmthanh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://hmthanh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-11-04T23:39:10+07:00</updated><id>http://hmthanh.github.io/blog/feed.xml</id><title type="html">Minh-Thanh’s Blog</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">Quotes</title><link href="http://hmthanh.github.io/blog/softskill/2020/11/03/How-to-thinking.html" rel="alternate" type="text/html" title="Quotes" /><published>2020-11-03T11:04:17+07:00</published><updated>2020-11-03T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/softskill/2020/11/03/How-to-thinking</id><content type="html" xml:base="http://hmthanh.github.io/blog/softskill/2020/11/03/How-to-thinking.html">&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Không thể tạo ra kết quả mới nếu đầu vào và tư duy như cũ&lt;/p&gt;
   &lt;/li&gt;
@@ -1301,7 +1301,7 @@ Cơ bản mà nói, convolution neural network có thể được xem như một
 
 &lt;p&gt;In the last few years, deep neural networks have lead to breakthrough results on a variety of pattern recognition problems, such as computer vision and voice recognition. One of the essential components leading to these results has been a special kind of neural network called a convolutional neural network.&lt;/p&gt;
 
-&lt;p&gt;At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron&lt;sup&gt;&lt;a href=&quot;#035f:fn:1&quot; class=&quot;footnote&quot; id=&quot;035f:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.&lt;/p&gt;
+&lt;p&gt;At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron&lt;sup&gt;&lt;a href=&quot;#e1db:fn:1&quot; class=&quot;footnote&quot; id=&quot;e1db:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/Conv2-9x5-Conv2Conv2.png&quot; alt=&quot;Conv2Conv2&quot; /&gt;&lt;/p&gt;
 
@@ -1336,7 +1336,7 @@ There are a bunch of different neurons, and every input connects to every neuron
 
 &lt;p&gt;We care about the same properties at all points in time. It’s useful to know the frequencies at the beginning, it’s useful to know the frequencies in the middle, and it’s also useful to know the frequencies at the end. Again, note that these are local properties, in that we only need to look at a small window of the audio sample in order to determine them.&lt;/p&gt;
 
-&lt;p&gt;So, we can create a group of neurons, $A$, that look at small time segments of our data&lt;sup&gt;&lt;a href=&quot;#035f:fn:2&quot; class=&quot;footnote&quot; id=&quot;035f:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; $A$ looks at all such segments, computing certain features.
+&lt;p&gt;So, we can create a group of neurons, $A$, that look at small time segments of our data&lt;sup&gt;&lt;a href=&quot;#e1db:fn:2&quot; class=&quot;footnote&quot; id=&quot;e1db:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; $A$ looks at all such segments, computing certain features.
 Then, the output of this convolutional layer is fed into a fully-connected layer, $F$.&lt;/p&gt;
 
 &lt;p style=&quot;width: 90%; padding: 20 10px;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/Conv-9-Conv2.png&quot; alt=&quot;Conv-9-Conv2&quot; /&gt;&lt;/p&gt;
@@ -1417,7 +1417,7 @@ They used a new kind of neuron (ReLUs) and a new technique to reduce a problem c
 They used a very large dataset with lots of image categories (&lt;a href=&quot;http://www.image-net.org/&quot;&gt;ImageNet&lt;/a&gt;). And, of course, it was a convolutional neural network.&lt;/p&gt;
 
 &lt;p&gt;Their architecture, illustrated below, was very deep.
-It has 5 convolutional layers&lt;sup&gt;&lt;a href=&quot;#035f:fn:3&quot; class=&quot;footnote&quot; id=&quot;035f:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, with pooling interspersed, and three fully-connected layers.
+It has 5 convolutional layers&lt;sup&gt;&lt;a href=&quot;#e1db:fn:3&quot; class=&quot;footnote&quot; id=&quot;e1db:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, with pooling interspersed, and three fully-connected layers.
 The early layers are split over the two GPUs.&lt;/p&gt;
 
 &lt;p style=&quot;width: 80%; padding: 20 10px;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/KSH-arch.png&quot; alt=&quot;KSH-arch&quot; /&gt;&lt;/p&gt;
@@ -1450,7 +1450,7 @@ From &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf&quot;&
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Neurons in one side focus on black and white, learning to detect edges of different orientations and sizes.
-Neurons on the other side specialize on color and texture, detecting color contrasts and patterns&lt;sup&gt;&lt;a href=&quot;#035f:fn:4&quot; class=&quot;footnote&quot; id=&quot;035f:fn-back:4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
+Neurons on the other side specialize on color and texture, detecting color contrasts and patterns&lt;sup&gt;&lt;a href=&quot;#e1db:fn:4&quot; class=&quot;footnote&quot; id=&quot;e1db:fn-back:4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
 Remember that the neurons are &lt;em&gt;randomly&lt;/em&gt; initialized. No human went and set them to be edge detectors, or to split in this way. It arose simply from training the network to classify images.&lt;/p&gt;
 
 &lt;p&gt;These remarkable results (and other exciting results around that time) were only the beginning. They were quickly followed by a lot of other work testing modified approaches and gradually improving the results, or applying them to other areas. And, in addition to the neural networks community, many in the computer vision community have adopted deep convolutional neural networks.&lt;/p&gt;
@@ -1518,18 +1518,18 @@ There is an alternative formulation, in terms of a mathematical operation called
 &lt;h1 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h1&gt;
 
 &lt;ol class=&quot;footnotelist&quot;&gt;
-&lt;li id=&quot;035f:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
+&lt;li id=&quot;e1db:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
         It should be noted that not all neural networks that use multiple copies of the same neuron are convolutional neural networks. Convolutional neural networks are just one type of neural network that uses the more general trick, weight-tying. Other kinds of neural network that do this are recurrent neural networks and recursive neural networks.
-   &lt;a href=&quot;#035f:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;035f:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
+   &lt;a href=&quot;#e1db:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;e1db:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
       Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-   &lt;a href=&quot;#035f:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;035f:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
+   &lt;a href=&quot;#e1db:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;e1db:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
      Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-  &lt;a href=&quot;#035f:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;035f:fn:4&quot; class=&quot;footnotebody&quot; value=&quot;4&quot;&gt;
+  &lt;a href=&quot;#e1db:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;e1db:fn:4&quot; class=&quot;footnotebody&quot; value=&quot;4&quot;&gt;
        They also test using 7 in the paper.
-    &lt;a href=&quot;#035f:fn-back:4&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+    &lt;a href=&quot;#e1db:fn-back:4&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Christopher Olah</name></author><category term="deep-learning" /><summary type="html">Source : https://colah.github.io/posts/2014-07-Conv-Nets-Modular/</summary></entry><entry><title type="html">A Recipe for Training Neural Networks</title><link href="http://hmthanh.github.io/blog/deep-learning/2019/04/25/recipe-for-training-neural-network.html" rel="alternate" type="text/html" title="A Recipe for Training Neural Networks" /><published>2019-04-25T07:04:17+07:00</published><updated>2019-04-25T07:04:17+07:00</updated><id>http://hmthanh.github.io/blog/deep-learning/2019/04/25/recipe-for-training-neural-network</id><content type="html" xml:base="http://hmthanh.github.io/blog/deep-learning/2019/04/25/recipe-for-training-neural-network.html">&lt;!--more--&gt;
 
 &lt;ul class=&quot;table-of-content&quot; id=&quot;markdown-toc&quot;&gt;
@@ -2187,7 +2187,7 @@ The probability of the ball rolling $b$ units away from the new starting point i
 
 &lt;p&gt;If we fix the result of the first drop so we know the ball went distance $a$, for the ball to go a total distance $c$,
 the distance traveled in the second drop is also fixed at $b$, where $a + b = c$.
-So the probability of this happening is simply $f(a) ⋅ g(b)$.&lt;sup&gt;&lt;a href=&quot;#5639:fn:1&quot; class=&quot;footnote&quot; id=&quot;5639:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+So the probability of this happening is simply $f(a) ⋅ g(b)$.&lt;sup&gt;&lt;a href=&quot;#5318:fn:1&quot; class=&quot;footnote&quot; id=&quot;5318:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;Let’s think about this with a specific discrete example.
 We want the total distance $c$ to be $3$. If the first time it rolls, $a=2$, the second time it must roll $b=1$ in order to reach our total distance $a+b=3$.
@@ -2222,7 +2222,7 @@ So, summing over every solution to $a+b=c$, we can denote the total likelihood a
 
 \[(f∗g)(c)=\sum_{a} f(a)⋅g(c−a)\]
 
-&lt;p&gt;This is the standard definition&lt;sup&gt;&lt;a href=&quot;#5639:fn:2&quot; class=&quot;footnote&quot; id=&quot;5639:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; of convolution.&lt;/p&gt;
+&lt;p&gt;This is the standard definition&lt;sup&gt;&lt;a href=&quot;#5318:fn:2&quot; class=&quot;footnote&quot; id=&quot;5318:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; of convolution.&lt;/p&gt;
 
 &lt;p&gt;To make this a bit more concrete, we can think about this in terms of positions the ball might land.
 After the first drop, it will land at an intermediate position $a$ with probability $f(a)$.
@@ -2343,7 +2343,7 @@ This allows us to understand the convolution as a whole.&lt;/p&gt;
 
 &lt;p&gt;Where $x_0, x_1…$ are the inputs. The weights, $w0$, $w1$, … describe how the neuron connects to its inputs.
 A negative weight means that an input inhibits the neuron from firing, while a positive weight encourages it to.
-The weights are the heart of the neuron, controlling its behavior&lt;sup&gt;&lt;a href=&quot;#5639:fn:3&quot; class=&quot;footnote&quot; id=&quot;5639:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
+The weights are the heart of the neuron, controlling its behavior&lt;sup&gt;&lt;a href=&quot;#5318:fn:3&quot; class=&quot;footnote&quot; id=&quot;5318:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
 Saying that multiple neurons are identical is the same thing as saying that the weights are the same.&lt;/p&gt;
 
 &lt;p&gt;It’s this wiring of neurons, describing all the weights and which ones are identical, that convolution will handle for us.&lt;/p&gt;
@@ -2416,10 +2416,10 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
 &lt;h1 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h1&gt;
 
 &lt;ol class=&quot;footnotelist&quot;&gt;
-&lt;li id=&quot;5639:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
+&lt;li id=&quot;5318:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
         We want the probability of the ball rolling a units the first time and also rolling b units the second time. The distributions $P(A)=f(a)$ and $P(b)=g(b)$ are independent, with both distributions centered at 0. So  $P(a,b)=P(a)∗P(b)=f(a)⋅g(b)$
-   &lt;a href=&quot;#5639:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;5639:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
+   &lt;a href=&quot;#5318:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;5318:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
       The non-standard definition, which I haven’t previously seen, seems to have a lot of benefits. In future posts, we will find this definition very helpful because it lends itself to generalization to new algebraic structures. But it also has the advantage that it makes a lot of algebraic properties of convolutions really obvious.
       &lt;br /&gt;
       For example, convolution is a commutative operation. That is, $f∗g=g∗f$. Why?
@@ -2431,8 +2431,8 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
       \sum_{(a+b)+c=d} (f(a)⋅g(b))⋅h(c)  = \sum_{a+(b+c)=d} f(a)⋅(g(b)⋅h(c))
       $$
       
-   &lt;a href=&quot;#5639:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;5639:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
+   &lt;a href=&quot;#5318:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;5318:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
      There’s also the bias, which is the “threshold” for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
-  &lt;a href=&quot;#5639:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+  &lt;a href=&quot;#5318:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Christopher Olah</name></author><category term="deep" /><category term="learning" /><summary type="html">Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/</summary></entry></feed>

@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Minh-Thanh's Blog
+title: State of the art
 email: hmthanhgm@gmail.com
 website: "http://hmthanh.github.io/"
 description: ✨ _Your ambition outweighed your talent !_ ✨
