@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://hmthanh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://hmthanh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-11-18T02:01:00+07:00</updated><id>http://hmthanh.github.io/blog/feed.xml</id><title type="html">State of the art</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">Optimizing C/C++ Basic</title><link href="http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic.html" rel="alternate" type="text/html" title="Optimizing C/C++ Basic" /><published>2020-11-17T11:04:17+07:00</published><updated>2020-11-17T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic</id><content type="html" xml:base="http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic.html">&lt;ul class=&quot;table-of-content&quot; id=&quot;markdown-toc&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://hmthanh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://hmthanh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-11-18T02:09:51+07:00</updated><id>http://hmthanh.github.io/blog/feed.xml</id><title type="html">State of the art</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">Optimizing C/C++ Basic</title><link href="http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic.html" rel="alternate" type="text/html" title="Optimizing C/C++ Basic" /><published>2020-11-17T11:04:17+07:00</published><updated>2020-11-17T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic</id><content type="html" xml:base="http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic.html">&lt;ul class=&quot;table-of-content&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#1-variable-storage&quot; id=&quot;markdown-toc-1-variable-storage&quot;&gt;1. Variable storage&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#11-static-storage&quot; id=&quot;markdown-toc-11-static-storage&quot;&gt;1.1 Static storage&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#12-register-storage&quot; id=&quot;markdown-toc-12-register-storage&quot;&gt;1.2 Register storage&lt;/a&gt;&lt;/li&gt;
@@ -11,27 +11,24 @@
       &lt;li&gt;&lt;a href=&quot;#24-operator-rule&quot; id=&quot;markdown-toc-24-operator-rule&quot;&gt;2.4 Operator rule&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#3-booleans&quot; id=&quot;markdown-toc-3-booleans&quot;&gt;3. Booleans&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#31-and&quot; id=&quot;markdown-toc-31-and&quot;&gt;3.1 and&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-booleans&quot; id=&quot;markdown-toc-3-booleans&quot;&gt;3. Booleans&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#4-functions&quot; id=&quot;markdown-toc-4-functions&quot;&gt;4. Functions&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#macro&quot; id=&quot;markdown-toc-macro&quot;&gt;Macro&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#parameter&quot; id=&quot;markdown-toc-parameter&quot;&gt;Parameter&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#function-rule&quot; id=&quot;markdown-toc-function-rule&quot;&gt;Function rule&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#41-macro&quot; id=&quot;markdown-toc-41-macro&quot;&gt;4.1 Macro&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#42-parameter&quot; id=&quot;markdown-toc-42-parameter&quot;&gt;4.2 Parameter&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#43-function-rule&quot; id=&quot;markdown-toc-43-function-rule&quot;&gt;4.3 Function rule&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#5-arrays&quot; id=&quot;markdown-toc-5-arrays&quot;&gt;5. Arrays&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#6-loops&quot; id=&quot;markdown-toc-6-loops&quot;&gt;6. Loops&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#unrolling&quot; id=&quot;markdown-toc-unrolling&quot;&gt;Unrolling&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#copy-and-clearing-arrays&quot; id=&quot;markdown-toc-copy-and-clearing-arrays&quot;&gt;Copy and clearing arrays&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#move-loops-inside-function-call&quot; id=&quot;markdown-toc-move-loops-inside-function-call&quot;&gt;Move loops inside function call&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#fuction-rule&quot; id=&quot;markdown-toc-fuction-rule&quot;&gt;Fuction rule&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#61-unrolling&quot; id=&quot;markdown-toc-61-unrolling&quot;&gt;6.1 Unrolling&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#62-copy-and-clearing-arrays&quot; id=&quot;markdown-toc-62-copy-and-clearing-arrays&quot;&gt;6.2 Copy and clearing arrays&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#63-move-loops-inside-function-call&quot; id=&quot;markdown-toc-63-move-loops-inside-function-call&quot;&gt;6.3 Move loops inside function call&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#64-fuction-rule&quot; id=&quot;markdown-toc-64-fuction-rule&quot;&gt;6.4 Fuction rule&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#7-statements&quot; id=&quot;markdown-toc-7-statements&quot;&gt;7. Statements&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#using-table-lookup&quot; id=&quot;markdown-toc-using-table-lookup&quot;&gt;Using table lookup&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#switch-and-table&quot; id=&quot;markdown-toc-switch-and-table&quot;&gt;Switch and table&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#71-using-table-lookup&quot; id=&quot;markdown-toc-71-using-table-lookup&quot;&gt;7.1 Using table lookup&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#72-switch-and-table&quot; id=&quot;markdown-toc-72-switch-and-table&quot;&gt;7.2 Switch and table&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#8-inputoutput&quot; id=&quot;markdown-toc-8-inputoutput&quot;&gt;8. Input/Output&lt;/a&gt;&lt;/li&gt;
@@ -224,8 +221,6 @@
 
 &lt;h1 id=&quot;3-booleans&quot;&gt;3. Booleans&lt;/h1&gt;
 
-&lt;h3 id=&quot;31-and&quot;&gt;3.1 and&lt;/h3&gt;
-
 &lt;ul&gt;
   &lt;li&gt;Version 1 : 1.5 B cycles&lt;/li&gt;
 &lt;/ul&gt;
@@ -286,7 +281,7 @@
 
 &lt;h1 id=&quot;4-functions&quot;&gt;4. Functions&lt;/h1&gt;
 
-&lt;h3 id=&quot;macro&quot;&gt;Macro&lt;/h3&gt;
+&lt;h3 id=&quot;41-macro&quot;&gt;4.1 Macro&lt;/h3&gt;
 
 &lt;p&gt;Use macros instead of functions&lt;/p&gt;
 
@@ -320,7 +315,7 @@ int main(){
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&quot;parameter&quot;&gt;Parameter&lt;/h3&gt;
+&lt;h3 id=&quot;42-parameter&quot;&gt;4.2 Parameter&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Version 1 : 7 B cycles&lt;/li&gt;
@@ -370,7 +365,7 @@ int main(){
   &lt;p&gt;Using C &lt;code&gt;scanf&lt;/code&gt; or &lt;code&gt;printf&lt;/code&gt; instead of C++ &lt;code&gt;cin&lt;/code&gt; or &lt;code&gt;cout&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;function-rule&quot;&gt;Function rule&lt;/h3&gt;
+&lt;h3 id=&quot;43-function-rule&quot;&gt;4.3 Function rule&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;ul&gt;
@@ -399,7 +394,7 @@ int main(){
 
 &lt;h1 id=&quot;6-loops&quot;&gt;6. Loops&lt;/h1&gt;
 
-&lt;h3 id=&quot;unrolling&quot;&gt;Unrolling&lt;/h3&gt;
+&lt;h3 id=&quot;61-unrolling&quot;&gt;6.1 Unrolling&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Version 1 : 13 B cycles&lt;/li&gt;
@@ -446,7 +441,7 @@ int main(){
   &lt;p&gt;Using unrolling&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;copy-and-clearing-arrays&quot;&gt;Copy and clearing arrays&lt;/h3&gt;
+&lt;h3 id=&quot;62-copy-and-clearing-arrays&quot;&gt;6.2 Copy and clearing arrays&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Version 1 : 15B cycles&lt;/li&gt;
@@ -489,7 +484,7 @@ int main(){
   &lt;p&gt;Using &lt;code&gt;memcpy&lt;/code&gt;, &lt;code&gt;memset&lt;/code&gt; is often faster&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;move-loops-inside-function-call&quot;&gt;Move loops inside function call&lt;/h3&gt;
+&lt;h3 id=&quot;63-move-loops-inside-function-call&quot;&gt;6.3 Move loops inside function call&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Version 1 : 8.3 B cycles&lt;/li&gt;
@@ -528,7 +523,7 @@ int main(){
   &lt;p&gt;Using for loop inside function call&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;fuction-rule&quot;&gt;Fuction rule&lt;/h3&gt;
+&lt;h3 id=&quot;64-fuction-rule&quot;&gt;6.4 Fuction rule&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;It is faster to compare to zero rather than compare with difference number&lt;/p&gt;
@@ -544,7 +539,7 @@ int main(){
 
 &lt;h1 id=&quot;7-statements&quot;&gt;7. Statements&lt;/h1&gt;
 
-&lt;h3 id=&quot;using-table-lookup&quot;&gt;Using table lookup&lt;/h3&gt;
+&lt;h3 id=&quot;71-using-table-lookup&quot;&gt;7.1 Using table lookup&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Version 1 : 1B cycles&lt;/li&gt;
@@ -575,7 +570,7 @@ int main(){
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&quot;switch-and-table&quot;&gt;Switch and table&lt;/h3&gt;
+&lt;h3 id=&quot;72-switch-and-table&quot;&gt;7.2 Switch and table&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Version 1 : 7B cycles&lt;/li&gt;
@@ -631,7 +626,7 @@ int main(){
 
 &lt;blockquote&gt;
   &lt;p&gt;Read file on the buffer and read and write multiple time on buffer to avoid access multiple time read write on disk.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Minh-Thanh Hoang</name></author><category term="tutorial" /><summary type="html">1. Variable storage 1.1 Static storage 1.2 Register storage 2. Operators 2.1 Initializations 2.2 Contructor 2.3 Assignment composite 2.4 Operator rule 3. Booleans 3.1 and 4. Functions Macro Parameter Function rule 5. Arrays 6. Loops Unrolling Copy and clearing arrays Move loops inside function call Fuction rule 7. Statements Using table lookup Switch and table 8. Input/Output Using perf to profiling in linux : (perf)[(http://www.brendangregg.com/perf.html)] 1. Variable storage 1.1 Static storage Version 1 : 7.1 cycles int main(){ int n = 10000000; for (int i = 0; i &amp;lt; n; i++){ } return 0; } Version 2 : 6.1 B cycles int main(){ static int nStatic = 10000000; for (int i = 0; i &amp;lt; n; i++){ } return 0; } static : replace calculation result by storing the value in static storage, where possible 1.2 Register storage Version 1 : 2.2 B cycles int main(){ static int nStatic = 3; long res = 0; for (int i = 0; i &amp;lt; 10000000; i++){ res += i * nStatic; } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } Version 2 : 1 B cycles int main(){ register int nRegister = 3; long res = 0; for (int i = 0; i &amp;lt; 10000000; i++){ res += i * nRegister; } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } register : variables stored in register are accessed in a flash, and number of registers is strictly limited 2. Operators 2.1 Initializations Version 1 : 17.7 B cycles int main(){ for (int i = 0; i &amp;lt; 10000000; i++){ string s; s = &quot;Hello World&quot;; } return 0; } Version 2 : 17 B cycles int main(){ for (int i = 0; i &amp;lt; 10000000; i++){ string s(&quot;Hello World&quot;); } return 0; } Using initializations instead of assignments. In particular, in contructors, use initialization list 2.2 Contructor demoClass(const T&amp;amp; t){ _data = t; } -&amp;gt; demoClass(const T&amp;amp; t) : _data(t){} 2.3 Assignment composite Version 1 : 8.8 B cycles int main(){ string hello = &quot;Hello&quot;; string world = &quot;World&quot;; for (int i = 0; i &amp;lt; 10000000; i++){ string result = hello + &quot; &quot; + hello + &quot;,&quot; + world; } return 0; } Version 2 : 4.7 B cycles int main(){ string hello = &quot;Hello&quot;; string world = &quot;World&quot;; for (int i = 0; i &amp;lt; 10000000; i++){ string result = hello; result += &quot; &quot;; result += hello; result += &quot;,&quot;; result += world; } return 0; } Use the assignment composite operators instead of simple operators combined with assignment operators 2.4 Operator rule Using prefix operator (++obj) instead of the postfix operator (obj++) in object; postfix operator will create a spectre copy Use shift operations &amp;gt;&amp;gt; and &amp;lt;&amp;lt; instead of integer multiplication and division if possible Should use the same type of variables for processing, type conversion must be avoid Replace integer division with multiplication when there are multiple divisions in an expression. Example : x = a / b / c; =&amp;gt; x = a/(b * c); 3. Booleans 3.1 and Version 1 : 1.5 B cycles int main(){ long res = 0; for (int i = 0; i &amp;lt; 10000000; i++){ bool a = true; if (a &amp;amp;&amp;amp; i%2 == 0){ res++; } } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; } Version 2 : 1.2 B cycles int main(){ long res = 0; for (int i = 0; i &amp;lt; 10000000; i++){ bool a = true; if (i%2 == 0 &amp;amp;&amp;amp; a){ res++; } } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; } If one operator and is more predictable than the other, then put it first If one operator and is faster to calculate than the other then put it first The one operator and of the Boolean operators &amp;amp;&amp;amp; is evaluated in the following way If the first operand of &amp;amp;&amp;amp; is false, then the seconds operand is not evaluated at all because the result is known to be false regardless of the value of the second operand. 4. Functions Macro Use macros instead of functions Version 1 int findMax(int a, int b){ return (a &amp;gt; b) ? a : b; } int main(){ long res = 0; for (int i = 0; i &amp;lt; 1000000; i++){ int t = findMax(i, 10000); } } Version 2 : 3 times faster #define FINDMAX(a, b) (a &amp;gt; b ? a : b) int main(){ long res = 0; for (int i = 0; i &amp;lt; 1000000; i++){ int t = FINDMAX(i, 10000); } } Parameter Version 1 : 7 B cycles int res = 0; void sum(vector&amp;lt;int&amp;gt; arr){ for (int i = 0; i &amp;lt; arr.size(); i++) res += arr[i]; } int main(){ vector&amp;lt;int&amp;gt; v(10, 1); for (int i = 0; i &amp;lt; 10000000; i++){ sum(v); } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } Version 2 : 2 B cycles int res = 0; void sum(vector&amp;lt;int&amp;gt; &amp;amp;arr){ for (int i = 0; i &amp;lt; arr.size(); i++) res += arr[i]; } int main(){ vector&amp;lt;int&amp;gt; v(10, 1); for (int i = 0; i &amp;lt; 10000000; i++){ sum(v); } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } Pass structures or classes by reference, not by value Using C scanf or printf instead of C++ cin or cout Function rule Return objects via reference parameters (The return value of a function will be stored in a register. If this return data has no intened usage, time and space are wasted in storing this information) template &amp;lt;class T&amp;gt; T funcReturn(){ T res; ... return res; } =&amp;gt; template &amp;lt;class T&amp;gt; T funcReturn(T&amp;amp; res){ res = ... } 5. Arrays Accessing in continuous memory is faster than discrete memory or random memory 6. Loops Unrolling Version 1 : 13 B cycles void functionA(){}; void functionB(){}; void functionC(){}; int main(){ for (int i = 0; i &amp;lt; 10000000; i++){ int funcIdx = i % 3; switch(funcIdx){ default: case 0: functionA(); break; case 1: functionB(); break; case 2: functionC(); break; } } return 0; } Version 2 : 6.1 B cycles void functionA(){}; void functionB(){}; void functionC(){}; int main(){ for (int i = 0; i &amp;lt; 10000000; i += 3){ functionA(); functionB(); functionC(); } return 0; } Using unrolling Copy and clearing arrays Version 1 : 15B cycles int main(){ int a[1000], b[1000]; for (int i = 0; i &amp;lt; 10000000; i++){ int value = i % 100; for (int j = 0; j &amp;lt; 1000; j++) a[j] = value; for (int j = 0; j &amp;lt; 1000; j++) b[j] = a[j]; } return 0; } Version 2 : 1B cycles (15 times faster) #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;string&amp;gt; int main(){ int a[1000], b[1000]; for (int i = 0; i &amp;lt; 10000000; i++){ int value = i % 100; memset(a, value, sizeof(a)); memcpy(b, a, sizeof(a)); } return 0; } Using memcpy, memset is often faster Move loops inside function call Version 1 : 8.3 B cycles int res = 0; void functionA(){ res++; } int main(){ for (int i = 0; i &amp;lt; 10000000; i++){ functionA(); } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } Version 2 : 7.6 B cycles int res = 0; void functionA(){ for (int i = 0; i &amp;lt; 10000000; i++) res++; } int main(){ functionA(); cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } Using for loop inside function call Fuction rule It is faster to compare to zero rather than compare with difference number Prefix (++i) is better than postfix(i++) Avoid calculation in condition of loop 7. Statements Using table lookup Version 1 : 1B cycles int main(){ vector&amp;lt;int&amp;gt; a = vector&amp;lt;int&amp;gt;(4, 0); vector&amp;lt;bool&amp;gt; b = vector&amp;lt;bool&amp;gt;{true, false, true, false}; for (int i = 0; i &amp;lt; 10000000; i++){ a[i] = b[i] ? 100 : 200; } return 0; } Version 2 : 0.7B cycles int main(){ vector&amp;lt;int&amp;gt; a = vector&amp;lt;int&amp;gt;(4, 0); vector&amp;lt;bool&amp;gt; b = vector&amp;lt;bool&amp;gt;{true, false, true, false}; int value[2] = {200, 100}; for (int i = 0; i &amp;lt; 10000000; i++){ a[i] = value[b[i]]; } return 0; } Switch and table Version 1 : 7B cycles void functionA(){}; void functionB(){}; void functionC(){}; int main(){ for (int i = 0; i &amp;lt; 10000000; i++){ int funcIdx = i % 3; switch(funcIdx){ default: case 0: functionA(); break; case 1: functionB(); break; case 2: functionC(); break; } } return 0; } Version 2 : 3.2B cycles void functionA(){}; void functionB(){}; void functionC(){}; typedef void(*func)(void); int main(){ static func functions[] = {functionA, functionB, functionC}; for (int i = 0; i &amp;lt; 10000000; i++){ functions[i % 3](); } return 0; } Switch can be replace by a function table Using switch instead of if 8. Input/Output Read file on the buffer and read and write multiple time on buffer to avoid access multiple time read write on disk.</summary></entry><entry><title type="html">NeoVim cơ bản</title><link href="http://hmthanh.github.io/blog/tutorial/2020/11/01/basic-neovim.html" rel="alternate" type="text/html" title="NeoVim cơ bản" /><published>2020-11-01T11:04:17+07:00</published><updated>2020-11-01T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/tutorial/2020/11/01/basic-neovim</id><content type="html" xml:base="http://hmthanh.github.io/blog/tutorial/2020/11/01/basic-neovim.html">&lt;p&gt;Download NeoVim tại : &lt;a href=&quot;https://neovim.io/&quot;&gt;NeoVim&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Minh-Thanh Hoang</name></author><category term="tutorial" /><summary type="html">1. Variable storage 1.1 Static storage 1.2 Register storage 2. Operators 2.1 Initializations 2.2 Contructor 2.3 Assignment composite 2.4 Operator rule 3. Booleans 4. Functions 4.1 Macro 4.2 Parameter 4.3 Function rule 5. Arrays 6. Loops 6.1 Unrolling 6.2 Copy and clearing arrays 6.3 Move loops inside function call 6.4 Fuction rule 7. Statements 7.1 Using table lookup 7.2 Switch and table 8. Input/Output Using perf to profiling in linux : (perf)[(http://www.brendangregg.com/perf.html)] 1. Variable storage 1.1 Static storage Version 1 : 7.1 cycles int main(){ int n = 10000000; for (int i = 0; i &amp;lt; n; i++){ } return 0; } Version 2 : 6.1 B cycles int main(){ static int nStatic = 10000000; for (int i = 0; i &amp;lt; n; i++){ } return 0; } static : replace calculation result by storing the value in static storage, where possible 1.2 Register storage Version 1 : 2.2 B cycles int main(){ static int nStatic = 3; long res = 0; for (int i = 0; i &amp;lt; 10000000; i++){ res += i * nStatic; } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } Version 2 : 1 B cycles int main(){ register int nRegister = 3; long res = 0; for (int i = 0; i &amp;lt; 10000000; i++){ res += i * nRegister; } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } register : variables stored in register are accessed in a flash, and number of registers is strictly limited 2. Operators 2.1 Initializations Version 1 : 17.7 B cycles int main(){ for (int i = 0; i &amp;lt; 10000000; i++){ string s; s = &quot;Hello World&quot;; } return 0; } Version 2 : 17 B cycles int main(){ for (int i = 0; i &amp;lt; 10000000; i++){ string s(&quot;Hello World&quot;); } return 0; } Using initializations instead of assignments. In particular, in contructors, use initialization list 2.2 Contructor demoClass(const T&amp;amp; t){ _data = t; } -&amp;gt; demoClass(const T&amp;amp; t) : _data(t){} 2.3 Assignment composite Version 1 : 8.8 B cycles int main(){ string hello = &quot;Hello&quot;; string world = &quot;World&quot;; for (int i = 0; i &amp;lt; 10000000; i++){ string result = hello + &quot; &quot; + hello + &quot;,&quot; + world; } return 0; } Version 2 : 4.7 B cycles int main(){ string hello = &quot;Hello&quot;; string world = &quot;World&quot;; for (int i = 0; i &amp;lt; 10000000; i++){ string result = hello; result += &quot; &quot;; result += hello; result += &quot;,&quot;; result += world; } return 0; } Use the assignment composite operators instead of simple operators combined with assignment operators 2.4 Operator rule Using prefix operator (++obj) instead of the postfix operator (obj++) in object; postfix operator will create a spectre copy Use shift operations &amp;gt;&amp;gt; and &amp;lt;&amp;lt; instead of integer multiplication and division if possible Should use the same type of variables for processing, type conversion must be avoid Replace integer division with multiplication when there are multiple divisions in an expression. Example : x = a / b / c; =&amp;gt; x = a/(b * c); 3. Booleans Version 1 : 1.5 B cycles int main(){ long res = 0; for (int i = 0; i &amp;lt; 10000000; i++){ bool a = true; if (a &amp;amp;&amp;amp; i%2 == 0){ res++; } } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; } Version 2 : 1.2 B cycles int main(){ long res = 0; for (int i = 0; i &amp;lt; 10000000; i++){ bool a = true; if (i%2 == 0 &amp;amp;&amp;amp; a){ res++; } } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; } If one operator and is more predictable than the other, then put it first If one operator and is faster to calculate than the other then put it first The one operator and of the Boolean operators &amp;amp;&amp;amp; is evaluated in the following way If the first operand of &amp;amp;&amp;amp; is false, then the seconds operand is not evaluated at all because the result is known to be false regardless of the value of the second operand. 4. Functions 4.1 Macro Use macros instead of functions Version 1 int findMax(int a, int b){ return (a &amp;gt; b) ? a : b; } int main(){ long res = 0; for (int i = 0; i &amp;lt; 1000000; i++){ int t = findMax(i, 10000); } } Version 2 : 3 times faster #define FINDMAX(a, b) (a &amp;gt; b ? a : b) int main(){ long res = 0; for (int i = 0; i &amp;lt; 1000000; i++){ int t = FINDMAX(i, 10000); } } 4.2 Parameter Version 1 : 7 B cycles int res = 0; void sum(vector&amp;lt;int&amp;gt; arr){ for (int i = 0; i &amp;lt; arr.size(); i++) res += arr[i]; } int main(){ vector&amp;lt;int&amp;gt; v(10, 1); for (int i = 0; i &amp;lt; 10000000; i++){ sum(v); } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } Version 2 : 2 B cycles int res = 0; void sum(vector&amp;lt;int&amp;gt; &amp;amp;arr){ for (int i = 0; i &amp;lt; arr.size(); i++) res += arr[i]; } int main(){ vector&amp;lt;int&amp;gt; v(10, 1); for (int i = 0; i &amp;lt; 10000000; i++){ sum(v); } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } Pass structures or classes by reference, not by value Using C scanf or printf instead of C++ cin or cout 4.3 Function rule Return objects via reference parameters (The return value of a function will be stored in a register. If this return data has no intened usage, time and space are wasted in storing this information) template &amp;lt;class T&amp;gt; T funcReturn(){ T res; ... return res; } =&amp;gt; template &amp;lt;class T&amp;gt; T funcReturn(T&amp;amp; res){ res = ... } 5. Arrays Accessing in continuous memory is faster than discrete memory or random memory 6. Loops 6.1 Unrolling Version 1 : 13 B cycles void functionA(){}; void functionB(){}; void functionC(){}; int main(){ for (int i = 0; i &amp;lt; 10000000; i++){ int funcIdx = i % 3; switch(funcIdx){ default: case 0: functionA(); break; case 1: functionB(); break; case 2: functionC(); break; } } return 0; } Version 2 : 6.1 B cycles void functionA(){}; void functionB(){}; void functionC(){}; int main(){ for (int i = 0; i &amp;lt; 10000000; i += 3){ functionA(); functionB(); functionC(); } return 0; } Using unrolling 6.2 Copy and clearing arrays Version 1 : 15B cycles int main(){ int a[1000], b[1000]; for (int i = 0; i &amp;lt; 10000000; i++){ int value = i % 100; for (int j = 0; j &amp;lt; 1000; j++) a[j] = value; for (int j = 0; j &amp;lt; 1000; j++) b[j] = a[j]; } return 0; } Version 2 : 1B cycles (15 times faster) #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;string&amp;gt; int main(){ int a[1000], b[1000]; for (int i = 0; i &amp;lt; 10000000; i++){ int value = i % 100; memset(a, value, sizeof(a)); memcpy(b, a, sizeof(a)); } return 0; } Using memcpy, memset is often faster 6.3 Move loops inside function call Version 1 : 8.3 B cycles int res = 0; void functionA(){ res++; } int main(){ for (int i = 0; i &amp;lt; 10000000; i++){ functionA(); } cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } Version 2 : 7.6 B cycles int res = 0; void functionA(){ for (int i = 0; i &amp;lt; 10000000; i++) res++; } int main(){ functionA(); cout &amp;lt;&amp;lt; res &amp;lt;&amp;lt; endl; return 0; } Using for loop inside function call 6.4 Fuction rule It is faster to compare to zero rather than compare with difference number Prefix (++i) is better than postfix(i++) Avoid calculation in condition of loop 7. Statements 7.1 Using table lookup Version 1 : 1B cycles int main(){ vector&amp;lt;int&amp;gt; a = vector&amp;lt;int&amp;gt;(4, 0); vector&amp;lt;bool&amp;gt; b = vector&amp;lt;bool&amp;gt;{true, false, true, false}; for (int i = 0; i &amp;lt; 10000000; i++){ a[i] = b[i] ? 100 : 200; } return 0; } Version 2 : 0.7B cycles int main(){ vector&amp;lt;int&amp;gt; a = vector&amp;lt;int&amp;gt;(4, 0); vector&amp;lt;bool&amp;gt; b = vector&amp;lt;bool&amp;gt;{true, false, true, false}; int value[2] = {200, 100}; for (int i = 0; i &amp;lt; 10000000; i++){ a[i] = value[b[i]]; } return 0; } 7.2 Switch and table Version 1 : 7B cycles void functionA(){}; void functionB(){}; void functionC(){}; int main(){ for (int i = 0; i &amp;lt; 10000000; i++){ int funcIdx = i % 3; switch(funcIdx){ default: case 0: functionA(); break; case 1: functionB(); break; case 2: functionC(); break; } } return 0; } Version 2 : 3.2B cycles void functionA(){}; void functionB(){}; void functionC(){}; typedef void(*func)(void); int main(){ static func functions[] = {functionA, functionB, functionC}; for (int i = 0; i &amp;lt; 10000000; i++){ functions[i % 3](); } return 0; } Switch can be replace by a function table Using switch instead of if 8. Input/Output Read file on the buffer and read and write multiple time on buffer to avoid access multiple time read write on disk.</summary></entry><entry><title type="html">NeoVim cơ bản</title><link href="http://hmthanh.github.io/blog/tutorial/2020/11/01/basic-neovim.html" rel="alternate" type="text/html" title="NeoVim cơ bản" /><published>2020-11-01T11:04:17+07:00</published><updated>2020-11-01T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/tutorial/2020/11/01/basic-neovim</id><content type="html" xml:base="http://hmthanh.github.io/blog/tutorial/2020/11/01/basic-neovim.html">&lt;p&gt;Download NeoVim tại : &lt;a href=&quot;https://neovim.io/&quot;&gt;NeoVim&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;cấu-hình-initvim&quot;&gt;Cấu hình &lt;code&gt;init.vim&lt;/code&gt;&lt;/h1&gt;
 
@@ -2444,7 +2439,7 @@ Cơ bản mà nói, convolution neural network có thể được xem như một
 
 &lt;p&gt;In the last few years, deep neural networks have lead to breakthrough results on a variety of pattern recognition problems, such as computer vision and voice recognition. One of the essential components leading to these results has been a special kind of neural network called a convolutional neural network.&lt;/p&gt;
 
-&lt;p&gt;At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron&lt;sup&gt;&lt;a href=&quot;#3645:fn:1&quot; class=&quot;footnote&quot; id=&quot;3645:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.&lt;/p&gt;
+&lt;p&gt;At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron&lt;sup&gt;&lt;a href=&quot;#e675:fn:1&quot; class=&quot;footnote&quot; id=&quot;e675:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/Conv2-9x5-Conv2Conv2.png&quot; alt=&quot;Conv2Conv2&quot; /&gt;&lt;/p&gt;
 
@@ -2479,7 +2474,7 @@ There are a bunch of different neurons, and every input connects to every neuron
 
 &lt;p&gt;We care about the same properties at all points in time. It’s useful to know the frequencies at the beginning, it’s useful to know the frequencies in the middle, and it’s also useful to know the frequencies at the end. Again, note that these are local properties, in that we only need to look at a small window of the audio sample in order to determine them.&lt;/p&gt;
 
-&lt;p&gt;So, we can create a group of neurons, $A$, that look at small time segments of our data&lt;sup&gt;&lt;a href=&quot;#3645:fn:2&quot; class=&quot;footnote&quot; id=&quot;3645:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; $A$ looks at all such segments, computing certain features.
+&lt;p&gt;So, we can create a group of neurons, $A$, that look at small time segments of our data&lt;sup&gt;&lt;a href=&quot;#e675:fn:2&quot; class=&quot;footnote&quot; id=&quot;e675:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; $A$ looks at all such segments, computing certain features.
 Then, the output of this convolutional layer is fed into a fully-connected layer, $F$.&lt;/p&gt;
 
 &lt;p style=&quot;width: 90%; padding: 20 10px;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/Conv-9-Conv2.png&quot; alt=&quot;Conv-9-Conv2&quot; /&gt;&lt;/p&gt;
@@ -2560,7 +2555,7 @@ They used a new kind of neuron (ReLUs) and a new technique to reduce a problem c
 They used a very large dataset with lots of image categories (&lt;a href=&quot;http://www.image-net.org/&quot;&gt;ImageNet&lt;/a&gt;). And, of course, it was a convolutional neural network.&lt;/p&gt;
 
 &lt;p&gt;Their architecture, illustrated below, was very deep.
-It has 5 convolutional layers&lt;sup&gt;&lt;a href=&quot;#3645:fn:3&quot; class=&quot;footnote&quot; id=&quot;3645:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, with pooling interspersed, and three fully-connected layers.
+It has 5 convolutional layers&lt;sup&gt;&lt;a href=&quot;#e675:fn:3&quot; class=&quot;footnote&quot; id=&quot;e675:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, with pooling interspersed, and three fully-connected layers.
 The early layers are split over the two GPUs.&lt;/p&gt;
 
 &lt;p style=&quot;width: 80%; padding: 20 10px;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/KSH-arch.png&quot; alt=&quot;KSH-arch&quot; /&gt;&lt;/p&gt;
@@ -2593,7 +2588,7 @@ From &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf&quot;&
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Neurons in one side focus on black and white, learning to detect edges of different orientations and sizes.
-Neurons on the other side specialize on color and texture, detecting color contrasts and patterns&lt;sup&gt;&lt;a href=&quot;#3645:fn:4&quot; class=&quot;footnote&quot; id=&quot;3645:fn-back:4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
+Neurons on the other side specialize on color and texture, detecting color contrasts and patterns&lt;sup&gt;&lt;a href=&quot;#e675:fn:4&quot; class=&quot;footnote&quot; id=&quot;e675:fn-back:4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
 Remember that the neurons are &lt;em&gt;randomly&lt;/em&gt; initialized. No human went and set them to be edge detectors, or to split in this way. It arose simply from training the network to classify images.&lt;/p&gt;
 
 &lt;p&gt;These remarkable results (and other exciting results around that time) were only the beginning. They were quickly followed by a lot of other work testing modified approaches and gradually improving the results, or applying them to other areas. And, in addition to the neural networks community, many in the computer vision community have adopted deep convolutional neural networks.&lt;/p&gt;
@@ -2661,18 +2656,18 @@ There is an alternative formulation, in terms of a mathematical operation called
 &lt;h1 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h1&gt;
 
 &lt;ol class=&quot;footnotelist&quot;&gt;
-&lt;li id=&quot;3645:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
+&lt;li id=&quot;e675:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
         It should be noted that not all neural networks that use multiple copies of the same neuron are convolutional neural networks. Convolutional neural networks are just one type of neural network that uses the more general trick, weight-tying. Other kinds of neural network that do this are recurrent neural networks and recursive neural networks.
-   &lt;a href=&quot;#3645:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;3645:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
+   &lt;a href=&quot;#e675:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;e675:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
       Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-   &lt;a href=&quot;#3645:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;3645:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
+   &lt;a href=&quot;#e675:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;e675:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
      Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-  &lt;a href=&quot;#3645:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;3645:fn:4&quot; class=&quot;footnotebody&quot; value=&quot;4&quot;&gt;
+  &lt;a href=&quot;#e675:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;e675:fn:4&quot; class=&quot;footnotebody&quot; value=&quot;4&quot;&gt;
        They also test using 7 in the paper.
-    &lt;a href=&quot;#3645:fn-back:4&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+    &lt;a href=&quot;#e675:fn-back:4&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Christopher Olah</name></author><category term="deep-learning" /><summary type="html">Source : https://colah.github.io/posts/2014-07-Conv-Nets-Modular/</summary></entry><entry><title type="html">Attention? Attention!</title><link href="http://hmthanh.github.io/blog/2018/06/24/attention-attention.html" rel="alternate" type="text/html" title="Attention? Attention!" /><published>2018-06-24T18:07:00+07:00</published><updated>2018-06-24T18:07:00+07:00</updated><id>http://hmthanh.github.io/blog/2018/06/24/attention-attention</id><content type="html" xml:base="http://hmthanh.github.io/blog/2018/06/24/attention-attention.html">&lt;p&gt;Source : &lt;a href=&quot;https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html&quot;&gt;Lilian&lt;/a&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -3195,7 +3190,7 @@ The probability of the ball rolling $b$ units away from the new starting point i
 
 &lt;p&gt;If we fix the result of the first drop so we know the ball went distance $a$, for the ball to go a total distance $c$,
 the distance traveled in the second drop is also fixed at $b$, where $a + b = c$.
-So the probability of this happening is simply $f(a) ⋅ g(b)$.&lt;sup&gt;&lt;a href=&quot;#c298:fn:1&quot; class=&quot;footnote&quot; id=&quot;c298:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+So the probability of this happening is simply $f(a) ⋅ g(b)$.&lt;sup&gt;&lt;a href=&quot;#528c:fn:1&quot; class=&quot;footnote&quot; id=&quot;528c:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;Let’s think about this with a specific discrete example.
 We want the total distance $c$ to be $3$. If the first time it rolls, $a=2$, the second time it must roll $b=1$ in order to reach our total distance $a+b=3$.
@@ -3230,7 +3225,7 @@ So, summing over every solution to $a+b=c$, we can denote the total likelihood a
 
 \[(f∗g)(c)=\sum_{a} f(a)⋅g(c−a)\]
 
-&lt;p&gt;This is the standard definition&lt;sup&gt;&lt;a href=&quot;#c298:fn:2&quot; class=&quot;footnote&quot; id=&quot;c298:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; of convolution.&lt;/p&gt;
+&lt;p&gt;This is the standard definition&lt;sup&gt;&lt;a href=&quot;#528c:fn:2&quot; class=&quot;footnote&quot; id=&quot;528c:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; of convolution.&lt;/p&gt;
 
 &lt;p&gt;To make this a bit more concrete, we can think about this in terms of positions the ball might land.
 After the first drop, it will land at an intermediate position $a$ with probability $f(a)$.
@@ -3351,7 +3346,7 @@ This allows us to understand the convolution as a whole.&lt;/p&gt;
 
 &lt;p&gt;Where $x_0, x_1…$ are the inputs. The weights, $w0$, $w1$, … describe how the neuron connects to its inputs.
 A negative weight means that an input inhibits the neuron from firing, while a positive weight encourages it to.
-The weights are the heart of the neuron, controlling its behavior&lt;sup&gt;&lt;a href=&quot;#c298:fn:3&quot; class=&quot;footnote&quot; id=&quot;c298:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
+The weights are the heart of the neuron, controlling its behavior&lt;sup&gt;&lt;a href=&quot;#528c:fn:3&quot; class=&quot;footnote&quot; id=&quot;528c:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
 Saying that multiple neurons are identical is the same thing as saying that the weights are the same.&lt;/p&gt;
 
 &lt;p&gt;It’s this wiring of neurons, describing all the weights and which ones are identical, that convolution will handle for us.&lt;/p&gt;
@@ -3424,10 +3419,10 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
 &lt;h1 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h1&gt;
 
 &lt;ol class=&quot;footnotelist&quot;&gt;
-&lt;li id=&quot;c298:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
+&lt;li id=&quot;528c:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
         We want the probability of the ball rolling a units the first time and also rolling b units the second time. The distributions $P(A)=f(a)$ and $P(b)=g(b)$ are independent, with both distributions centered at 0. So  $P(a,b)=P(a)∗P(b)=f(a)⋅g(b)$
-   &lt;a href=&quot;#c298:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;c298:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
+   &lt;a href=&quot;#528c:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;528c:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
       The non-standard definition, which I haven’t previously seen, seems to have a lot of benefits. In future posts, we will find this definition very helpful because it lends itself to generalization to new algebraic structures. But it also has the advantage that it makes a lot of algebraic properties of convolutions really obvious.
       &lt;br /&gt;
       For example, convolution is a commutative operation. That is, $f∗g=g∗f$. Why?
@@ -3439,10 +3434,10 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
       \sum_{(a+b)+c=d} (f(a)⋅g(b))⋅h(c)  = \sum_{a+(b+c)=d} f(a)⋅(g(b)⋅h(c))
       $$
       
-   &lt;a href=&quot;#c298:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;c298:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
+   &lt;a href=&quot;#528c:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;528c:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
      There’s also the bias, which is the “threshold” for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
-  &lt;a href=&quot;#c298:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+  &lt;a href=&quot;#528c:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Christopher Olah</name></author><category term="deep" /><category term="learning" /><summary type="html">Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/</summary></entry><entry><title type="html">Quotes</title><link href="http://hmthanh.github.io/blog/softskill/2012/11/03/Quotes.html" rel="alternate" type="text/html" title="Quotes" /><published>2012-11-03T11:04:17+07:00</published><updated>2012-11-03T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/softskill/2012/11/03/Quotes</id><content type="html" xml:base="http://hmthanh.github.io/blog/softskill/2012/11/03/Quotes.html">&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Không thể tạo ra kết quả mới nếu đầu vào và tư duy như cũ

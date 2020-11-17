@@ -66,7 +66,7 @@ Cơ bản mà nói, convolution neural network có thể được xem như một
 
 <p>In the last few years, deep neural networks have lead to breakthrough results on a variety of pattern recognition problems, such as computer vision and voice recognition. One of the essential components leading to these results has been a special kind of neural network called a convolutional neural network.</p>
 
-<p>At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron<sup><a href="#4311:fn:1" class="footnote" id="4311:fn-back:1">1</a></sup>. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.</p>
+<p>At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron<sup><a href="#baf6:fn:1" class="footnote" id="baf6:fn-back:1">1</a></sup>. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.</p>
 
 <p style="width: 100%;" class="center"><img src="/blog/assets/images/2014-08-06-ConvNets-Modular/Conv2-9x5-Conv2Conv2.png" alt="Conv2Conv2"></p>
 
@@ -101,7 +101,7 @@ There are a bunch of different neurons, and every input connects to every neuron
 
 <p>We care about the same properties at all points in time. It’s useful to know the frequencies at the beginning, it’s useful to know the frequencies in the middle, and it’s also useful to know the frequencies at the end. Again, note that these are local properties, in that we only need to look at a small window of the audio sample in order to determine them.</p>
 
-<p>So, we can create a group of neurons, $A$, that look at small time segments of our data<sup><a href="#4311:fn:2" class="footnote" id="4311:fn-back:2">2</a></sup> $A$ looks at all such segments, computing certain features.
+<p>So, we can create a group of neurons, $A$, that look at small time segments of our data<sup><a href="#baf6:fn:2" class="footnote" id="baf6:fn-back:2">2</a></sup> $A$ looks at all such segments, computing certain features.
 Then, the output of this convolutional layer is fed into a fully-connected layer, $F$.</p>
 
 <p style="width: 90%; padding: 20 10px;" class="center"><img src="/blog/assets/images/2014-08-06-ConvNets-Modular/Conv-9-Conv2.png" alt="Conv-9-Conv2"></p>
@@ -182,7 +182,7 @@ They used a new kind of neuron (ReLUs) and a new technique to reduce a problem c
 They used a very large dataset with lots of image categories (<a href="http://www.image-net.org/">ImageNet</a>). And, of course, it was a convolutional neural network.</p>
 
 <p>Their architecture, illustrated below, was very deep.
-It has 5 convolutional layers<sup><a href="#4311:fn:3" class="footnote" id="4311:fn-back:3">3</a></sup>, with pooling interspersed, and three fully-connected layers.
+It has 5 convolutional layers<sup><a href="#baf6:fn:3" class="footnote" id="baf6:fn-back:3">3</a></sup>, with pooling interspersed, and three fully-connected layers.
 The early layers are split over the two GPUs.</p>
 
 <p style="width: 80%; padding: 20 10px;" class="center"><img src="/blog/assets/images/2014-08-06-ConvNets-Modular/KSH-arch.png" alt="KSH-arch"></p>
@@ -215,7 +215,7 @@ From <a href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf">Krizehvsky et
 <p><br></p>
 
 <p>Neurons in one side focus on black and white, learning to detect edges of different orientations and sizes.
-Neurons on the other side specialize on color and texture, detecting color contrasts and patterns<sup><a href="#4311:fn:4" class="footnote" id="4311:fn-back:4">4</a></sup>.
+Neurons on the other side specialize on color and texture, detecting color contrasts and patterns<sup><a href="#baf6:fn:4" class="footnote" id="baf6:fn-back:4">4</a></sup>.
 Remember that the neurons are <em>randomly</em> initialized. No human went and set them to be edge detectors, or to split in this way. It arose simply from training the network to classify images.</p>
 
 <p>These remarkable results (and other exciting results around that time) were only the beginning. They were quickly followed by a lot of other work testing modified approaches and gradually improving the results, or applying them to other areas. And, in addition to the neural networks community, many in the computer vision community have adopted deep convolutional neural networks.</p>
@@ -283,21 +283,21 @@ There is an alternative formulation, in terms of a mathematical operation called
 <h1 id="acknowledgments">Acknowledgments</h1>
 
 <ol class="footnotelist">
-<li id="4311:fn:1" class="footnotebody" value="1">
+<li id="baf6:fn:1" class="footnotebody" value="1">
         It should be noted that not all neural networks that use multiple copies of the same neuron are convolutional neural networks. Convolutional neural networks are just one type of neural network that uses the more general trick, weight-tying. Other kinds of neural network that do this are recurrent neural networks and recursive neural networks.
-   <a href="#4311:fn-back:1" class="backlink">⏎</a>
+   <a href="#baf6:fn-back:1" class="backlink">⏎</a>
 </li>
-<li id="4311:fn:2" class="footnotebody" value="2">
+<li id="baf6:fn:2" class="footnotebody" value="2">
       Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-   <a href="#4311:fn-back:2" class="backlink">⏎</a>
+   <a href="#baf6:fn-back:2" class="backlink">⏎</a>
 </li>
-<li id="4311:fn:3" class="footnotebody" value="3">
+<li id="baf6:fn:3" class="footnotebody" value="3">
      Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-  <a href="#4311:fn-back:3" class="backlink">⏎</a>
+  <a href="#baf6:fn-back:3" class="backlink">⏎</a>
 </li>
-<li id="4311:fn:4" class="footnotebody" value="4">
+<li id="baf6:fn:4" class="footnotebody" value="4">
        They also test using 7 in the paper.
-    <a href="#4311:fn-back:4" class="backlink">⏎</a>
+    <a href="#baf6:fn-back:4" class="backlink">⏎</a>
 </li>
 </ol>
 

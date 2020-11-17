@@ -162,8 +162,6 @@ demoClass(const T& t) : _data(t){}
 
 # 3. Booleans
 
-### 3.1 and
-
 * Version 1 : 1.5 B cycles
 
 ```c++
@@ -206,7 +204,7 @@ int main(){
 
 # 4. Functions
 
-### Macro
+### 4.1 Macro
 
 Use macros instead of functions
 
@@ -238,7 +236,7 @@ int main(){
 }
 ```
 
-### Parameter
+### 4.2 Parameter
 
 * Version 1 : 7 B cycles
 
@@ -282,7 +280,7 @@ int main(){
 
 > Using C `scanf` or `printf` instead of C++ `cin` or `cout`
 
-### Function rule
+### 4.3 Function rule
 
 > * Return objects via reference parameters
   (The return value of a function will be stored in a register. If this return data has no intened usage, time and space are wasted in storing this information)
@@ -307,7 +305,7 @@ template <class T> T funcReturn(T& res){
 
 # 6. Loops
 
-### Unrolling
+### 6.1 Unrolling
 
 * Version 1 : 13 B cycles
 
@@ -350,7 +348,7 @@ int main(){
 
 > Using unrolling
 
-### Copy and clearing arrays
+### 6.2 Copy and clearing arrays
 
 * Version 1 : 15B cycles
 
@@ -389,7 +387,7 @@ int main(){
 
 > Using `memcpy`, `memset` is often faster
 
-### Move loops inside function call
+### 6.3 Move loops inside function call
 
 * Version 1 : 8.3 B cycles
 
@@ -425,7 +423,7 @@ int main(){
 
 > Using for loop inside function call
 
-### Fuction rule
+### 6.4 Fuction rule
 
 > It is faster to compare to zero rather than compare with difference number
 
@@ -435,7 +433,7 @@ int main(){
 
 # 7. Statements
 
-### Using table lookup
+### 7.1 Using table lookup
 
 * Version 1 : 1B cycles
 
@@ -464,7 +462,7 @@ int main(){
 }
 ```
 
-### Switch and table
+### 7.2 Switch and table
 
 * Version 1 : 7B cycles
 

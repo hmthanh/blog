@@ -1,4 +1,400 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://hmthanh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://hmthanh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-11-05T00:29:17+07:00</updated><id>http://hmthanh.github.io/blog/feed.xml</id><title type="html">Minh-Thanh’s Blog</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">VIM cơ bản</title><link href="http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html" rel="alternate" type="text/html" title="VIM cơ bản" /><published>2020-11-01T11:04:17+07:00</published><updated>2020-11-01T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial</id><content type="html" xml:base="http://hmthanh.github.io/blog/tutorial/2020/11/01/simple-vim-tutorial.html">&lt;p&gt;Download VIM tại : &lt;a href=&quot;https://www.vim.org/download.php&quot;&gt;VIM&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://hmthanh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://hmthanh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-11-05T00:46:08+07:00</updated><id>http://hmthanh.github.io/blog/feed.xml</id><title type="html">Minh-Thanh’s Blog</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">NeoVim cơ bản</title><link href="http://hmthanh.github.io/blog/tutorial/2020/11/01/basic-neovim.html" rel="alternate" type="text/html" title="NeoVim cơ bản" /><published>2020-11-01T11:04:17+07:00</published><updated>2020-11-01T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/tutorial/2020/11/01/basic-neovim</id><content type="html" xml:base="http://hmthanh.github.io/blog/tutorial/2020/11/01/basic-neovim.html">&lt;p&gt;Download NeoVim tại : &lt;a href=&quot;https://neovim.io/&quot;&gt;NeoVim&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;cấu-hình-initvim&quot;&gt;Cấu hình &lt;code&gt;init.vim&lt;/code&gt;&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-vim&quot;&gt;&quot;python with virtualenv support
+py &amp;lt;&amp;lt; EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+call plug#begin('~/.vim/plugged')
+&quot; python
+  Plugin 'tmhedberg/SimpylFold'
+  Plugin 'vim-scripts/indentpython.vim'
+  Plugin 'davidhalter/jedi-vim'
+  Plugin 'scrooloose/syntastic'
+  Plugin 'nvie/vim-flake8'
+  Plugin 'jistr/vim-nerdtree-tabs'
+  
+&quot; Fix
+  Plug 'tpope/vim-fugitive'
+&quot; looking
+  Plug 'mhinz/vim-startify'
+  Plug 'Yggdroot/indentLine'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'myusuf3/numbers.vim'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'sickill/vim-monokai'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'altercation/vim-colors-solarized'
+&quot; completion/templating
+  Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'ervandew/supertab'
+  Plug 'tpope/vim-endwise'
+  Plug 'preservim/nerdcommenter'
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+&quot; command extention
+  Plug 'easymotion/vim-easymotion'
+  Plug 'wellle/targets.vim'
+  Plug 'tpope/vim-surround'
+  Plug 'junegunn/vim-easy-align'
+  Plug 'wellle/targets.vim'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'repeat.vim'
+&quot; utils
+  Plug 'neomake/neomake'
+  Plug 'kassio/neoterm'
+  Plug 'sjl/gundo.vim'
+  Plug 'chrisbra/NrrwRgn'
+  Plug 'Mark--Karkat'
+&quot; misc
+  Plug 'asins/vimcdoc'
+  Plug 'ccvext.vim'
+  Plug 'CodeFalling/fcitx-vim-osx'
+  &quot;Plug 'lilydjwg/fcitx.vim'
+  Plug 'junegunn/vim-github-dashboard'
+&quot; documentation
+  Plug 'rhysd/nyaovim-markdown-preview'
+  Plug 'xolox/vim-notes'
+  Plug 'xolox/vim-misc'
+  Plug 'itchyny/calendar.vim'
+  Plug 'junegunn/vim-journal'
+&quot; navigation
+  Plug 'scrooloose/nerdtree'
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'wesleyche/SrcExpl'
+  Plug 'majutsushi/tagbar'
+  Plug 'taglist.vim'
+  Plug 'rizzatti/dash.vim'
+  Plug 'eugen0329/vim-esearch'
+&quot; c/c++
+  
+&quot; java
+  Plug 'artur-shaik/vim-javacomplete2'
+  &quot;Plug 'vhakulinen/neovim-intellij-complete-deoplete'
+&quot; python
+  Plug 'zchee/deoplete-jedi'
+&quot; html/css/javascript
+  Plug 'mattn/emmet-vim'
+&quot; scala
+  Plug 'ensime/ensime-vim', { 'do': function('DoRemote') }
+  Plug 'derekwyatt/vim-scala'
+&quot;  Plug 'ktvoelker/sbt-vim'
+&quot;  Plug 'megaannum/vimside'
+call plug#end()
+
+&quot; Fundamental settings
+  set encoding=utf-8
+  set fileencoding=utf-8
+  set fileencodings=ucs-bom,utf-8,gbk,cp936,latin-1
+  set fileformat=unix
+  set fileformats=unix,dos,mac
+  filetype on
+  filetype plugin on
+  filetype plugin indent on
+  syntax on
+&quot; Some useful settings
+  set smartindent
+  set expandtab         &quot;tab to spaces
+  set tabstop=2         &quot;the width of a tab
+  set shiftwidth=2      &quot;the width for indent
+  set foldenable
+  set foldmethod=indent &quot;folding by indent
+  set foldlevel=99
+  set ignorecase        &quot;ignore the case when search texts
+  set smartcase         &quot;if searching text contains uppercase case will not be ignored
+&quot; Lookings
+  set number           &quot;line number
+  set cursorline       &quot;hilight the line of the cursor
+  set cursorcolumn     &quot;hilight the column of the cursor
+  set nowrap           &quot;no line wrapping
+  colorscheme monokai
+  &quot;au BufWinEnter * let w:m2=matchadd('Underlined', '\%&amp;gt;' . 80 . 'v.', -1)
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+&quot; Shortcuts
+  &quot; \ =&amp;gt; go to command mode
+    imap &amp;lt;leader&amp;gt;&amp;lt;leader&amp;gt; &amp;lt;esc&amp;gt;:
+  &quot; go =&amp;gt; go to anywhere
+    nmap go &amp;lt;Plug&amp;gt;(easymotion-jumptoanywhere)
+  &quot; &amp;lt;c-v&amp;gt; =&amp;gt; for pasting
+    imap &amp;lt;c-v&amp;gt; &amp;lt;esc&amp;gt;&quot;+pa
+  &quot; &amp;lt;c-h/j/k/l&amp;gt; =&amp;gt; hjkl in normal mode (but there is a bug mapping &amp;lt;c-h&amp;gt;)
+    imap &amp;lt;c-h&amp;gt; &amp;lt;left&amp;gt;
+    imap &amp;lt;c-j&amp;gt; &amp;lt;down&amp;gt;
+    imap &amp;lt;c-k&amp;gt; &amp;lt;up&amp;gt;
+    imap &amp;lt;c-l&amp;gt; &amp;lt;right&amp;gt;
+  &quot; \cl =&amp;gt; redraw the screen
+    nmap &amp;lt;leader&amp;gt;l &amp;lt;c-l&amp;gt;&amp;lt;c-l&amp;gt;
+    imap &amp;lt;leader&amp;gt;l &amp;lt;esc&amp;gt;&amp;lt;leader&amp;gt;la
+  &quot; &amp;lt;space&amp;gt; =&amp;gt; fold/unfold current code
+  &quot; tips: zR =&amp;gt; unfold all; zM =&amp;gt; fold all
+    nnoremap &amp;lt;space&amp;gt; @=((foldclosed(line('.')) &amp;lt; 0) ? 'zc' : 'zo')&amp;lt;CR&amp;gt;
+  &quot; \o =&amp;gt; open current file by system apps (only available in osx)
+    nmap &amp;lt;leader&amp;gt;o :!open &quot;%&quot;&amp;lt;cr&amp;gt;
+    imap &amp;lt;leader&amp;gt;o &amp;lt;esc&amp;gt;&amp;lt;leader&amp;gt;o
+  &quot; ,, =&amp;gt; escape to normal mode
+    imap ,, &amp;lt;Esc&amp;gt;
+    tmap ,, &amp;lt;Esc&amp;gt;
+  &quot; &amp;lt;esc&amp;gt; =&amp;gt; go back to normal mode (in terminal mode)
+    tnoremap &amp;lt;Esc&amp;gt; &amp;lt;C-\&amp;gt;&amp;lt;C-n&amp;gt; 
+  &quot; &amp;lt;F4&amp;gt; =&amp;gt; popup the file tree navigation)
+    nmap &amp;lt;F4&amp;gt; :NERDTreeToggle&amp;lt;CR&amp;gt;
+  &quot; use t{h,j,k,l} to switch between different windows
+    noremap tk &amp;lt;c-w&amp;gt;k
+    noremap tj &amp;lt;c-w&amp;gt;j
+    noremap th &amp;lt;c-w&amp;gt;h
+    noremap tl &amp;lt;c-w&amp;gt;l
+		nmap twj :resize +5&amp;lt;cr&amp;gt;
+		nmap twk :resize -5&amp;lt;cr&amp;gt;
+		nmap twh :vertical resize -5&amp;lt;cr&amp;gt;
+		nmap twl :vertical resize +5&amp;lt;cr&amp;gt;
+  &quot; t[number] =&amp;gt; switch to the file showed in the top tabs
+  &quot; t[ t] =&amp;gt; prev tab/next tab
+    nmap t1 &amp;lt;Plug&amp;gt;AirlineSelectTab1
+    nmap t2 &amp;lt;Plug&amp;gt;AirlineSelectTab2
+    nmap t3 &amp;lt;Plug&amp;gt;AirlineSelectTab3
+    nmap t4 &amp;lt;Plug&amp;gt;AirlineSelectTab4
+    nmap t5 &amp;lt;Plug&amp;gt;AirlineSelectTab5
+    nmap t6 &amp;lt;Plug&amp;gt;AirlineSelectTab6
+    nmap t7 &amp;lt;Plug&amp;gt;AirlineSelectTab7
+    nmap t8 &amp;lt;Plug&amp;gt;AirlineSelectTab8
+    nmap t9 &amp;lt;Plug&amp;gt;AirlineSelectTab9
+    nmap t[ &amp;lt;Plug&amp;gt;AirlineSelectPrevTab
+    nmap t] &amp;lt;Plug&amp;gt;AirlineSelectNextTab
+  &quot; ts =&amp;gt; toggle the srcExpl (for source code exploring)
+    nnoremap ts :SrcExplToggle&amp;lt;CR&amp;gt;
+  &quot; tg =&amp;gt; toogle the gundo
+    nnoremap tg :GundoToggle&amp;lt;CR&amp;gt;
+  &quot; tb =&amp;gt; open the tagbar
+    nmap tb :TlistClose&amp;lt;CR&amp;gt;:TagbarToggle&amp;lt;CR&amp;gt;
+  &quot; ti =&amp;gt; taglist
+    nmap ti :TagbarClose&amp;lt;CR&amp;gt;:Tlist&amp;lt;CR&amp;gt;
+  &quot; &amp;lt;s-enter&amp;gt; =&amp;gt; toggle the terminal
+    if exists('nyaovim_version')
+      nnoremap &amp;lt;silent&amp;gt; &amp;lt;s-cr&amp;gt; :Ttoggle&amp;lt;cr&amp;gt;
+    else &quot; in terminal use t&amp;lt;enter&amp;gt;
+      nmap t&amp;lt;CR&amp;gt; :Ttoggle&amp;lt;CR&amp;gt; 
+    endif
+  &quot; tt =&amp;gt; type the command for the terminal
+    nnoremap tt :T&amp;lt;space&amp;gt;
+  &quot; te =&amp;gt; send current line/selected lines to the terminal
+    nnoremap &amp;lt;silent&amp;gt; te :TREPLSend&amp;lt;CR&amp;gt;
+    xnoremap &amp;lt;silent&amp;gt; te :TREPLSend&amp;lt;CR&amp;gt;
+  &quot; tE =&amp;gt; send the thole current file to the terminal
+    nnoremap &amp;lt;silent&amp;gt; tE :TREPLSendFile&amp;lt;CR&amp;gt;
+  &quot; \t =&amp;gt; goto normal mode and press t (e.g. \t&amp;lt;enter&amp;gt; to toggle the terminal)
+    imap &amp;lt;leader&amp;gt;t &amp;lt;esc&amp;gt;t
+  &quot; tm =&amp;gt; toggle the markdown preview
+    let g:markdown_preview_on = 0
+    au! BufWinEnter *.md,*.markdown,*.mdown let g:markdown_preview_on = g:markdown_preview_auto || g:markdown_preview_on  
+    au! BufWinLeave *.md,*.markdown,*.mdown let g:markdown_preview_on = !g:markdown_preview_auto &amp;amp;&amp;amp; g:markdown_preview_on  
+    nmap tm @=(g:markdown_preview_on ? ':Stop' : ':Start')&amp;lt;CR&amp;gt;MarkdownPreview&amp;lt;CR&amp;gt;:let g:markdown_preview_on = 1 - g:markdown_preview_on&amp;lt;CR&amp;gt;
+  &quot; \g =&amp;gt; scroll to bottom in markdown preview (insert mode)
+    imap &amp;lt;leader&amp;gt;g &amp;lt;esc&amp;gt;&amp;lt;leader&amp;gt;Ga
+  &quot; \jd =&amp;gt; GoTo the definition
+    &quot;nnoremap &amp;lt;leader&amp;gt;jd :YcmCompleter GoTo&amp;lt;CR&amp;gt;
+  &quot; \e =&amp;gt; edit only current/selected line(s) in normal/visual mode
+  &quot; z + [fFtTwWbBeE(ge)(gE)jknNs] =&amp;gt; easy motion
+    map zf &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;f
+    map zF &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;F
+    map zt &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;t
+    map zT &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;T
+    map zw &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;w
+    map zW &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;W
+    map zb &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;b
+    map zB &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;B
+    map ze &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;e
+    map zE &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;E
+    map zge &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;ge
+    map zgE &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;gE
+    map zj &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;j
+    map zk &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;k
+    map zn &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;n
+    map zN &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;N
+    map zs &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;s
+  &quot; zn =&amp;gt; NrrwRgn in normal/visual mode
+    nmap zn :NR&amp;lt;CR&amp;gt;
+    xmap zn :NR&amp;lt;CR&amp;gt;
+  &quot; zm =&amp;gt; multipleCursor by regular expression
+    nnoremap zm :MultipleCursorsFind&amp;lt;space&amp;gt;
+    xnoremap zm :MultipleCursorsFind&amp;lt;space&amp;gt;
+    xmap zI zm^&amp;lt;cr&amp;gt;I
+    xmap zA zm$&amp;lt;cr&amp;gt;A
+
+&quot; Plugin settings
+  &quot; Airline
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#buffer_idx_mode = 1
+    let g:airline_powerline_fonts = 1
+    if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+    endif
+  &quot; EasyAlign
+    xmap ga &amp;lt;Plug&amp;gt;(LiveEasyAlign)
+    nmap ga &amp;lt;Plug&amp;gt;(LiveEasyAlign)
+  &quot; EasyMotion
+    hi EasyMotionTarget ctermfg=9 guifg=red
+    hi EasyMotionTarget2First ctermfg=9 guifg=red
+    hi EasyMotionTarget2Second ctermfg=9 guifg=lightred
+    hi link EasyMotionShade Comment
+  &quot; Emmet
+    let g:user_emmet_leader_key = ',z'
+  &quot; ESearch
+    let g:esearch = {
+      \ 'adapter':    'ack',
+      \ 'backend':    'nvim',
+      \ 'out':        'win',
+      \ 'batch_size': 1000,
+      \ 'use':        ['visual', 'hlsearch', 'last'],
+      \}
+  &quot; IndentLine
+    let g:indentLine_color_gui = &quot;#504945&quot;
+  &quot; Markdown_preview (a plugin in nyaovim)
+    let g:markdown_preview_eager = 1
+    let g:markdown_preview_auto = 1
+  &quot; Multi_cursor
+    let g:multi_cursor_use_default_mapping=0
+    let g:multi_cursor_start_key='&amp;lt;c-n&amp;gt;'
+    let g:multi_cursor_next_key='&amp;lt;tab&amp;gt;'
+    let g:multi_cursor_prev_key='b'
+    let g:multi_cursor_skip_key='x'
+    let g:multi_cursor_quit_key='q'
+  &quot; Neomake
+    let g:neomake_cpp_enabled_makers = ['clang']
+    let g:neomake_cpp_clang_args = ['-Wall', '-Wextra', '-std=c++11', '-o', '%:p:r']
+    let g:neomake_cpp_gcc_args = ['-Wall', '-Wextra', '-std=c++11', '-o', '%:p:r']
+    let g:neomake_scala_enabled_markers = ['fsc', 'scalastyle']
+    let g:neomake_scala_scalac_args = ['-Ystop-after:parser', '-Xexperimental']
+  &quot; Neoterm
+    let g:neoterm_size=20
+    let g:neoterm_repl_command= 'zsh'
+    let g:neoterm_position = 'horizontal'
+    &quot; toogle the terminal
+    &quot; kills the current job (send a &amp;lt;c-c&amp;gt;)
+    nnoremap &amp;lt;silent&amp;gt; tc :call neoterm#kill()&amp;lt;cr&amp;gt;
+  &quot; Notes
+    let g:notes_directories = ['~/Dev/notes-in-vim']
+  &quot; Startify
+    command! -nargs=1 CD cd &amp;lt;args&amp;gt; | Startify
+    autocmd User Startified setlocal cursorline
+    let g:startify_enable_special         = 0
+    let g:startify_files_number           = 8
+    let g:startify_relative_path          = 1
+    let g:startify_change_to_dir          = 1
+    let g:startify_update_oldfiles        = 1
+    let g:startify_session_autoload       = 1
+    let g:startify_session_persistence    = 1
+    let g:startify_session_delete_buffers = 1
+    let g:startify_list_order = [
+      \ ['   LRU within this dir:'],
+      \ 'dir',
+      \ ['   LRU:'],
+      \ 'files',
+      \ ['   Sessions:'],
+      \ 'sessions',
+      \ ['   Bookmarks:'],
+      \ 'bookmarks',
+      \ ]
+    let g:startify_skiplist = [
+                \ 'COMMIT_EDITMSG',
+                \ 'plugged/.*/doc',
+                \ '/data/repo/neovim/runtime/doc',
+                \ '.vimrc',
+                \ 'nyaovimrc.html',
+                \ ]
+    let g:startify_bookmarks = [
+                \ { 'c': '~/.vimrc' },
+                \ { 'y': '~/.config/nyaovim/nyaovimrc.html' },
+                \ ]
+    let g:startify_custom_footer =
+          \ ['', &quot;   I like it!&quot;, '']
+    highlight StartifyFooter  ctermfg=240
+  &quot; Supertab
+    let g:SuperTabMappingForward = '&amp;lt;s-tab&amp;gt;'
+    let g:SuperTabMappingBackward = '&amp;lt;tab&amp;gt;'
+  &quot; Tagbar
+    let g:tagbar_width=30
+  &quot; Taglist
+    let Tlist_Show_One_File=1
+    let Tlist_Exit_OnlyWindow=1
+    let Tlist_File_Fold_Auto_Close=1
+    let Tlist_WinWidth=30
+    let Tlist_Use_Right_Window=1
+  &quot; UltiSnip
+  &quot; &amp;lt;tab&amp;gt; =&amp;gt; expand the snippets
+    let g:UltiSnipsExpandTrigger = '&amp;lt;tab&amp;gt;'
+  &quot; &amp;lt;ctrl-d&amp;gt; =&amp;gt; list available snippets start with the chars before the cursor
+    let g:UltiSnipsListSnippets = '&amp;lt;c-d&amp;gt;'
+  &quot; &amp;lt;enter&amp;gt; =&amp;gt; go to the next placeholder
+    let g:UltiSnipsJumpForwardTrigger = '&amp;lt;enter&amp;gt;'
+  &quot; &amp;lt;shift-enter&amp;gt; =&amp;gt; go to the previous placeholder
+    if exists('g:nyaovim_version')
+      let g:UltiSnipsJumpBackwardTrigger = '&amp;lt;s-enter&amp;gt;'
+    else &quot;as &amp;lt;shift-enter&amp;gt; can't be handled in terminal, use &amp;lt;ctrl-k&amp;gt; instead
+      let g:UltiSnipsJumpBackwardTrigger = '&amp;lt;c-k&amp;gt;'
+    endif
+
+&quot; Automatics
+  function! ToStartify()
+    if winnr(&quot;$&quot;) == 1 &amp;amp;&amp;amp; buffer_name(winbufnr(winnr())) != &quot;&quot;
+      vs
+      Startify
+      exec &quot;normal \&amp;lt;c-w&amp;gt;w&quot;
+    endif
+  endfunction
+  au! QuitPre * call ToStartify()
+  au BufReadPost * if line(&quot;'\&quot;&quot;) &amp;gt; 1 &amp;amp;&amp;amp; line(&quot;'\&quot;&quot;) &amp;lt;= line(&quot;$&quot;) | exe &quot;normal! g'\&quot;&quot; | endif
+  autocmd BufWritePost *.scala :EnTypeCheck
+  cd $HOME
+  au BufRead,BufNewFile,BufEnter \@!(term://)* cd %:p:h
+  au! BufWritePost * Neomake
+  autocmd FileType json set nocursorcolumn
+
+  &quot; Python configuration
+  au BufNewFile,BufRead *.py set
+    \ tabstop=4
+    \ softtabstop=4
+    \ shiftwidth=4
+    \ textwidth=79
+    \ expandtab
+    \ autoindent
+    \ fileformat=unix
+	
+  au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s$/
+  map &amp;lt;leader&amp;gt;y :let g:ycm_auto_trigger=0&amp;lt;CR&amp;gt;
+  map &amp;lt;leader&amp;gt;y :let g:ycm_auto_trigger=1&amp;lt;CR&amp;gt;
+  
+  let python_highlight_all=1
+  call togglebg#map(&quot;&amp;lt;F5&amp;gt;&quot;)
+  
+  let NERDTreeIgnore=['\.pyc$', '\~$'] &quot;ignore files in NERDTree
+  
+  set keymap=vietnamese-telex
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;file-coc-settingsjson&quot;&gt;File coc-settings.json&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
+	  &quot;coc.preferences.formatOnSaveFiletypes&quot;: [&quot;javascript&quot;, &quot;typescript&quot;, &quot;typescriptreact&quot;, &quot;json&quot;, &quot;javascriptreact&quot;, &quot;typescript.tsx&quot;],
+	    &quot;eslint.filetypes&quot;: [&quot;javascript&quot;, &quot;typescript&quot;, &quot;typescriptreact&quot;, &quot;javascriptreact&quot;, &quot;typescript.tsx&quot;],
+	      &quot;coc.preferences.diagnostic.virtualText&quot;: true,
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;sử-dụng&quot;&gt;Sử dụng&lt;/h1&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -136,12 +532,12 @@
     &lt;p&gt;Các câu lệnh thường gặp&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;:w Lưu văn bản&lt;/li&gt;
-      &lt;li&gt;:wq Lưu và thoát văn bản&lt;/li&gt;
-      &lt;li&gt;:q&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;:w&lt;/code&gt; Lưu văn bản&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;:wq&lt;/code&gt; Lưu và thoát văn bản&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;:q&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Minh-Thanh Hoang</name></author><category term="tutorial" /><summary type="html">Download VIM tại : VIM Vim có hai chế độ insert mode (để chèn) : ấn i để chuyển qua chế độ insert normal mode (để di chuyển và điều khiển trong văn bản) : ấn Esc để chuyển qua chế độ normal Vim chuyển cơ bản Di chuyển sang trái &amp;lt;- hoặc sang phải -&amp;gt; trong văn bản : ấn h sang trái, ấn l sang phải Di chuyển lên xuống từng dòng : ấn j đi xuống, ấn k đi lên Di chuyển theo từ Để di chuyển đến từ tiếp theo : w đến đầu từ, e đến cuối từ Để di chuyển đến từ phía trước : b di chuyển đến đầu từ Di chuyển sử dụng số Sử dụng số trước các phím di chuyển (w, e, b) để đi đến số từ mong muốn Ví dụ : 3w để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo Sử dụng số trước l để di chuyển đến ký tự (letter) lần Ví dụ : 3l di chuyển đến 3 ký tự tiếp theo Chèn nhiều lần trong chế độ norrmal mode Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng [number]i[character] rồi Esc Ví dụ 30iabc Esc sẽ sinh ra abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab Tìm kiếm một ký tự Để tìm kiếm một ký tự : f[character] Để tìm kiếm nhiều ký tự : [number]f[character] Đi đến vị trí cặp dấu ngoặc ([, {, () trùng : Shift + 5 = % Di chuyển đến Đầu dòng 0 Cuối dòng Shift + 4 = $ Di chuyển đến từ giống với từ ở ngay vị trí con trỏ Tiếp theo * Quay lại # Di chuyển đến Đầu văn bản gg Cuối văn bản G Đến dòng thứ number : [number]G Tìm kiếm một từ Nhấn /[word] để tìm kiếm Nhấn Enter n để di chuyển đến từ tiếp theo Để chèn một dòng mới Trước dòng hoặc sau dòng hiện tại o hoặc O Để xóa một ký tự x xóa các ký tự trước X xóa ký tự phía sau Thay thế ký tự ở vị trí con trỏ : r[character] Để xóa một chữ d[number]w xóa number chữ và khoảng trắng d[number]e xóa number chữ Để lặp lại quá trình đã xóa ở trên nhấn . Chế độ visual mode : v visual mode : Chọn theo cột V visual mode line : Chọn theo hàng Ví du để chọn một từ sau con trỏ đang xét nhấn vw Các câu lệnh thường gặp :w Lưu văn bản :wq Lưu và thoát văn bản :q</summary></entry><entry><title type="html">The Transformer Family</title><link href="http://hmthanh.github.io/blog/2020/04/07/the-transformer-family.html" rel="alternate" type="text/html" title="The Transformer Family" /><published>2020-04-07T19:00:00+07:00</published><updated>2020-04-07T19:00:00+07:00</updated><id>http://hmthanh.github.io/blog/2020/04/07/the-transformer-family</id><content type="html" xml:base="http://hmthanh.github.io/blog/2020/04/07/the-transformer-family.html">&lt;blockquote&gt;
+&lt;/ol&gt;</content><author><name>Minh-Thanh Hoang</name></author><category term="tutorial" /><summary type="html">Download NeoVim tại : NeoVim Cấu hình init.vim &quot;python with virtualenv support py &amp;lt;&amp;lt; EOF import os import sys if 'VIRTUAL_ENV' in os.environ: project_base_dir = os.environ['VIRTUAL_ENV'] activate_this = os.path.join(project_base_dir, 'bin/activate_this.py') execfile(activate_this, dict(__file__=activate_this)) EOF function! DoRemote(arg) UpdateRemotePlugins endfunction call plug#begin('~/.vim/plugged') &quot; python Plugin 'tmhedberg/SimpylFold' Plugin 'vim-scripts/indentpython.vim' Plugin 'davidhalter/jedi-vim' Plugin 'scrooloose/syntastic' Plugin 'nvie/vim-flake8' Plugin 'jistr/vim-nerdtree-tabs' &quot; Fix Plug 'tpope/vim-fugitive' &quot; looking Plug 'mhinz/vim-startify' Plug 'Yggdroot/indentLine' Plug 'ryanoasis/vim-devicons' Plug 'myusuf3/numbers.vim' Plug 'vim-airline/vim-airline' Plug 'vim-airline/vim-airline-themes' Plug 'sickill/vim-monokai' Plug 'airblade/vim-gitgutter' Plug 'altercation/vim-colors-solarized' &quot; completion/templating Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') } Plug 'jiangmiao/auto-pairs' Plug 'ervandew/supertab' Plug 'tpope/vim-endwise' Plug 'preservim/nerdcommenter' Plug 'SirVer/ultisnips' Plug 'honza/vim-snippets' &quot; command extention Plug 'easymotion/vim-easymotion' Plug 'wellle/targets.vim' Plug 'tpope/vim-surround' Plug 'junegunn/vim-easy-align' Plug 'wellle/targets.vim' Plug 'terryma/vim-multiple-cursors' Plug 'repeat.vim' &quot; utils Plug 'neomake/neomake' Plug 'kassio/neoterm' Plug 'sjl/gundo.vim' Plug 'chrisbra/NrrwRgn' Plug 'Mark--Karkat' &quot; misc Plug 'asins/vimcdoc' Plug 'ccvext.vim' Plug 'CodeFalling/fcitx-vim-osx' &quot;Plug 'lilydjwg/fcitx.vim' Plug 'junegunn/vim-github-dashboard' &quot; documentation Plug 'rhysd/nyaovim-markdown-preview' Plug 'xolox/vim-notes' Plug 'xolox/vim-misc' Plug 'itchyny/calendar.vim' Plug 'junegunn/vim-journal' &quot; navigation Plug 'scrooloose/nerdtree' Plug 'ctrlpvim/ctrlp.vim' Plug 'wesleyche/SrcExpl' Plug 'majutsushi/tagbar' Plug 'taglist.vim' Plug 'rizzatti/dash.vim' Plug 'eugen0329/vim-esearch' &quot; c/c++ &quot; java Plug 'artur-shaik/vim-javacomplete2' &quot;Plug 'vhakulinen/neovim-intellij-complete-deoplete' &quot; python Plug 'zchee/deoplete-jedi' &quot; html/css/javascript Plug 'mattn/emmet-vim' &quot; scala Plug 'ensime/ensime-vim', { 'do': function('DoRemote') } Plug 'derekwyatt/vim-scala' &quot; Plug 'ktvoelker/sbt-vim' &quot; Plug 'megaannum/vimside' call plug#end() &quot; Fundamental settings set encoding=utf-8 set fileencoding=utf-8 set fileencodings=ucs-bom,utf-8,gbk,cp936,latin-1 set fileformat=unix set fileformats=unix,dos,mac filetype on filetype plugin on filetype plugin indent on syntax on &quot; Some useful settings set smartindent set expandtab &quot;tab to spaces set tabstop=2 &quot;the width of a tab set shiftwidth=2 &quot;the width for indent set foldenable set foldmethod=indent &quot;folding by indent set foldlevel=99 set ignorecase &quot;ignore the case when search texts set smartcase &quot;if searching text contains uppercase case will not be ignored &quot; Lookings set number &quot;line number set cursorline &quot;hilight the line of the cursor set cursorcolumn &quot;hilight the column of the cursor set nowrap &quot;no line wrapping colorscheme monokai &quot;au BufWinEnter * let w:m2=matchadd('Underlined', '\%&amp;gt;' . 80 . 'v.\+', -1) let $NVIM_TUI_ENABLE_TRUE_COLOR=1 &quot; Shortcuts &quot; \\ =&amp;gt; go to command mode imap &amp;lt;leader&amp;gt;&amp;lt;leader&amp;gt; &amp;lt;esc&amp;gt;: &quot; go =&amp;gt; go to anywhere nmap go &amp;lt;Plug&amp;gt;(easymotion-jumptoanywhere) &quot; &amp;lt;c-v&amp;gt; =&amp;gt; for pasting imap &amp;lt;c-v&amp;gt; &amp;lt;esc&amp;gt;&quot;+pa &quot; &amp;lt;c-h/j/k/l&amp;gt; =&amp;gt; hjkl in normal mode (but there is a bug mapping &amp;lt;c-h&amp;gt;) imap &amp;lt;c-h&amp;gt; &amp;lt;left&amp;gt; imap &amp;lt;c-j&amp;gt; &amp;lt;down&amp;gt; imap &amp;lt;c-k&amp;gt; &amp;lt;up&amp;gt; imap &amp;lt;c-l&amp;gt; &amp;lt;right&amp;gt; &quot; \cl =&amp;gt; redraw the screen nmap &amp;lt;leader&amp;gt;l &amp;lt;c-l&amp;gt;&amp;lt;c-l&amp;gt; imap &amp;lt;leader&amp;gt;l &amp;lt;esc&amp;gt;&amp;lt;leader&amp;gt;la &quot; &amp;lt;space&amp;gt; =&amp;gt; fold/unfold current code &quot; tips: zR =&amp;gt; unfold all; zM =&amp;gt; fold all nnoremap &amp;lt;space&amp;gt; @=((foldclosed(line('.')) &amp;lt; 0) ? 'zc' : 'zo')&amp;lt;CR&amp;gt; &quot; \o =&amp;gt; open current file by system apps (only available in osx) nmap &amp;lt;leader&amp;gt;o :!open &quot;%&quot;&amp;lt;cr&amp;gt; imap &amp;lt;leader&amp;gt;o &amp;lt;esc&amp;gt;&amp;lt;leader&amp;gt;o &quot; ,, =&amp;gt; escape to normal mode imap ,, &amp;lt;Esc&amp;gt; tmap ,, &amp;lt;Esc&amp;gt; &quot; &amp;lt;esc&amp;gt; =&amp;gt; go back to normal mode (in terminal mode) tnoremap &amp;lt;Esc&amp;gt; &amp;lt;C-\&amp;gt;&amp;lt;C-n&amp;gt; &quot; &amp;lt;F4&amp;gt; =&amp;gt; popup the file tree navigation) nmap &amp;lt;F4&amp;gt; :NERDTreeToggle&amp;lt;CR&amp;gt; &quot; use t{h,j,k,l} to switch between different windows noremap tk &amp;lt;c-w&amp;gt;k noremap tj &amp;lt;c-w&amp;gt;j noremap th &amp;lt;c-w&amp;gt;h noremap tl &amp;lt;c-w&amp;gt;l nmap twj :resize +5&amp;lt;cr&amp;gt; nmap twk :resize -5&amp;lt;cr&amp;gt; nmap twh :vertical resize -5&amp;lt;cr&amp;gt; nmap twl :vertical resize +5&amp;lt;cr&amp;gt; &quot; t[number] =&amp;gt; switch to the file showed in the top tabs &quot; t[ t] =&amp;gt; prev tab/next tab nmap t1 &amp;lt;Plug&amp;gt;AirlineSelectTab1 nmap t2 &amp;lt;Plug&amp;gt;AirlineSelectTab2 nmap t3 &amp;lt;Plug&amp;gt;AirlineSelectTab3 nmap t4 &amp;lt;Plug&amp;gt;AirlineSelectTab4 nmap t5 &amp;lt;Plug&amp;gt;AirlineSelectTab5 nmap t6 &amp;lt;Plug&amp;gt;AirlineSelectTab6 nmap t7 &amp;lt;Plug&amp;gt;AirlineSelectTab7 nmap t8 &amp;lt;Plug&amp;gt;AirlineSelectTab8 nmap t9 &amp;lt;Plug&amp;gt;AirlineSelectTab9 nmap t[ &amp;lt;Plug&amp;gt;AirlineSelectPrevTab nmap t] &amp;lt;Plug&amp;gt;AirlineSelectNextTab &quot; ts =&amp;gt; toggle the srcExpl (for source code exploring) nnoremap ts :SrcExplToggle&amp;lt;CR&amp;gt; &quot; tg =&amp;gt; toogle the gundo nnoremap tg :GundoToggle&amp;lt;CR&amp;gt; &quot; tb =&amp;gt; open the tagbar nmap tb :TlistClose&amp;lt;CR&amp;gt;:TagbarToggle&amp;lt;CR&amp;gt; &quot; ti =&amp;gt; taglist nmap ti :TagbarClose&amp;lt;CR&amp;gt;:Tlist&amp;lt;CR&amp;gt; &quot; &amp;lt;s-enter&amp;gt; =&amp;gt; toggle the terminal if exists('nyaovim_version') nnoremap &amp;lt;silent&amp;gt; &amp;lt;s-cr&amp;gt; :Ttoggle&amp;lt;cr&amp;gt; else &quot; in terminal use t&amp;lt;enter&amp;gt; nmap t&amp;lt;CR&amp;gt; :Ttoggle&amp;lt;CR&amp;gt; endif &quot; tt =&amp;gt; type the command for the terminal nnoremap tt :T&amp;lt;space&amp;gt; &quot; te =&amp;gt; send current line/selected lines to the terminal nnoremap &amp;lt;silent&amp;gt; te :TREPLSend&amp;lt;CR&amp;gt; xnoremap &amp;lt;silent&amp;gt; te :TREPLSend&amp;lt;CR&amp;gt; &quot; tE =&amp;gt; send the thole current file to the terminal nnoremap &amp;lt;silent&amp;gt; tE :TREPLSendFile&amp;lt;CR&amp;gt; &quot; \t =&amp;gt; goto normal mode and press t (e.g. \t&amp;lt;enter&amp;gt; to toggle the terminal) imap &amp;lt;leader&amp;gt;t &amp;lt;esc&amp;gt;t &quot; tm =&amp;gt; toggle the markdown preview let g:markdown_preview_on = 0 au! BufWinEnter *.md,*.markdown,*.mdown let g:markdown_preview_on = g:markdown_preview_auto || g:markdown_preview_on au! BufWinLeave *.md,*.markdown,*.mdown let g:markdown_preview_on = !g:markdown_preview_auto &amp;amp;&amp;amp; g:markdown_preview_on nmap tm @=(g:markdown_preview_on ? ':Stop' : ':Start')&amp;lt;CR&amp;gt;MarkdownPreview&amp;lt;CR&amp;gt;:let g:markdown_preview_on = 1 - g:markdown_preview_on&amp;lt;CR&amp;gt; &quot; \g =&amp;gt; scroll to bottom in markdown preview (insert mode) imap &amp;lt;leader&amp;gt;g &amp;lt;esc&amp;gt;&amp;lt;leader&amp;gt;Ga &quot; \jd =&amp;gt; GoTo the definition &quot;nnoremap &amp;lt;leader&amp;gt;jd :YcmCompleter GoTo&amp;lt;CR&amp;gt; &quot; \e =&amp;gt; edit only current/selected line(s) in normal/visual mode &quot; z + [fFtTwWbBeE(ge)(gE)jknNs] =&amp;gt; easy motion map zf &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;f map zF &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;F map zt &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;t map zT &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;T map zw &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;w map zW &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;W map zb &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;b map zB &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;B map ze &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;e map zE &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;E map zge &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;ge map zgE &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;gE map zj &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;j map zk &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;k map zn &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;n map zN &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;N map zs &amp;lt;Leader&amp;gt;&amp;lt;Leader&amp;gt;s &quot; zn =&amp;gt; NrrwRgn in normal/visual mode nmap zn :NR&amp;lt;CR&amp;gt; xmap zn :NR&amp;lt;CR&amp;gt; &quot; zm =&amp;gt; multipleCursor by regular expression nnoremap zm :MultipleCursorsFind&amp;lt;space&amp;gt; xnoremap zm :MultipleCursorsFind&amp;lt;space&amp;gt; xmap zI zm^&amp;lt;cr&amp;gt;I xmap zA zm$&amp;lt;cr&amp;gt;A &quot; Plugin settings &quot; Airline let g:airline#extensions#tabline#enabled = 1 let g:airline#extensions#tabline#buffer_idx_mode = 1 let g:airline_powerline_fonts = 1 if !exists('g:airline_symbols') let g:airline_symbols = {} endif &quot; EasyAlign xmap ga &amp;lt;Plug&amp;gt;(LiveEasyAlign) nmap ga &amp;lt;Plug&amp;gt;(LiveEasyAlign) &quot; EasyMotion hi EasyMotionTarget ctermfg=9 guifg=red hi EasyMotionTarget2First ctermfg=9 guifg=red hi EasyMotionTarget2Second ctermfg=9 guifg=lightred hi link EasyMotionShade Comment &quot; Emmet let g:user_emmet_leader_key = ',z' &quot; ESearch let g:esearch = { \ 'adapter': 'ack', \ 'backend': 'nvim', \ 'out': 'win', \ 'batch_size': 1000, \ 'use': ['visual', 'hlsearch', 'last'], \} &quot; IndentLine let g:indentLine_color_gui = &quot;#504945&quot; &quot; Markdown_preview (a plugin in nyaovim) let g:markdown_preview_eager = 1 let g:markdown_preview_auto = 1 &quot; Multi_cursor let g:multi_cursor_use_default_mapping=0 let g:multi_cursor_start_key='&amp;lt;c-n&amp;gt;' let g:multi_cursor_next_key='&amp;lt;tab&amp;gt;' let g:multi_cursor_prev_key='b' let g:multi_cursor_skip_key='x' let g:multi_cursor_quit_key='q' &quot; Neomake let g:neomake_cpp_enabled_makers = ['clang'] let g:neomake_cpp_clang_args = ['-Wall', '-Wextra', '-std=c++11', '-o', '%:p:r'] let g:neomake_cpp_gcc_args = ['-Wall', '-Wextra', '-std=c++11', '-o', '%:p:r'] let g:neomake_scala_enabled_markers = ['fsc', 'scalastyle'] let g:neomake_scala_scalac_args = ['-Ystop-after:parser', '-Xexperimental'] &quot; Neoterm let g:neoterm_size=20 let g:neoterm_repl_command= 'zsh' let g:neoterm_position = 'horizontal' &quot; toogle the terminal &quot; kills the current job (send a &amp;lt;c-c&amp;gt;) nnoremap &amp;lt;silent&amp;gt; tc :call neoterm#kill()&amp;lt;cr&amp;gt; &quot; Notes let g:notes_directories = ['~/Dev/notes-in-vim'] &quot; Startify command! -nargs=1 CD cd &amp;lt;args&amp;gt; | Startify autocmd User Startified setlocal cursorline let g:startify_enable_special = 0 let g:startify_files_number = 8 let g:startify_relative_path = 1 let g:startify_change_to_dir = 1 let g:startify_update_oldfiles = 1 let g:startify_session_autoload = 1 let g:startify_session_persistence = 1 let g:startify_session_delete_buffers = 1 let g:startify_list_order = [ \ [' LRU within this dir:'], \ 'dir', \ [' LRU:'], \ 'files', \ [' Sessions:'], \ 'sessions', \ [' Bookmarks:'], \ 'bookmarks', \ ] let g:startify_skiplist = [ \ 'COMMIT_EDITMSG', \ 'plugged/.*/doc', \ '/data/repo/neovim/runtime/doc', \ '.vimrc', \ 'nyaovimrc.html', \ ] let g:startify_bookmarks = [ \ { 'c': '~/.vimrc' }, \ { 'y': '~/.config/nyaovim/nyaovimrc.html' }, \ ] let g:startify_custom_footer = \ ['', &quot; I like it!&quot;, ''] highlight StartifyFooter ctermfg=240 &quot; Supertab let g:SuperTabMappingForward = '&amp;lt;s-tab&amp;gt;' let g:SuperTabMappingBackward = '&amp;lt;tab&amp;gt;' &quot; Tagbar let g:tagbar_width=30 &quot; Taglist let Tlist_Show_One_File=1 let Tlist_Exit_OnlyWindow=1 let Tlist_File_Fold_Auto_Close=1 let Tlist_WinWidth=30 let Tlist_Use_Right_Window=1 &quot; UltiSnip &quot; &amp;lt;tab&amp;gt; =&amp;gt; expand the snippets let g:UltiSnipsExpandTrigger = '&amp;lt;tab&amp;gt;' &quot; &amp;lt;ctrl-d&amp;gt; =&amp;gt; list available snippets start with the chars before the cursor let g:UltiSnipsListSnippets = '&amp;lt;c-d&amp;gt;' &quot; &amp;lt;enter&amp;gt; =&amp;gt; go to the next placeholder let g:UltiSnipsJumpForwardTrigger = '&amp;lt;enter&amp;gt;' &quot; &amp;lt;shift-enter&amp;gt; =&amp;gt; go to the previous placeholder if exists('g:nyaovim_version') let g:UltiSnipsJumpBackwardTrigger = '&amp;lt;s-enter&amp;gt;' else &quot;as &amp;lt;shift-enter&amp;gt; can't be handled in terminal, use &amp;lt;ctrl-k&amp;gt; instead let g:UltiSnipsJumpBackwardTrigger = '&amp;lt;c-k&amp;gt;' endif &quot; Automatics function! ToStartify() if winnr(&quot;$&quot;) == 1 &amp;amp;&amp;amp; buffer_name(winbufnr(winnr())) != &quot;&quot; vs Startify exec &quot;normal \&amp;lt;c-w&amp;gt;w&quot; endif endfunction au! QuitPre * call ToStartify() au BufReadPost * if line(&quot;'\&quot;&quot;) &amp;gt; 1 &amp;amp;&amp;amp; line(&quot;'\&quot;&quot;) &amp;lt;= line(&quot;$&quot;) | exe &quot;normal! g'\&quot;&quot; | endif autocmd BufWritePost *.scala :EnTypeCheck cd $HOME au BufRead,BufNewFile,BufEnter \@!(term://)* cd %:p:h au! BufWritePost * Neomake autocmd FileType json set nocursorcolumn &quot; Python configuration au BufNewFile,BufRead *.py set \ tabstop=4 \ softtabstop=4 \ shiftwidth=4 \ textwidth=79 \ expandtab \ autoindent \ fileformat=unix au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/ map &amp;lt;leader&amp;gt;y :let g:ycm_auto_trigger=0&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;y :let g:ycm_auto_trigger=1&amp;lt;CR&amp;gt; let python_highlight_all=1 call togglebg#map(&quot;&amp;lt;F5&amp;gt;&quot;) let NERDTreeIgnore=['\.pyc$', '\~$'] &quot;ignore files in NERDTree set keymap=vietnamese-telex File coc-settings.json { &quot;coc.preferences.formatOnSaveFiletypes&quot;: [&quot;javascript&quot;, &quot;typescript&quot;, &quot;typescriptreact&quot;, &quot;json&quot;, &quot;javascriptreact&quot;, &quot;typescript.tsx&quot;], &quot;eslint.filetypes&quot;: [&quot;javascript&quot;, &quot;typescript&quot;, &quot;typescriptreact&quot;, &quot;javascriptreact&quot;, &quot;typescript.tsx&quot;], &quot;coc.preferences.diagnostic.virtualText&quot;: true, } Sử dụng Vim có hai chế độ insert mode (để chèn) : ấn i để chuyển qua chế độ insert normal mode (để di chuyển và điều khiển trong văn bản) : ấn Esc để chuyển qua chế độ normal Vim chuyển cơ bản Di chuyển sang trái &amp;lt;- hoặc sang phải -&amp;gt; trong văn bản : ấn h sang trái, ấn l sang phải Di chuyển lên xuống từng dòng : ấn j đi xuống, ấn k đi lên Di chuyển theo từ Để di chuyển đến từ tiếp theo : w đến đầu từ, e đến cuối từ Để di chuyển đến từ phía trước : b di chuyển đến đầu từ Di chuyển sử dụng số Sử dụng số trước các phím di chuyển (w, e, b) để đi đến số từ mong muốn Ví dụ : 3w để di chuyển đến vị trí đầu tiên sau 3 từ tiếp theo Sử dụng số trước l để di chuyển đến ký tự (letter) lần Ví dụ : 3l di chuyển đến 3 ký tự tiếp theo Chèn nhiều lần trong chế độ norrmal mode Để chèn các kỹ tự lặp lại nhiều lần, ta sử dụng [number]i[character] rồi Esc Ví dụ 30iabc Esc sẽ sinh ra abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab Tìm kiếm một ký tự Để tìm kiếm một ký tự : f[character] Để tìm kiếm nhiều ký tự : [number]f[character] Đi đến vị trí cặp dấu ngoặc ([, {, () trùng : Shift + 5 = % Di chuyển đến Đầu dòng 0 Cuối dòng Shift + 4 = $ Di chuyển đến từ giống với từ ở ngay vị trí con trỏ Tiếp theo * Quay lại # Di chuyển đến Đầu văn bản gg Cuối văn bản G Đến dòng thứ number : [number]G Tìm kiếm một từ Nhấn /[word] để tìm kiếm Nhấn Enter n để di chuyển đến từ tiếp theo Để chèn một dòng mới Trước dòng hoặc sau dòng hiện tại o hoặc O Để xóa một ký tự x xóa các ký tự trước X xóa ký tự phía sau Thay thế ký tự ở vị trí con trỏ : r[character] Để xóa một chữ d[number]w xóa number chữ và khoảng trắng d[number]e xóa number chữ Để lặp lại quá trình đã xóa ở trên nhấn . Chế độ visual mode : v visual mode : Chọn theo cột V visual mode line : Chọn theo hàng Ví du để chọn một từ sau con trỏ đang xét nhấn vw Các câu lệnh thường gặp :w Lưu văn bản :wq Lưu và thoát văn bản :q</summary></entry><entry><title type="html">The Transformer Family</title><link href="http://hmthanh.github.io/blog/2020/04/07/the-transformer-family.html" rel="alternate" type="text/html" title="The Transformer Family" /><published>2020-04-07T19:00:00+07:00</published><updated>2020-04-07T19:00:00+07:00</updated><id>http://hmthanh.github.io/blog/2020/04/07/the-transformer-family</id><content type="html" xml:base="http://hmthanh.github.io/blog/2020/04/07/the-transformer-family.html">&lt;blockquote&gt;
   &lt;p&gt;Inspired by recent progress on various enhanced versions of Transformer models, this post presents how the vanilla Transformer can be improved for longer-term attention span, less memory and computation consumption, RL task solving, etc.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -1415,7 +1811,7 @@ Cơ bản mà nói, convolution neural network có thể được xem như một
 
 &lt;p&gt;In the last few years, deep neural networks have lead to breakthrough results on a variety of pattern recognition problems, such as computer vision and voice recognition. One of the essential components leading to these results has been a special kind of neural network called a convolutional neural network.&lt;/p&gt;
 
-&lt;p&gt;At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron&lt;sup&gt;&lt;a href=&quot;#4311:fn:1&quot; class=&quot;footnote&quot; id=&quot;4311:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.&lt;/p&gt;
+&lt;p&gt;At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron&lt;sup&gt;&lt;a href=&quot;#baf6:fn:1&quot; class=&quot;footnote&quot; id=&quot;baf6:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/Conv2-9x5-Conv2Conv2.png&quot; alt=&quot;Conv2Conv2&quot; /&gt;&lt;/p&gt;
 
@@ -1450,7 +1846,7 @@ There are a bunch of different neurons, and every input connects to every neuron
 
 &lt;p&gt;We care about the same properties at all points in time. It’s useful to know the frequencies at the beginning, it’s useful to know the frequencies in the middle, and it’s also useful to know the frequencies at the end. Again, note that these are local properties, in that we only need to look at a small window of the audio sample in order to determine them.&lt;/p&gt;
 
-&lt;p&gt;So, we can create a group of neurons, $A$, that look at small time segments of our data&lt;sup&gt;&lt;a href=&quot;#4311:fn:2&quot; class=&quot;footnote&quot; id=&quot;4311:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; $A$ looks at all such segments, computing certain features.
+&lt;p&gt;So, we can create a group of neurons, $A$, that look at small time segments of our data&lt;sup&gt;&lt;a href=&quot;#baf6:fn:2&quot; class=&quot;footnote&quot; id=&quot;baf6:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; $A$ looks at all such segments, computing certain features.
 Then, the output of this convolutional layer is fed into a fully-connected layer, $F$.&lt;/p&gt;
 
 &lt;p style=&quot;width: 90%; padding: 20 10px;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/Conv-9-Conv2.png&quot; alt=&quot;Conv-9-Conv2&quot; /&gt;&lt;/p&gt;
@@ -1531,7 +1927,7 @@ They used a new kind of neuron (ReLUs) and a new technique to reduce a problem c
 They used a very large dataset with lots of image categories (&lt;a href=&quot;http://www.image-net.org/&quot;&gt;ImageNet&lt;/a&gt;). And, of course, it was a convolutional neural network.&lt;/p&gt;
 
 &lt;p&gt;Their architecture, illustrated below, was very deep.
-It has 5 convolutional layers&lt;sup&gt;&lt;a href=&quot;#4311:fn:3&quot; class=&quot;footnote&quot; id=&quot;4311:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, with pooling interspersed, and three fully-connected layers.
+It has 5 convolutional layers&lt;sup&gt;&lt;a href=&quot;#baf6:fn:3&quot; class=&quot;footnote&quot; id=&quot;baf6:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, with pooling interspersed, and three fully-connected layers.
 The early layers are split over the two GPUs.&lt;/p&gt;
 
 &lt;p style=&quot;width: 80%; padding: 20 10px;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/KSH-arch.png&quot; alt=&quot;KSH-arch&quot; /&gt;&lt;/p&gt;
@@ -1564,7 +1960,7 @@ From &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf&quot;&
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Neurons in one side focus on black and white, learning to detect edges of different orientations and sizes.
-Neurons on the other side specialize on color and texture, detecting color contrasts and patterns&lt;sup&gt;&lt;a href=&quot;#4311:fn:4&quot; class=&quot;footnote&quot; id=&quot;4311:fn-back:4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
+Neurons on the other side specialize on color and texture, detecting color contrasts and patterns&lt;sup&gt;&lt;a href=&quot;#baf6:fn:4&quot; class=&quot;footnote&quot; id=&quot;baf6:fn-back:4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
 Remember that the neurons are &lt;em&gt;randomly&lt;/em&gt; initialized. No human went and set them to be edge detectors, or to split in this way. It arose simply from training the network to classify images.&lt;/p&gt;
 
 &lt;p&gt;These remarkable results (and other exciting results around that time) were only the beginning. They were quickly followed by a lot of other work testing modified approaches and gradually improving the results, or applying them to other areas. And, in addition to the neural networks community, many in the computer vision community have adopted deep convolutional neural networks.&lt;/p&gt;
@@ -1632,18 +2028,18 @@ There is an alternative formulation, in terms of a mathematical operation called
 &lt;h1 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h1&gt;
 
 &lt;ol class=&quot;footnotelist&quot;&gt;
-&lt;li id=&quot;4311:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
+&lt;li id=&quot;baf6:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
         It should be noted that not all neural networks that use multiple copies of the same neuron are convolutional neural networks. Convolutional neural networks are just one type of neural network that uses the more general trick, weight-tying. Other kinds of neural network that do this are recurrent neural networks and recursive neural networks.
-   &lt;a href=&quot;#4311:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;4311:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
+   &lt;a href=&quot;#baf6:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;baf6:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
       Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-   &lt;a href=&quot;#4311:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;4311:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
+   &lt;a href=&quot;#baf6:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;baf6:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
      Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-  &lt;a href=&quot;#4311:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;4311:fn:4&quot; class=&quot;footnotebody&quot; value=&quot;4&quot;&gt;
+  &lt;a href=&quot;#baf6:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;baf6:fn:4&quot; class=&quot;footnotebody&quot; value=&quot;4&quot;&gt;
        They also test using 7 in the paper.
-    &lt;a href=&quot;#4311:fn-back:4&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+    &lt;a href=&quot;#baf6:fn-back:4&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Christopher Olah</name></author><category term="deep-learning" /><summary type="html">Source : https://colah.github.io/posts/2014-07-Conv-Nets-Modular/</summary></entry><entry><title type="html">Attention? Attention!</title><link href="http://hmthanh.github.io/blog/2018/06/24/attention-attention.html" rel="alternate" type="text/html" title="Attention? Attention!" /><published>2018-06-24T18:07:00+07:00</published><updated>2018-06-24T18:07:00+07:00</updated><id>http://hmthanh.github.io/blog/2018/06/24/attention-attention</id><content type="html" xml:base="http://hmthanh.github.io/blog/2018/06/24/attention-attention.html">&lt;p&gt;Source : &lt;a href=&quot;https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html&quot;&gt;Lilian&lt;/a&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -2166,7 +2562,7 @@ The probability of the ball rolling $b$ units away from the new starting point i
 
 &lt;p&gt;If we fix the result of the first drop so we know the ball went distance $a$, for the ball to go a total distance $c$,
 the distance traveled in the second drop is also fixed at $b$, where $a + b = c$.
-So the probability of this happening is simply $f(a) ⋅ g(b)$.&lt;sup&gt;&lt;a href=&quot;#08a2:fn:1&quot; class=&quot;footnote&quot; id=&quot;08a2:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+So the probability of this happening is simply $f(a) ⋅ g(b)$.&lt;sup&gt;&lt;a href=&quot;#7f5f:fn:1&quot; class=&quot;footnote&quot; id=&quot;7f5f:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;Let’s think about this with a specific discrete example.
 We want the total distance $c$ to be $3$. If the first time it rolls, $a=2$, the second time it must roll $b=1$ in order to reach our total distance $a+b=3$.
@@ -2201,7 +2597,7 @@ So, summing over every solution to $a+b=c$, we can denote the total likelihood a
 
 \[(f∗g)(c)=\sum_{a} f(a)⋅g(c−a)\]
 
-&lt;p&gt;This is the standard definition&lt;sup&gt;&lt;a href=&quot;#08a2:fn:2&quot; class=&quot;footnote&quot; id=&quot;08a2:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; of convolution.&lt;/p&gt;
+&lt;p&gt;This is the standard definition&lt;sup&gt;&lt;a href=&quot;#7f5f:fn:2&quot; class=&quot;footnote&quot; id=&quot;7f5f:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; of convolution.&lt;/p&gt;
 
 &lt;p&gt;To make this a bit more concrete, we can think about this in terms of positions the ball might land.
 After the first drop, it will land at an intermediate position $a$ with probability $f(a)$.
@@ -2322,7 +2718,7 @@ This allows us to understand the convolution as a whole.&lt;/p&gt;
 
 &lt;p&gt;Where $x_0, x_1…$ are the inputs. The weights, $w0$, $w1$, … describe how the neuron connects to its inputs.
 A negative weight means that an input inhibits the neuron from firing, while a positive weight encourages it to.
-The weights are the heart of the neuron, controlling its behavior&lt;sup&gt;&lt;a href=&quot;#08a2:fn:3&quot; class=&quot;footnote&quot; id=&quot;08a2:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
+The weights are the heart of the neuron, controlling its behavior&lt;sup&gt;&lt;a href=&quot;#7f5f:fn:3&quot; class=&quot;footnote&quot; id=&quot;7f5f:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
 Saying that multiple neurons are identical is the same thing as saying that the weights are the same.&lt;/p&gt;
 
 &lt;p&gt;It’s this wiring of neurons, describing all the weights and which ones are identical, that convolution will handle for us.&lt;/p&gt;
@@ -2395,10 +2791,10 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
 &lt;h1 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h1&gt;
 
 &lt;ol class=&quot;footnotelist&quot;&gt;
-&lt;li id=&quot;08a2:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
+&lt;li id=&quot;7f5f:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
         We want the probability of the ball rolling a units the first time and also rolling b units the second time. The distributions $P(A)=f(a)$ and $P(b)=g(b)$ are independent, with both distributions centered at 0. So  $P(a,b)=P(a)∗P(b)=f(a)⋅g(b)$
-   &lt;a href=&quot;#08a2:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;08a2:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
+   &lt;a href=&quot;#7f5f:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;7f5f:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
       The non-standard definition, which I haven’t previously seen, seems to have a lot of benefits. In future posts, we will find this definition very helpful because it lends itself to generalization to new algebraic structures. But it also has the advantage that it makes a lot of algebraic properties of convolutions really obvious.
       &lt;br /&gt;
       For example, convolution is a commutative operation. That is, $f∗g=g∗f$. Why?
@@ -2410,10 +2806,10 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
       \sum_{(a+b)+c=d} (f(a)⋅g(b))⋅h(c)  = \sum_{a+(b+c)=d} f(a)⋅(g(b)⋅h(c))
       $$
       
-   &lt;a href=&quot;#08a2:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;08a2:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
+   &lt;a href=&quot;#7f5f:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;7f5f:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
      There’s also the bias, which is the “threshold” for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
-  &lt;a href=&quot;#08a2:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+  &lt;a href=&quot;#7f5f:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Christopher Olah</name></author><category term="deep" /><category term="learning" /><summary type="html">Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/</summary></entry><entry><title type="html">Quotes</title><link href="http://hmthanh.github.io/blog/softskill/2012/11/03/Quotes.html" rel="alternate" type="text/html" title="Quotes" /><published>2012-11-03T11:04:17+07:00</published><updated>2012-11-03T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/softskill/2012/11/03/Quotes</id><content type="html" xml:base="http://hmthanh.github.io/blog/softskill/2012/11/03/Quotes.html">&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Không thể tạo ra kết quả mới nếu đầu vào và tư duy như cũ
