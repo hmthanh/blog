@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang=" en ">
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate icon" class="js-site-favicon" type="image/png" href="/blog/assets/favicon/favicon.ico">
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/blog/assets/favicon/favicon.ico">
 <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Understand Convolution | State of the art</title>
 <meta name="generator" content="Jekyll v4.1.1">
@@ -21,7 +23,7 @@
 <meta name="twitter:card" content="summary">
 <meta property="twitter:title" content="Understand Convolution">
 <script type="application/ld+json">
-{"headline":"Understand Convolution","dateModified":"2014-07-08T18:04:17+07:00","datePublished":"2014-07-08T18:04:17+07:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html"},"url":"http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html","author":{"@type":"Person","name":"Christopher Olah"},"description":"Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Understand Convolution","dateModified":"2014-07-08T18:04:17+07:00","datePublished":"2014-07-08T18:04:17+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html"},"url":"http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html","author":{"@type":"Person","name":"Christopher Olah"},"description":"Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css">
 <link type="application/atom+xml" rel="alternate" href="http://hmthanh.github.io/blog/feed.xml" title="State of the art">
@@ -71,7 +73,7 @@ The probability of the ball rolling $b$ units away from the new starting point i
 
 <p>If we fix the result of the first drop so we know the ball went distance $a$, for the ball to go a total distance $c$,
 the distance traveled in the second drop is also fixed at $b$, where $a + b = c$.
-So the probability of this happening is simply $f(a) ⋅ g(b)$.<sup><a href="#528c:fn:1" class="footnote" id="528c:fn-back:1">1</a></sup></p>
+So the probability of this happening is simply $f(a) ⋅ g(b)$.<sup><a href="#9c3d:fn:1" class="footnote" id="9c3d:fn-back:1">1</a></sup></p>
 
 <p>Let’s think about this with a specific discrete example.
 We want the total distance $c$ to be $3$. If the first time it rolls, $a=2$, the second time it must roll $b=1$ in order to reach our total distance $a+b=3$.
@@ -106,7 +108,7 @@ So, summing over every solution to $a+b=c$, we can denote the total likelihood a
 
 \[(f∗g)(c)=\sum_{a} f(a)⋅g(c−a)\]
 
-<p>This is the standard definition<sup><a href="#528c:fn:2" class="footnote" id="528c:fn-back:2">2</a></sup> of convolution.</p>
+<p>This is the standard definition<sup><a href="#9c3d:fn:2" class="footnote" id="9c3d:fn-back:2">2</a></sup> of convolution.</p>
 
 <p>To make this a bit more concrete, we can think about this in terms of positions the ball might land.
 After the first drop, it will land at an intermediate position $a$ with probability $f(a)$.
@@ -227,7 +229,7 @@ This allows us to understand the convolution as a whole.</p>
 
 <p>Where $x_0, x_1…$ are the inputs. The weights, $w0$, $w1$, … describe how the neuron connects to its inputs.
 A negative weight means that an input inhibits the neuron from firing, while a positive weight encourages it to.
-The weights are the heart of the neuron, controlling its behavior<sup><a href="#528c:fn:3" class="footnote" id="528c:fn-back:3">3</a></sup>.
+The weights are the heart of the neuron, controlling its behavior<sup><a href="#9c3d:fn:3" class="footnote" id="9c3d:fn-back:3">3</a></sup>.
 Saying that multiple neurons are identical is the same thing as saying that the weights are the same.</p>
 
 <p>It’s this wiring of neurons, describing all the weights and which ones are identical, that convolution will handle for us.</p>
@@ -300,11 +302,11 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
 <h1 id="acknowledgments">Acknowledgments</h1>
 
 <ol class="footnotelist">
-<li id="528c:fn:1" class="footnotebody" value="1">
+<li id="9c3d:fn:1" class="footnotebody" value="1">
         We want the probability of the ball rolling a units the first time and also rolling b units the second time. The distributions $P(A)=f(a)$ and $P(b)=g(b)$ are independent, with both distributions centered at 0. So  $P(a,b)=P(a)∗P(b)=f(a)⋅g(b)$
-   <a href="#528c:fn-back:1" class="backlink">⏎</a>
+   <a href="#9c3d:fn-back:1" class="backlink">⏎</a>
 </li>
-<li id="528c:fn:2" class="footnotebody" value="2">
+<li id="9c3d:fn:2" class="footnotebody" value="2">
       The non-standard definition, which I haven’t previously seen, seems to have a lot of benefits. In future posts, we will find this definition very helpful because it lends itself to generalization to new algebraic structures. But it also has the advantage that it makes a lot of algebraic properties of convolutions really obvious.
       <br>
       For example, convolution is a commutative operation. That is, $f∗g=g∗f$. Why?
@@ -316,11 +318,11 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
       \sum_{(a+b)+c=d} (f(a)⋅g(b))⋅h(c)  = \sum_{a+(b+c)=d} f(a)⋅(g(b)⋅h(c))
       $$
       
-   <a href="#528c:fn-back:2" class="backlink">⏎</a>
+   <a href="#9c3d:fn-back:2" class="backlink">⏎</a>
 </li>
-<li id="528c:fn:3" class="footnotebody" value="3">
-     There’s also the bias, which is the “threshold” for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
-  <a href="#528c:fn-back:3" class="backlink">⏎</a>
+<li id="9c3d:fn:3" class="footnotebody" value="3">
+     There’s also the bias, which is the "threshold" for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
+  <a href="#9c3d:fn-back:3" class="backlink">⏎</a>
 </li>
 </ol>
 
@@ -332,7 +334,7 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
         <div class="page-navigation">
           
           <a class="prev" href="/blog/softskill/2012/11/03/Quotes.html"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"></path></svg> Quotes</a>  
-          <a class="next" href="/blog/2018/06/24/attention-attention.html">Attention? Attention! <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg></a> 
+          <a class="next" href="/blog/2017/11/03/Understanding-Dynamic-Routing-between-Capsules.html">Understanding Dynamic Routing between Capsules <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg></a> 
       </div>
     
     </div>

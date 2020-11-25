@@ -168,7 +168,7 @@ $$
 
 Just like one-dimensional convolutions, we can think of a two-dimensional convolution as sliding one function on top of another, multiplying and adding.
 
-One common application of this is image processing. We can think of images as two-dimensional functions. Many important image transformations are convolutions where you convolve the image function with a very small, local function called a “kernel.”
+One common application of this is image processing. We can think of images as two-dimensional functions. Many important image transformations are convolutions where you convolve the image function with a very small, local function called a "kernel."
 
 ![RiverTrain-ImageConvDiagram]({{ '/assets/images/2014-07-08-understand-convolution/RiverTrain-ImageConvDiagram.png' | relative_url }})
 {: style="width: 100%;" class="center"}
@@ -325,6 +325,6 @@ In fact, the use of highly-efficient parallel convolution implementations on GPU
       
    {% endfnbody %}
    {% fnbody %}
-     There’s also the bias, which is the “threshold” for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
+     There’s also the bias, which is the "threshold" for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
   {% endfnbody %}
 {% endfootnotes %}

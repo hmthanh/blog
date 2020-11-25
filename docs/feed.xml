@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://hmthanh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://hmthanh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-11-18T02:09:51+07:00</updated><id>http://hmthanh.github.io/blog/feed.xml</id><title type="html">State of the art</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">Optimizing C/C++ Basic</title><link href="http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic.html" rel="alternate" type="text/html" title="Optimizing C/C++ Basic" /><published>2020-11-17T11:04:17+07:00</published><updated>2020-11-17T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic</id><content type="html" xml:base="http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic.html">&lt;ul class=&quot;table-of-content&quot; id=&quot;markdown-toc&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://hmthanh.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://hmthanh.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-11-25T15:25:55+07:00</updated><id>http://hmthanh.github.io/blog/feed.xml</id><title type="html">State of the art</title><subtitle>✨ _Your ambition outweighed your talent !_ ✨</subtitle><entry><title type="html">Optimizing C/C++ Basic</title><link href="http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic.html" rel="alternate" type="text/html" title="Optimizing C/C++ Basic" /><published>2020-11-17T11:04:17+07:00</published><updated>2020-11-17T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic</id><content type="html" xml:base="http://hmthanh.github.io/blog/tutorial/2020/11/17/optimized-cplusplus-basic.html">&lt;ul class=&quot;table-of-content&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#1-variable-storage&quot; id=&quot;markdown-toc-1-variable-storage&quot;&gt;1. Variable storage&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#11-static-storage&quot; id=&quot;markdown-toc-11-static-storage&quot;&gt;1.1 Static storage&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#12-register-storage&quot; id=&quot;markdown-toc-12-register-storage&quot;&gt;1.2 Register storage&lt;/a&gt;&lt;/li&gt;
@@ -2416,7 +2416,7 @@ fib_m(50)
 
 &lt;p&gt;Once you make it here you’ll have all the ingredients for success: You have a deep understanding of the technology, the dataset and the problem, you’ve set up the entire training/evaluation infrastructure and achieved high confidence in its accuracy, and you’ve explored increasingly more complex models, gaining performance improvements in ways you’ve predicted each step of the way. You’re now ready to read a lot of papers, try a large number of experiments, and get your SOTA results. Good luck!&lt;/p&gt;
 
-&lt;p&gt;Source : &lt;a href=&quot;http://karpathy.github.io/2019/04/25/recipe/&quot;&gt;Andrej Karpathy&lt;/a&gt;&lt;/p&gt;</content><author><name>Andrej Karpathy</name></author><category term="deep-learning" /><summary type="html">A collection of practical advice for the process of achieving strong results with neural networks.</summary></entry><entry><title type="html">Convolution Neural Network : A Modular Perspective</title><link href="http://hmthanh.github.io/blog/deep-learning/2019/04/25/ConvNets-Modular.html" rel="alternate" type="text/html" title="Convolution Neural Network : A Modular Perspective" /><published>2019-04-25T07:04:17+07:00</published><updated>2019-04-25T07:04:17+07:00</updated><id>http://hmthanh.github.io/blog/deep-learning/2019/04/25/ConvNets-Modular</id><content type="html" xml:base="http://hmthanh.github.io/blog/deep-learning/2019/04/25/ConvNets-Modular.html">&lt;p&gt;Source : &lt;a href=&quot;https://colah.github.io/posts/2014-07-Conv-Nets-Modular/&quot;&gt;https://colah.github.io/posts/2014-07-Conv-Nets-Modular/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Source : &lt;a href=&quot;http://karpathy.github.io/2019/04/25/recipe/&quot;&gt;Andrej Karpathy&lt;/a&gt;&lt;/p&gt;</content><author><name>Andrej Karpathy</name></author><category term="deep-learning" /><summary type="html">A collection of practical advice for the process of achieving strong results with neural networks.</summary></entry><entry><title type="html">Convolution Neural Network : A Modular Perspective</title><link href="http://hmthanh.github.io/blog/deep-learning/2019/04/25/Convolution-Neural-Network-A-Modular-Perspective.html" rel="alternate" type="text/html" title="Convolution Neural Network : A Modular Perspective" /><published>2019-04-25T07:04:17+07:00</published><updated>2019-04-25T07:04:17+07:00</updated><id>http://hmthanh.github.io/blog/deep-learning/2019/04/25/Convolution-Neural-Network-A-Modular-Perspective</id><content type="html" xml:base="http://hmthanh.github.io/blog/deep-learning/2019/04/25/Convolution-Neural-Network-A-Modular-Perspective.html">&lt;p&gt;Source : &lt;a href=&quot;https://colah.github.io/posts/2014-07-Conv-Nets-Modular/&quot;&gt;https://colah.github.io/posts/2014-07-Conv-Nets-Modular/&lt;/a&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -2439,7 +2439,7 @@ Cơ bản mà nói, convolution neural network có thể được xem như một
 
 &lt;p&gt;In the last few years, deep neural networks have lead to breakthrough results on a variety of pattern recognition problems, such as computer vision and voice recognition. One of the essential components leading to these results has been a special kind of neural network called a convolutional neural network.&lt;/p&gt;
 
-&lt;p&gt;At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron&lt;sup&gt;&lt;a href=&quot;#e675:fn:1&quot; class=&quot;footnote&quot; id=&quot;e675:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.&lt;/p&gt;
+&lt;p&gt;At its most basic, convolutional neural networks can be thought of as a kind of neural network that uses many identical copies of the same neuron&lt;sup&gt;&lt;a href=&quot;#c61f:fn:1&quot; class=&quot;footnote&quot; id=&quot;c61f:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. This allows the network to have lots of neurons and express computationally large models while keeping the number of actual parameters – the values describing how neurons behave – that need to be learned fairly small.&lt;/p&gt;
 
 &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/Conv2-9x5-Conv2Conv2.png&quot; alt=&quot;Conv2Conv2&quot; /&gt;&lt;/p&gt;
 
@@ -2474,7 +2474,7 @@ There are a bunch of different neurons, and every input connects to every neuron
 
 &lt;p&gt;We care about the same properties at all points in time. It’s useful to know the frequencies at the beginning, it’s useful to know the frequencies in the middle, and it’s also useful to know the frequencies at the end. Again, note that these are local properties, in that we only need to look at a small window of the audio sample in order to determine them.&lt;/p&gt;
 
-&lt;p&gt;So, we can create a group of neurons, $A$, that look at small time segments of our data&lt;sup&gt;&lt;a href=&quot;#e675:fn:2&quot; class=&quot;footnote&quot; id=&quot;e675:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; $A$ looks at all such segments, computing certain features.
+&lt;p&gt;So, we can create a group of neurons, $A$, that look at small time segments of our data&lt;sup&gt;&lt;a href=&quot;#c61f:fn:2&quot; class=&quot;footnote&quot; id=&quot;c61f:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; $A$ looks at all such segments, computing certain features.
 Then, the output of this convolutional layer is fed into a fully-connected layer, $F$.&lt;/p&gt;
 
 &lt;p style=&quot;width: 90%; padding: 20 10px;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/Conv-9-Conv2.png&quot; alt=&quot;Conv-9-Conv2&quot; /&gt;&lt;/p&gt;
@@ -2555,7 +2555,7 @@ They used a new kind of neuron (ReLUs) and a new technique to reduce a problem c
 They used a very large dataset with lots of image categories (&lt;a href=&quot;http://www.image-net.org/&quot;&gt;ImageNet&lt;/a&gt;). And, of course, it was a convolutional neural network.&lt;/p&gt;
 
 &lt;p&gt;Their architecture, illustrated below, was very deep.
-It has 5 convolutional layers&lt;sup&gt;&lt;a href=&quot;#e675:fn:3&quot; class=&quot;footnote&quot; id=&quot;e675:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, with pooling interspersed, and three fully-connected layers.
+It has 5 convolutional layers&lt;sup&gt;&lt;a href=&quot;#c61f:fn:3&quot; class=&quot;footnote&quot; id=&quot;c61f:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, with pooling interspersed, and three fully-connected layers.
 The early layers are split over the two GPUs.&lt;/p&gt;
 
 &lt;p style=&quot;width: 80%; padding: 20 10px;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2014-08-06-ConvNets-Modular/KSH-arch.png&quot; alt=&quot;KSH-arch&quot; /&gt;&lt;/p&gt;
@@ -2588,7 +2588,7 @@ From &lt;a href=&quot;http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf&quot;&
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Neurons in one side focus on black and white, learning to detect edges of different orientations and sizes.
-Neurons on the other side specialize on color and texture, detecting color contrasts and patterns&lt;sup&gt;&lt;a href=&quot;#e675:fn:4&quot; class=&quot;footnote&quot; id=&quot;e675:fn-back:4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
+Neurons on the other side specialize on color and texture, detecting color contrasts and patterns&lt;sup&gt;&lt;a href=&quot;#c61f:fn:4&quot; class=&quot;footnote&quot; id=&quot;c61f:fn-back:4&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;.
 Remember that the neurons are &lt;em&gt;randomly&lt;/em&gt; initialized. No human went and set them to be edge detectors, or to split in this way. It arose simply from training the network to classify images.&lt;/p&gt;
 
 &lt;p&gt;These remarkable results (and other exciting results around that time) were only the beginning. They were quickly followed by a lot of other work testing modified approaches and gradually improving the results, or applying them to other areas. And, in addition to the neural networks community, many in the computer vision community have adopted deep convolutional neural networks.&lt;/p&gt;
@@ -2656,18 +2656,18 @@ There is an alternative formulation, in terms of a mathematical operation called
 &lt;h1 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h1&gt;
 
 &lt;ol class=&quot;footnotelist&quot;&gt;
-&lt;li id=&quot;e675:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
+&lt;li id=&quot;c61f:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
         It should be noted that not all neural networks that use multiple copies of the same neuron are convolutional neural networks. Convolutional neural networks are just one type of neural network that uses the more general trick, weight-tying. Other kinds of neural network that do this are recurrent neural networks and recursive neural networks.
-   &lt;a href=&quot;#e675:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;e675:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
+   &lt;a href=&quot;#c61f:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;c61f:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
       Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-   &lt;a href=&quot;#e675:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;e675:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
+   &lt;a href=&quot;#c61f:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;c61f:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
      Groups of neurons, like $A$, that appear in multiple places are sometimes called modules, and networks that use them are sometimes called modular neural networks
-  &lt;a href=&quot;#e675:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;e675:fn:4&quot; class=&quot;footnotebody&quot; value=&quot;4&quot;&gt;
+  &lt;a href=&quot;#c61f:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;c61f:fn:4&quot; class=&quot;footnotebody&quot; value=&quot;4&quot;&gt;
        They also test using 7 in the paper.
-    &lt;a href=&quot;#e675:fn-back:4&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+    &lt;a href=&quot;#c61f:fn-back:4&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>Christopher Olah</name></author><category term="deep-learning" /><summary type="html">Source : https://colah.github.io/posts/2014-07-Conv-Nets-Modular/</summary></entry><entry><title type="html">Attention? Attention!</title><link href="http://hmthanh.github.io/blog/2018/06/24/attention-attention.html" rel="alternate" type="text/html" title="Attention? Attention!" /><published>2018-06-24T18:07:00+07:00</published><updated>2018-06-24T18:07:00+07:00</updated><id>http://hmthanh.github.io/blog/2018/06/24/attention-attention</id><content type="html" xml:base="http://hmthanh.github.io/blog/2018/06/24/attention-attention.html">&lt;p&gt;Source : &lt;a href=&quot;https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html&quot;&gt;Lilian&lt;/a&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -3162,7 +3162,1671 @@ All the sub-layers output data of the same dimension \(d_\text{model} = 512\).&l
 
 &lt;p&gt;[14]  Oriol Vinyals, Meire Fortunato, and Navdeep Jaitly. &lt;a href=&quot;https://arxiv.org/abs/1506.03134&quot;&gt;“Pointer networks.”&lt;/a&gt; NIPS 2015.&lt;/p&gt;
 
-&lt;p&gt;[15] Alex Graves, Greg Wayne, and Ivo Danihelka. &lt;a href=&quot;https://arxiv.org/abs/1410.5401&quot;&gt;“Neural turing machines.”&lt;/a&gt; arXiv preprint arXiv:1410.5401 (2014).&lt;/p&gt;</content><author><name>Lilian</name></author><category term="attention" /><category term="transformer" /><category term="rnn" /><summary type="html">Source : Lilian</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://hmthanh.github.io/blog/transformer.png" /><media:content medium="image" url="http://hmthanh.github.io/blog/transformer.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Understand Convolution</title><link href="http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html" rel="alternate" type="text/html" title="Understand Convolution" /><published>2014-07-08T18:04:17+07:00</published><updated>2014-07-08T18:04:17+07:00</updated><id>http://hmthanh.github.io/blog/2014/07/08/understand-convolution</id><content type="html" xml:base="http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html">&lt;p&gt;Source : &lt;a href=&quot;https://colah.github.io/posts/2014-07-Understanding-Convolutions/&quot;&gt;https://colah.github.io/posts/2014-07-Understanding-Convolutions/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[15] Alex Graves, Greg Wayne, and Ivo Danihelka. &lt;a href=&quot;https://arxiv.org/abs/1410.5401&quot;&gt;“Neural turing machines.”&lt;/a&gt; arXiv preprint arXiv:1410.5401 (2014).&lt;/p&gt;</content><author><name>Lilian</name></author><category term="attention" /><category term="transformer" /><category term="rnn" /><summary type="html">Source : Lilian</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://hmthanh.github.io/blog/transformer.png" /><media:content medium="image" url="http://hmthanh.github.io/blog/transformer.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Understanding Matrix capsules with EM Routing</title><link href="http://hmthanh.github.io/blog/2017/11/14/Understanding-Matrix-capsules-with-EM-Routing.html" rel="alternate" type="text/html" title="Understanding Matrix capsules with EM Routing" /><published>2017-11-14T18:00:00+07:00</published><updated>2017-11-14T18:00:00+07:00</updated><id>http://hmthanh.github.io/blog/2017/11/14/Understanding-Matrix-capsules-with-EM-Routing</id><content type="html" xml:base="http://hmthanh.github.io/blog/2017/11/14/Understanding-Matrix-capsules-with-EM-Routing.html">&lt;p&gt;Source : &lt;a href=&quot;https://jhui.github.io/2017/11/14/Matrix-Capsules-with-EM-routing-Capsule-Network/&quot;&gt;Jonathan Hui blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul class=&quot;table-of-content&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#cnn-challenges&quot; id=&quot;markdown-toc-cnn-challenges&quot;&gt;CNN challenges&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#adversaires&quot; id=&quot;markdown-toc-adversaires&quot;&gt;Adversaires&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#capsule&quot; id=&quot;markdown-toc-capsule&quot;&gt;Capsule&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#matrix-capsule&quot; id=&quot;markdown-toc-matrix-capsule&quot;&gt;Matrix capsule&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#gaussian-mixture-model--expectation-maximization-em&quot; id=&quot;markdown-toc-gaussian-mixture-model--expectation-maximization-em&quot;&gt;Gaussian mixture model &amp;amp; Expectation Maximization (EM)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#using-em-for-routing-by-agreement&quot; id=&quot;markdown-toc-using-em-for-routing-by-agreement&quot;&gt;Using EM for Routing-By-Agreement&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#capsule-assignment&quot; id=&quot;markdown-toc-capsule-assignment&quot;&gt;Capsule assignment&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#calculate-capsule-activation-and-pose-matrix&quot; id=&quot;markdown-toc-calculate-capsule-activation-and-pose-matrix&quot;&gt;Calculate capsule activation and pose matrix&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#em-routing&quot; id=&quot;markdown-toc-em-routing&quot;&gt;EM Routing&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-role-of-backpropagation--em-routing&quot; id=&quot;markdown-toc-the-role-of-backpropagation--em-routing&quot;&gt;The role of backpropagation &amp;amp; EM routing&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#loss-function-using-spread-loss&quot; id=&quot;markdown-toc-loss-function-using-spread-loss&quot;&gt;Loss function (using Spread loss)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#capsule-network&quot; id=&quot;markdown-toc-capsule-network&quot;&gt;Capsule Network&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#smallnorb&quot; id=&quot;markdown-toc-smallnorb&quot;&gt;smallNORB&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#architect&quot; id=&quot;markdown-toc-architect&quot;&gt;Architect&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#relu-conv1&quot; id=&quot;markdown-toc-relu-conv1&quot;&gt;ReLU Conv1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#primarycaps&quot; id=&quot;markdown-toc-primarycaps&quot;&gt;PrimaryCaps&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#convcaps1-convcaps2&quot; id=&quot;markdown-toc-convcaps1-convcaps2&quot;&gt;ConvCaps1, ConvCaps2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#em-routing-coding&quot; id=&quot;markdown-toc-em-routing-coding&quot;&gt;EM routing coding&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#m-steps&quot; id=&quot;markdown-toc-m-steps&quot;&gt;m-steps&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#e-steps&quot; id=&quot;markdown-toc-e-steps&quot;&gt;E-steps&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#class-capsules&quot; id=&quot;markdown-toc-class-capsules&quot;&gt;Class capsules&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#spread-loss&quot; id=&quot;markdown-toc-spread-loss&quot;&gt;Spread loss&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#result&quot; id=&quot;markdown-toc-result&quot;&gt;Result&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#visualization&quot; id=&quot;markdown-toc-visualization&quot;&gt;Visualization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#credits&quot; id=&quot;markdown-toc-credits&quot;&gt;Credits&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This article covers the second Hinton’s capsule network paper &lt;a href=&quot;https://openreview.net/pdf?id=HJWLfGWRb&quot;&gt;&lt;em&gt;Matrix capsules with EM Routing&lt;/em&gt;&lt;/a&gt;, both authored by Geoffrey E Hinton, Sara Sabour and Nicholas Frosst. We will first cover the matrix capsules and apply EM (Expectation Maximization) routing to classify images with different viewpoints. For those want to understand the detail implementation, the second half of the article covers an implementation on the matrix Capsule and EM routing using TensorFlow.&lt;/p&gt;
+
+&lt;h3 id=&quot;cnn-challenges&quot;&gt;CNN challenges&lt;/h3&gt;
+
+&lt;p&gt;In our &lt;a href=&quot;https://hmthanh.github.io/2017/11/03/Dynamic-Routing-Between-Capsules/&quot;&gt;previous capsule article&lt;/a&gt;, we cover the challenges of CNN in exploring spatial relationship and discuss how capsule networks may address those short-comings. Let’s recap some important challenges of CNN in classifying the same class of images but in different viewpoints. For example, classify a face correctly even with different orientations.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/sface3.jpg&quot; alt=&quot;sface3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Conceptually, the CNN trains neurons to handle different feature orientations (0°, 20°, -20° ) with a top level face detection neuron.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/cnn1.jpg&quot; alt=&quot;sface3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To solve the problem, we add more convolution layers and features maps. Nevertheless this approach tends to memorize the dataset rather than generalize a solution. It requires a large volume of training data to cover different variants and to avoid overfitting. MNist dataset contains 55,000 training data. i.e. 5,500 samples per digits. However, it is unlikely that children need so many samples to learn numbers. Our existing deep learning models including CNN are inefficient in utilizing datapoints.&lt;/p&gt;
+
+&lt;h3 id=&quot;adversaires&quot;&gt;Adversaires&lt;/h3&gt;
+&lt;p&gt;CNN is also vulnerable to adversaires by simply move, rotate or resize individual features.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/sface2.jpg&quot; alt=&quot;sface2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can add tiny un-noticeable changes to an image to fool a deep network easily. The image on the left below is correctly classified by a CNN network as a panda. By selectively adding small changes from the middle picture to the panda picture, the CNN suddenly mis-classifies the resulting image in the right as a gibbon.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/a2.png&quot; alt=&quot;a2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(image source &lt;a href=&quot;https://blog.openai.com/adversarial-example-research/&quot;&gt;OpenAi&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h3 id=&quot;capsule&quot;&gt;Capsule&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;A capsule captures the likeliness of a feature and its variant&lt;/strong&gt;. So the capsule does not &lt;em&gt;only&lt;/em&gt; detect a feature but it is trained to learn and detect the variants.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/c21.jpg&quot; alt=&quot;c21&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For example, the same network layer can detect a face rotated clockwise.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/c22.jpg&quot; alt=&quot;c22&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Equivariance&lt;/strong&gt; is the detection of objects that can transform to each other.  Intuitively, the capsule network detects the face is rotated right 20° (an equivariance) rather than realizes the face matched a variant that is rotated 20°. By forcing the model to learn the feature variant in a capsule, we &lt;em&gt;may&lt;/em&gt; extrapolate possible variants more effectively with less training data. In CNN, the final label is viewpoint invariant. i.e. the top neuron detects a face but losses the information in the angle of rotation. For equivariance, the variant information like the angle of rotation is kept inside the capsule. Maintaining such spatial orientation helps us to avoid adversaires.&lt;/p&gt;
+
+&lt;h3 id=&quot;matrix-capsule&quot;&gt;Matrix capsule&lt;/h3&gt;
+
+&lt;p&gt;A &lt;strong&gt;matrix capsule&lt;/strong&gt; captures the activation (likeliness) similar to that of a neuron, but also captures a 4x4 pose matrix. In computer graphics, a pose matrix defines the translation and the rotation of an object which is equivalent to the change of the viewpoint of an object.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/capp.png&quot; alt=&quot;capp&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Source from the Matrix capsules with EM routing paper)&lt;/p&gt;
+
+&lt;p&gt;For example, the second row images below represent the same object above them with differen viewpoints. In matrix capsule, we train the model to capture the pose information (orientation, azimuths etc…). Of course, just like other deep learning methods, this is our intention and it is never guaranteed.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/data.png&quot; alt=&quot;data&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Source from the Matrix capsules with EM routing paper)&lt;/p&gt;
+
+&lt;p&gt;The objective of the EM (Expectation Maximization) routing is to group capsules to form a part-whole relationship using a clustering technique (EM). In machine learning, we use EM clustering to cluster datapoints into Gaussian distributions. For example, we cluster the datapoints below into two clusters modeled by two gaussian distributions  \(G_1 = \mathcal{N}(\mu_1, \sigma_1^2)\) and \(G_2 = \mathcal{N}(\mu_2, \sigma_2^2)\). Then we represent the datapoints by the corresponding Gaussian distribution.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/GM2.png&quot; alt=&quot;GM2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the face detection example, each of the mouth, eyes and nose detection capsules in the lower layer makes predictions (&lt;strong&gt;votes&lt;/strong&gt;) on the pose matrices of its possible parent capsules. Each vote is a predicted value for a parent capsule’s pose matrix, and it is computed by multiplying its own pose matrix \(M\) with a &lt;strong&gt;transformation matrix&lt;/strong&gt; \(W\) that we learn from the training data.&lt;/p&gt;
+
+\[\begin{split}
+&amp;amp;v = M W \quad 
+\end{split}\]
+
+&lt;p&gt;We apply the EM routing to group capsules into a parent capsule in runtime:&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/cluster.jpg&quot; alt=&quot;cluster&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;i.e., if the nose, mouth and eyes capsules all vote a similar pose matrix value, we cluster them together to form a parent capsule: the face capsule.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/c3.jpg&quot; alt=&quot;c3&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A higher level feature (a face) is detected by looking for agreement between votes from the capsules one layer below. We use EM routing to cluster capsules that have close proximity of the corresponding votes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;gaussian-mixture-model--expectation-maximization-em&quot;&gt;Gaussian mixture model &amp;amp; Expectation Maximization (EM)&lt;/h3&gt;
+
+&lt;p&gt;We will take a short break to understand EM. A Gaussian mixture model clusters datapoints into a mixture of Gaussian distributions described by a mean \(\mu\) and a standard deviation \(\sigma\). Below, we cluster datapoints into the yellow and red cluster which each is described by a \(\mu\) and a \(\sigma\).&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/em.gif&quot; alt=&quot;em&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Image source Wikipedia)&lt;/p&gt;
+
+&lt;p&gt;For a Gaussian mixture model with two clusters, we start with a random initialization of clusters \(G_1 = (\mu_1, \sigma^2_1)\) and \(G_2 = (\mu_2, \sigma^2_2)\). Expectation Maximization (EM) algorithm tries to fit the training datapoints into \(G_1\) and \(G_2\) and then re-compute \(\mu\) and \(\sigma\) for \(G_1\) and \(G_2\) based on Gaussian distribution. The iteration continues until the solution converged such that the probability of seeing all datapoints is maximized with the final \(G_1\) and \(G_2\) distribution.&lt;/p&gt;
+
+&lt;p&gt;The probability of \(x\) given (belong to) the cluster \(G_1\) is:&lt;/p&gt;
+
+\[\begin{split}
+P(x \vert G_1 ) &amp;amp; = \frac{1}{\sigma_1\sqrt{2\pi}}e^{-(x - \mu_1)^{2}/2\sigma_1^{2} } \\
+\end{split}\]
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;At each iteration, we start with 2 Gaussian distributions which we later re-calculate its \(\mu\) and \(\sigma\) based on the datapoints.
+&lt;img src=&quot;/blog/assets/images/capsule/GM1.png&quot; alt=&quot;GM1&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;Eventually, we will converge to two Gaussian distributions that maximize the likelihood of the observed datapoints.
+&lt;img src=&quot;/blog/assets/images/capsule/GM2.png&quot; alt=&quot;GM2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;using-em-for-routing-by-agreement&quot;&gt;Using EM for Routing-By-Agreement&lt;/h3&gt;
+
+&lt;p&gt;Now, let’s get into more details. A higher level feature (a face) is detected by looking for agreement between votes from the capsules one layer below. A &lt;strong&gt;vote&lt;/strong&gt; \(v_{ij}\) for the parent capsule \(j\) from capsule \(i\) is computed by multipling the pose matrix \(M_i\) of capsule \(i\) with a &lt;strong&gt;viewpoint invariant transformation&lt;/strong&gt; \(W_{ij}\).&lt;/p&gt;
+
+\[\begin{split}
+&amp;amp;v_{ij} = M_iW_{ij} \quad 
+\end{split}\]
+
+&lt;p&gt;The probability that a capsule \(i\) is grouped into capsule \(j\) as a part-whole relationship is based on the proximity of the vote \(v_{ij}\) to other votes \((v_{o_{1}j} \ldots v_{o_{k}j})\) from other capsules. \(W_{ij}\) is learned discriminatively through a cost function and the backpropagation. It learns not only what a face is composed of, and it also makes sure the pose information of the parent capsule matched with its sub-components after some transformation.&lt;/p&gt;
+
+&lt;p&gt;Here is the visualization of routing-by-agreement with the matrix capsules. We group capsules with similar votes (\(T_iT_{ij} \approx T_hT_{hj}\)) after transform the pose \(T_i\) and \(T_j\) with a viewpoint invariant transformation. (\(T_{ij}\) aka \(W_{ij}\) and \(T_{hj}\))&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/gh.png&quot; alt=&quot;gh&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Source Geoffrey Hinton)&lt;/p&gt;
+
+&lt;p&gt;Even the viewpoint may change, the pose matrices and the votes change in a co-ordinate way. In our example, the locations of the votes may change from the red dots to the pink dots below when the face is rotated. Nevertheless, EM routing is based on proximity and therefore EM routing can still cluster the same children capsules together. Hence, the transformation matrices are the same for any viewpoints of the objects: viewpoint invariant. We just need one set of the transformation matrices and one parent capsule for different object orientations.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/cluster2.jpg&quot; alt=&quot;cluster2&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;capsule-assignment&quot;&gt;Capsule assignment&lt;/h4&gt;
+
+&lt;p&gt;EM routing clusters capsules to form a higher level capsule in runtime. It also calculates the &lt;strong&gt;assignment probabilities&lt;/strong&gt; \(r_{ij}\) to quantify the runtime connection between a capsule and its parents. For example, the hand capsule does not belong to the face capsule, the assignment probability between them is zero. \(r_{ij}\) is also impacted by the activation of a capsule. If the mouth in the image is obstructed, the mouth capsule will have zero activation. The calculated \(r_{ij}\) will also be zero.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/c2.jpg&quot; alt=&quot;c2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;calculate-capsule-activation-and-pose-matrix&quot;&gt;Calculate capsule activation and pose matrix&lt;/h3&gt;
+
+&lt;p&gt;The output of a capsule is computed differently than a deep network neuron. In EM clustering, we represent datapoints by a Gaussian distribution. In EM routing, we model the pose matrix of the parent capsule with a Gaussian also. The pose matrix is a \(4 \times 4\) matrix, i.e. 16 components. We model the pose matrix with a Gaussian having 16 \(\mu\) and 16 \(\sigma\) and each \(\mu\) represents a pose matrix’s component.&lt;/p&gt;
+
+&lt;p&gt;Let \(v_{ij}\) be the vote from capsule \(i\) for the parent capsule \(j\), and \(v^h_{ij}\) be its \(h\)-th component. We apply the probability density function of a Gaussian&lt;/p&gt;
+
+\[\begin{split}
+P(x) &amp;amp; = \frac{1}{\sigma \sqrt{2\pi}}e^{-(x - \mu)^{2}/2\sigma^{2} } \\
+\end{split}\]
+
+&lt;p&gt;to compute the probability of \(v^h_{ij}\) belonging to the capsule \(j\)’s Gaussian model:&lt;/p&gt;
+
+\[\begin{split}
+p^h_{i \vert j} &amp;amp; = \frac{1}{\sqrt{2 \pi ({\sigma^h_j})^2}} \exp{(- \frac{(v^h_{ij}-\mu^h_j)^2}{2 ({\sigma^h_j})^2})} \\
+\end{split}\]
+
+&lt;p&gt;Let’s take the natural \(log\):&lt;/p&gt;
+
+\[\begin{split}
+\ln(p^h_{i \vert j}) &amp;amp;= \ln \frac{1}{\sqrt{2 \pi ({\sigma^h_j})^2}} \exp{(- \frac{(v^h_{ij}-\mu^h_j)^2}{2 ({\sigma^h_j})^2})} \\
+\\
+&amp;amp;= - \ln(\sigma^h_j) - \frac{\ln(2 \pi)}{2} - \frac{(v^h_{ij}-\mu^h_j)^2}{2 ({\sigma^h_j})^2}\\
+\end{split}\]
+
+&lt;p&gt;Let’s estimate the cost to activate a capsule. The lower the cost, the more likely a capsule will be activated. If cost is high, the votes do not match the parent Gaussian distribution and therefore a low chance to be activated.&lt;/p&gt;
+
+&lt;p&gt;Let \(cost_{ij}\) be the cost to activate the parent capsule \(j\) by the capsule \(i\). It is the negative of the log likelihood:&lt;/p&gt;
+
+\[cost^h_{ij} = - \ln(P^h_{i \vert j})\]
+
+&lt;p&gt;Since capsules are not equally linked with capsule \(j\), we pro-rated the cost with the runtime &lt;strong&gt;assignment probabilities&lt;/strong&gt; \(r_{ij}\). The cost from all lower layer capsules is:&lt;/p&gt;
+
+\[\begin{split}
+cost^h_j &amp;amp;= \sum_i  r_{ij} cost^h_{ij} \\
+&amp;amp;= \sum_i - r_{ij} \ln(p^h_{i \vert j}) \\
+&amp;amp;= \sum_i r_{ij}  \big( \frac{(v^h_{ij}-\mu^h_j)^2}{2 ({\sigma^h_j})^2} + \ln(\sigma^h_j) + \frac{\ln(2 \pi)}{2} \big)\\
+&amp;amp;= \frac{\sum_i r_{ij} (\sigma^h_j)^2}{2 (\sigma^h_j)^2} + (\ln(\sigma^h_j) + \frac{\ln(2 \pi)}{2}) \sum_i r_{ij} \\
+&amp;amp;= \big(\ln(\sigma^h_j) + k \big) \sum_i r_{ij}  \quad \text{which k is a constant}
+\end{split}\]
+
+&lt;p&gt;To determine whether the capsule \(j\) will be activated, we use the following equation:&lt;/p&gt;
+
+\[a_j = sigmoid(\lambda(b_j - \sum_h cost^h_j))\]
+
+&lt;p&gt;In the original paper, “\(-b_j\)” is explained as the cost of describing the mean and variance of capsule \(j\). In another word, if the benefit \(b_j\) of representing datapoints by the parent capsule \(j\) outranks the cost caused by the discrepancy in their votes, we activate the output capsules. We do not compute \(b_j\) analytically. Instead, we approximate it through training using the backpropagation and a cost function.&lt;/p&gt;
+
+&lt;p&gt;\(r_{ij}\), \(\mu\), \(\sigma\) and \(a_j\) are computed iteratively using EM routing discussed in the next section. λ in the equation above is the inverse temperature parameter \(\frac{1}{temperature}\). As \(r_{ij}\) is getting better, we drop the temperature (larger λ) which increase the steepness in the s-curve in \(sigmoid(z)\). It helps us to fine tune \(r_{ij}\) better with higher sensitivity to vote discrepancy in these region. In our implementation, λ is first initialized to 1 at the beginning of the iterations and then increment by 1 after each routing iteration. The paper does not specific the details and we would suggest experimenting different schemes in your implementation.&lt;/p&gt;
+
+&lt;h4 id=&quot;em-routing&quot;&gt;EM Routing&lt;/h4&gt;
+
+&lt;p&gt;The pose matrix and the activation of the output capsules are computed iteratively using the EM routing. The EM method fits datapoints into a a mixture of Gaussian models with alternative calls between an E-step and an M-step. The E-step determines the assignment probability \(r_{ij}\) of each datapoint to a parent capsule. The M-step re-calculate the Gaussian models’ values based on \(r_{ij}\). We repeat the iteration 3 times. The last \(a_j\) will be the parent capsule’s output. The 16 \(\mu\) from the last Gaussian model will be reshaped to form the \(4 \times 4\) pose matrix of the parent capsule.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/al1.png&quot; alt=&quot;al1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Source from the Matrix capsules with EM routing paper)&lt;/p&gt;
+
+&lt;p&gt;\(a\) and \(V\) above is the activation and the votes from the children capsules. We initialize the assignment probability \(r_{ij}\) to be uniformly distributed. i.e. we start with the children capsules equally related with any parents. We call M-step to compute an updated Gaussian model (\(\mu\), \(\sigma\)) and the parent activation \(a_j\) from \(a\), \(V\) and current \(r_{ij}\). Then we call E-step to recompute the assignment probabilities \(r_{ij}\) based on the new Gaussian model and the new \(a_j\).&lt;/p&gt;
+
+&lt;p&gt;The details of M-step:&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/al2.png&quot; alt=&quot;al2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In M-step, we calculate \(\mu\) and \(\sigma\) based on the activation \(a_i\) from the children capsules, the current \(r_{ij}\) and votes \(V\). M-step also re-calcule the cost and the activation \(a_j\) for the parent capsules. \(\beta_{\nu}\) and \(\beta_{\alpha}\) is trained discriminatively. λ is an inverse temperature parameter increased by 1 after each routing iteration in our code implementation.&lt;/p&gt;
+
+&lt;p&gt;The details of E-step:&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/al3.png&quot; alt=&quot;al3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In E-step, we re-calculate the assignment probability \(r_{ij}\) based on the new \(\mu\), \(\sigma\) and \(a_j\). The assignment is increased if the vote is closer to the \(\mu\) of the updated Gaussian model.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We use the \(a_j\) from the last m-step call in the iterations as the activation of the output capsule \(j\) and we shape the 16 \(\mu\) to form the 4x4 pose matrix.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;the-role-of-backpropagation--em-routing&quot;&gt;The role of backpropagation &amp;amp; EM routing&lt;/h4&gt;
+
+&lt;p&gt;In CNN, we use the formula below to calculate the activation of a neuron.&lt;/p&gt;
+
+\[y_j =  ReLU( \sum_{i} W_{ij} * x_i + b_{j} )\]
+
+&lt;p&gt;However, the output of a capsule including the activation and the pose matrix is calculated by the EM routing. We use EM-routing to compute the parent capsule’s output from the transformation matrix \(W\) and the children capsules’ activations and pose matrices. Nevertheless, by no mistake, the matrix capsules still heavily depend on the backpropagation in training the transformation matrix \(W_{ij}\) and the parameters \(\beta_{\nu}\) and \(\beta_{\alpha}\).&lt;/p&gt;
+
+&lt;p&gt;In EM routing, we compute the assignment probability \(r_{ij}\) to quantify the connection between the children capsules and the parent capsules. This value is important but short lived. We re-initialize it to be uniformly distributed for every datapoint before the EM routing calculation. In any situration, training or testing, we use EM routing to compute capsules’ outputs.&lt;/p&gt;
+
+&lt;h4 id=&quot;loss-function-using-spread-loss&quot;&gt;Loss function (using Spread loss)&lt;/h4&gt;
+
+&lt;p&gt;Matrix capsules requires a loss function to train \(W\), \(\beta_{\nu}\) and \(\beta_{\alpha}\). We pick spread loss as the main loss function for the backpropagation. The loss from the class \(i\) (other than the true label \(t\)) is defined as&lt;/p&gt;
+
+\[L_i = (\max(0, m - (a_t - a_i)))^2\]
+
+&lt;p&gt;which \(a_t\) is the activation of the target class (true label) and \(a_i\) is the activation for class \(i\).&lt;/p&gt;
+
+&lt;p&gt;The total cost is:&lt;/p&gt;
+
+\[L = \sum_{i \neq t} (\max(0, m - (a_t - a_i)))^2\]
+
+&lt;p&gt;If the margin between the true label and the wrong class is smaller than \(m\), we penalize it by the 
+square of \(m - (a_t - a_i)\). \(m\) is initially start as 0.2 and linearly increased by 0.1 after each epoch training. \(m\) will stop growing after reaching the maximum 0.9. Starting at a lower margin helps the training to avoid too many dead capsules during the early phase.&lt;/p&gt;
+
+&lt;p&gt;Other implementations add regularization loss and reconstruction loss to the loss function. Since those are not specific to the matrix capsule, we will simply mention here without further elaboration.&lt;/p&gt;
+
+&lt;h3 id=&quot;capsule-network&quot;&gt;Capsule Network&lt;/h3&gt;
+
+&lt;p&gt;The Capsule Network (CapsNet) in the first paper uses a fully connected network. This solution is hard to scale for larger images. In the next few sections, the matrix capsules use some of the convolution techniques in CNN to explore spatial features so it can scale better.&lt;/p&gt;
+
+&lt;h4 id=&quot;smallnorb&quot;&gt;smallNORB&lt;/h4&gt;
+
+&lt;p&gt;The research paper uses the smallNORB dataset. It has 5 toy classes: airplanes, cars, trucks, humans and animals. Every individual sample is pictured at 18 different azimuths (0-340), 9 elevations and 6 lighting conditions. This dataset is particular picked by the paper so it can study the classification of images with different viewpoints.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/data.png&quot; alt=&quot;data2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Picture from the Matrix capsules with EM routing paper)&lt;/p&gt;
+
+&lt;h4 id=&quot;architect&quot;&gt;Architect&lt;/h4&gt;
+
+&lt;p&gt;However, many code implementations start with the MNist dataset because the image size is smaller. So for our demonstration, we also pick the MNist dataset. This is the network design:&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/cape.png&quot; alt=&quot;cape&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;(Picture from the Matrix capsules with EM routing paper).&lt;/p&gt;
+
+&lt;p&gt;ReLU Conv1 is a regular convolution (CNN) layer using a 5x5 filter with stride 2 outputting 32 (\(A=32\)) channels (feature maps) using the ReLU activation.&lt;/p&gt;
+
+&lt;p&gt;In PrimaryCaps, we apply a 1x1 convolution filter to transform each of the 32 channels into 32 (\(B=32\)) primary capsules. Each capsule contains a 4x4 pose matrix and an activation value. We use the regular convolution layer to implement the PrimaryCaps. We group \(4 \times 4 + 1\) neurons to generate 1 capsule.&lt;/p&gt;
+
+&lt;p&gt;PrimaryCaps is followed by a &lt;strong&gt;convolution capsule layer&lt;/strong&gt; ConvCaps1 using a 3x3 filters (\(K=3\)) with stride 2. ConvCaps1 takes capsules as input and output capsules. ConvCaps1 is similar to a regular convolution layer except it uses EM routing to compute the capsule output.&lt;/p&gt;
+
+&lt;p&gt;The capsule output of ConvCaps1 is then feed into ConvCaps2. ConvCaps2 is another convolution capsule layer but with stride 1.&lt;/p&gt;
+
+&lt;p&gt;The output capsules of ConvCaps2 are connected to the Class Capsules using a 1x1 filter and it outputs one capsule per class. (In MNist, we have 10 classes \(E=10\))&lt;/p&gt;
+
+&lt;p&gt;We use EM routing to compute the pose matrices and the output activations for ConvCaps1, ConvCaps2 and Class Capsules. In CNN, we slide the same filter over the spatial dimension in calculating the same feature map. We want to detect the same feature regardless of the location. Similarly, in EM routing, we share the same transformation matrix \(W_{ij}\) across spatial dimension to calculate the votes.&lt;/p&gt;
+
+&lt;p&gt;For example, from ConvCaps1 to ConvCaps2, we have&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a 3x3 filter,&lt;/li&gt;
+  &lt;li&gt;32 input and output capsules, and&lt;/li&gt;
+  &lt;li&gt;a 4x4 pose matrix.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since we share the transformation matrix, we just need 3x3x32x32x4x4 parameters for \(W\).&lt;/p&gt;
+
+&lt;p&gt;Here is the summary of each layer and the shape of their outputs:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Layer Name&lt;/th&gt;
+      &lt;th&gt;Apply&lt;/th&gt;
+      &lt;th&gt;Output shape&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MNist image&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;28, 28, 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ReLU Conv1&lt;/td&gt;
+      &lt;td&gt;Regular Convolution (CNN) layer using 5x5 kernels with 32 output channels, stride 2 and padding&lt;/td&gt;
+      &lt;td&gt;14, 14, 32&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PrimaryCaps&lt;/td&gt;
+      &lt;td&gt;Modified convolution layer with 1x1 kernels, strides 1 with padding and outputing 32 capsules. &lt;br /&gt;Requiring 32x32x(4x4+1) parameters.&lt;/td&gt;
+      &lt;td&gt;&lt;nobr&gt;pose \(14, 14, 32, 4, 4), &lt;/nobr&gt; &lt;br /&gt;activations (14, 14, 32)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ConvCaps1&lt;/td&gt;
+      &lt;td&gt;Capsule convolution with 3x3 kernels, strides 2 and no padding. Requiring 3x3x32x32x4x4 parameters.&lt;/td&gt;
+      &lt;td&gt;poses (6, 6, 32, 4, 4), activations (6, 6, 32)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ConvCaps2&lt;/td&gt;
+      &lt;td&gt;Capsule convolution with 3x3 kernels, strides 1 and no padding&lt;/td&gt;
+      &lt;td&gt;poses (4, 4, 32, 4, 4), activations (4, 4, 32)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Class Capsules&lt;/td&gt;
+      &lt;td&gt;Capsule with 1x1 kernel. Requiring 32x10x4x4 parameters.&lt;/td&gt;
+      &lt;td&gt;poses (10, 4, 4), activations (10)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For the rest of the article, we will cover a detail implementation using Tensor. Here is the code in building our layers:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def capsules_net(inputs, num_classes, iterations, batch_size, name='capsule_em'):
+    &quot;&quot;&quot;Define the Capsule Network model
+    &quot;&quot;&quot;
+
+    with tf.variable_scope(name) as scope:
+        # ReLU Conv1
+        # Images shape (24, 28, 28, 1) -&amp;gt; conv 5x5 filters, 32 output channels, strides 2 with padding, ReLU
+        # nets -&amp;gt; (?, 14, 14, 32)
+        nets = conv2d(
+            inputs,
+            kernel=5, out_channels=32, stride=2, padding='SAME',
+            activation_fn=tf.nn.relu, name='relu_conv1'
+        )
+
+        # PrimaryCaps
+        # (?, 14, 14, 32) -&amp;gt; capsule 1x1 filter, 32 output capsule, strides 1 without padding
+        # nets -&amp;gt; (poses (?, 14, 14, 32, 4, 4), activations (?, 14, 14, 32))
+        nets = primary_caps(
+            nets,
+            kernel_size=1, out_capsules=32, stride=1, padding='VALID',
+            pose_shape=[4, 4], name='primary_caps'
+        )
+
+        # ConvCaps1
+        # (poses, activations) -&amp;gt; conv capsule, 3x3 kernels, strides 2, no padding
+        # nets -&amp;gt; (poses (24, 6, 6, 32, 4, 4), activations (24, 6, 6, 32))
+        nets = conv_capsule(
+            nets, shape=[3, 3, 32, 32], strides=[1, 2, 2, 1], iterations=iterations,
+            batch_size=batch_size, name='conv_caps1'
+        )
+
+        # ConvCaps2
+        # (poses, activations) -&amp;gt; conv capsule, 3x3 kernels, strides 1, no padding
+        # nets -&amp;gt; (poses (24, 4, 4, 32, 4, 4), activations (24, 4, 4, 32))
+        nets = conv_capsule(
+            nets, shape=[3, 3, 32, 32], strides=[1, 1, 1, 1], iterations=iterations,
+            batch_size=batch_size, name='conv_caps2'
+        )
+
+        # Class capsules
+        # (poses, activations) -&amp;gt; 1x1 convolution, 10 output capsules
+        # nets -&amp;gt; (poses (24, 10, 4, 4), activations (24, 10))
+        nets = class_capsules(nets, num_classes, iterations=iterations,
+                              batch_size=batch_size, name='class_capsules')
+
+        # poses (24, 10, 4, 4), activations (24, 10)
+        poses, activations = nets
+
+    return poses, activations
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;relu-conv1&quot;&gt;ReLU Conv1&lt;/h4&gt;
+
+&lt;p&gt;ReLU Conv1 is a simple CNN layer. We use the TensorFlow slim API &lt;em&gt;slim.conv2d&lt;/em&gt; to create a CNN layer using a 3x3 kernel with stride 2 and ReLU. (We use the slim API so the code is more condense and easier to read.)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def conv2d(inputs, kernel, out_channels, stride, padding, name, is_train=True, activation_fn=None):
+  with slim.arg_scope([slim.conv2d], trainable=is_train):
+    with tf.variable_scope(name) as scope:
+      output = slim.conv2d(inputs,
+                           num_outputs=out_channels,
+                           kernel_size=[kernel, kernel], stride=stride, padding=padding,
+                           scope=scope, activation_fn=activation_fn)
+      tf.logging.info(f&quot;{name} output shape: {output.get_shape()}&quot;)
+
+  return output
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;primarycaps&quot;&gt;PrimaryCaps&lt;/h4&gt;
+
+&lt;p&gt;PrimaryCaps is not much difference from a CNN layer: instead of generating 1 scalar value, we generate 32 capsules with 4 x 4  scalar values for the pose matrices and 1 scalar for the activation:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def primary_caps(inputs, kernel_size, out_capsules, stride, padding, pose_shape, name):
+    &quot;&quot;&quot;This constructs a primary capsule layer using regular convolution layer.
+
+    :param inputs: shape (N, H, W, C) (?, 14, 14, 32)
+    :param kernel_size: Apply a filter of [kernel, kernel] [5x5]
+    :param out_capsules: # of output capsule (32)
+    :param stride: 1, 2, or ... (1)
+    :param padding: padding: SAME or VALID.
+    :param pose_shape: (4, 4)
+    :param name: scope name
+
+    :return: (poses, activations), (poses (?, 14, 14, 32, 4, 4), activations (?, 14, 14, 32))
+    &quot;&quot;&quot;
+
+    with tf.variable_scope(name) as scope:
+        # Generate the poses matrics for the 32 output capsules
+        poses = conv2d(
+            inputs,
+            kernel_size, out_capsules * pose_shape[0] * pose_shape[1], stride, padding=padding,
+            name='pose_stacked'
+        )
+
+        input_shape = inputs.get_shape()
+
+        # Reshape 16 scalar values into a 4x4 matrix
+        poses = tf.reshape(
+            poses, shape=[-1, input_shape[-3], input_shape[-2], out_capsules, pose_shape[0], pose_shape[1]],
+            name='poses'
+        )
+
+        # Generate the activation for the 32 output capsules
+        activations = conv2d(
+            inputs,
+            kernel_size,
+            out_capsules,
+            stride,
+            padding=padding,
+            activation_fn=tf.sigmoid,
+            name='activation'
+        )
+
+        tf.summary.histogram(
+            'activations', activations
+        )
+
+    # poses (?, 14, 14, 32, 4, 4), activations (?, 14, 14, 32)
+    return poses, activations
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;convcaps1-convcaps2&quot;&gt;ConvCaps1, ConvCaps2&lt;/h4&gt;
+
+&lt;p&gt;ConvCaps1 and ConvCaps are both convolution capsule with stride 2 and 1 respectively. In the comment of the following code, we trace the tensor shape for the ConvCaps1 layer.&lt;/p&gt;
+
+&lt;p&gt;The code involves 3 major steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use kernel_tile to tile (convolute) the pose matrices and the activation to be used later in voting and EM routing.&lt;/li&gt;
+  &lt;li&gt;Compute votes: call mat_transform to generate the votes from the children “tiled” pose matrices and the transformation matrices.&lt;/li&gt;
+  &lt;li&gt;EM-routing: call matrix_capsules_em_routing to compute the output capsules (pose and activation) of the parent capsule.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def conv_capsule(inputs, shape, strides, iterations, batch_size, name):
+  &quot;&quot;&quot;This constructs a convolution capsule layer from a primary or convolution capsule layer.
+      i: input capsules (32)
+      o: output capsules (32)
+      batch size: 24
+      spatial dimension: 14x14
+      kernel: 3x3
+  :param inputs: a primary or convolution capsule layer with poses and activations
+         pose: (24, 14, 14, 32, 4, 4)
+         activation: (24, 14, 14, 32)
+  :param shape: the shape of convolution operation kernel, [kh, kw, i, o] = (3, 3, 32, 32)
+  :param strides: often [1, 2, 2, 1] (stride 2), or [1, 1, 1, 1] (stride 1).
+  :param iterations: number of iterations in EM routing. 3
+  :param name: name.
+
+  :return: (poses, activations).
+
+  &quot;&quot;&quot;
+  inputs_poses, inputs_activations = inputs
+
+  with tf.variable_scope(name) as scope:
+
+      stride = strides[1] # 2
+      i_size = shape[-2] # 32
+      o_size = shape[-1] # 32
+      pose_size = inputs_poses.get_shape()[-1]  # 4
+
+      # Tile the input capusles' pose matrices to the spatial dimension of the output capsules
+      # Such that we can later multiple with the transformation matrices to generate the votes.
+      inputs_poses = kernel_tile(inputs_poses, 3, stride)  # (?, 14, 14, 32, 4, 4) -&amp;gt; (?, 6, 6, 3x3=9, 32x16=512)
+
+      # Tile the activations needed for the EM routing
+      inputs_activations = kernel_tile(inputs_activations, 3, stride)  # (?, 14, 14, 32) -&amp;gt; (?, 6, 6, 9, 32)
+      spatial_size = int(inputs_activations.get_shape()[1]) # 6
+
+      # Reshape it for later operations
+      inputs_poses = tf.reshape(inputs_poses, shape=[-1, 3 * 3 * i_size, 16])  # (?, 9x32=288, 16)
+      inputs_activations = tf.reshape(inputs_activations, shape=[-1, spatial_size, spatial_size, 3 * 3 * i_size]) # (?, 6, 6, 9x32=288)
+
+      with tf.variable_scope('votes') as scope:
+          
+          # Generate the votes by multiply it with the transformation matrices
+          votes = mat_transform(inputs_poses, o_size, size=batch_size*spatial_size*spatial_size)  # (864, 288, 32, 16)
+          
+          # Reshape the vote for EM routing
+          votes_shape = votes.get_shape()
+          votes = tf.reshape(votes, shape=[batch_size, spatial_size, spatial_size, votes_shape[-3], votes_shape[-2], votes_shape[-1]]) # (24, 6, 6, 288, 32, 16)
+          tf.logging.info(f&quot;{name} votes shape: {votes.get_shape()}&quot;)
+
+      with tf.variable_scope('routing') as scope:
+          
+          # beta_v and beta_a one for each output capsule: (1, 1, 1, 32)
+          beta_v = tf.get_variable(
+              name='beta_v', shape=[1, 1, 1, o_size], dtype=tf.float32,
+              initializer=initializers.xavier_initializer()
+          )
+          beta_a = tf.get_variable(
+              name='beta_a', shape=[1, 1, 1, o_size], dtype=tf.float32,
+              initializer=initializers.xavier_initializer()
+          )
+
+          # Use EM routing to compute the pose and activation
+          # votes (24, 6, 6, 3x3x32=288, 32, 16), inputs_activations (?, 6, 6, 288)
+          # poses (24, 6, 6, 32, 16), activation (24, 6, 6, 32)
+          poses, activations = matrix_capsules_em_routing(
+              votes, inputs_activations, beta_v, beta_a, iterations, name='em_routing'
+          )
+
+          # Reshape it back to 4x4 pose matrix
+          poses_shape = poses.get_shape()
+          # (24, 6, 6, 32, 4, 4)
+          poses = tf.reshape(
+              poses, [
+                  poses_shape[0], poses_shape[1], poses_shape[2], poses_shape[3], pose_size, pose_size
+              ]
+          )
+
+      tf.logging.info(f&quot;{name} pose shape: {poses.get_shape()}&quot;)
+      tf.logging.info(f&quot;{name} activations shape: {activations.get_shape()}&quot;)
+
+      return poses, activations
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;kernel_tile use tiling and convolution to prepare the input pose matrices and the activations to the correct spatial dimension for voting and EM-routing. (The code is pretty hard to understand so readers may simply treat it as a black box if it is too hard.)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def kernel_tile(input, kernel, stride):
+    &quot;&quot;&quot;This constructs a primary capsule layer using regular convolution layer.
+
+    :param inputs: shape (?, 14, 14, 32, 4, 4)
+    :param kernel: 3
+    :param stride: 2
+
+    :return output: (50, 5, 5, 3x3=9, 136)
+    &quot;&quot;&quot;
+
+    # (?, 14, 14, 32x(16)=512)
+    input_shape = input.get_shape()
+    size = input_shape[4]*input_shape[5] if len(input_shape)&amp;gt;5 else 1
+    input = tf.reshape(input, shape=[-1, input_shape[1], input_shape[2], input_shape[3]*size])
+
+
+    input_shape = input.get_shape()
+    tile_filter = np.zeros(shape=[kernel, kernel, input_shape[3],
+                                  kernel * kernel], dtype=np.float32)
+    for i in range(kernel):
+        for j in range(kernel):
+            tile_filter[i, j, :, i * kernel + j] = 1.0 # (3, 3, 512, 9)
+
+    # (3, 3, 512, 9)
+    tile_filter_op = tf.constant(tile_filter, dtype=tf.float32)
+
+    # (?, 6, 6, 4608)
+    output = tf.nn.depthwise_conv2d(input, tile_filter_op, strides=[
+                                    1, stride, stride, 1], padding='VALID')
+
+    output_shape = output.get_shape()
+    output = tf.reshape(output, shape=[-1, output_shape[1], output_shape[2], input_shape[3], kernel * kernel])
+    output = tf.transpose(output, perm=[0, 1, 2, 4, 3])
+
+    # (?, 6, 6, 9, 512)
+    return output
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mat_transform extracts the transformation matrices parameters as a TensorFlow trainable variable \(w\). It then multiplies with the “tiled” input pose matrices to generate the votes for the parent capsules.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def mat_transform(input, output_cap_size, size):
+    &quot;&quot;&quot;Compute the vote.
+
+    :param inputs: shape (size, 288, 16)
+    :param output_cap_size: 32
+
+    :return votes: (24, 5, 5, 3x3=9, 136)
+    &quot;&quot;&quot;
+
+    caps_num_i = int(input.get_shape()[1]) # 288
+    output = tf.reshape(input, shape=[size, caps_num_i, 1, 4, 4]) # (size, 288, 1, 4, 4)
+
+    w = slim.variable('w', shape=[1, caps_num_i, output_cap_size, 4, 4], dtype=tf.float32,
+                      initializer=tf.truncated_normal_initializer(mean=0.0, stddev=1.0)) # (1, 288, 32, 4, 4)
+    w = tf.tile(w, [size, 1, 1, 1, 1])  # (24, 288, 32, 4, 4)
+
+    output = tf.tile(output, [1, 1, output_cap_size, 1, 1]) # (size, 288, 32, 4, 4)
+
+    votes = tf.matmul(output, w) # (24, 288, 32, 4, 4)
+    votes = tf.reshape(votes, [size, caps_num_i, output_cap_size, 16]) # (size, 288, 32, 16)
+
+    return votes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;em-routing-coding&quot;&gt;EM routing coding&lt;/h4&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/al1.png&quot; alt=&quot;al1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the code implementation for the EM routing which calling m_step and e_step alternatively. By default, we ran the iterations 3 times. The main purpose of the EM routing is to compute the pose matrices and the activations of the output capsules. In the last iteration, the m_step already complete the last calculation of those parameters. Therefore we skip the e_step in the last iteration which mainly responsible for re-calculating the routing assignment \(r_{ij}\). The comments contain the tracing of the shape of tensors in ConvCaps1.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def matrix_capsules_em_routing(votes, i_activations, beta_v, beta_a, iterations, name):
+  &quot;&quot;&quot;The EM routing between input capsules (i) and output capsules (j).
+
+  :param votes: (N, OH, OW, kh x kw x i, o, 4 x 4) = (24, 6, 6, 3x3*32=288, 32, 16)
+  :param i_activation: activation from Level L (24, 6, 6, 288)
+  :param beta_v: (1, 1, 1, 32)
+  :param beta_a: (1, 1, 1, 32)
+  :param iterations: number of iterations in EM routing, often 3.
+  :param name: name.
+
+  :return: (pose, activation) of output capsules.
+  &quot;&quot;&quot;
+
+  votes_shape = votes.get_shape().as_list()
+
+  with tf.variable_scope(name) as scope:
+
+    # Match rr (routing assignment) shape, i_activations shape with votes shape for broadcasting in EM routing
+
+    # rr: [3x3x32=288, 32, 1]
+    # rr: routing matrix from each input capsule (i) to each output capsule (o)
+    rr = tf.constant(
+      1.0/votes_shape[-2], shape=votes_shape[-3:-1] + [1], dtype=tf.float32
+    )
+
+    # i_activations: expand_dims to (24, 6, 6, 288, 1, 1)
+    i_activations = i_activations[..., tf.newaxis, tf.newaxis]
+
+    # beta_v and beta_a: expand_dims to (1, 1, 1, 1, 32, 1]
+    beta_v = beta_v[..., tf.newaxis, :, tf.newaxis]
+    beta_a = beta_a[..., tf.newaxis, :, tf.newaxis]
+
+    # inverse_temperature schedule (min, max)
+    it_min = 1.0
+    it_max = min(iterations, 3.0)
+    for it in range(iterations):
+      inverse_temperature = it_min + (it_max - it_min) * it / max(1.0, iterations - 1.0)
+      o_mean, o_stdv, o_activations = m_step(
+        rr, votes, i_activations, beta_v, beta_a, inverse_temperature=inverse_temperature
+      )
+
+      # We skip the e_step call in the last iteration because we only 
+      # need to return the a_j and the mean from the m_stp in the last iteration
+      # to compute the output capsule activation and pose matrices  
+      if it &amp;lt; iterations - 1:
+        rr = e_step(
+          o_mean, o_stdv, o_activations, votes
+        )
+
+    # pose: (N, OH, OW, o 4 x 4) via squeeze o_mean (24, 6, 6, 32, 16)
+    poses = tf.squeeze(o_mean, axis=-3)
+
+    # activation: (N, OH, OW, o) via squeeze o_activationis [24, 6, 6, 32]
+    activations = tf.squeeze(o_activations, axis=[-3, -1])
+
+  return poses, activations
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the equation for the output capsule’s activation \(a_j\)&lt;/p&gt;
+
+\[a_j = sigmoid(\lambda(b_j - \sum_h cost^h_j))\]
+
+&lt;p&gt;λ is an inverse temperature parameter. In our implementation, we start from 1 and increment it by 1 after each routing iteration. The original paper does not specify how λ is increased and you can experiment different schemes instead. Here is our source code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# inverse_temperature schedule (min, max)
+it_min = 1.0
+it_max = min(iterations, 3.0)
+for it in range(iterations):
+  inverse_temperature = it_min + (it_max - it_min) * it / max(1.0, iterations - 1.0)
+
+  o_mean, o_stdv, o_activations = m_step(
+    rr, votes, i_activations, beta_v, beta_a, inverse_temperature=inverse_temperature
+  )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After the last iteration loop, \(a_j\) is output as the final activation of the output capsule \(j\). The mean \(\mu^h_j\) is used for the final value of the h-th component of the corresponding pose matrix. We later reshape those 16 components into a 4x4 pose matrix.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# pose: (N, OH, OW, o 4 x 4) via squeeze o_mean (24, 6, 6, 32, 16)
+poses = tf.squeeze(o_mean, axis=-3)
+
+# activation: (N, OH, OW, o) via squeeze o_activationis [24, 6, 6, 32]
+activations = tf.squeeze(o_activations, axis=[-3, -1])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;m-steps&quot;&gt;m-steps&lt;/h4&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;The algorithm for the m-steps.
+&lt;img src=&quot;/blog/assets/images/capsule/al2.png&quot; alt=&quot;al2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;m_step computes the mean and the variance of the parent capsules. Means and variances have the shape of (24, 6, 6, 1, 32, 16) and (24, 6, 6, 1, 32, 1) respectively in ConvCaps1.&lt;/p&gt;
+
+&lt;p&gt;The following is the code listing of the m-step method.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def m_step(rr, votes, i_activations, beta_v, beta_a, inverse_temperature):
+  &quot;&quot;&quot;The M-Step in EM Routing from input capsules i to output capsule j.
+  i: input capsules (32)
+  o: output capsules (32)
+  h: 4x4 = 16
+  output spatial dimension: 6x6
+  :param rr: routing assignments. shape = (kh x kw x i, o, 1) =(3x3x32, 32, 1) = (288, 32, 1)
+  :param votes. shape = (N, OH, OW, kh x kw x i, o, 4x4) = (24, 6, 6, 288, 32, 16)
+  :param i_activations: input capsule activation (at Level L). (N, OH, OW, kh x kw x i, 1, 1) = (24, 6, 6, 288, 1, 1)
+     with dimensions expanded to match votes for broadcasting.
+  :param beta_v: Trainable parameters in computing cost (1, 1, 1, 1, 32, 1)
+  :param beta_a: Trainable parameters in computing next level activation (1, 1, 1, 1, 32, 1)
+  :param inverse_temperature: lambda, increase over each iteration by the caller.
+
+  :return: (o_mean, o_stdv, o_activation)
+  &quot;&quot;&quot;
+
+  rr_prime = rr * i_activations
+
+  # rr_prime_sum: sum over all input capsule i
+  rr_prime_sum = tf.reduce_sum(rr_prime, axis=-3, keep_dims=True, name='rr_prime_sum')
+
+  # o_mean: (24, 6, 6, 1, 32, 16)
+  o_mean = tf.reduce_sum(
+    rr_prime * votes, axis=-3, keep_dims=True
+  ) / rr_prime_sum
+
+  # o_stdv: (24, 6, 6, 1, 32, 16)
+  o_stdv = tf.sqrt(
+    tf.reduce_sum(
+      rr_prime * tf.square(votes - o_mean), axis=-3, keep_dims=True
+    ) / rr_prime_sum
+  )
+
+  # o_cost_h: (24, 6, 6, 1, 32, 16)
+  o_cost_h = (beta_v + tf.log(o_stdv + epsilon)) * rr_prime_sum
+
+  # o_cost: (24, 6, 6, 1, 32, 1)
+  # o_activations_cost = (24, 6, 6, 1, 32, 1)
+  # yg: This is done for numeric stability.
+  # It is the relative variance between each channel determined which one should activate.
+  o_cost = tf.reduce_sum(o_cost_h, axis=-1, keep_dims=True)
+  o_cost_mean = tf.reduce_mean(o_cost, axis=-2, keep_dims=True)
+  o_cost_stdv = tf.sqrt(
+    tf.reduce_sum(
+      tf.square(o_cost - o_cost_mean), axis=-2, keep_dims=True
+    ) / o_cost.get_shape().as_list()[-2]
+  )
+  o_activations_cost = beta_a + (o_cost_mean - o_cost) / (o_cost_stdv + epsilon)
+
+  # (24, 6, 6, 1, 32, 1)
+  o_activations = tf.sigmoid(
+    inverse_temperature * o_activations_cost
+  )
+
+  return o_mean, o_stdv, o_activations
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;e-steps&quot;&gt;E-steps&lt;/h4&gt;
+
+&lt;p&gt;The algorithm for the e-steps.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/al3.png&quot; alt=&quot;al3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;e_step is mainly responsible for re-calculating the routing assignment (shape: 24, 6, 6, 288, 32, 1) after m_step updates the output activation \(a_j\) and the Gaussian models with new \(\mu\) and \(\sigma\).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def e_step(o_mean, o_stdv, o_activations, votes):
+  &quot;&quot;&quot;The E-Step in EM Routing.
+
+  :param o_mean: (24, 6, 6, 1, 32, 16)
+  :param o_stdv: (24, 6, 6, 1, 32, 16)
+  :param o_activations: (24, 6, 6, 1, 32, 1)
+  :param votes: (24, 6, 6, 288, 32, 16)
+
+  :return: rr
+  &quot;&quot;&quot;
+
+  o_p_unit0 = - tf.reduce_sum(
+    tf.square(votes - o_mean) / (2 * tf.square(o_stdv)), axis=-1, keep_dims=True
+  )
+
+  o_p_unit2 = - tf.reduce_sum(
+    tf.log(o_stdv + epsilon), axis=-1, keep_dims=True
+  )
+
+  # o_p is the probability density of the h-th component of the vote from i to j
+  # (24, 6, 6, 1, 32, 16)
+  o_p = o_p_unit0 + o_p_unit2
+
+  # rr: (24, 6, 6, 288, 32, 1)cd
+
+  zz = tf.log(o_activations + epsilon) + o_p
+  rr = tf.nn.softmax(
+    zz, dim=len(zz.get_shape().as_list())-2
+  )
+
+  return rr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;class-capsules&quot;&gt;Class capsules&lt;/h4&gt;
+
+&lt;p&gt;Recall from a couple sections ago, the output of ConvCaps2 is feed into the Class capsules layer. The output poses for ConvCaps2 has a shape of (24, 4, 4, 32, 4, 4).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;batch size of 24&lt;/li&gt;
+  &lt;li&gt;4x4 spatial output&lt;/li&gt;
+  &lt;li&gt;32 output channels&lt;/li&gt;
+  &lt;li&gt;4x4 pose matrix&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Instead of using a 3x3 filter in ConvCaps2, Class capsules use a 1x1 filter. Also, instead of outputting a 2D spatial output (6x6 in ConvCaps1 and 4x4 in ConvCaps2), it outputs 10 capsules each representing one of the 10 classes in the MNist. The code structure for the class capsules is very similar to the conv_capsule. It makes calls to compute the votes and then use EM routing to compute the capsule outputs.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def class_capsules(inputs, num_classes, iterations, batch_size, name):
+    &quot;&quot;&quot;
+    :param inputs: ((24, 4, 4, 32, 4, 4), (24, 4, 4, 32))
+    :param num_classes: 10
+    :param iterations: 3
+    :param batch_size: 24
+    :param name:
+    :return poses, activations: poses (24, 10, 4, 4), activation (24, 10).
+    &quot;&quot;&quot;
+
+    inputs_poses, inputs_activations = inputs # (24, 4, 4, 32, 4, 4), (24, 4, 4, 32)
+
+    inputs_shape = inputs_poses.get_shape()
+    spatial_size = int(inputs_shape[1])  # 4
+    pose_size = int(inputs_shape[-1])    # 4
+    i_size = int(inputs_shape[3])        # 32
+
+    # inputs_poses (24*4*4=384, 32, 16)
+    inputs_poses = tf.reshape(inputs_poses, shape=[batch_size*spatial_size*spatial_size, inputs_shape[-3], inputs_shape[-2]*inputs_shape[-2] ])
+
+    with tf.variable_scope(name) as scope:
+        with tf.variable_scope('votes') as scope:
+            # inputs_poses (384, 32, 16)
+            # votes: (384, 32, 10, 16)
+            votes = mat_transform(inputs_poses, num_classes, size=batch_size*spatial_size*spatial_size)
+            tf.logging.info(f&quot;{name} votes shape: {votes.get_shape()}&quot;)
+
+            # votes (24, 4, 4, 32, 10, 16)
+            votes = tf.reshape(votes, shape=[batch_size, spatial_size, spatial_size, i_size, num_classes, pose_size*pose_size])
+
+            # (24, 4, 4, 32, 10, 16)
+            votes = coord_addition(votes, spatial_size, spatial_size)
+
+            tf.logging.info(f&quot;{name} votes shape with coord addition: {votes.get_shape()}&quot;)
+
+        with tf.variable_scope('routing') as scope:
+            # beta_v and beta_a one for each output capsule: (1, 10)
+            beta_v = tf.get_variable(
+                name='beta_v', shape=[1, num_classes], dtype=tf.float32,
+                initializer=initializers.xavier_initializer()
+            )
+            beta_a = tf.get_variable(
+                name='beta_a', shape=[1, num_classes], dtype=tf.float32,
+                initializer=initializers.xavier_initializer()
+            )
+
+            # votes (24, 4, 4, 32, 10, 16) -&amp;gt; (24, 512, 10, 16)
+            votes_shape = votes.get_shape()
+            votes = tf.reshape(votes, shape=[batch_size, votes_shape[1] * votes_shape[2] * votes_shape[3], votes_shape[4], votes_shape[5]] )
+
+            # inputs_activations (24, 4, 4, 32) -&amp;gt; (24, 512)
+            inputs_activations = tf.reshape(inputs_activations, shape=[batch_size,
+                                                                       votes_shape[1] * votes_shape[2] * votes_shape[3]])
+
+            # votes (24, 512, 10, 16), inputs_activations (24, 512)
+            # poses (24, 10, 16), activation (24, 10)
+            poses, activations = matrix_capsules_em_routing(
+                votes, inputs_activations, beta_v, beta_a, iterations, name='em_routing'
+            )
+
+        # poses (24, 10, 16) -&amp;gt; (24, 10, 4, 4)
+        poses = tf.reshape(poses, shape=[batch_size, num_classes, pose_size, pose_size] )
+
+        # poses (24, 10, 4, 4), activation (24, 10)
+        return poses, activations
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To integrate the spatial location of the predicted class in the class capsules, we add the scaled x, y coordinate of the center of the receptive field of each capsule in ConvCaps2 to the first two elements of the vote. This is called &lt;strong&gt;Coordinate Addition&lt;/strong&gt;. According to the paper, this encourages the model to train the transformation matrix to produce values for those two elements to represent the position of the feature relative to the center of the capsule’s receptive field. The motivation of the coordinate addition is to have the first 2 elements of the votes (\(v^1_{jk}, v^2_{jk}\)) to predict the spatial coordinates (x, y) of the predicted class.&lt;/p&gt;
+
+&lt;p&gt;By retaining the spatial information in the capsule, we move beyond simply checking the presence of a feature. We encourage the system to verify the spatial relationship of features to avoid adversaries. i.e. if the spatial orders of features are wrong, their corresponding votes should not match.&lt;/p&gt;
+
+&lt;p&gt;The pseudo code below illustrates the key idea. The pose matrices for the ConvCaps2 output has the shape of (24, &lt;strong&gt;4, 4&lt;/strong&gt;, 32, 4, 4).  i.e. a spatial dimension of 4x4. We use the location of the capsule to locate the corresponding element in c1 below (a 4x4 matrix) which contains the scaled x coordinate of the center of the receptive field of the spatial capsule. We add this element value to \(v^1_{jk}\). For the second element \(v^2_{jk}\) of the vote, we repeat the same process using c2.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Spatial output of ConvCaps2 is 4x4
+v1 = [[[8.],  [12.], [16.], [20.]],
+      [[8.],  [12.], [16.], [20.]],
+      [[8.],  [12.], [16.], [20.]],
+      [[8.],  [12.], [16.], [20.]],
+     ]
+
+v2 = [[[8.],  [8.],  [8.],  [8]],
+      [[12.], [12.], [12.], [12.]],
+      [[16.], [16.], [16.], [16.]],
+      [[20.], [20.], [20.], [20.]]
+         ]
+
+c1 = np.array(v1, dtype=np.float32) / 28.0
+c2 = np.array(v2, dtype=np.float32) / 28.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is the final code which looks far more complicated in order to handle any image size.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def coord_addition(votes, H, W):
+    &quot;&quot;&quot;Coordinate addition.
+
+    :param votes: (24, 4, 4, 32, 10, 16)
+    :param H, W: spaital height and width 4
+
+    :return votes: (24, 4, 4, 32, 10, 16)
+    &quot;&quot;&quot;
+    coordinate_offset_hh = tf.reshape(
+      (tf.range(H, dtype=tf.float32) + 0.50) / H, [1, H, 1, 1, 1]
+    )
+    coordinate_offset_h0 = tf.constant(
+      0.0, shape=[1, H, 1, 1, 1], dtype=tf.float32
+    )
+    coordinate_offset_h = tf.stack(
+      [coordinate_offset_hh, coordinate_offset_h0] + [coordinate_offset_h0 for _ in range(14)], axis=-1
+    )  # (1, 4, 1, 1, 1, 16)
+
+    coordinate_offset_ww = tf.reshape(
+      (tf.range(W, dtype=tf.float32) + 0.50) / W, [1, 1, W, 1, 1]
+    )
+    coordinate_offset_w0 = tf.constant(
+      0.0, shape=[1, 1, W, 1, 1], dtype=tf.float32
+    )
+    coordinate_offset_w = tf.stack(
+      [coordinate_offset_w0, coordinate_offset_ww] + [coordinate_offset_w0 for _ in range(14)], axis=-1
+    ) # (1, 1, 4, 1, 1, 16)
+
+    # (24, 4, 4, 32, 10, 16)
+    votes = votes + coordinate_offset_h + coordinate_offset_w
+
+    return votes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;spread-loss&quot;&gt;Spread loss&lt;/h3&gt;
+
+&lt;p&gt;To compute the spread loss:&lt;/p&gt;
+
+\[L = \sum_{i \neq t} (\max(0, m - (a_t - a_i)))^2\]
+
+&lt;p&gt;The value of \(m\) starts from 0.1. After each epoch, we increase the value by 0.1 until it reached the maximum of 0.9. This prevents too many dead capsules in the early phase of the training.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def spread_loss(labels, activations, iterations_per_epoch, global_step, name):
+    &quot;&quot;&quot;Spread loss
+
+    :param labels: (24, 10] in one-hot vector
+    :param activations: [24, 10], activation for each class
+    :param margin: increment from 0.2 to 0.9 during training
+
+    :return: spread loss
+    &quot;&quot;&quot;
+
+    # Margin schedule
+    # Margin increase from 0.2 to 0.9 by an increment of 0.1 for every epoch
+    margin = tf.train.piecewise_constant(
+        tf.cast(global_step, dtype=tf.int32),
+        boundaries=[
+            (iterations_per_epoch * x) for x in range(1, 8)
+        ],
+        values=[
+            x / 10.0 for x in range(2, 10)
+        ]
+    )
+
+    activations_shape = activations.get_shape().as_list()
+
+    with tf.variable_scope(name) as scope:
+        # mask_t, mask_f Tensor (?, 10)
+        mask_t = tf.equal(labels, 1)      # Mask for the true label
+        mask_i = tf.equal(labels, 0)      # Mask for the non-true label
+
+        # Activation for the true label
+        # activations_t (?, 1)
+        activations_t = tf.reshape(
+            tf.boolean_mask(activations, mask_t), shape=(tf.shape(activations)[0], 1)
+        )
+        
+        # Activation for the other classes
+        # activations_i (?, 9)
+        activations_i = tf.reshape(
+            tf.boolean_mask(activations, mask_i), [tf.shape(activations)[0], activations_shape[1] - 1]
+        )
+
+        l = tf.reduce_sum(
+            tf.square(
+                tf.maximum(
+                    0.0,
+                    margin - (activations_t - activations_i)
+                )
+            )
+        )
+        tf.losses.add_loss(l)
+
+        return l
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;result&quot;&gt;Result&lt;/h3&gt;
+
+&lt;p&gt;The following is the histogram of distances of votes to the mean of each of the 5 final capsules after each routing iteration. Each distance point is weighted by its assignment probability. With a human image as input, we expect, after 3 iterations, the difference is the smallest (closer to 0) for the human column. (any distances greater than 0.05 will not be shown here.)&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/iter.png&quot; alt=&quot;iter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The error rate for the Capsule network is generally lower than a CNN model with similar number of layers as shown below.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/resu.png&quot; alt=&quot;resu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Source from the Matrix capsules with EM routing paper)&lt;/p&gt;
+
+&lt;p&gt;The core idea of FGSM (fast gradient sign method) adversary is to add some noise on every step of optimization to drift the classification away from the target class. It slightly modifies the image to maximize the error based on the gradient information. Matrix routing is shown to be less vulnerable to FGSM adversaries comparing to CNN.&lt;/p&gt;
+
+&lt;h3 id=&quot;visualization&quot;&gt;Visualization&lt;/h3&gt;
+
+&lt;p&gt;The pose matrices in Class Capsules are interpreted as the latent representation of the image. By adjusting the first 2 dimension of the pose and reconstructing it through a decoder (similar to the one in the previous capsule article), we can visualize what the Capsule Network learns for the MNist data.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/m2.png&quot; alt=&quot;m2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;(Source from the Matrix capsules with EM routing paper)&lt;/p&gt;
+
+&lt;p&gt;Some digits are slightly rotated or moved which demonstrate the Class Capsules are learning the pose information of the MNist dataset.&lt;/p&gt;
+
+&lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
+
+&lt;p&gt;Part of the code implementation in computing the vote and the EM-routing is modified from &lt;a href=&quot;https://github.com/gyang274/capsulesEM&quot;&gt;Guang Yang&lt;/a&gt; or &lt;a href=&quot;https://github.com/www0wwwjs1/Matrix-Capsules-EM-Tensorflow&quot;&gt;Suofei Zhang&lt;/a&gt; implementations. Our source code is located at the &lt;a href=&quot;https://github.com/jhui/machine_learning/tree/master/capsule_em&quot;&gt;github&lt;/a&gt;. To run,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Configure the mnist_config.py and cap_config.py according to your environment.&lt;/li&gt;
+  &lt;li&gt;Run the download_and_convert_mnist.py before running train.py.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please note that the source code is for illustration purpose with no support at this moment. Readers may refer to other implementations if you have problems to trouble shooting any issues that may come up. Zhang’s implementation seems easier to understand but Yang implementation is closer to the original paper.&lt;/p&gt;</content><author><name></name></author><summary type="html">A simple tutorial in understanding Matrix capsules with EM Routing in Capsule Networks</summary></entry><entry><title type="html">Understanding Dynamic Routing between Capsules</title><link href="http://hmthanh.github.io/blog/2017/11/03/Understanding-Dynamic-Routing-between-Capsules.html" rel="alternate" type="text/html" title="Understanding Dynamic Routing between Capsules" /><published>2017-11-03T18:00:00+07:00</published><updated>2017-11-03T18:00:00+07:00</updated><id>http://hmthanh.github.io/blog/2017/11/03/Understanding-Dynamic-Routing-between-Capsules</id><content type="html" xml:base="http://hmthanh.github.io/blog/2017/11/03/Understanding-Dynamic-Routing-between-Capsules.html">&lt;p&gt;Source : &lt;a href=&quot;https://jhui.github.io/2017/11/03/Dynamic-Routing-Between-Capsules/&quot;&gt;Jonathan Hui blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul class=&quot;table-of-content&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#cnn-challenges&quot; id=&quot;markdown-toc-cnn-challenges&quot;&gt;CNN challenges&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#equivariance&quot; id=&quot;markdown-toc-equivariance&quot;&gt;Equivariance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#capsule&quot; id=&quot;markdown-toc-capsule&quot;&gt;Capsule&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#dynamic-routing&quot; id=&quot;markdown-toc-dynamic-routing&quot;&gt;Dynamic routing&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#intuition&quot; id=&quot;markdown-toc-intuition&quot;&gt;Intuition&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#calculating-a-capsule-output&quot; id=&quot;markdown-toc-calculating-a-capsule-output&quot;&gt;Calculating a capsule output&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#iterative-dynamic-routing&quot; id=&quot;markdown-toc-iterative-dynamic-routing&quot;&gt;Iterative dynamic Routing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#max-pooling-shortcoming&quot; id=&quot;markdown-toc-max-pooling-shortcoming&quot;&gt;Max pooling shortcoming&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#significant-of-routing-by-agreement-with-capsules&quot; id=&quot;markdown-toc-significant-of-routing-by-agreement-with-capsules&quot;&gt;Significant of routing-by-agreement with capsules&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#capsnet-architecture&quot; id=&quot;markdown-toc-capsnet-architecture&quot;&gt;CapsNet architecture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#loss-function-margin-loss&quot; id=&quot;markdown-toc-loss-function-margin-loss&quot;&gt;Loss function (Margin loss)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#capsnet-model&quot; id=&quot;markdown-toc-capsnet-model&quot;&gt;CapsNet model&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#primarycapsules&quot; id=&quot;markdown-toc-primarycapsules&quot;&gt;PrimaryCapsules&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#squash-function&quot; id=&quot;markdown-toc-squash-function&quot;&gt;Squash function&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#digicaps-with-dynamic-routing&quot; id=&quot;markdown-toc-digicaps-with-dynamic-routing&quot;&gt;DigiCaps with dynamic routing&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#image-reconstruction&quot; id=&quot;markdown-toc-image-reconstruction&quot;&gt;Image reconstruction&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#reconstruction-loss&quot; id=&quot;markdown-toc-reconstruction-loss&quot;&gt;Reconstruction loss&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-capsule-is-learning&quot; id=&quot;markdown-toc-what-capsule-is-learning&quot;&gt;What capsule is learning?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#sabour-implementation&quot; id=&quot;markdown-toc-sabour-implementation&quot;&gt;Sabour implementation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This article covers the technical paper by Sara Sabour, Nicholas Frosst and Geoffrey Hinton on &lt;a href=&quot;https://arxiv.org/pdf/1710.09829.pdf&quot;&gt;Dynamic Routing between Capsules&lt;/a&gt;. In this article, we will describe the basic Capsule concept and apply it with the Capsule network &lt;em&gt;CapsNet&lt;/em&gt; to detect digits in MNist. In the last third of the article, we go through a detail implementation. The source code implementation is originated from &lt;a href=&quot;https://github.com/XifengGuo/CapsNet-Keras&quot;&gt;XifengGuo&lt;/a&gt; using Keras with Tensorflow.&lt;/p&gt;
+
+&lt;h3 id=&quot;cnn-challenges&quot;&gt;CNN challenges&lt;/h3&gt;
+
+&lt;p&gt;In deep learning, the activation level of a neuron is often interpreted as the likelihood of detecting a specific feature.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/fc.jpg&quot; alt=&quot;fc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If we pass the Picasso’s “Portrait of woman in d`hermine pass” into a CNN classifier, how likely that the classifier may mistaken it as a real human face?&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/picasso.jpg&quot; alt=&quot;picasso&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;CNN is good at detecting features but less effective at exploring the spatial relationships among features (perspective, size, orientation). For example, the following picture may fool a &lt;em&gt;simple&lt;/em&gt; CNN model in believing that this a good sketch of a human face.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/face2.jpg&quot; alt=&quot;face2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://sharenoesis.com/article/draw-face/84&quot;&gt;(image source)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A simple CNN model can extract the features for nose, eyes and mouth correctly but will wrongly activate the neuron for the face detection. Without realize the mis-match in spatial orientation and size, the activation for the face detection will be too high.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/face4.jpg&quot; alt=&quot;face4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, we imagine that each neuron contains the likelihood as well as properties of the features. For example, it outputs a vector containing [likelihood, orientation, size]. With this spatial information, we can detect the in-consistence in the orientation and size among the nose, eyes and ear features and therefore output a much lower activation for the face detection.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/face5.jpg&quot; alt=&quot;face5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead of using the term neurons, the technical paper uses the term &lt;strong&gt;capsules&lt;/strong&gt; to indicate that capsules output a vector instead of a single scaler value.&lt;/p&gt;
+
+&lt;h3 id=&quot;equivariance&quot;&gt;Equivariance&lt;/h3&gt;
+
+&lt;p&gt;Conceptually, a CNN model uses multiple neurons and layers in capturing different feature’s variants:&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/cnn1.jpg&quot; alt=&quot;cnn1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A capsule network share the same capsule to detect multiple variants in a simpler network.&lt;/p&gt;
+
+&lt;p style=&quot;width: 45%; float:left;&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/c21.jpg&quot; alt=&quot;GM2&quot; /&gt;&lt;/p&gt;
+
+&lt;p style=&quot;width: 45%; float:right;&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/c22.jpg&quot; alt=&quot;GM2&quot; /&gt;&lt;/p&gt;
+
+&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Equivariance&lt;/strong&gt; is the detection of objects that can transform to each other. Intuitively, a capsule detects the face is rotated right 20° (or rotated left 20°) rather than realizes the face matched a variant that is rotated right 20°. By forcing the model to learn the feature variant in a capsule, we &lt;em&gt;may&lt;/em&gt; extrapolate possible variants more effectively with less training data.&lt;/p&gt;
+
+&lt;p&gt;MNist dataset contains 55,000 training data. i.e. 5,500 samples per digits. However, it is unlikely that children need to read this large amount of samples to learn digits. Our existing deep learning models including CNN seem inefficient in utilizing datapoints.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;With feature property as part of the information extracted by capsules, we &lt;em&gt;may&lt;/em&gt; generalize the model better without an over extensive amount of labeled data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;capsule&quot;&gt;Capsule&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A capsule is a group of neurons that not only capture the likelihood but also the parameters of the specific feature.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For example, the first row below indicates the probabilities of detecting the number “7” by a neuron. A 2-D capsule is formed by combining 2 neurons. This capsule outputs a 2-D vector in detecting the number “7”. For the first image in the second row, it outputs a vector \(v = (0, 0.9)\). The magnitude of the vector \(\| v \| = \sqrt{ 0^2 + 0.9^2 } = 0.9\) corresponds to the probability of detecting “7”. The second image of each row looks more like a “1” than a “7”. Therefore its corresponding likelihood as “7” is smaller (smaller scaler value or smaller vector’s magnitude but with the same orientation) .&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/cap1.jpg&quot; alt=&quot;cap1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the third row, we rotate the image by 20°. The capsule will generate vectors with the same magnitude but different orientations. Here, the angle of the vector represents the angle of rotation for the number “7”. As we can image, we can add 2 more neurons to a capsule to capture the size and stroke width.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/style.jpg&quot; alt=&quot;style&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We call the output vector of a capsule as the &lt;strong&gt;activity vector&lt;/strong&gt; with magnitude represents the probability of detecting a feature and its orientation represents its parameters (properties).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;dynamic-routing&quot;&gt;Dynamic routing&lt;/h3&gt;
+
+&lt;p&gt;Dynamic routing groups capsules to form a parent capsule, and it calculates the capsule’s output.&lt;/p&gt;
+
+&lt;h4 id=&quot;intuition&quot;&gt;Intuition&lt;/h4&gt;
+
+&lt;p&gt;We collect 3 similar sketches with different scale and orientation, and we measures the horizontal width of the mouth and the eye in pixels. They are
+\(s^{(1)}=(100, 66), s^{(2)}=(200, 131) \text{ and } s^{(3)}=( 50, 33).\)&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/faa2.jpg&quot; alt=&quot;faa2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&quot;http://sharenoesis.com/article/draw-face/84&quot;&gt;Image modified from&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Let’s assume \(W_m =2, W_e=3\), and we calculate a vote from the mouth and the eye for \(s^{(1)}\) as:&lt;/p&gt;
+
+\[\begin{split}
+v^{(1)}_m &amp;amp; = W_m \times width_m = 2 \times 100 = 200 \
+v^{(1)}_e &amp;amp; = W_e \times width_e = 3 \times 66 = 198 \
+\end{split}\]
+
+&lt;p&gt;We realize both \(v^{(1)}_m\) and \(v^{(1)}_e\) are very similar. When we repeat it with other sketches, we get the same findings. So the mouth capsule and the eye capsule can be strongly related to a parent capsule with width approximate 200 pixels. From our experience, a face is 2 times (\(W_m=2\)) the width of a mouth and 3 times the width (\(W_e=3\)) of an eye. So the parent capsule we detected is a face capsule. Of course, we can make it more accurate by adding more properties like height or color. In dynamic routing, we transform the vectors of an input capsules with a transformation matrix \(W\) to form a vote, and group capsules with similar votes. Those votes eventually becomes the output vector of the parent capsule. So how can we know \(W\)? Just do it in the deep learning way: backpropagation with a cost function.&lt;/p&gt;
+
+&lt;h4 id=&quot;calculating-a-capsule-output&quot;&gt;Calculating a capsule output&lt;/h4&gt;
+
+&lt;p&gt;For a capsule, the input \(u_i\) and the output \(v_j\) of a capsule are vectors.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/fc2.jpg&quot; alt=&quot;fc2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We apply a &lt;strong&gt;transformation matrix&lt;/strong&gt; \(W_{ij}\) to the capsule output \(u_i\) of the pervious layer. For example, with a \(p \times k\) matrix, we transform \(u_i\) to \(\hat{u}_{j \vert i}\) from k-dimension to p-dimension. (\((p \times k) \times (k \times 1) \implies p \times 1\)) Then we compute a weighted sum \(s_j\) with weights \(c_{ij}\).&lt;/p&gt;
+
+\[\begin{split}
+\hat{u}_{j|i} &amp;amp;= W_{ij} u_i \
+s_j &amp;amp; = \sum_i c_{ij}  \hat{u}_{j|i} \
+\end{split}\]
+
+&lt;p&gt;\(c_{ij}\) are &lt;strong&gt;coupling coefficients&lt;/strong&gt; that are calculated by the iterative dynamic routing process (discussed next) and \(\sum_{j} c_{ij}\) are designed to sum to one. Conceptually, \(c_{ij}\) measures how likely capsule \(i\) may activate capsule \(j\).&lt;/p&gt;
+
+&lt;p&gt;Instead of applying a ReLU function, we apply a squashing function to \(s_j\) so the final output vector \(v_j\) of the capsule has length between 0 and 1. This function shrinks small vectors to zero and large vectors to unit vectors.&lt;/p&gt;
+
+\[\begin{split}
+v_{j} &amp;amp; = \frac{\| s_{j} \|^2}{ 1 + \| s_{j} \|^2} \frac{s_{j}}{ \| s_{j} \|}  \
+\end{split}\]
+
+\[\begin{split}
+v_{j} &amp;amp; \approx \| s_{j} \| s_{j}  \quad &amp;amp; \text{for } s_{j} \text { is small. } \
+v_{j} &amp;amp; \approx \frac{s_{j}}{ \| s_{j} \|}  \quad &amp;amp; \text{for } s_{j} \text { is large. } \
+\end{split}\]
+
+&lt;h3 id=&quot;iterative-dynamic-routing&quot;&gt;Iterative dynamic Routing&lt;/h3&gt;
+
+&lt;p&gt;In capsule, we use iterative dynamic routing to compute the capsule output by calculating an intermediate value \(c_{ij}\) (coupling coefficient).&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/face6.jpg&quot; alt=&quot;face6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Recall that the &lt;strong&gt;prediction vector&lt;/strong&gt; \(\hat{u}_{j \vert i}\) is computed as:&lt;/p&gt;
+
+\[\begin{split}
+\hat{u}_{j|i} &amp;amp;= W_{ij} u_i \
+\end{split}\]
+
+&lt;p&gt;and the &lt;strong&gt;activity vector&lt;/strong&gt; \(v_j\) (the capsule \(j\) output) is:&lt;/p&gt;
+
+\[\begin{split}
+s_j &amp;amp; = \sum_i c_{ij}  \hat{u}_{j|i} \
+v_{j} &amp;amp; = \frac{\| s_{j} \|^2}{ 1 + \| s_{j} \|^2} \frac{s_{j}}{ \| s_{j} \|}  \
+\end{split}\]
+
+&lt;p&gt;Intuitively, prediction vector \(\hat{u}_{j \vert i}\) is the prediction (&lt;strong&gt;vote&lt;/strong&gt;) from the capsule \(i\) on the output of the capsule \(j\) above. If the activity vector has close similarity with the prediction vector, we conclude that both capsules are highly related. Such similarity is measured using the scalar product of the prediction and the activity vector.&lt;/p&gt;
+
+\[\begin{split}
+b_{ij} ← \hat{u}_{j \vert i} \cdot v_j \
+\end{split}\]
+
+&lt;p&gt;Therefore, the similarity score \(b_{ij}\) takes into account on both likeliness and the feature properties, instead of just likeliness in neurons. Also, \(b_{ij}\) remains low if the activation \(u_i\) of capsule \(i\) is low since \(\hat{u}_{j \vert i}\) length is proportional to \(u_i\). i.e. \(b_{ij}\) should remain low between the mouth capsule and the face capsule if the mouth capsule is not activated.&lt;/p&gt;
+
+&lt;p&gt;The coupling coefficients \(c_{ij}\) is computed as the softmax of \(b_{ij}\):&lt;/p&gt;
+
+\[\begin{split}
+c_{ij} &amp;amp; = \frac{\exp{b_{ij}}} {\sum_k \exp{b_{ik}} } \
+\end{split}\]
+
+&lt;p&gt;To make \(b_{ij}\) more accurate , it is updated iteratively in multiple iterations (typically in 3 iterations).&lt;/p&gt;
+
+\[\begin{split}
+b_{ij} ← b_{ij} + \hat{u}_{j \vert i} \cdot v_j \
+\end{split}\]
+
+&lt;p&gt;Here is the final pseudo code for the dynamic routing:&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/alg.jpg&quot; alt=&quot;alg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1710.09829.pdf&quot;&gt;Source Sara Sabour, Nicholas Frosst, Geoffrey Hinton&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Routing a capsule to the capsule in the layer above based on relevancy is called &lt;strong&gt;Routing-by-agreement&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The dynamic routing is not a complete replacement of the backpropagation. The transformation matrix \(W\) is still trained with the backpropagation using a cost function. However, we use dynamic routing to compute the output of a capsule. We compute \(c_{ij}\) to quantify the connection between a capsule and its parent capsules. This value is important but short lived. We re-initialize it to 0 for every datapoint before the dynamic routing calculation. To calculate a capsule output, training or testing, we always redo the dynamic routing calculation.&lt;/p&gt;
+
+&lt;h3 id=&quot;max-pooling-shortcoming&quot;&gt;Max pooling shortcoming&lt;/h3&gt;
+
+&lt;p&gt;The max pooling in a CNN handles translational variance. Even a feature is slightly moved, if it is still within the pooling window, it can still be detected. Nevertheless, this approach keeps only the max feature (the most dominating) and throws away the others. Capsules maintain a weighted sum of features from the previous layer. Hence, it is more suitable in detecting overlapping features. For example detecting multiple overlapping digits in the handwriting:&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/over.jpg&quot; alt=&quot;over&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;significant-of-routing-by-agreement-with-capsules&quot;&gt;Significant of routing-by-agreement with capsules&lt;/h3&gt;
+
+&lt;p&gt;In a fully connected network, we calculate the neuron with&lt;/p&gt;
+
+\[y_j =  ReLU( \sum_{i} W_{ij} x_i + b_{j} ),\]
+
+&lt;p&gt;and \(W\) is trained by the backpropagation with a global cost function. Iterative dynamic routing provides an alternative of calculating how a capsule is activated by using local features’ properties. Theoretically, we can group capsules better and simpler to form a &lt;strong&gt;parse tree&lt;/strong&gt; with reduced risk of adversaries.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/face7.jpg&quot; alt=&quot;face7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The iterative dynamic routing with capsules is just one showcase in demonstrating the routing-by-agreement. In a second paper on capsules &lt;em&gt;Matrix capsules with EM routing&lt;/em&gt;, a matrix capsule [likeliness, 4x4 pose matrix] is proposed with a new Expectation-maximization (EM) routing. The pose matrices are designed to capture different viewpoints so a capsule can capture objects with different azimuths and elevations.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/data.png&quot; alt=&quot;data&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(Source from the paper Matrix capsules with EM routing)&lt;/p&gt;
+
+&lt;p&gt;Matrix capsules apply a clustering technique, the EM routing, to cluster related capsules to form a parent capsule. Even the viewpoint may change, the votes will change in a co-ordinate way from the red dots to the pink dots below. So the EM routing can still cluster the same children capsules together.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/cluster2.jpg&quot; alt=&quot;cluster2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The first paper opens a new approach in the deep learning, and the second paper explores deeper into its potential. For those interested, there are more details in my second article on &lt;a href=&quot;https://jhui.github.io/2017/11/14/Matrix-Capsules-with-EM-routing-Capsule-Network/&quot;&gt;Matrix capsule&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;capsnet-architecture&quot;&gt;CapsNet architecture&lt;/h3&gt;
+
+&lt;p&gt;Finally, we apply capsules to build the CapsNet to classify the MNist digits. The following is the architecture using CapsNet.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/arch1.jpg&quot; alt=&quot;arch1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Image is feed into the ReLU Conv1 which is a standard convolution layer. It applies 256 9x9 kernels to generate an output with 256 channels (feature maps). With stride 1 and no padding, the spatial dimension is reduced to 20x20. ( 28-9+1=20)&lt;/p&gt;
+
+&lt;p&gt;It is then feed into PrimaryCapsules which is a modified convolution layer supporting capsules. It generates a 8-D vector instead of a scalar. PrimaryCapsules used 8x32 kernels to generate 32 8-D capsules. (i.e. 8 output neurons are grouped together to form a capsule) PrimaryCapsules uses 9x9 kernels with stride 2 and no padding to reduce the spatial dimension from 20x20 to 6x6 ( \(\lfloor \frac{20-9}{2} \rfloor + 1 = 6\)). In PrimaryCapsules, we have 32x6x6 capsules.&lt;/p&gt;
+
+&lt;p&gt;It is then feed into DigiCaps which apply a transformation matrix \(W_{ij}\) with shape 16x8 to convert the 8-D capsule to a 16-D capsule for each class \(j\) (from 1 to 10).&lt;/p&gt;
+
+\[\begin{split}
+\hat{u}_{j|i} &amp;amp;= W_{ij} u_i \
+\end{split}\]
+
+&lt;p&gt;The final output \(v_j\) for class \(j\) is computed as:&lt;/p&gt;
+
+\[\begin{split}
+s_j &amp;amp; = \sum_i c_{ij}  \hat{u}_{j|i} \
+v_{j} &amp;amp; = \frac{\| s_{j} \|^2}{ 1 + \| s_{j} \|^2} \frac{s_{j}}{ \| s_{j} \|}  \
+\end{split}\]
+
+&lt;p&gt;Because there are 10 classes, the shape of DigiCaps is 10x16 (10 16-D vector.) Each vector \(v_j\) acts as the capsule for class \(j\). The probability of the image to be classify as \(j\) is computed by \(\| v_j \|\). In our example, the true label is 7 and \(v_7\) is the latent representation of our input. With a 2 hidden fully connected layers, we can reconstruct the 28x28 image from \(v_7\).&lt;/p&gt;
+
+&lt;p&gt;Here is the summary of each layers:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Layer Name&lt;/th&gt;
+      &lt;th&gt;Apply&lt;/th&gt;
+      &lt;th&gt;Output shape&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Image&lt;/td&gt;
+      &lt;td&gt;Raw image array&lt;/td&gt;
+      &lt;td&gt;28x28x1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ReLU Conv1&lt;/td&gt;
+      &lt;td&gt;Convolution layer with 9x9 kernels output 256 channels, stride 1, no padding with ReLU&lt;/td&gt;
+      &lt;td&gt;20x20x256&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PrimaryCapsules&lt;/td&gt;
+      &lt;td&gt;Convolution capsule layer with 9x9 kernel output 32x6x6 8-D capsule, stride 2, no padding&lt;/td&gt;
+      &lt;td&gt;6x6x32x8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DigiCaps&lt;/td&gt;
+      &lt;td&gt;Capsule output computed from a \(W_{ij}\) (16x8 matrix) between \(u_i\) and \(v_j\) (\(i\) from 1 to 32x6x6 and \(j\) from 1 to 10).&lt;/td&gt;
+      &lt;td&gt;10x16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;FC1&lt;/td&gt;
+      &lt;td&gt;Fully connected with ReLU&lt;/td&gt;
+      &lt;td&gt;512&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;FC2&lt;/td&gt;
+      &lt;td&gt;Fully connected with ReLU&lt;/td&gt;
+      &lt;td&gt;1024&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Output image&lt;/td&gt;
+      &lt;td&gt;Fully connected with sigmoid&lt;/td&gt;
+      &lt;td&gt;784 (28x28)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Our capsule layers use convolution kernels to explore locality information.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;loss-function-margin-loss&quot;&gt;Loss function (Margin loss)&lt;/h3&gt;
+
+&lt;p&gt;In our example, we want to detect multiple digits in a picture. Capsules use a separate margin loss \(L_c\) for each category \(c\) digit present in the picture:&lt;/p&gt;
+
+\[L_c = T_c \max(0, m^+ − \|v_c\|)^2 + λ (1 − T_c) \max(0, \|v_c\| − m^−)^2\]
+
+&lt;p&gt;which \(T_c = 1\) if an object of class \(c\) is present. \(m^+ = 0.9\) and \(m^− = 0.1\). The λ down-weighting (default 0.5) stops the initial learning from shrinking the activity
+vectors of all classes. The total loss is just the sum of the losses of all classes.&lt;/p&gt;
+
+&lt;p&gt;Computing the margin loss in Keras&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def margin_loss(y_true, y_pred):
+    &quot;&quot;&quot;
+    :param y_true: [None, n_classes]
+    :param y_pred: [None, num_capsule]
+    :return: a scalar loss value.
+    &quot;&quot;&quot;
+    L = y_true * K.square(K.maximum(0., 0.9 - y_pred)) + \
+        0.5 * (1 - y_true) * K.square(K.maximum(0., y_pred - 0.1))
+
+    return K.mean(K.sum(L, 1))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;capsnet-model&quot;&gt;CapsNet model&lt;/h3&gt;
+
+&lt;p&gt;Here is the Keras code in creating the CapsNet model:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def CapsNet(input_shape, n_class, num_routing):
+    &quot;&quot;&quot;
+    :param input_shape: (None, width, height, channels)
+    :param n_class: number of classes
+    :param num_routing: number of routing iterations
+    :return: A Keras Model with 2 inputs (image, label) and 
+             2 outputs (capsule output and reconstruct image)
+    &quot;&quot;&quot;
+    # Image
+    x = layers.Input(shape=input_shape)
+
+    # ReLU Conv1
+    conv1 = layers.Conv2D(filters=256, kernel_size=9, strides=1, 
+	             padding='valid', activation='relu', name='conv1')(x)
+
+    # PrimaryCapsules: Conv2D layer with `squash` activation, 
+    # reshape to [None, num_capsule, dim_vector]
+    primarycaps = PrimaryCap(conv1, dim_vector=8, n_channels=32, 
+	                    kernel_size=9, strides=2, padding='valid')
+
+    # DigiCap: Capsule layer. Routing algorithm works here.
+    digitcaps = DigiCaps(num_capsule=n_class, dim_vector=16, 
+	        num_routing=num_routing, name='digitcaps')(primarycaps)
+
+    # The length of the capsule's output vector 
+    out_caps = Length(name='out_caps')(digitcaps)
+
+    # Decoder network.
+    y = layers.Input(shape=(n_class,))
+
+    # The true label is used to extract the corresponding vj
+    masked = Mask()([digitcaps, y])  
+    x_recon = layers.Dense(512, activation='relu')(masked)
+    x_recon = layers.Dense(1024, activation='relu')(x_recon)
+    x_recon = layers.Dense(784, activation='sigmoid')(x_recon)
+    x_recon = layers.Reshape(target_shape=[28, 28, 1], name='out_recon')(x_recon)
+
+    # two-input-two-output keras Model
+    return models.Model([x, y], [out_caps, x_recon])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The length of the capsule’s output vector \(\| v_j \|\) corresponds to the probability that it belong to the class \(j\). For example, \(\| v_7 \|\) is the probability of the input image belongs to 7.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class Length(layers.Layer):
+    def call(self, inputs, **kwargs):
+        # L2 length which is the square root 
+        # of the sum of square of the capsule element
+        return K.sqrt(K.sum(K.square(inputs), -1))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;primarycapsules&quot;&gt;PrimaryCapsules&lt;/h4&gt;
+
+&lt;p&gt;PrimaryCapsules converts 20x20 256 channels into 32x6x6 8-D capsules.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def PrimaryCap(inputs, dim_vector, n_channels, kernel_size, strides, padding):
+    &quot;&quot;&quot;
+    Apply Conv2D `n_channels` times and concatenate all capsules
+    :param inputs: 4D tensor, shape=[None, width, height, channels]
+    :param dim_vector: the dim of the output vector of capsule
+    :param n_channels: the number of types of capsules
+    :return: output tensor, shape=[None, num_capsule, dim_vector]
+    &quot;&quot;&quot;
+    output = layers.Conv2D(filters=dim_vector*n_channels, kernel_size=kernel_size, strides=strides, padding=padding)(inputs)
+    outputs = layers.Reshape(target_shape=[-1, dim_vector])(output)
+    return layers.Lambda(squash)(outputs)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;squash-function&quot;&gt;Squash function&lt;/h4&gt;
+
+&lt;p&gt;Squash function behaves like a sigmoid function to squash a vector such that its length falls between 0 and 1.&lt;/p&gt;
+
+\[\begin{split}
+v_{j} &amp;amp; = \frac{\| s_{j} \|^2}{ 1 + \| s_{j} \|^2} \frac{s_{j}}{ \| s_{j} \|}  \
+\end{split}\]
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;def squash(vectors, axis=-1):
+    &quot;&quot;&quot;
+    The non-linear activation used in Capsule. It drives the length of a large vector to near 1 and small vector to 0
+    :param vectors: some vectors to be squashed, N-dim tensor
+    :param axis: the axis to squash
+    :return: a Tensor with same shape as input vectors
+    &quot;&quot;&quot;
+    s_squared_norm = K.sum(K.square(vectors), axis, keepdims=True)
+    scale = s_squared_norm / (1 + s_squared_norm) / K.sqrt(s_squared_norm)
+    return scale * vectors
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;digicaps-with-dynamic-routing&quot;&gt;DigiCaps with dynamic routing&lt;/h4&gt;
+
+&lt;p&gt;DigiCaps converts the capsules in PrimaryCapsules to 10 capsules each making a prediction for class \(j\). The following is the code in creating 10 (n_class) 16-D (dim_vector) capsules:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;# num_routing is default to 3
+digitcaps = DigiCap(num_capsule=n_class, dim_vector=16, 
+                  num_routing=num_routing, name='digitcaps')(primarycaps)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;DigiCap is just a simple extension of a dense layer. Instead of taking a scalar and output a scalar, it takes a vector and output a vector:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;input shape = (None, input_num_capsule (32), input_dim_vector(8) )&lt;/li&gt;
+  &lt;li&gt;output shape = (None, num_capsule (10), dim_vector(16) )&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here is the DigiCaps and we will detail some part of the code for explanation later.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class DigiCap(layers.Layer):
+    &quot;&quot;&quot;
+    The capsule layer. 
+ 	
+    :param num_capsule: number of capsules in this layer
+    :param dim_vector: dimension of the output vectors of the capsules in this layer
+    :param num_routings: number of iterations for the routing algorithm
+    &quot;&quot;&quot;
+    def __init__(self, num_capsule, dim_vector, num_routing=3,
+                 kernel_initializer='glorot_uniform',
+                 b_initializer='zeros',
+                 **kwargs):
+        super(DigiCap, self).__init__(**kwargs)
+        self.num_capsule = num_capsule    # 10
+        self.dim_vector = dim_vector      # 16
+        self.num_routing = num_routing    # 3
+        self.kernel_initializer = initializers.get(kernel_initializer)
+        self.b_initializer = initializers.get(b_initializer)
+
+    def build(self, input_shape):
+        &quot;The input Tensor should have shape=[None, input_num_capsule, input_dim_vector]&quot;		
+        assert len(input_shape) &amp;gt;= 3, 
+        self.input_num_capsule = input_shape[1]
+        self.input_dim_vector = input_shape[2]
+
+        # Transform matrix W
+        self.W = self.add_weight(shape=[self.input_num_capsule, self.num_capsule, 
+                                 self.input_dim_vector, self.dim_vector],
+                                 initializer=self.kernel_initializer,
+                                 name='W')
+
+        # Coupling coefficient. 
+        # The redundant dimensions are just to facilitate subsequent matrix calculation.
+        self.b = self.add_weight(shape=[1, self.input_num_capsule, self.num_capsule, 1, 1],
+                                    initializer=self.b_initializer,
+                                    name='b',
+                                    trainable=False)
+        self.built = True
+
+    def call(self, inputs, training=None):
+        # inputs.shape = (None, input_num_capsule, input_dim_vector)
+        # Expand dims to (None, input_num_capsule, 1, 1, input_dim_vector)
+        inputs_expand = K.expand_dims(K.expand_dims(inputs, 2), 2)
+
+        # Replicate num_capsule dimension to prepare being multiplied by W
+        # Now shape = [None, input_num_capsule, num_capsule, 1, input_dim_vector]
+        inputs_tiled = K.tile(inputs_expand, [1, 1, self.num_capsule, 1, 1])
+
+        # Compute `inputs * W` by scanning inputs_tiled on dimension 0. 
+        # inputs_hat.shape = [None, input_num_capsule, num_capsule, 1, dim_vector]
+        inputs_hat = tf.scan(lambda ac, x: K.batch_dot(x, self.W, [3, 2]),
+                             elems=inputs_tiled,
+                             initializer=K.zeros([self.input_num_capsule, self.num_capsule, 1, self.dim_vector]))
+        # Routing algorithm
+        assert self.num_routing &amp;gt; 0, 'The num_routing should be &amp;gt; 0.'
+        for i in range(self.num_routing):
+            c = tf.nn.softmax(self.b, dim=2)  # dim=2 is the num_capsule dimension
+            # outputs.shape=[None, 1, num_capsule, 1, dim_vector]
+            outputs = squash(K.sum(c * inputs_hat, 1, keepdims=True))
+
+            # last iteration needs not compute b which will not be passed to the graph any more anyway.
+            if i != self.num_routing - 1:
+                self.b += K.sum(inputs_hat * outputs, -1, keepdims=True)
+        return K.reshape(outputs, [-1, self.num_capsule, self.dim_vector])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;build&lt;/em&gt; declares the self.W parameters representing the transform matrix W and self.b representing the \(b_{ij}\).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;    def build(self, input_shape):
+        &quot;The input Tensor should have shape=[None, input_num_capsule, input_dim_vector]&quot;		
+        assert len(input_shape) &amp;gt;= 3, 
+        self.input_num_capsule = input_shape[1]
+        self.input_dim_vector = input_shape[2]
+
+        # Transform matrix W
+        self.W = self.add_weight(shape=[self.input_num_capsule, self.num_capsule, 
+                                 self.input_dim_vector, self.dim_vector],
+                                 initializer=self.kernel_initializer,
+                                 name='W')
+
+        # Coupling coefficient. 
+        # The redundant dimensions are just to facilitate subsequent matrix calculation.
+        self.b = self.add_weight(shape=[1, self.input_num_capsule, self.num_capsule, 1, 1],
+                                    initializer=self.b_initializer,
+                                    name='b',
+                                    trainable=False)
+        self.built = True
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To compute:&lt;/p&gt;
+
+\[\begin{split}
+\hat{u}_{j|i} &amp;amp;= W_{ij} u_i \
+\end{split}\]
+
+&lt;p&gt;The code first expand the dimension of \(u_i\) and then multiple it with \(w\). Nevertheless, the simple dot product implementation of \(W_{ij} u_i\) (commet out below) is replaced by tf.scan for better speed performance.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class DigiCap(layers.Layer):
+    ...
+
+    def call(self, inputs, training=None):
+        # inputs.shape = (None, input_num_capsule, input_dim_vector)
+        # Expand dims to (None, input_num_capsule, 1, 1, input_dim_vector)
+        inputs_expand = K.expand_dims(K.expand_dims(inputs, 2), 2)
+
+        # Replicate num_capsule dimension to prepare being multiplied by W
+        # Now shape = [None, input_num_capsule, num_capsule, 1, input_dim_vector]
+        inputs_tiled = K.tile(inputs_expand, [1, 1, self.num_capsule, 1, 1])
+
+        &quot;&quot;&quot;  
+        # Compute `inputs * W` 
+        # By expanding the first dim of W.
+        # W has shape (batch_size, input_num_capsule, num_capsule, input_dim_vector, dim_vector)
+        w_tiled = K.tile(K.expand_dims(self.W, 0), [self.batch_size, 1, 1, 1, 1])
+        
+        # Transformed vectors, 
+        inputs_hat.shape = (None, input_num_capsule, num_capsule, 1, dim_vector)
+        inputs_hat = K.batch_dot(inputs_tiled, w_tiled, [4, 3])
+        &quot;&quot;&quot;
+		
+        # However, we will implement the same code with a faster implementation using tf.sacn	
+        # Compute `inputs * W` by scanning inputs_tiled on dimension 0. 
+        # inputs_hat.shape = [None, input_num_capsule, num_capsule, 1, dim_vector]
+        inputs_hat = tf.scan(lambda ac, x: K.batch_dot(x, self.W, [3, 2]),
+                             elems=inputs_tiled,
+                             initializer=K.zeros([self.input_num_capsule, self.num_capsule, 1, self.dim_vector]))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is the code to implement the following Iterative dynamic Routing pseudo code.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/alg.jpg&quot; alt=&quot;alg&quot; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class DigiCap(layers.Layer):
+    ...
+    def call(self, inputs, training=None):
+        ...
+        # Routing algorithm
+        assert self.num_routing &amp;gt; 0, 'The num_routing should be &amp;gt; 0.'
+		
+        for i in range(self.num_routing):  # Default: loop 3 times
+            c = tf.nn.softmax(self.b, dim=2)  # dim=2 is the num_capsule dimension
+			
+            # outputs.shape=[None, 1, num_capsule, 1, dim_vector]
+            outputs = squash(K.sum(c * inputs_hat, 1, keepdims=True))
+
+            # last iteration needs not compute b which will not be passed to the graph any more anyway.
+            if i != self.num_routing - 1:
+                self.b += K.sum(inputs_hat * outputs, -1, keepdims=True)
+        return K.reshape(outputs, [-1, self.num_capsule, self.dim_vector])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;image-reconstruction&quot;&gt;Image reconstruction&lt;/h4&gt;
+
+&lt;p&gt;We use the true label to select \(v_j\) to reconstruct the image during training. Then we feed \(v_j\) through 3 fully connected layers to re-generate the original image.&lt;/p&gt;
+
+&lt;p&gt;Select \(v_j\) in training with Mask&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;class Mask(layers.Layer):
+    &quot;&quot;&quot;
+    Mask a Tensor with shape=[None, d1, d2] by the max value in axis=1.
+    Output shape: [None, d2]
+    &quot;&quot;&quot;
+    def call(self, inputs, **kwargs):
+        # use true label to select target capsule, shape=[batch_size, num_capsule]
+        if type(inputs) is list:  # true label is provided with shape = [batch_size, n_classes], i.e. one-hot code.
+            assert len(inputs) == 2
+            inputs, mask = inputs
+        else:  # if no true label, mask by the max length of vectors of capsules
+            x = inputs
+            # Enlarge the range of values in x to make max(new_x)=1 and others &amp;lt; 0
+            x = (x - K.max(x, 1, True)) / K.epsilon() + 1
+            mask = K.clip(x, 0, 1)  # the max value in x clipped to 1 and other to 0
+
+        # masked inputs, shape = [batch_size, dim_vector]
+        inputs_masked = K.batch_dot(inputs, mask, [1, 1])
+        return inputs_masked
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;reconstruction-loss&quot;&gt;Reconstruction loss&lt;/h4&gt;
+
+&lt;p&gt;A reconstruction loss \(\| \text{image} - \text{reconstructed image} \|\) is added to the loss function. It trains the network to capture the critical properties into the capsule. However, the reconstruction loss is multiple by a regularization factor (0.0005) so it does not dominate over the marginal loss.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-capsule-is-learning&quot;&gt;What capsule is learning?&lt;/h3&gt;
+
+&lt;p&gt;Each capsule in DigiCaps is a 16-D vector. By slightly varying one dimension by holding other constant, we can learn what property for each dimension is capturing. Each row below is the reconstructed image (using the decoder) of changing only one dimension.&lt;/p&gt;
+
+&lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/capsule/dim.png&quot; alt=&quot;dim&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sabour-implementation&quot;&gt;Sabour implementation&lt;/h3&gt;
+
+&lt;p&gt;Sara Sabour released an implementation on Capsule at &lt;a href=&quot;https://github.com/Sarasra/models/tree/master/research/capsules&quot;&gt;Github Sara Sabour&lt;/a&gt;. Since this is an ongoing research, do expect the implementation may be different from the paper.&lt;/p&gt;</content><author><name></name></author><summary type="html">A simple tutorial in understanding Capsules, Dynamic routing and Capsule Network CapsNet</summary></entry><entry><title type="html">Understand Convolution</title><link href="http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html" rel="alternate" type="text/html" title="Understand Convolution" /><published>2014-07-08T18:04:17+07:00</published><updated>2014-07-08T18:04:17+07:00</updated><id>http://hmthanh.github.io/blog/2014/07/08/understand-convolution</id><content type="html" xml:base="http://hmthanh.github.io/blog/2014/07/08/understand-convolution.html">&lt;p&gt;Source : &lt;a href=&quot;https://colah.github.io/posts/2014-07-Understanding-Convolutions/&quot;&gt;https://colah.github.io/posts/2014-07-Understanding-Convolutions/&lt;/a&gt;&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -3190,7 +4854,7 @@ The probability of the ball rolling $b$ units away from the new starting point i
 
 &lt;p&gt;If we fix the result of the first drop so we know the ball went distance $a$, for the ball to go a total distance $c$,
 the distance traveled in the second drop is also fixed at $b$, where $a + b = c$.
-So the probability of this happening is simply $f(a) ⋅ g(b)$.&lt;sup&gt;&lt;a href=&quot;#528c:fn:1&quot; class=&quot;footnote&quot; id=&quot;528c:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+So the probability of this happening is simply $f(a) ⋅ g(b)$.&lt;sup&gt;&lt;a href=&quot;#9c3d:fn:1&quot; class=&quot;footnote&quot; id=&quot;9c3d:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;Let’s think about this with a specific discrete example.
 We want the total distance $c$ to be $3$. If the first time it rolls, $a=2$, the second time it must roll $b=1$ in order to reach our total distance $a+b=3$.
@@ -3225,7 +4889,7 @@ So, summing over every solution to $a+b=c$, we can denote the total likelihood a
 
 \[(f∗g)(c)=\sum_{a} f(a)⋅g(c−a)\]
 
-&lt;p&gt;This is the standard definition&lt;sup&gt;&lt;a href=&quot;#528c:fn:2&quot; class=&quot;footnote&quot; id=&quot;528c:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; of convolution.&lt;/p&gt;
+&lt;p&gt;This is the standard definition&lt;sup&gt;&lt;a href=&quot;#9c3d:fn:2&quot; class=&quot;footnote&quot; id=&quot;9c3d:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; of convolution.&lt;/p&gt;
 
 &lt;p&gt;To make this a bit more concrete, we can think about this in terms of positions the ball might land.
 After the first drop, it will land at an intermediate position $a$ with probability $f(a)$.
@@ -3346,7 +5010,7 @@ This allows us to understand the convolution as a whole.&lt;/p&gt;
 
 &lt;p&gt;Where $x_0, x_1…$ are the inputs. The weights, $w0$, $w1$, … describe how the neuron connects to its inputs.
 A negative weight means that an input inhibits the neuron from firing, while a positive weight encourages it to.
-The weights are the heart of the neuron, controlling its behavior&lt;sup&gt;&lt;a href=&quot;#528c:fn:3&quot; class=&quot;footnote&quot; id=&quot;528c:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
+The weights are the heart of the neuron, controlling its behavior&lt;sup&gt;&lt;a href=&quot;#9c3d:fn:3&quot; class=&quot;footnote&quot; id=&quot;9c3d:fn-back:3&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;.
 Saying that multiple neurons are identical is the same thing as saying that the weights are the same.&lt;/p&gt;
 
 &lt;p&gt;It’s this wiring of neurons, describing all the weights and which ones are identical, that convolution will handle for us.&lt;/p&gt;
@@ -3419,10 +5083,10 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
 &lt;h1 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h1&gt;
 
 &lt;ol class=&quot;footnotelist&quot;&gt;
-&lt;li id=&quot;528c:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
+&lt;li id=&quot;9c3d:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
         We want the probability of the ball rolling a units the first time and also rolling b units the second time. The distributions $P(A)=f(a)$ and $P(b)=g(b)$ are independent, with both distributions centered at 0. So  $P(a,b)=P(a)∗P(b)=f(a)⋅g(b)$
-   &lt;a href=&quot;#528c:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;528c:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
+   &lt;a href=&quot;#9c3d:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;9c3d:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
       The non-standard definition, which I haven’t previously seen, seems to have a lot of benefits. In future posts, we will find this definition very helpful because it lends itself to generalization to new algebraic structures. But it also has the advantage that it makes a lot of algebraic properties of convolutions really obvious.
       &lt;br /&gt;
       For example, convolution is a commutative operation. That is, $f∗g=g∗f$. Why?
@@ -3434,39 +5098,8 @@ it is possible to create a $O(nlog(n))$ implementation. We will discuss this in 
       \sum_{(a+b)+c=d} (f(a)⋅g(b))⋅h(c)  = \sum_{a+(b+c)=d} f(a)⋅(g(b)⋅h(c))
       $$
       
-   &lt;a href=&quot;#528c:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;528c:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
-     There’s also the bias, which is the “threshold” for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
-  &lt;a href=&quot;#528c:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Christopher Olah</name></author><category term="deep" /><category term="learning" /><summary type="html">Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/</summary></entry><entry><title type="html">Quotes</title><link href="http://hmthanh.github.io/blog/softskill/2012/11/03/Quotes.html" rel="alternate" type="text/html" title="Quotes" /><published>2012-11-03T11:04:17+07:00</published><updated>2012-11-03T11:04:17+07:00</updated><id>http://hmthanh.github.io/blog/softskill/2012/11/03/Quotes</id><content type="html" xml:base="http://hmthanh.github.io/blog/softskill/2012/11/03/Quotes.html">&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Không thể tạo ra kết quả mới nếu đầu vào và tư duy như cũ
-(The definition of insanity is doing the same thing over and over again and expecting different results)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Nếu bạn vẫn làm những việc thường làm thì bạn vẫn nhận được kết quả bạn nhận được&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Nếu tôi có 6 tiếng để chặt một cái cây, tôi sẽ giành 4 tiếng để mài một lưỡi rìu
-  (Give me six hours to chop down a tree and I will spend the first four sharpening the axe)&lt;/p&gt;
-
-    &lt;p style=&quot;width: 100%;&quot; class=&quot;center&quot;&gt;&lt;img src=&quot;/blog/assets/images/2020-11-03-how-to-thinking/abraham-lincoln.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Keep it simple&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Cách bạn làm một việc là cách bạn làm mọi việc
-  (The Way a Person Does One Thing Is the Way They Do Everything)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Thay đổi tất cả trừ vợ và con&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Không có con đường tắt nào đi đến thành công&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Tham vọng của bạn sẽ mở rộng tài năng của bạn
-  (Your ambition outweighed your talent)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Minh-Thanh Hoang</name></author><category term="softskill" /><summary type="html">Không thể tạo ra kết quả mới nếu đầu vào và tư duy như cũ (The definition of insanity is doing the same thing over and over again and expecting different results) Nếu bạn vẫn làm những việc thường làm thì bạn vẫn nhận được kết quả bạn nhận được Nếu tôi có 6 tiếng để chặt một cái cây, tôi sẽ giành 4 tiếng để mài một lưỡi rìu (Give me six hours to chop down a tree and I will spend the first four sharpening the axe) Keep it simple Cách bạn làm một việc là cách bạn làm mọi việc (The Way a Person Does One Thing Is the Way They Do Everything) Thay đổi tất cả trừ vợ và con Không có con đường tắt nào đi đến thành công Tham vọng của bạn sẽ mở rộng tài năng của bạn (Your ambition outweighed your talent)</summary></entry></feed>
+   &lt;a href=&quot;#9c3d:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;9c3d:fn:3&quot; class=&quot;footnotebody&quot; value=&quot;3&quot;&gt;
+     There’s also the bias, which is the &quot;threshold&quot; for whether the neuron fires, but it’s much simpler and I don’t want to clutter this section talking about it.
+  &lt;a href=&quot;#9c3d:fn-back:3&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Christopher Olah</name></author><category term="deep" /><category term="learning" /><summary type="html">Source : https://colah.github.io/posts/2014-07-Understanding-Convolutions/</summary></entry></feed>

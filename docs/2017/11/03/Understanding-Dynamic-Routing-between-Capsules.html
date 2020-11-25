@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate icon" class="js-site-favicon" type="image/png" href="/blog/assets/favicon/favicon.ico">
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/blog/assets/favicon/favicon.ico">
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Understanding Dynamic Routing between Capsules | State of the art</title>
+<meta name="generator" content="Jekyll v4.1.1">
+<meta property="og:title" content="Understanding Dynamic Routing between Capsules">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="A simple tutorial in understanding Capsules, Dynamic routing and Capsule Network CapsNet">
+<meta property="og:description" content="A simple tutorial in understanding Capsules, Dynamic routing and Capsule Network CapsNet">
+<link rel="canonical" href="http://hmthanh.github.io/blog/2017/11/03/Understanding-Dynamic-Routing-between-Capsules.html">
+<meta property="og:url" content="http://hmthanh.github.io/blog/2017/11/03/Understanding-Dynamic-Routing-between-Capsules.html">
+<meta property="og:site_name" content="State of the art">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-11-03T18:00:00+07:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Understanding Dynamic Routing between Capsules">
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Understanding Dynamic Routing between Capsules","dateModified":"2017-11-03T18:00:00+07:00","datePublished":"2017-11-03T18:00:00+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://hmthanh.github.io/blog/2017/11/03/Understanding-Dynamic-Routing-between-Capsules.html"},"url":"http://hmthanh.github.io/blog/2017/11/03/Understanding-Dynamic-Routing-between-Capsules.html","description":"A simple tutorial in understanding Capsules, Dynamic routing and Capsule Network CapsNet","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css">
+<link type="application/atom+xml" rel="alternate" href="http://hmthanh.github.io/blog/feed.xml" title="State of the art">
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+            <header class="post-header">
+                <h1 class="post-title p-name" itemprop="name headline" id="title">Understanding Dynamic Routing between Capsules</h1>
+                <a class="back" href="/blog/"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"></path></svg>Back Home</a>
+                <p class="post-meta">
+                    <time class="dt-published" datetime="2017-11-03T18:00:00+07:00" itemprop="datePublished">Nov 3, 2017
+            </time></p>
+                    <div style="clear:both"></div>
+            </header>
+            
+
+            <div class="post-content e-content" itemprop="articleBody">
+                <p>Source : <a href="https://jhui.github.io/2017/11/03/Dynamic-Routing-Between-Capsules/">Jonathan Hui blog</a></p>
+
+<!--more-->
+
+<ul class="table-of-content" id="markdown-toc">
+  <li><a href="#cnn-challenges" id="markdown-toc-cnn-challenges">CNN challenges</a></li>
+  <li><a href="#equivariance" id="markdown-toc-equivariance">Equivariance</a></li>
+  <li><a href="#capsule" id="markdown-toc-capsule">Capsule</a></li>
+  <li>
+<a href="#dynamic-routing" id="markdown-toc-dynamic-routing">Dynamic routing</a>    <ul>
+      <li><a href="#intuition" id="markdown-toc-intuition">Intuition</a></li>
+      <li><a href="#calculating-a-capsule-output" id="markdown-toc-calculating-a-capsule-output">Calculating a capsule output</a></li>
+    </ul>
+  </li>
+  <li><a href="#iterative-dynamic-routing" id="markdown-toc-iterative-dynamic-routing">Iterative dynamic Routing</a></li>
+  <li><a href="#max-pooling-shortcoming" id="markdown-toc-max-pooling-shortcoming">Max pooling shortcoming</a></li>
+  <li><a href="#significant-of-routing-by-agreement-with-capsules" id="markdown-toc-significant-of-routing-by-agreement-with-capsules">Significant of routing-by-agreement with capsules</a></li>
+  <li><a href="#capsnet-architecture" id="markdown-toc-capsnet-architecture">CapsNet architecture</a></li>
+  <li><a href="#loss-function-margin-loss" id="markdown-toc-loss-function-margin-loss">Loss function (Margin loss)</a></li>
+  <li>
+<a href="#capsnet-model" id="markdown-toc-capsnet-model">CapsNet model</a>    <ul>
+      <li><a href="#primarycapsules" id="markdown-toc-primarycapsules">PrimaryCapsules</a></li>
+      <li><a href="#squash-function" id="markdown-toc-squash-function">Squash function</a></li>
+      <li><a href="#digicaps-with-dynamic-routing" id="markdown-toc-digicaps-with-dynamic-routing">DigiCaps with dynamic routing</a></li>
+      <li><a href="#image-reconstruction" id="markdown-toc-image-reconstruction">Image reconstruction</a></li>
+      <li><a href="#reconstruction-loss" id="markdown-toc-reconstruction-loss">Reconstruction loss</a></li>
+    </ul>
+  </li>
+  <li><a href="#what-capsule-is-learning" id="markdown-toc-what-capsule-is-learning">What capsule is learning?</a></li>
+  <li><a href="#sabour-implementation" id="markdown-toc-sabour-implementation">Sabour implementation</a></li>
+</ul>
+
+<p>This article covers the technical paper by Sara Sabour, Nicholas Frosst and Geoffrey Hinton on <a href="https://arxiv.org/pdf/1710.09829.pdf">Dynamic Routing between Capsules</a>. In this article, we will describe the basic Capsule concept and apply it with the Capsule network <em>CapsNet</em> to detect digits in MNist. In the last third of the article, we go through a detail implementation. The source code implementation is originated from <a href="https://github.com/XifengGuo/CapsNet-Keras">XifengGuo</a> using Keras with Tensorflow.</p>
+
+<h3 id="cnn-challenges">CNN challenges</h3>
+
+<p>In deep learning, the activation level of a neuron is often interpreted as the likelihood of detecting a specific feature.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/fc.jpg" alt="fc"></p>
+
+<p>If we pass the Picasso’s “Portrait of woman in d`hermine pass” into a CNN classifier, how likely that the classifier may mistaken it as a real human face?</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/picasso.jpg" alt="picasso"></p>
+
+<p>CNN is good at detecting features but less effective at exploring the spatial relationships among features (perspective, size, orientation). For example, the following picture may fool a <em>simple</em> CNN model in believing that this a good sketch of a human face.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/face2.jpg" alt="face2"></p>
+<p><a href="http://sharenoesis.com/article/draw-face/84">(image source)</a></p>
+
+<p>A simple CNN model can extract the features for nose, eyes and mouth correctly but will wrongly activate the neuron for the face detection. Without realize the mis-match in spatial orientation and size, the activation for the face detection will be too high.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/face4.jpg" alt="face4"></p>
+
+<p>Now, we imagine that each neuron contains the likelihood as well as properties of the features. For example, it outputs a vector containing [likelihood, orientation, size]. With this spatial information, we can detect the in-consistence in the orientation and size among the nose, eyes and ear features and therefore output a much lower activation for the face detection.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/face5.jpg" alt="face5"></p>
+
+<p>Instead of using the term neurons, the technical paper uses the term <strong>capsules</strong> to indicate that capsules output a vector instead of a single scaler value.</p>
+
+<h3 id="equivariance">Equivariance</h3>
+
+<p>Conceptually, a CNN model uses multiple neurons and layers in capturing different feature’s variants:</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/cnn1.jpg" alt="cnn1"></p>
+
+<p>A capsule network share the same capsule to detect multiple variants in a simpler network.</p>
+
+<p style="width: 45%; float:left;"><img src="/blog/assets/images/capsule/c21.jpg" alt="GM2"></p>
+
+<p style="width: 45%; float:right;"><img src="/blog/assets/images/capsule/c22.jpg" alt="GM2"></p>
+
+<div style="clear:both;"></div>
+
+<p><strong>Equivariance</strong> is the detection of objects that can transform to each other. Intuitively, a capsule detects the face is rotated right 20° (or rotated left 20°) rather than realizes the face matched a variant that is rotated right 20°. By forcing the model to learn the feature variant in a capsule, we <em>may</em> extrapolate possible variants more effectively with less training data.</p>
+
+<p>MNist dataset contains 55,000 training data. i.e. 5,500 samples per digits. However, it is unlikely that children need to read this large amount of samples to learn digits. Our existing deep learning models including CNN seem inefficient in utilizing datapoints.</p>
+
+<blockquote>
+  <p>With feature property as part of the information extracted by capsules, we <em>may</em> generalize the model better without an over extensive amount of labeled data.</p>
+</blockquote>
+
+<h3 id="capsule">Capsule</h3>
+
+<blockquote>
+  <p>A capsule is a group of neurons that not only capture the likelihood but also the parameters of the specific feature.</p>
+</blockquote>
+
+<p>For example, the first row below indicates the probabilities of detecting the number “7” by a neuron. A 2-D capsule is formed by combining 2 neurons. This capsule outputs a 2-D vector in detecting the number “7”. For the first image in the second row, it outputs a vector \(v = (0, 0.9)\). The magnitude of the vector \(\| v \| = \sqrt{ 0^2 + 0.9^2 } = 0.9\) corresponds to the probability of detecting “7”. The second image of each row looks more like a “1” than a “7”. Therefore its corresponding likelihood as “7” is smaller (smaller scaler value or smaller vector’s magnitude but with the same orientation) .</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/cap1.jpg" alt="cap1"></p>
+
+<p>In the third row, we rotate the image by 20°. The capsule will generate vectors with the same magnitude but different orientations. Here, the angle of the vector represents the angle of rotation for the number “7”. As we can image, we can add 2 more neurons to a capsule to capture the size and stroke width.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/style.jpg" alt="style"></p>
+
+<blockquote>
+  <p>We call the output vector of a capsule as the <strong>activity vector</strong> with magnitude represents the probability of detecting a feature and its orientation represents its parameters (properties).</p>
+</blockquote>
+
+<h3 id="dynamic-routing">Dynamic routing</h3>
+
+<p>Dynamic routing groups capsules to form a parent capsule, and it calculates the capsule’s output.</p>
+
+<h4 id="intuition">Intuition</h4>
+
+<p>We collect 3 similar sketches with different scale and orientation, and we measures the horizontal width of the mouth and the eye in pixels. They are
+\(s^{(1)}=(100, 66), s^{(2)}=(200, 131) \text{ and } s^{(3)}=( 50, 33).\)</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/faa2.jpg" alt="faa2"></p>
+
+<p>(<a href="http://sharenoesis.com/article/draw-face/84">Image modified from</a>)</p>
+
+<p>Let’s assume \(W_m =2, W_e=3\), and we calculate a vote from the mouth and the eye for \(s^{(1)}\) as:</p>
+
+\[\begin{split}
+v^{(1)}_m &amp; = W_m \times width_m = 2 \times 100 = 200 \
+v^{(1)}_e &amp; = W_e \times width_e = 3 \times 66 = 198 \
+\end{split}\]
+
+<p>We realize both \(v^{(1)}_m\) and \(v^{(1)}_e\) are very similar. When we repeat it with other sketches, we get the same findings. So the mouth capsule and the eye capsule can be strongly related to a parent capsule with width approximate 200 pixels. From our experience, a face is 2 times (\(W_m=2\)) the width of a mouth and 3 times the width (\(W_e=3\)) of an eye. So the parent capsule we detected is a face capsule. Of course, we can make it more accurate by adding more properties like height or color. In dynamic routing, we transform the vectors of an input capsules with a transformation matrix \(W\) to form a vote, and group capsules with similar votes. Those votes eventually becomes the output vector of the parent capsule. So how can we know \(W\)? Just do it in the deep learning way: backpropagation with a cost function.</p>
+
+<h4 id="calculating-a-capsule-output">Calculating a capsule output</h4>
+
+<p>For a capsule, the input \(u_i\) and the output \(v_j\) of a capsule are vectors.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/fc2.jpg" alt="fc2"></p>
+
+<p>We apply a <strong>transformation matrix</strong> \(W_{ij}\) to the capsule output \(u_i\) of the pervious layer. For example, with a \(p \times k\) matrix, we transform \(u_i\) to \(\hat{u}_{j \vert i}\) from k-dimension to p-dimension. (\((p \times k) \times (k \times 1) \implies p \times 1\)) Then we compute a weighted sum \(s_j\) with weights \(c_{ij}\).</p>
+
+\[\begin{split}
+\hat{u}_{j|i} &amp;= W_{ij} u_i \
+s_j &amp; = \sum_i c_{ij}  \hat{u}_{j|i} \
+\end{split}\]
+
+<p>\(c_{ij}\) are <strong>coupling coefficients</strong> that are calculated by the iterative dynamic routing process (discussed next) and \(\sum_{j} c_{ij}\) are designed to sum to one. Conceptually, \(c_{ij}\) measures how likely capsule \(i\) may activate capsule \(j\).</p>
+
+<p>Instead of applying a ReLU function, we apply a squashing function to \(s_j\) so the final output vector \(v_j\) of the capsule has length between 0 and 1. This function shrinks small vectors to zero and large vectors to unit vectors.</p>
+
+\[\begin{split}
+v_{j} &amp; = \frac{\| s_{j} \|^2}{ 1 + \| s_{j} \|^2} \frac{s_{j}}{ \| s_{j} \|}  \
+\end{split}\]
+
+\[\begin{split}
+v_{j} &amp; \approx \| s_{j} \| s_{j}  \quad &amp; \text{for } s_{j} \text { is small. } \
+v_{j} &amp; \approx \frac{s_{j}}{ \| s_{j} \|}  \quad &amp; \text{for } s_{j} \text { is large. } \
+\end{split}\]
+
+<h3 id="iterative-dynamic-routing">Iterative dynamic Routing</h3>
+
+<p>In capsule, we use iterative dynamic routing to compute the capsule output by calculating an intermediate value \(c_{ij}\) (coupling coefficient).</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/face6.jpg" alt="face6"></p>
+
+<p>Recall that the <strong>prediction vector</strong> \(\hat{u}_{j \vert i}\) is computed as:</p>
+
+\[\begin{split}
+\hat{u}_{j|i} &amp;= W_{ij} u_i \
+\end{split}\]
+
+<p>and the <strong>activity vector</strong> \(v_j\) (the capsule \(j\) output) is:</p>
+
+\[\begin{split}
+s_j &amp; = \sum_i c_{ij}  \hat{u}_{j|i} \
+v_{j} &amp; = \frac{\| s_{j} \|^2}{ 1 + \| s_{j} \|^2} \frac{s_{j}}{ \| s_{j} \|}  \
+\end{split}\]
+
+<p>Intuitively, prediction vector \(\hat{u}_{j \vert i}\) is the prediction (<strong>vote</strong>) from the capsule \(i\) on the output of the capsule \(j\) above. If the activity vector has close similarity with the prediction vector, we conclude that both capsules are highly related. Such similarity is measured using the scalar product of the prediction and the activity vector.</p>
+
+\[\begin{split}
+b_{ij} ← \hat{u}_{j \vert i} \cdot v_j \
+\end{split}\]
+
+<p>Therefore, the similarity score \(b_{ij}\) takes into account on both likeliness and the feature properties, instead of just likeliness in neurons. Also, \(b_{ij}\) remains low if the activation \(u_i\) of capsule \(i\) is low since \(\hat{u}_{j \vert i}\) length is proportional to \(u_i\). i.e. \(b_{ij}\) should remain low between the mouth capsule and the face capsule if the mouth capsule is not activated.</p>
+
+<p>The coupling coefficients \(c_{ij}\) is computed as the softmax of \(b_{ij}\):</p>
+
+\[\begin{split}
+c_{ij} &amp; = \frac{\exp{b_{ij}}} {\sum_k \exp{b_{ik}} } \
+\end{split}\]
+
+<p>To make \(b_{ij}\) more accurate , it is updated iteratively in multiple iterations (typically in 3 iterations).</p>
+
+\[\begin{split}
+b_{ij} ← b_{ij} + \hat{u}_{j \vert i} \cdot v_j \
+\end{split}\]
+
+<p>Here is the final pseudo code for the dynamic routing:</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/alg.jpg" alt="alg"></p>
+
+<p><a href="https://arxiv.org/pdf/1710.09829.pdf">Source Sara Sabour, Nicholas Frosst, Geoffrey Hinton</a></p>
+
+<blockquote>
+  <p>Routing a capsule to the capsule in the layer above based on relevancy is called <strong>Routing-by-agreement</strong>.</p>
+</blockquote>
+
+<p>The dynamic routing is not a complete replacement of the backpropagation. The transformation matrix \(W\) is still trained with the backpropagation using a cost function. However, we use dynamic routing to compute the output of a capsule. We compute \(c_{ij}\) to quantify the connection between a capsule and its parent capsules. This value is important but short lived. We re-initialize it to 0 for every datapoint before the dynamic routing calculation. To calculate a capsule output, training or testing, we always redo the dynamic routing calculation.</p>
+
+<h3 id="max-pooling-shortcoming">Max pooling shortcoming</h3>
+
+<p>The max pooling in a CNN handles translational variance. Even a feature is slightly moved, if it is still within the pooling window, it can still be detected. Nevertheless, this approach keeps only the max feature (the most dominating) and throws away the others. Capsules maintain a weighted sum of features from the previous layer. Hence, it is more suitable in detecting overlapping features. For example detecting multiple overlapping digits in the handwriting:</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/over.jpg" alt="over"></p>
+
+<h3 id="significant-of-routing-by-agreement-with-capsules">Significant of routing-by-agreement with capsules</h3>
+
+<p>In a fully connected network, we calculate the neuron with</p>
+
+\[y_j =  ReLU( \sum_{i} W_{ij} x_i + b_{j} ),\]
+
+<p>and \(W\) is trained by the backpropagation with a global cost function. Iterative dynamic routing provides an alternative of calculating how a capsule is activated by using local features’ properties. Theoretically, we can group capsules better and simpler to form a <strong>parse tree</strong> with reduced risk of adversaries.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/face7.jpg" alt="face7"></p>
+
+<p>The iterative dynamic routing with capsules is just one showcase in demonstrating the routing-by-agreement. In a second paper on capsules <em>Matrix capsules with EM routing</em>, a matrix capsule [likeliness, 4x4 pose matrix] is proposed with a new Expectation-maximization (EM) routing. The pose matrices are designed to capture different viewpoints so a capsule can capture objects with different azimuths and elevations.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/data.png" alt="data"></p>
+
+<p>(Source from the paper Matrix capsules with EM routing)</p>
+
+<p>Matrix capsules apply a clustering technique, the EM routing, to cluster related capsules to form a parent capsule. Even the viewpoint may change, the votes will change in a co-ordinate way from the red dots to the pink dots below. So the EM routing can still cluster the same children capsules together.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/cluster2.jpg" alt="cluster2"></p>
+
+<p>The first paper opens a new approach in the deep learning, and the second paper explores deeper into its potential. For those interested, there are more details in my second article on <a href="https://jhui.github.io/2017/11/14/Matrix-Capsules-with-EM-routing-Capsule-Network/">Matrix capsule</a>.</p>
+
+<h3 id="capsnet-architecture">CapsNet architecture</h3>
+
+<p>Finally, we apply capsules to build the CapsNet to classify the MNist digits. The following is the architecture using CapsNet.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/arch1.jpg" alt="arch1"></p>
+
+<p>Image is feed into the ReLU Conv1 which is a standard convolution layer. It applies 256 9x9 kernels to generate an output with 256 channels (feature maps). With stride 1 and no padding, the spatial dimension is reduced to 20x20. ( 28-9+1=20)</p>
+
+<p>It is then feed into PrimaryCapsules which is a modified convolution layer supporting capsules. It generates a 8-D vector instead of a scalar. PrimaryCapsules used 8x32 kernels to generate 32 8-D capsules. (i.e. 8 output neurons are grouped together to form a capsule) PrimaryCapsules uses 9x9 kernels with stride 2 and no padding to reduce the spatial dimension from 20x20 to 6x6 ( \(\lfloor \frac{20-9}{2} \rfloor + 1 = 6\)). In PrimaryCapsules, we have 32x6x6 capsules.</p>
+
+<p>It is then feed into DigiCaps which apply a transformation matrix \(W_{ij}\) with shape 16x8 to convert the 8-D capsule to a 16-D capsule for each class \(j\) (from 1 to 10).</p>
+
+\[\begin{split}
+\hat{u}_{j|i} &amp;= W_{ij} u_i \
+\end{split}\]
+
+<p>The final output \(v_j\) for class \(j\) is computed as:</p>
+
+\[\begin{split}
+s_j &amp; = \sum_i c_{ij}  \hat{u}_{j|i} \
+v_{j} &amp; = \frac{\| s_{j} \|^2}{ 1 + \| s_{j} \|^2} \frac{s_{j}}{ \| s_{j} \|}  \
+\end{split}\]
+
+<p>Because there are 10 classes, the shape of DigiCaps is 10x16 (10 16-D vector.) Each vector \(v_j\) acts as the capsule for class \(j\). The probability of the image to be classify as \(j\) is computed by \(\| v_j \|\). In our example, the true label is 7 and \(v_7\) is the latent representation of our input. With a 2 hidden fully connected layers, we can reconstruct the 28x28 image from \(v_7\).</p>
+
+<p>Here is the summary of each layers:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Layer Name</th>
+      <th>Apply</th>
+      <th>Output shape</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Image</td>
+      <td>Raw image array</td>
+      <td>28x28x1</td>
+    </tr>
+    <tr>
+      <td>ReLU Conv1</td>
+      <td>Convolution layer with 9x9 kernels output 256 channels, stride 1, no padding with ReLU</td>
+      <td>20x20x256</td>
+    </tr>
+    <tr>
+      <td>PrimaryCapsules</td>
+      <td>Convolution capsule layer with 9x9 kernel output 32x6x6 8-D capsule, stride 2, no padding</td>
+      <td>6x6x32x8</td>
+    </tr>
+    <tr>
+      <td>DigiCaps</td>
+      <td>Capsule output computed from a (W_{ij}) (16x8 matrix) between (u_i) and (v_j) ((i) from 1 to 32x6x6 and (j) from 1 to 10).</td>
+      <td>10x16</td>
+    </tr>
+    <tr>
+      <td>FC1</td>
+      <td>Fully connected with ReLU</td>
+      <td>512</td>
+    </tr>
+    <tr>
+      <td>FC2</td>
+      <td>Fully connected with ReLU</td>
+      <td>1024</td>
+    </tr>
+    <tr>
+      <td>Output image</td>
+      <td>Fully connected with sigmoid</td>
+      <td>784 (28x28)</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Our capsule layers use convolution kernels to explore locality information.</p>
+</blockquote>
+
+<h3 id="loss-function-margin-loss">Loss function (Margin loss)</h3>
+
+<p>In our example, we want to detect multiple digits in a picture. Capsules use a separate margin loss \(L_c\) for each category \(c\) digit present in the picture:</p>
+
+\[L_c = T_c \max(0, m^+ − \|v_c\|)^2 + λ (1 − T_c) \max(0, \|v_c\| − m^−)^2\]
+
+<p>which \(T_c = 1\) if an object of class \(c\) is present. \(m^+ = 0.9\) and \(m^− = 0.1\). The λ down-weighting (default 0.5) stops the initial learning from shrinking the activity
+vectors of all classes. The total loss is just the sum of the losses of all classes.</p>
+
+<p>Computing the margin loss in Keras</p>
+<pre><code class="language-python">def margin_loss(y_true, y_pred):
+    """
+    :param y_true: [None, n_classes]
+    :param y_pred: [None, num_capsule]
+    :return: a scalar loss value.
+    """
+    L = y_true * K.square(K.maximum(0., 0.9 - y_pred)) + \
+        0.5 * (1 - y_true) * K.square(K.maximum(0., y_pred - 0.1))
+
+    return K.mean(K.sum(L, 1))
+</code></pre>
+
+<h3 id="capsnet-model">CapsNet model</h3>
+
+<p>Here is the Keras code in creating the CapsNet model:</p>
+<pre><code class="language-python">def CapsNet(input_shape, n_class, num_routing):
+    """
+    :param input_shape: (None, width, height, channels)
+    :param n_class: number of classes
+    :param num_routing: number of routing iterations
+    :return: A Keras Model with 2 inputs (image, label) and 
+             2 outputs (capsule output and reconstruct image)
+    """
+    # Image
+    x = layers.Input(shape=input_shape)
+
+    # ReLU Conv1
+    conv1 = layers.Conv2D(filters=256, kernel_size=9, strides=1, 
+	             padding='valid', activation='relu', name='conv1')(x)
+
+    # PrimaryCapsules: Conv2D layer with `squash` activation, 
+    # reshape to [None, num_capsule, dim_vector]
+    primarycaps = PrimaryCap(conv1, dim_vector=8, n_channels=32, 
+	                    kernel_size=9, strides=2, padding='valid')
+
+    # DigiCap: Capsule layer. Routing algorithm works here.
+    digitcaps = DigiCaps(num_capsule=n_class, dim_vector=16, 
+	        num_routing=num_routing, name='digitcaps')(primarycaps)
+
+    # The length of the capsule's output vector 
+    out_caps = Length(name='out_caps')(digitcaps)
+
+    # Decoder network.
+    y = layers.Input(shape=(n_class,))
+
+    # The true label is used to extract the corresponding vj
+    masked = Mask()([digitcaps, y])  
+    x_recon = layers.Dense(512, activation='relu')(masked)
+    x_recon = layers.Dense(1024, activation='relu')(x_recon)
+    x_recon = layers.Dense(784, activation='sigmoid')(x_recon)
+    x_recon = layers.Reshape(target_shape=[28, 28, 1], name='out_recon')(x_recon)
+
+    # two-input-two-output keras Model
+    return models.Model([x, y], [out_caps, x_recon])
+</code></pre>
+
+<p>The length of the capsule’s output vector \(\| v_j \|\) corresponds to the probability that it belong to the class \(j\). For example, \(\| v_7 \|\) is the probability of the input image belongs to 7.</p>
+<pre><code class="language-python">class Length(layers.Layer):
+    def call(self, inputs, **kwargs):
+        # L2 length which is the square root 
+        # of the sum of square of the capsule element
+        return K.sqrt(K.sum(K.square(inputs), -1))
+</code></pre>
+
+<h4 id="primarycapsules">PrimaryCapsules</h4>
+
+<p>PrimaryCapsules converts 20x20 256 channels into 32x6x6 8-D capsules.</p>
+<pre><code class="language-python">def PrimaryCap(inputs, dim_vector, n_channels, kernel_size, strides, padding):
+    """
+    Apply Conv2D `n_channels` times and concatenate all capsules
+    :param inputs: 4D tensor, shape=[None, width, height, channels]
+    :param dim_vector: the dim of the output vector of capsule
+    :param n_channels: the number of types of capsules
+    :return: output tensor, shape=[None, num_capsule, dim_vector]
+    """
+    output = layers.Conv2D(filters=dim_vector*n_channels, kernel_size=kernel_size, strides=strides, padding=padding)(inputs)
+    outputs = layers.Reshape(target_shape=[-1, dim_vector])(output)
+    return layers.Lambda(squash)(outputs)
+</code></pre>
+
+<h4 id="squash-function">Squash function</h4>
+
+<p>Squash function behaves like a sigmoid function to squash a vector such that its length falls between 0 and 1.</p>
+
+\[\begin{split}
+v_{j} &amp; = \frac{\| s_{j} \|^2}{ 1 + \| s_{j} \|^2} \frac{s_{j}}{ \| s_{j} \|}  \
+\end{split}\]
+
+<pre><code class="language-python">def squash(vectors, axis=-1):
+    """
+    The non-linear activation used in Capsule. It drives the length of a large vector to near 1 and small vector to 0
+    :param vectors: some vectors to be squashed, N-dim tensor
+    :param axis: the axis to squash
+    :return: a Tensor with same shape as input vectors
+    """
+    s_squared_norm = K.sum(K.square(vectors), axis, keepdims=True)
+    scale = s_squared_norm / (1 + s_squared_norm) / K.sqrt(s_squared_norm)
+    return scale * vectors
+</code></pre>
+
+<h4 id="digicaps-with-dynamic-routing">DigiCaps with dynamic routing</h4>
+
+<p>DigiCaps converts the capsules in PrimaryCapsules to 10 capsules each making a prediction for class \(j\). The following is the code in creating 10 (n_class) 16-D (dim_vector) capsules:</p>
+<pre><code class="language-python"># num_routing is default to 3
+digitcaps = DigiCap(num_capsule=n_class, dim_vector=16, 
+                  num_routing=num_routing, name='digitcaps')(primarycaps)
+</code></pre>
+
+<p>DigiCap is just a simple extension of a dense layer. Instead of taking a scalar and output a scalar, it takes a vector and output a vector:</p>
+
+<ul>
+  <li>input shape = (None, input_num_capsule (32), input_dim_vector(8) )</li>
+  <li>output shape = (None, num_capsule (10), dim_vector(16) )</li>
+</ul>
+
+<p>Here is the DigiCaps and we will detail some part of the code for explanation later.</p>
+<pre><code class="language-python">class DigiCap(layers.Layer):
+    """
+    The capsule layer. 
+ 	
+    :param num_capsule: number of capsules in this layer
+    :param dim_vector: dimension of the output vectors of the capsules in this layer
+    :param num_routings: number of iterations for the routing algorithm
+    """
+    def __init__(self, num_capsule, dim_vector, num_routing=3,
+                 kernel_initializer='glorot_uniform',
+                 b_initializer='zeros',
+                 **kwargs):
+        super(DigiCap, self).__init__(**kwargs)
+        self.num_capsule = num_capsule    # 10
+        self.dim_vector = dim_vector      # 16
+        self.num_routing = num_routing    # 3
+        self.kernel_initializer = initializers.get(kernel_initializer)
+        self.b_initializer = initializers.get(b_initializer)
+
+    def build(self, input_shape):
+        "The input Tensor should have shape=[None, input_num_capsule, input_dim_vector]"		
+        assert len(input_shape) &gt;= 3, 
+        self.input_num_capsule = input_shape[1]
+        self.input_dim_vector = input_shape[2]
+
+        # Transform matrix W
+        self.W = self.add_weight(shape=[self.input_num_capsule, self.num_capsule, 
+                                 self.input_dim_vector, self.dim_vector],
+                                 initializer=self.kernel_initializer,
+                                 name='W')
+
+        # Coupling coefficient. 
+        # The redundant dimensions are just to facilitate subsequent matrix calculation.
+        self.b = self.add_weight(shape=[1, self.input_num_capsule, self.num_capsule, 1, 1],
+                                    initializer=self.b_initializer,
+                                    name='b',
+                                    trainable=False)
+        self.built = True
+
+    def call(self, inputs, training=None):
+        # inputs.shape = (None, input_num_capsule, input_dim_vector)
+        # Expand dims to (None, input_num_capsule, 1, 1, input_dim_vector)
+        inputs_expand = K.expand_dims(K.expand_dims(inputs, 2), 2)
+
+        # Replicate num_capsule dimension to prepare being multiplied by W
+        # Now shape = [None, input_num_capsule, num_capsule, 1, input_dim_vector]
+        inputs_tiled = K.tile(inputs_expand, [1, 1, self.num_capsule, 1, 1])
+
+        # Compute `inputs * W` by scanning inputs_tiled on dimension 0. 
+        # inputs_hat.shape = [None, input_num_capsule, num_capsule, 1, dim_vector]
+        inputs_hat = tf.scan(lambda ac, x: K.batch_dot(x, self.W, [3, 2]),
+                             elems=inputs_tiled,
+                             initializer=K.zeros([self.input_num_capsule, self.num_capsule, 1, self.dim_vector]))
+        # Routing algorithm
+        assert self.num_routing &gt; 0, 'The num_routing should be &gt; 0.'
+        for i in range(self.num_routing):
+            c = tf.nn.softmax(self.b, dim=2)  # dim=2 is the num_capsule dimension
+            # outputs.shape=[None, 1, num_capsule, 1, dim_vector]
+            outputs = squash(K.sum(c * inputs_hat, 1, keepdims=True))
+
+            # last iteration needs not compute b which will not be passed to the graph any more anyway.
+            if i != self.num_routing - 1:
+                self.b += K.sum(inputs_hat * outputs, -1, keepdims=True)
+        return K.reshape(outputs, [-1, self.num_capsule, self.dim_vector])
+</code></pre>
+
+<p><em>build</em> declares the self.W parameters representing the transform matrix W and self.b representing the \(b_{ij}\).</p>
+<pre><code class="language-python">    def build(self, input_shape):
+        "The input Tensor should have shape=[None, input_num_capsule, input_dim_vector]"		
+        assert len(input_shape) &gt;= 3, 
+        self.input_num_capsule = input_shape[1]
+        self.input_dim_vector = input_shape[2]
+
+        # Transform matrix W
+        self.W = self.add_weight(shape=[self.input_num_capsule, self.num_capsule, 
+                                 self.input_dim_vector, self.dim_vector],
+                                 initializer=self.kernel_initializer,
+                                 name='W')
+
+        # Coupling coefficient. 
+        # The redundant dimensions are just to facilitate subsequent matrix calculation.
+        self.b = self.add_weight(shape=[1, self.input_num_capsule, self.num_capsule, 1, 1],
+                                    initializer=self.b_initializer,
+                                    name='b',
+                                    trainable=False)
+        self.built = True
+</code></pre>
+
+<p>To compute:</p>
+
+\[\begin{split}
+\hat{u}_{j|i} &amp;= W_{ij} u_i \
+\end{split}\]
+
+<p>The code first expand the dimension of \(u_i\) and then multiple it with \(w\). Nevertheless, the simple dot product implementation of \(W_{ij} u_i\) (commet out below) is replaced by tf.scan for better speed performance.</p>
+
+<pre><code class="language-python">class DigiCap(layers.Layer):
+    ...
+
+    def call(self, inputs, training=None):
+        # inputs.shape = (None, input_num_capsule, input_dim_vector)
+        # Expand dims to (None, input_num_capsule, 1, 1, input_dim_vector)
+        inputs_expand = K.expand_dims(K.expand_dims(inputs, 2), 2)
+
+        # Replicate num_capsule dimension to prepare being multiplied by W
+        # Now shape = [None, input_num_capsule, num_capsule, 1, input_dim_vector]
+        inputs_tiled = K.tile(inputs_expand, [1, 1, self.num_capsule, 1, 1])
+
+        """  
+        # Compute `inputs * W` 
+        # By expanding the first dim of W.
+        # W has shape (batch_size, input_num_capsule, num_capsule, input_dim_vector, dim_vector)
+        w_tiled = K.tile(K.expand_dims(self.W, 0), [self.batch_size, 1, 1, 1, 1])
+        
+        # Transformed vectors, 
+        inputs_hat.shape = (None, input_num_capsule, num_capsule, 1, dim_vector)
+        inputs_hat = K.batch_dot(inputs_tiled, w_tiled, [4, 3])
+        """
+		
+        # However, we will implement the same code with a faster implementation using tf.sacn	
+        # Compute `inputs * W` by scanning inputs_tiled on dimension 0. 
+        # inputs_hat.shape = [None, input_num_capsule, num_capsule, 1, dim_vector]
+        inputs_hat = tf.scan(lambda ac, x: K.batch_dot(x, self.W, [3, 2]),
+                             elems=inputs_tiled,
+                             initializer=K.zeros([self.input_num_capsule, self.num_capsule, 1, self.dim_vector]))
+</code></pre>
+
+<p>Here is the code to implement the following Iterative dynamic Routing pseudo code.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/alg.jpg" alt="alg"></p>
+
+<pre><code class="language-python">class DigiCap(layers.Layer):
+    ...
+    def call(self, inputs, training=None):
+        ...
+        # Routing algorithm
+        assert self.num_routing &gt; 0, 'The num_routing should be &gt; 0.'
+		
+        for i in range(self.num_routing):  # Default: loop 3 times
+            c = tf.nn.softmax(self.b, dim=2)  # dim=2 is the num_capsule dimension
+			
+            # outputs.shape=[None, 1, num_capsule, 1, dim_vector]
+            outputs = squash(K.sum(c * inputs_hat, 1, keepdims=True))
+
+            # last iteration needs not compute b which will not be passed to the graph any more anyway.
+            if i != self.num_routing - 1:
+                self.b += K.sum(inputs_hat * outputs, -1, keepdims=True)
+        return K.reshape(outputs, [-1, self.num_capsule, self.dim_vector])
+</code></pre>
+
+<h4 id="image-reconstruction">Image reconstruction</h4>
+
+<p>We use the true label to select \(v_j\) to reconstruct the image during training. Then we feed \(v_j\) through 3 fully connected layers to re-generate the original image.</p>
+
+<p>Select \(v_j\) in training with Mask</p>
+<pre><code class="language-python">class Mask(layers.Layer):
+    """
+    Mask a Tensor with shape=[None, d1, d2] by the max value in axis=1.
+    Output shape: [None, d2]
+    """
+    def call(self, inputs, **kwargs):
+        # use true label to select target capsule, shape=[batch_size, num_capsule]
+        if type(inputs) is list:  # true label is provided with shape = [batch_size, n_classes], i.e. one-hot code.
+            assert len(inputs) == 2
+            inputs, mask = inputs
+        else:  # if no true label, mask by the max length of vectors of capsules
+            x = inputs
+            # Enlarge the range of values in x to make max(new_x)=1 and others &lt; 0
+            x = (x - K.max(x, 1, True)) / K.epsilon() + 1
+            mask = K.clip(x, 0, 1)  # the max value in x clipped to 1 and other to 0
+
+        # masked inputs, shape = [batch_size, dim_vector]
+        inputs_masked = K.batch_dot(inputs, mask, [1, 1])
+        return inputs_masked
+</code></pre>
+
+<h4 id="reconstruction-loss">Reconstruction loss</h4>
+
+<p>A reconstruction loss \(\| \text{image} - \text{reconstructed image} \|\) is added to the loss function. It trains the network to capture the critical properties into the capsule. However, the reconstruction loss is multiple by a regularization factor (0.0005) so it does not dominate over the marginal loss.</p>
+
+<h3 id="what-capsule-is-learning">What capsule is learning?</h3>
+
+<p>Each capsule in DigiCaps is a 16-D vector. By slightly varying one dimension by holding other constant, we can learn what property for each dimension is capturing. Each row below is the reconstructed image (using the decoder) of changing only one dimension.</p>
+
+<p style="width: 100%;" class="center"><img src="/blog/assets/images/capsule/dim.png" alt="dim"></p>
+
+<h3 id="sabour-implementation">Sabour implementation</h3>
+
+<p>Sara Sabour released an implementation on Capsule at <a href="https://github.com/Sarasra/models/tree/master/research/capsules">Github Sara Sabour</a>. Since this is an ongoing research, do expect the implementation may be different from the paper.</p>
+
+            </div>
+<a class="u-url" href="/blog/2017/11/03/Understanding-Dynamic-Routing-between-Capsules.html" hidden></a>
+        </article>
+        
+
+        <div class="page-navigation">
+          
+          <a class="prev" href="/blog/2014/07/08/understand-convolution.html"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"></path></svg> Understand Convolution</a>  
+          <a class="next" href="/blog/2017/11/14/Understanding-Matrix-capsules-with-EM-Routing.html">Understanding Matrix capsules with EM Routing <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg></a> 
+      </div>
+    
+    </div>
+</main>
+<div class="scroll-top"><a href="#title" class="nav-top">Top <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512"><path d="M177 255.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 351.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 425.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1zm-34-192L7 199.7c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l96.4-96.4 96.4 96.4c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9l-136-136c-9.2-9.4-24.4-9.4-33.8 0z"></path></svg></a></div>
+<footer class="site-footer h-card">
+    <data class="u-url" href="/blog/"></data>
+
+    <div class="wrapper">
+        <div class="footer-col-wrapper">
+            <div><ul class="social-media-list">
+<li><a href="http://hmthanh.github.io/" target="_blank"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path></svg><span class="username">Website</span></a></li>
+<li><a href="mailto:hmthanhgm@gmail.com"><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg> <span class="username">Email</span></a></li>
+<li><a href="https://www.facebook.com/hmthanhgm" target="_blank"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username">Facebook</span></a></li>
+<li><a href="https://github.com/hmthanh" target="_blank"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg>
+    <span class="username">Github</span></a></li>
+<li><a href="https://www.twitter.com/hmthanhgm" target="_blank"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">Twitter</span></a></li>
+<li>
+        <a href="/blog/%20/feed.xml">RSS</a>
+    </li>
+
+</ul></div>
+            <p>© 2020 Minh-Thanh</p>
+        </div>
+    </div>
+</footer>
+            <script>
+                window.onload = function () {
+                    var script = document.createElement('script');
+                    var firstScript = document.getElementsByTagName('script')[0];
+                    script.type = 'text/javascript';
+                    script.async = true;
+                    script.src = '/blog/sw-register.js?v=' + Date.now();
+                    firstScript.parentNode.insertBefore(script, firstScript);
+                };
+            </script>
+            </body>
+
+
+</html>

@@ -210,13 +210,13 @@ Alan Turing in [1936](https://en.wikipedia.org/wiki/Turing_machine) proposed a m
 *Fig. 9. How a Turing machine looks like: a tape + a head that handles the tape. (Image source: http://aturingmachine.com/)*
 {: style="text-align: center;"}
 
-**Neural Turing Machine** (**NTM**, [Graves, Wayne & Danihelka, 2014](https://arxiv.org/abs/1410.5401)) is a model architecture for coupling a neural network with external memory storage. The memory mimics the Turing machine tape and the neural network controls the operation heads to read from or write to the tape. However, the memory in NTM is finite, and thus it probably looks more like a “Neural [von Neumann](https://en.wikipedia.org/wiki/Von_Neumann_architecture) Machine”.
+**Neural Turing Machine** (**NTM**, [Graves, Wayne & Danihelka, 2014](https://arxiv.org/abs/1410.5401)) is a model architecture for coupling a neural network with external memory storage. The memory mimics the Turing machine tape and the neural network controls the operation heads to read from or write to the tape. However, the memory in NTM is finite, and thus it probably looks more like a "Neural [von Neumann](https://en.wikipedia.org/wiki/Von_Neumann_architecture) Machine".
 
 NTM contains two major components, a *controller* neural network and a *memory* bank. 
 Controller: is in charge of executing operations on the memory. It can be any type of neural network, feed-forward or recurrent.
 Memory: stores processed information. It is a matrix of size $$N \times M$$, containing N vector rows and each has $$M$$ dimensions.
 
-In one update iteration, the controller processes the input and interacts with the memory bank accordingly to generate output. The interaction is handled by a set of parallel *read* and *write* heads. Both read and write operations are “blurry” by softly attending to all the memory addresses.
+In one update iteration, the controller processes the input and interacts with the memory bank accordingly to generate output. The interaction is handled by a set of parallel *read* and *write* heads. Both read and write operations are "blurry" by softly attending to all the memory addresses.
 
 ![turing-machine]({{ '/assets/images/transformer/NTM.png' | relative_url }})
 {: style="width: 60%;" class="center"}
